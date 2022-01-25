@@ -1,35 +1,64 @@
 import rubik.cube as rubik
 
 def _check(parms):
-    
+
+    result={}
+   
 #put this try except in, if string is a number, or missing cube key, will throw errors here
     
     try:
-        parm_string = parms.get("cube")    
-        unique_color = []
-        dict_col = {}
-        result={}
-        
+        parm_string = parms.get("cube")  #get the string
+          
+        unique_color = [] #create list with all the unique colors in it
         for char in parm_string:
             if char not in unique_color:
                 unique_color.append(char) 
-        lst_cube_center = ([x for x in parms.get("cube")])[4::9]
-        unique_center = []
-        for char in lst_cube_center:
-            if char not in unique_center:
-                unique_center.append(char)             
+            
                 
-        #create a dictionary of the colors. Use to count colors
-        
+        #create a dictionary of the colors. Use to count colors 
+        dict_col = {}       
         keys = ["col1", "col2","col3", "col4", "col5", "col6"]
         for i in range(len(keys)):
             dict_col[keys[i]] = unique_color[i]
         
-        #create a flag. Should be 9 blocks of each color. 
-        col_flag = 0   
+        #create list to count the blocks 
+        lst_cnt_blocks = []
         for vals in dict_col.values():
-            if parm_string.count(vals) != 9:
-                col_flag = 1              
+            lst_cnt_blocks.append(parm_string.count(vals))  
+            
+        #make a list of the centers. Should be 6 different ones       
+        lst_cube_center = ([x for x in parms.get("cube")])[4::9]
+        
+        unique_center = []
+        for char in lst_cube_center:
+            if char not in unique_center:
+                unique_center.append(char)               
+              
+        #create an instance of the cube by creating nested list
+        lst_cube = ([x for x in parms.get("cube")])
+        print(lst_cube)
+
+        lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) #
+
+        for i in range (1,7):
+            for j in range(1,10):
+                exec(f"lst_in{i}.append(lst_cube.pop(0))")   
+        
+        
+        lst_cb_out = []
+        for i in range(1,7):
+            exec(f'lst_cb_out.append(lst_in{i})')
+            
+        #if the flag is set to 1, then fails the final rule
+        if  (len(set((lst_cb_out[0])))) == 1 and (len(set((lst_cb_out[2])))) != 1:
+            flg_side_col = 1;
+        elif  (len(set((lst_cb_out[1])))) == 1 and (len(set((lst_cb_out[3])))) != 1:
+            flg_side_col = 1;
+        elif (len(set((lst_cb_out[4])))) == 1 and (len(set((lst_cb_out[5])))) != 1:
+            flg_side_col = 1;
+        else:
+            flg_side_col = 0;
+              
     except:
         pass #one of the below will catch errors
             
@@ -44,28 +73,25 @@ def _check(parms):
         result['status'] = 'error: cube not a string'
         
     #has 54 elements
-    elif (len(parms.get("cube")) < 54):
-        result['status'] = 'error: cube string is too small. Has to be 54 elements'
-        
-    elif (len(parms.get("cube")) > 54):
-        result['status'] = 'error: cube string is too large. Has to be 54 elements'    
-       
+    elif (len(parms.get("cube")) != 54):
+        cub_len = len((parms.get("cube")))  #get the length of the cube   
+        result['status'] = (f'error: cube string has to have 54 elements. It has {cub_len} elements.')
+           
     #has 6 colors
-    elif len(set(parms.get("cube"))) < 6:    
-        cub_len = len(set(parms.get("cube")))  #get the length of the cube          
-        result['status'] = (f"error: There are {cub_len} colors. There should be 6.\n The colors in this cube are {unique_color}")        
+    elif len(set(parms.get("cube"))) != 6:    
+        cub_col = len(set(parms.get("cube")))  #get the colors of the cube         
+        result['status'] = (f"error: There are {cub_col} colors. There should be 6.\n The colors in this cube are {unique_color}")        
      
     #has 9 occurrences of the 6 colors
-    elif (col_flag == 1):
+    elif (max(lst_cnt_blocks)> 9):
         result['status'] = 'error: one of the colors is more or less than 9 occurrences'
             
     #each middle face is a different color
     elif len(unique_center) != 6:
         result['status'] = 'error: two middle faces are the same colors'   
           
-    #no color can be adjacent to a color that would appear on the opposite side of the cube when solved
-    #what is opposite side of the cube?
-    #how identify one side solved?
+    elif (flg_side_col == 1):
+        result['status'] = 'error: Adjacent color to color that would appear on opposite side' 
         
     else:
         result['status'] = 'ok'
