@@ -45,10 +45,10 @@ def _check(parms):
         
     #has 54 elements
     elif (len(parms.get("cube")) < 54):
-        result['status'] = 'error: cube string is too small'
+        result['status'] = 'error: cube string is too small. Has to be 54 elements'
         
     elif (len(parms.get("cube")) > 54):
-        result['status'] = 'error: cube string is too large'    
+        result['status'] = 'error: cube string is too large. Has to be 54 elements'    
        
     #has 6 colors
     elif len(set(parms.get("cube"))) < 6:    
