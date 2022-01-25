@@ -63,8 +63,9 @@ def _check(parms):
     elif len(unique_center) != 6:
         result['status'] = 'error: two middle faces are the same colors'   
           
-    #no color can be adjacent to a color that would appear on the opposite side of the cube   
+    #no color can be adjacent to a color that would appear on the opposite side of the cube when solved
     #what is opposite side of the cube?
+    #how identify one side solved?
         
     else:
         result['status'] = 'ok'
