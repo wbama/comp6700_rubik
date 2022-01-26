@@ -49,6 +49,7 @@ def _check(parms):
         for i in range(1,7):
             exec(f'lst_cb_out.append(lst_in{i})')
             
+        #this function looks at the colors around the edge and compares to the back colors to add to counter
         def verify_adj_col():
             
             ctr = 0
