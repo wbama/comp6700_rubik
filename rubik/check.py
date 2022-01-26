@@ -50,20 +50,26 @@ def _check(parms):
             exec(f'lst_cb_out.append(lst_in{i})')
             
         def verify_adj_col():
-            for i in (0,1,2,3,5,6,7,8):
-                ctr = 0
-                #are the surrounding colors the same as the center color. if so
-                #does one of the outside colors match the back center color
-                if ((lst_cube[0][i]) == lst_cube[0][4]) and (lst_cube[2][4] in [lst_cube[1][j] for j in (0, 3, 6)]):
-                    ctr +=1        
-                elif ((lst_cube[0][i]) == lst_cube[0][4]) and (lst_cube[2][4] in [lst_cube[3][j] for j in (2, 5, 8)]):
-                    ctr +=1
-                elif ((lst_cube[0][i]) == lst_cube[0][4]) and (lst_cube[2][4] in [lst_cube[4][j] for j in (6, 7, 8)]):
-                    ctr +=1
-                elif ((lst_cube[0][i]) == lst_cube[0][4]) and (lst_cube[2][4] in [lst_cube[5][j] for j in (0, 1, 2)]):
-                    ctr +=1
-                else:
-                    ctr = ctr
+            
+            ctr = 0
+                
+            if ((lst_cube[0][0]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][2],lst_cube[4][6]]):
+                ctr = 1        
+            elif ((lst_cube[0][1]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[4][7]):
+                ctr = 1
+            elif ((lst_cube[0][2]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[4][8],lst_cube[1][0]]):
+                ctr = 1
+            elif ((lst_cube[0][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][5]):
+                ctr = 1
+            elif ((lst_cube[0][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][3]):
+                ctr = 1
+            elif ((lst_cube[0][6]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][8],lst_cube[5][0]]):
+                ctr = 1   
+            elif ((lst_cube[0][7]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[5][1]):
+                ctr = 1
+            elif ((lst_cube[0][8]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[1][6],lst_cube[5][2]]):
+                ctr = 1
+        
             return ctr
 
         #create an instance of the cube by creating nested list        
@@ -180,7 +186,7 @@ def _check(parms):
     #has 6 colors
     elif len(set(parms.get("cube"))) != 6:    
         cub_col = len(set(parms.get("cube")))  #get the colors of the cube         
-        result['status'] = (f"error: There are {cub_col} colors. There should be 6.\n The colors in this cube are {unique_color}")        
+        result['status'] = (f"error: there are {cub_col} colors. There should be 6.\n The colors in this cube are {unique_color}")        
      
     #has 9 occurrences of the 6 colors
     elif (max(lst_cnt_blocks)!= 9):
@@ -191,7 +197,7 @@ def _check(parms):
         result['status'] = 'error: two middle faces are the same colors'   
           
     elif (max_opposite_ctr > 0):
-        result['status'] = 'error: Adjacent color to color that would appear on opposite side' 
+        result['status'] = 'error: adjacent color to color that would appear on opposite side' 
         
     else:
         result['status'] = 'ok'
