@@ -86,6 +86,8 @@ def _check(parms):
         #run checks against the first side. blue - front, red - right, green - back, yellow - top
         new_ctr = verify_adj_col()
         lst_opposite_cnt.append(new_ctr)
+#        print("\n")
+#        print(lst_cube)
 
         
         #rotate the cube - red - front, green - right, orange - back, yellow - top
@@ -93,6 +95,8 @@ def _check(parms):
         lst_cube.append(first_side)
         first_side = lst_cube.pop(5)
         lst_cube.insert(3, first_side)
+#        print("\n")
+#        print(lst_cube)
 
         
         new_ctr = verify_adj_col()
@@ -104,6 +108,8 @@ def _check(parms):
         lst_cube.append(first_side)
         first_side = lst_cube.pop(5)
         lst_cube.insert(3, first_side)
+#        print("\n")
+#        print(lst_cube)
         
         new_ctr = verify_adj_col()
         lst_opposite_cnt.append(new_ctr)
@@ -113,7 +119,8 @@ def _check(parms):
         lst_cube.append(first_side)
         first_side = lst_cube.pop(5)
         lst_cube.insert(3, first_side)
-
+#        print("\n")
+#        print(lst_cube)
     
         new_ctr = verify_adj_col()
         lst_opposite_cnt.append(new_ctr)
@@ -128,6 +135,8 @@ def _check(parms):
         lst_cube.insert(3, first_side)
         first_side = lst_cube.pop(4)
         lst_cube.append(first_side)
+#        print("\n")
+#        print(lst_cube)
         
         new_ctr = verify_adj_col()
         lst_opposite_cnt.append(new_ctr)
@@ -149,7 +158,6 @@ def _check(parms):
 #        print(lst_opposite_cnt)
         max_opposite_ctr = max(lst_opposite_cnt)
 #        print(max_opposite_ctr)
-
               
     except:
         pass #one of the below will catch errors
