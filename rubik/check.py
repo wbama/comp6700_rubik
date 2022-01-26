@@ -49,24 +49,107 @@ def _check(parms):
         for i in range(1,7):
             exec(f'lst_cb_out.append(lst_in{i})')
             
-        #if the flag is set to 1, then fails the final rule
-        #if one side is solved, the opposite side of that should also be solved. 1 unique item
-        if  (len(set((lst_cb_out[0])))) == 1 and (len(set((lst_cb_out[2])))) != 1:
-            flg_side_col = 1
-        elif  (len(set((lst_cb_out[1])))) == 1 and (len(set((lst_cb_out[3])))) != 1:
-            flg_side_col = 1
-        elif (len(set((lst_cb_out[4])))) == 1 and (len(set((lst_cb_out[5])))) != 1:
-            flg_side_col = 1
+        def verify_adj_col():
+            for i in (0,1,2,3,5,6,7,8):
+                ctr = 0
+                #are the surrounding colors the same as the center color. if so
+                #does one of the outside colors match the back center color
+                if ((lst_cube[0][i]) == lst_cube[0][4]) and (lst_cube[2][4] in [lst_cube[1][j] for j in (0, 3, 6)]):
+                    ctr +=1        
+                elif ((lst_cube[0][i]) == lst_cube[0][4]) and (lst_cube[2][4] in [lst_cube[3][j] for j in (2, 5, 8)]):
+                    ctr +=1
+                elif ((lst_cube[0][i]) == lst_cube[0][4]) and (lst_cube[2][4] in [lst_cube[4][j] for j in (6, 7, 8)]):
+                    ctr +=1
+                elif ((lst_cube[0][i]) == lst_cube[0][4]) and (lst_cube[2][4] in [lst_cube[5][j] for j in (0, 1, 2)]):
+                    ctr +=1
+                else:
+                    ctr = ctr
+            return ctr
+
+        #create an instance of the cube by creating nested list        
+        lst_cube = ([x for x in parms.get("cube")])
+#        print(lst_cube)
+        
+        lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) 
+        
+        for i in range (1,7):
+            for j in range(1,10):
+                exec(f"lst_in{i}.append(lst_cube.pop(0))")  
+                
+        #create list within a list of the cube.   
+        lst_cube = []
+        lst_opposite_cnt = []
+        for i in range(1,7):
+            exec(f'lst_cube.append(lst_in{i})')
             
-        elif  (len(set((lst_cb_out[2])))) == 1 and (len(set((lst_cb_out[0])))) != 1:
-            flg_side_col = 1
-        elif (len(set((lst_cb_out[3])))) == 1 and (len(set((lst_cb_out[1])))) != 1:
-            flg_side_col = 1
-        elif (len(set((lst_cb_out[5])))) == 1 and (len(set((lst_cb_out[4])))) != 1:
-            flg_side_col = 1
+  
+        #run checks against the first side. blue - front, red - right, green - back, yellow - top
+        new_ctr = verify_adj_col()
+        lst_opposite_cnt.append(new_ctr)
+
+        
+        #rotate the cube - red - front, green - right, orange - back, yellow - top
+        first_side = lst_cube.pop(0)
+        lst_cube.append(first_side)
+        first_side = lst_cube.pop(5)
+        lst_cube.insert(3, first_side)
+
+        
+        new_ctr = verify_adj_col()
+        lst_opposite_cnt.append(new_ctr)
+
+        
+        #rotate the cube - green - front, orange - right, blue - back, yellow - top
+        first_side = lst_cube.pop(0)
+        lst_cube.append(first_side)
+        first_side = lst_cube.pop(5)
+        lst_cube.insert(3, first_side)
+        
+        new_ctr = verify_adj_col()
+        lst_opposite_cnt.append(new_ctr)
+        
+        #rotate the cube - orange - front, blue - right, red - back, yellow - top
+        first_side = lst_cube.pop(0)
+        lst_cube.append(first_side)
+        first_side = lst_cube.pop(5)
+        lst_cube.insert(3, first_side)
+
+    
+        new_ctr = verify_adj_col()
+        lst_opposite_cnt.append(new_ctr)
+
+        
+        #flip the cube - white - front, orange - right, yellow - back, green - top
+        first_side = lst_cube.pop(5)
+        lst_cube.insert(0, first_side)
+        first_side = lst_cube.pop(5)
+        lst_cube.insert(2, first_side)
+        first_side = lst_cube.pop(4)
+        lst_cube.insert(3, first_side)
+        first_side = lst_cube.pop(4)
+        lst_cube.append(first_side)
+        
+        new_ctr = verify_adj_col()
+        lst_opposite_cnt.append(new_ctr)
+        
+        #flip the cube - yellow - front, orange - right, white - back, blue - top
+        first_side = lst_cube.pop(2)
+        lst_cube.insert(0, first_side)
+        first_side = lst_cube.pop(2)
+        lst_cube.insert(1, first_side)
+        first_side = lst_cube.pop(4)
+        lst_cube.append(first_side)
+#        print("\n")
+#        print(lst_cube)
+        
+        new_ctr = verify_adj_col()
+        lst_opposite_cnt.append(new_ctr)
+#        print(f"The counter for yellow front and white back is: {new_ctr}")
             
-        else:
-            flg_side_col = 0
+#        print(lst_opposite_cnt)
+        max_opposite_ctr = max(lst_opposite_cnt)
+#        print(max_opposite_ctr)
+
               
     except:
         pass #one of the below will catch errors
@@ -99,7 +182,7 @@ def _check(parms):
     elif len(unique_center) != 6:
         result['status'] = 'error: two middle faces are the same colors'   
           
-    elif (flg_side_col == 1):
+    elif (max_opposite_ctr > 0):
         result['status'] = 'error: Adjacent color to color that would appear on opposite side' 
         
     else:

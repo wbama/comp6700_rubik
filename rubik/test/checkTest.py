@@ -4,7 +4,7 @@ import rubik.check as check
 class CheckTest(TestCase):
         
     def test_check_010_ShouldReturnOkOnSolvedCube(self):
-        parm = {'op':'check', 'cube': 'bbbbbbbbbbrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
+        parm = {'op':'check', 'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
@@ -37,4 +37,8 @@ class CheckTest(TestCase):
 #     parm = {'op':'check', 'cube': 'bbbbrbbbbrrrrrrrbrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
 
 #adjacent color
-#     parm = {'op':'check', 'cube': 'bbbbbbbbbrrrrrrrrrgggggggggoooooyoooyyyyoyyyywwwwwwwww'}
+# parm = {'op':'check', 'cube':'bbbbbbbbbrrrrrrrrrgwgggggggoooooooooyyyyyyyyywwgwwwwww'}
+# parm = {'op':'check', 'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
+
+
+
