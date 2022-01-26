@@ -26,7 +26,7 @@ def _check(parms):
         for vals in dict_col.values():
             lst_cnt_blocks.append(parm_string.count(vals))  
             
-        #make a list of the centers. Should be 6 different ones       
+        #make a list of the center colors. Should be 6 different ones       
         lst_cube_center = ([x for x in parms.get("cube")])[4::9]
         
         unique_center = []
@@ -44,20 +44,29 @@ def _check(parms):
             for j in range(1,10):
                 exec(f"lst_in{i}.append(lst_cube.pop(0))")   
         
-        
+        #if front cube is solved, back cube should also be solved
         lst_cb_out = []
         for i in range(1,7):
             exec(f'lst_cb_out.append(lst_in{i})')
             
         #if the flag is set to 1, then fails the final rule
+        #if one side is solved, the opposite side of that should also be solved. 1 unique item
         if  (len(set((lst_cb_out[0])))) == 1 and (len(set((lst_cb_out[2])))) != 1:
-            flg_side_col = 1;
+            flg_side_col = 1
         elif  (len(set((lst_cb_out[1])))) == 1 and (len(set((lst_cb_out[3])))) != 1:
-            flg_side_col = 1;
+            flg_side_col = 1
         elif (len(set((lst_cb_out[4])))) == 1 and (len(set((lst_cb_out[5])))) != 1:
-            flg_side_col = 1;
+            flg_side_col = 1
+            
+        elif  (len(set((lst_cb_out[2])))) == 1 and (len(set((lst_cb_out[0])))) != 1:
+            flg_side_col = 1
+        elif (len(set((lst_cb_out[3])))) == 1 and (len(set((lst_cb_out[1])))) != 1:
+            flg_side_col = 1
+        elif (len(set((lst_cb_out[5])))) == 1 and (len(set((lst_cb_out[4])))) != 1:
+            flg_side_col = 1
+            
         else:
-            flg_side_col = 0;
+            flg_side_col = 0
               
     except:
         pass #one of the below will catch errors
@@ -83,7 +92,7 @@ def _check(parms):
         result['status'] = (f"error: There are {cub_col} colors. There should be 6.\n The colors in this cube are {unique_color}")        
      
     #has 9 occurrences of the 6 colors
-    elif (max(lst_cnt_blocks)> 9):
+    elif (max(lst_cnt_blocks)!= 9):
         result['status'] = 'error: one of the colors is more or less than 9 occurrences'
             
     #each middle face is a different color
