@@ -52,7 +52,7 @@ def _check(parms):
         #this function looks at the colors around the edge and compares to the back colors to add to counter
         def verify_adj_col():
             
-            #around the edge of the front side
+            #around the edge of side 0
             ctr = 0                
             if ((lst_cube[0][0]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][2],lst_cube[4][6]]):
                 ctr = 1        
@@ -71,43 +71,63 @@ def _check(parms):
             elif ((lst_cube[0][8]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[1][6],lst_cube[5][2]]):
                 ctr = 1
         
-            #top right row
+            #top right corner
             elif ((lst_cube[4][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][0]):
                 ctr = 1   
+            elif ((lst_cube[4][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][0]):
+                ctr = 1   
             elif ((lst_cube[4][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][1]):
-                ctr = 1           
+                ctr = 1   
+            elif ((lst_cube[4][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][1]):
+                ctr = 1            
             elif ((lst_cube[4][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][2]):
                 ctr = 1   
+            elif ((lst_cube[4][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][2]):
+                ctr = 1   
             
-            #top left row
-            
+            #top left corner    
             elif ((lst_cube[4][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][2]):
                 ctr = 1   
+            elif ((lst_cube[4][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][2]):
+                ctr = 1   
             elif ((lst_cube[4][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][1]):
-                ctr = 1           
+                ctr = 1    
+            elif ((lst_cube[4][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][1]):
+                ctr = 1    
             elif ((lst_cube[4][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][0]):
+                ctr = 1   
+            elif ((lst_cube[4][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][0]):
                 ctr = 1   
             
             #bottom right row
             elif ((lst_cube[5][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][6]):
-                ctr = 1   
+                ctr = 1  
+            elif ((lst_cube[5][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][6]):
+                ctr = 1  
             elif ((lst_cube[5][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][7]):
-                ctr = 1           
+                ctr = 1   
+            elif ((lst_cube[5][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][7]):
+                ctr = 1          
             elif ((lst_cube[5][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][8]):
-                ctr = 1         
+                ctr = 1   
+            elif ((lst_cube[5][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][8]):
+                ctr = 1   
             
-            #bottom left row
-        
+            #bottom left row        
             elif ((lst_cube[5][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][8]):
-                ctr = 1   
+                ctr = 1  
+            elif ((lst_cube[5][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][8]):
+                ctr = 1  
             elif ((lst_cube[5][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][7]):
-                ctr = 1           
+                ctr = 1    
+            elif ((lst_cube[5][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][7]):
+                ctr = 1 
             elif ((lst_cube[5][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][6]):
-                ctr = 1   
-        
+                ctr = 1 
+            elif ((lst_cube[5][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][6]):
+                ctr = 1           
                 
-            return ctr
-                
+            return ctr                
 
         #create an instance of the cube by creating nested list        
         lst_cube = ([x for x in parms.get("cube")])
@@ -173,9 +193,7 @@ def _check(parms):
             for j in range(1,10):
                 exec(f"lst_in{i}.append(lst_cube.pop(0))")  
                 
-        #create list within a list of the cube.          
-        
-        
+        #create list within a list of the cube.                  
         lst_opposite_cnt = []
         for i in range(1,7):
             exec(f'lst_cube.append(lst_in{i})')
@@ -183,10 +201,8 @@ def _check(parms):
         print("\n")
         print(lst_cube) #blue - front, red - right, green - back, yellow - top
         
-        lst_cube_orig = lst_cube[:]
-        
-        
-            
+        lst_cube_orig = lst_cube[:]  
+                    
         ########################################
         
         #run checks against the first side. blue - front, red - right, green - back, yellow - top
@@ -198,7 +214,6 @@ def _check(parms):
         
         first_side = lst_cube.pop(0)
         lst_cube.insert(3, first_side)
-        
         
         # rotate the top
         orig_side = lst_cube.pop(4)
@@ -219,7 +234,6 @@ def _check(parms):
         first_side = lst_cube.pop(5)
         lst_cube.insert(3, first_side)
 
-        
         #now rotate the top
         orig_side = lst_cube.pop(4)
         lst_cube.insert(4, turn_type1(orig_side))
@@ -238,7 +252,6 @@ def _check(parms):
         lst_cube.append(first_side)
         first_side = lst_cube.pop(5)
         lst_cube.insert(3, first_side)
-
         
         #now rotate the top
         orig_side = lst_cube.pop(4)
@@ -248,7 +261,6 @@ def _check(parms):
         orig_side = lst_cube.pop(5)
 
         lst_cube.insert(5, turn_type2(orig_side))
-        
         
         new_ctr = verify_adj_col()
         lst_opposite_cnt.append(new_ctr)
@@ -261,7 +273,6 @@ def _check(parms):
         #flip the cube - yellow - front, red - right, white - back, orange - green
         
         lst_cube = lst_cube_orig[:]
-
         
         side_0 = lst_cube[4]
 
@@ -286,15 +297,12 @@ def _check(parms):
         
         lst_cube = []
         for i in range(6):
-            exec(f'lst_cube.append(side_{i})')
+            exec(f'lst_cube.append(side_{i})')     
         
-        
-
-        
+     
         new_ctr = verify_adj_col()
         lst_opposite_cnt.append(new_ctr)
 
-        
         #####################################################
         #last bottom part
         
@@ -309,18 +317,17 @@ def _check(parms):
         side_1 = (turn_type1(side_1))
 
         side_2 = lst_cube[4]
-        #rotate sdie 2
+        #rotate side 2
         side_2 = (turn_type3(side_2))
-
+        #rotate side 3
         side_3 = lst_cube[3]
         side_3 = (turn_type2(side_3))
 
         side_4 = lst_cube[0]
 
         side_5 = lst_cube[2]
-        #rotate it correctly
+        #rotate side 5
         side_5 = (turn_type3(side_5))
-
         
         lst_cube = []
         for i in range(6):
@@ -330,14 +337,11 @@ def _check(parms):
         new_ctr = verify_adj_col()
         lst_opposite_cnt.append(new_ctr)
 
-        
         new_ctr = verify_adj_col()
         lst_opposite_cnt.append(new_ctr)   
 
         max_opposite_ctr = max(lst_opposite_cnt)
-
-
-              
+             
     except:
         pass #one of the below will catch errors
             
