@@ -1,4 +1,4 @@
-#https://wzd0029-rubik.mybluemix.net/rubik?op=info   
+#https://wzd0029-rubik.mybluemix.net
 
 
 def _info(parms):
