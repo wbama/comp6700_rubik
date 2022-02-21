@@ -3,6 +3,8 @@ from flask import Flask, request
 import rubik.dispatch as dispatch
 
 app = Flask(__name__)
+# This sets up a Flask microservice that listens for http request that begins with rubik
+#
 
 #-----------------------------------
 #  The following code is invoked when the path portion of the URL matches 
@@ -16,6 +18,7 @@ def server():
     try:
         userParms = {}
         for key in request.args:
+        # Converts querystring to a dictionary
             userParms[key] = str(request.args.get(key, ''))
         result=dispatch._dispatch(userParms)
         print("Response -->", str(result))
