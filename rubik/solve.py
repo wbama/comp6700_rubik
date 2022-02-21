@@ -2,10 +2,11 @@ import rubik.cube as rubik
 
 def _solve(parms):
     result = {}
-    encodedCube = parms.get('cube',None)       #get "cube" parameter if present
-    result['solution'] = 'FfRrBbLlUuDd'        #example rotations
-    result['status'] = 'ok'                     
+    result['cube'] = 'gwrbbbwwyyybrrygogyowogyygorrogowbggbboyybwobrrrrwgwwo'
+    result['rotate'] = 'F'
+    result['status'] = 'ok'
     return result
+
 
 # validate my parms, if invalid, need to return status with error
 # if everything is valid, load parms into cube modell
