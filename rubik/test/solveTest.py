@@ -15,21 +15,21 @@ class SolveTest(unittest.TestCase):
     
     def test_solve_010_ShouldRotateValidNominalCubeF(self):
         inputDict = {}
-        inputDict['cube'] = 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        inputDict['cube'] = 'rbywbwgbwrybrryrogyowogyygorrbgoobgwbboyybyrgowgrwgwwo'
         inputDict['rotate'] = 'F'
         inputDict['op'] = 'solve'
         
         expectedResult = {}
-        expectedResult['cube'] = 
+        expectedResult['cube'] = 'gwrbbbwwyyybrrygogyowogyygorrogowbggbboyybwobrrrrwgwwo'
+        expectedResult['status'] = 'ok'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
         
         
         
-    def test010_ShouldTestNominalNEvenlyDivisibleBy3(self):
-        n = 3
-        expectedResult = "fizz"
-        actualResult = fb.fizzbuzz(n)
-        self.assertEqual(expectedResult, actualResult)
+
     
 # analysis of solve
 #
