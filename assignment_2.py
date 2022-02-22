@@ -94,11 +94,11 @@ def turn_clock(orig_side):
     zero_side[5].insert(8, orig_side [5][8])
     return zero_side
 
-turned = turn_clock(lst_cube)
-print("original cube")
-print(lst_cube)
-print("turned_cube")
-print(turned)
+    turned = turn_clock(lst_cube)
+    print("original cube")
+    print(lst_cube)
+    print("turned_cube")
+    print(turned)
 
 
 def turn_cclock(orig_side):
