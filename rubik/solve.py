@@ -308,10 +308,11 @@ def _solve(parms):
         
     elif inputDict['rotate'] == 'U':
         print(lst_cube)
-        flip_cube_top_side(lst_cube)
+        
+        flipped = flip_cube_top_side(lst_cube)
 
         print("\nflipped")        
-        print(lst_cube)        
+        print(flipped)        
      
               
     elif inputDict['rotate'] == 'u':
