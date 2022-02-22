@@ -163,40 +163,28 @@ def _solve(parms):
 
 ###############################################################################
     if inputDict['rotate'] == 'F':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_clock(lst_cube))
     elif inputDict['rotate'] == 'f':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_cclock(lst_cube))        
     elif inputDict['rotate'] == 'R':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_clock(lst_cube))
     elif inputDict['rotate'] == 'r':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_cclock(lst_cube))
     elif inputDict['rotate'] == 'B':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_clock(lst_cube))        
     elif inputDict['rotate'] == 'b':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_cclock(lst_cube))
     elif inputDict['rotate'] == 'L':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_clock(lst_cube))
     elif inputDict['rotate'] == 'l':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_cclock(lst_cube))
     elif inputDict['rotate'] == 'U':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_clock(lst_cube))        
     elif inputDict['rotate'] == 'u':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_cclock(lst_cube))
     elif inputDict['rotate'] == 'D':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_clock(lst_cube))        
     elif inputDict['rotate'] == 'd':
-        print(inputDict['rotate'])
         c_rotate_cube = (turn_cclock(lst_cube))
     else:
         print("missing rotate")
