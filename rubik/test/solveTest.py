@@ -20,7 +20,8 @@ class SolveTest(unittest.TestCase):
             self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
             self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         except:
-            print("error: test_solve_001_ShouldRotateValidNominalCube_F")  
+            print("error: test_solve_001_ShouldRotateValidNominalCube_Blank") 
+            print(expectedResult['status']) 
  
     def test_solve_010_ShouldRotateValidNominalCube_F(self):
 

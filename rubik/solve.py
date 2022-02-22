@@ -232,12 +232,20 @@ def _solve(parms):
         exec(f'lst_cube.append(lst_in{i})')
     
 ###############################################################################
-
+    result = {}
     if  inputDict['rotate'] == '':
-        c_rotate_cube = (turn_clock(lst_cube))    
+        try:
+            c_rotate_cube = (turn_clock(lst_cube)) 
+            result['status'] = 'ok'  
+        except:
+            result['status'] = 'error: warning'
     
     elif inputDict['rotate'] == 'F':
-        c_rotate_cube = (turn_clock(lst_cube))    
+        try:
+            c_rotate_cube = (turn_clock(lst_cube))   
+            result['status'] = 'ok'
+        except:
+            result['status'] = 'error: warning'
         
     elif inputDict['rotate'] == 'f':
         c_rotate_cube = (turn_cclock(lst_cube))          
@@ -367,7 +375,7 @@ def _solve(parms):
     
     result = {}
     result['cube'] = str_cube
-    result['status'] = 'ok'
+
 
 
     return result    
