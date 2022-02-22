@@ -1,5 +1,6 @@
 
 from rubik.solve import turn_clock
+from rubik.solve import turn_cclock
 from rubik.solve import turn_type1
 from rubik.solve import turn_type2
 from rubik.solve import turn_type3
@@ -49,6 +50,14 @@ for i in range(1,7):
     exec(f'lst_cube.append(lst_in{i})')
 print("\nlst cube")
 print(lst_cube)
+str1 = "".join(lst_cube[0])
+str2 = "".join(lst_cube[1])
+str3 = "".join(lst_cube[2])
+str4 = "".join(lst_cube[3])
+str5 = "".join(lst_cube[4])
+str6 = "".join(lst_cube[5])    
+str_cube = str1+str2+str3+str4+str5+str6
+print(str_cube) 
 
 flip_cube_one = flip_cube_top_side(lst_cube)
 print(flip_cube_one)
@@ -57,9 +66,17 @@ flip_cube_two = flip_cube_top_side(flip_cube_one)
 print(flip_cube_two)
 flip_cube_three = flip_cube_top_side(flip_cube_two)
 print(flip_cube_three)
-c_rotate_cube = (turn_clock(flip_cube_three)) 
+c_rotate_cube = (turn_cclock(flip_cube_three)) 
 print(c_rotate_cube)
 flip_cube_four = flip_cube_top_side(c_rotate_cube)
 c_rotate_cube= flip_cube_four
 print(c_rotate_cube)
+str1 = "".join(c_rotate_cube[0])
+str2 = "".join(c_rotate_cube[1])
+str3 = "".join(c_rotate_cube[2])
+str4 = "".join(c_rotate_cube[3])
+str5 = "".join(c_rotate_cube[4])
+str6 = "".join(c_rotate_cube[5])    
+str_cube = str1+str2+str3+str4+str5+str6
+print(str_cube) 
 
