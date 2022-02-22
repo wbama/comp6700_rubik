@@ -237,7 +237,7 @@ def _solve(parms):
         try:
             c_rotate_cube = (turn_clock(lst_cube))  
             result['status'] = 'ok'
-        else:
+        except:
             result['status'] = 'error: warning'
         
       
