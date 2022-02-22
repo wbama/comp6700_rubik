@@ -334,7 +334,7 @@ def _solve(parms):
         lst_cube = []
         for i in range(6):
             exec(f'lst_cube.append(side_{i})') 
-             
+        print("\nFlipped top cube")     
         print(lst_cube)
         
         c_rotate_cube = (turn_clock(lst_cube))  
