@@ -250,9 +250,7 @@ def _solve(parms):
     elif inputDict['rotate'] == 'r':
         c_rotate_cube = (turn_cclock(lst_cube))
         
-        print("\nOriginal Cube")
-        print(lst_cube)
-        
+      
         rotate_cube_to_right(lst_cube)
         
         #rotate Right side clockwise
@@ -307,24 +305,40 @@ def _solve(parms):
         rotate_cube_to_right(c_rotate_cube)         
         
     elif inputDict['rotate'] == 'U':
-        print(lst_cube)
+        
+        flip_cube_one = flip_cube_top_side(lst_cube)
+
+        c_rotate_cube = (turn_clock(flip_cube_one)) 
+
+        flip_cube_two = flip_cube_top_side(c_rotate_cube)
+
+        flip_cube_three= flip_cube_top_side(flip_cube_two)
+
+        c_rotate_cube= flip_cube_top_side(flip_cube_three)     
+              
+    elif inputDict['rotate'] == 'u':
         
         flip_cube_one = flip_cube_top_side(lst_cube)
         c_rotate_cube = (turn_cclock(flip_cube_one)) 
         flip_cube_two = flip_cube_top_side(c_rotate_cube)
         flip_cube_three= flip_cube_top_side(flip_cube_two)
-        lst_cube= flip_cube_top_side(flip_cube_three)
+        c_rotate_cube= flip_cube_top_side(flip_cube_three)
 
-        print("\nflipped")        
-        print(lst_cube)        
-     
-              
-    elif inputDict['rotate'] == 'u':
-        c_rotate_cube = (turn_cclock(lst_cube))
     elif inputDict['rotate'] == 'D':
-        c_rotate_cube = (turn_clock(lst_cube))        
+        flip_cube_one = flip_cube_top_side(lst_cube)
+        
+        flip_cube_two = flip_cube_top_side(flip_cube_one)
+        flip_cube_three = flip_cube_top_side(flip_cube_two)
+        c_rotate_cube = (turn_clock(flip_cube_three)) 
+        flip_cube_four = flip_cube_top_side(c_rotate_cube)
+        c_rotate_cube= flip_cube_four
+        
     elif inputDict['rotate'] == 'd':
-        c_rotate_cube = (turn_cclock(lst_cube))
+        flip_cube_one = flip_cube_top_side(lst_cube)
+        c_rotate_cube = (turn_cclock(flip_cube_one)) 
+        flip_cube_two = flip_cube_top_side(c_rotate_cube)
+        flip_cube_three= flip_cube_top_side(flip_cube_two)
+        c_rotate_cube= flip_cube_top_side(flip_cube_three)
     else:
         c_rotate_cube = (turn_clock(lst_cube))
         
