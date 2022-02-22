@@ -20,7 +20,7 @@ class SolveTest(unittest.TestCase):
         try:
             self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         except:
-            print("error: warning)
+            print("error: warning")
         
         
     def test_solve_020_ShouldRotateValidNominalCube_f(self):
