@@ -67,7 +67,7 @@ def flip_cube_top_side(cube):
         side_4 = cube[2]
         side_4 = (turn_type3(side_4))
         side_5 = cube[0]        
-
+        cube = []
         for i in range(6):
             exec(f'cube.append(side_{i})') 
                
@@ -309,10 +309,13 @@ def _solve(parms):
     elif inputDict['rotate'] == 'U':
         print(lst_cube)
         
-        flipped = flip_cube_top_side(lst_cube)
+        flip_cube_one = flip_cube_top_side(lst_cube)
+#        c_rotate_cube = (turn_cclock(flip_cube_one)) 
+        flip_cube_two = flip_cube_top_side(flip_cube_one)
+        flip_cube_three= flip_cube_top_side(flip_cube_two)
 
         print("\nflipped")        
-        print(flipped)        
+        print(flip_cube_three)        
      
               
     elif inputDict['rotate'] == 'u':
