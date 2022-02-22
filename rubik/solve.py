@@ -371,7 +371,7 @@ def _solve(parms):
     
     result = {}
     result['cube'] = str_cube
-    #result['status'] = 'ok'
+    result['status'] = 'warning'
 
 
     return result    
