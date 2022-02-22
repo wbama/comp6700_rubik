@@ -51,7 +51,7 @@ def rotate_cube_to_right(cube):
         cube.insert(5, turn_type2(orig_side))
         return cube
     
-def rotate_cube_top_side(cube):
+def flip_cube_top_side(cube):
         side_0 = cube[4]
 
         side_1 = cube[1]
@@ -307,15 +307,41 @@ def _solve(parms):
         rotate_cube_to_right(c_rotate_cube)         
         
     elif inputDict['rotate'] == 'U':
+        print("\nOriginalCube")
         print(lst_cube)
-        rotate_cube_top_side(lst_cube)
+
+        side_0 = lst_cube[4]
+
+        side_1 = lst_cube[1]
+        #rotate it correctly
+        side_1 = (turn_type2(side_1))
+
+        side_2 = lst_cube[5]
+        #rotate side 2
+        side_2 = (turn_type3(side_2))
+
+        side_3 = lst_cube[3]
+        #rotate side 3
+        side_3 = (turn_type1(side_3))
+
+        #rotate side 4
+        side_4 = lst_cube[2]
+        side_4 = (turn_type3(side_4))
+
+        side_5 = lst_cube[0]
+
+        
+        lst_cube = []
+        for i in range(6):
+            exec(f'lst_cube.append(side_{i})') 
+             
         print(lst_cube)
         
         c_rotate_cube = (turn_clock(lst_cube))  
     
-        rotate_cube_top_side(c_rotate_cube)
-        rotate_cube_top_side(c_rotate_cube)
-        rotate_cube_top_side(c_rotate_cube)
+        flip_cube_top_side(c_rotate_cube)
+        flip_cube_top_side(c_rotate_cube)
+        flip_cube_top_side(c_rotate_cube)
         
               
     elif inputDict['rotate'] == 'u':
