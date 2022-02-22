@@ -1,5 +1,56 @@
 import rubik.cube as rubik
 
+def turn_type1(orig_side):
+    turned_side = []
+    turned_side.insert(0, orig_side [6])
+    turned_side.insert(1, orig_side [3])
+    turned_side.insert(2, orig_side [0])
+    turned_side.insert(3, orig_side [7])
+    turned_side.insert(4, orig_side [4])
+    turned_side.insert(5, orig_side [1])
+    turned_side.insert(6, orig_side [8])
+    turned_side.insert(7, orig_side [5])
+    turned_side.insert(8, orig_side [2])
+    return turned_side
+        
+def turn_type2(orig_side):
+    turned_side = []
+    turned_side.insert(0, orig_side [2])
+    turned_side.insert(1, orig_side [5])
+    turned_side.insert(2, orig_side [8])
+    turned_side.insert(3, orig_side [1])
+    turned_side.insert(4, orig_side [4])
+    turned_side.insert(5, orig_side [7])
+    turned_side.insert(6, orig_side [0])
+    turned_side.insert(7, orig_side [3])
+    turned_side.insert(8, orig_side [6])
+    return turned_side
+        
+def turn_type3(orig_side):
+    turned_side = []
+    turned_side.insert(0, orig_side [8])
+    turned_side.insert(1, orig_side [7])
+    turned_side.insert(2, orig_side [6])
+    turned_side.insert(3, orig_side [5])
+    turned_side.insert(4, orig_side [4])
+    turned_side.insert(5, orig_side [3])
+    turned_side.insert(6, orig_side [2])
+    turned_side.insert(7, orig_side [1])
+    turned_side.insert(8, orig_side [0])
+    return turned_side
+
+def rotate_right_type1_2(lst_cube):
+        #rotate cube to right
+        first_side = lst_cube.pop(0)
+        lst_cube.insert(3, first_side)        
+        # rotate the top
+        orig_side = lst_cube.pop(4)
+        lst_cube.insert(4, turn_type1(orig_side))        
+        #now rotate the bottom
+        orig_side = lst_cube.pop(5) 
+        lst_cube.insert(5, turn_type2(orig_side))
+        return lst_cube
+
 def turn_clock(orig_side):
     new_cube = [[], [], [], [], [], []]
     #front
@@ -157,25 +208,73 @@ def _solve(parms):
     for i in range(1,7):
         exec(f'lst_cube.append(lst_in{i})')
     
-    print("\nThe list cube")
-    print(lst_cube) #blue - front, yellow - right, green - back, yellow - top
-
-
 ###############################################################################
     if inputDict['rotate'] == 'F':
         c_rotate_cube = (turn_clock(lst_cube))
     elif inputDict['rotate'] == 'f':
-        c_rotate_cube = (turn_cclock(lst_cube))        
+        c_rotate_cube = (turn_cclock(lst_cube))   
+             
     elif inputDict['rotate'] == 'R':
-        c_rotate_cube = (turn_clock(lst_cube))
+       
+        rotate_right_type1_2(lst_cube)
+        
+        #rotate Right side clockwise
+        c_rotate_cube = (turn_clock(lst_cube)) 
+        
+        rotate_right_type1_2(c_rotate_cube)
+        rotate_right_type1_2(c_rotate_cube)
+        rotate_right_type1_2(c_rotate_cube)  
+              
     elif inputDict['rotate'] == 'r':
         c_rotate_cube = (turn_cclock(lst_cube))
+        
+        print("\nOriginal Cube")
+        print(lst_cube)
+        
+        rotate_right_type1_2(lst_cube)
+        
+        #rotate Right side clockwise
+        c_rotate_cube = (turn_cclock(lst_cube)) 
+        
+        rotate_right_type1_2(c_rotate_cube)
+        rotate_right_type1_2(c_rotate_cube)
+        rotate_right_type1_2(c_rotate_cube)        
+        
     elif inputDict['rotate'] == 'B':
-        c_rotate_cube = (turn_clock(lst_cube))        
+        
+        rotate_right_type1_2(lst_cube)
+        rotate_right_type1_2(lst_cube)
+        
+        #rotate Right side clockwise
+        c_rotate_cube = (turn_clock(lst_cube))         
+        
+        rotate_right_type1_2(c_rotate_cube)
+        rotate_right_type1_2(c_rotate_cube)  
+     
     elif inputDict['rotate'] == 'b':
-        c_rotate_cube = (turn_cclock(lst_cube))
+        rotate_right_type1_2(lst_cube)
+        rotate_right_type1_2(lst_cube)
+        
+        #rotate Right side clockwise
+        c_rotate_cube = (turn_cclock(lst_cube))         
+        
+        rotate_right_type1_2(c_rotate_cube)
+        rotate_right_type1_2(c_rotate_cube) 
+         
     elif inputDict['rotate'] == 'L':
         c_rotate_cube = (turn_clock(lst_cube))
+        
+        rotate_right_type1_2(lst_cube)
+        rotate_right_type1_2(lst_cube)
+        rotate_right_type1_2(lst_cube)
+        
+        #rotate Right side clockwise
+        c_rotate_cube = (turn_clock(lst_cube))       
+        
+        rotate_right_type1_2(c_rotate_cube)         
+        
+        
+        
     elif inputDict['rotate'] == 'l':
         c_rotate_cube = (turn_cclock(lst_cube))
     elif inputDict['rotate'] == 'U':
@@ -190,10 +289,7 @@ def _solve(parms):
         print("missing rotate")
         c_rotate_cube = (turn_clock(lst_cube))
         
-
-    print("\nRotated cube")
-    print(c_rotate_cube)
-    
+   
     str1 = "".join(c_rotate_cube[0])
     str2 = "".join(c_rotate_cube[1])
     str3 = "".join(c_rotate_cube[2])
@@ -202,8 +298,6 @@ def _solve(parms):
     str6 = "".join(c_rotate_cube[5])                       
  
     str_cube = str1+str2+str3+str4+str5+str6
-    print("\nString Cube")
-    print(str_cube)
     
     result = {}
     result['cube'] = str_cube

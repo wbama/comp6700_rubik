@@ -6,6 +6,7 @@ import rubik.solve as solve
 class SolveTest(unittest.TestCase):    
  
     def test_solve_010_ShouldRotateValidNominalCube_F(self):
+
         inputDict = {}
         inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
         inputDict['rotate'] = 'F'
