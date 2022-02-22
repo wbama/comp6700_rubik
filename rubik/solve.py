@@ -233,7 +233,10 @@ def _solve(parms):
     
 ###############################################################################
 
-    if inputDict['rotate'] == 'F':
+    if  inputDict['rotate'] == '':
+        c_rotate_cube = (turn_clock(lst_cube))    
+    
+    elif inputDict['rotate'] == 'F':
         c_rotate_cube = (turn_clock(lst_cube))    
         
     elif inputDict['rotate'] == 'f':

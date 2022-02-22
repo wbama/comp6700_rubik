@@ -3,7 +3,24 @@ import rubik.solve as solve
 
 
 
-class SolveTest(unittest.TestCase):    
+class SolveTest(unittest.TestCase):  
+    
+    def test_solve_001_ShouldRotateValidNominalCube_Null(self):
+
+        inputDict = {}
+        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+        inputDict['rotate'] = ''
+        inputDict['op'] = 'solve'           
+
+        try:
+            expectedResult = {}
+            expectedResult['cube'] = 'gbrgbrgbbbyybyoyoyogryggobbwwowwywwygrboorwwwryrrrgoog'
+            expectedResult['status'] = 'ok'
+            actualResult = solve._solve(inputDict)
+            self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+            self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        except:
+            print("error: test_solve_001_ShouldRotateValidNominalCube_F")  
  
     def test_solve_010_ShouldRotateValidNominalCube_F(self):
 
