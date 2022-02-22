@@ -223,7 +223,7 @@ class SolveTest(unittest.TestCase):
 #    inputs:
 #        parms: dictionary input that is validated. Do not have to validate i
 #        parms['op'] have to validate the keys ['op'] string, "solve", mandatory, arrives validated
-#        parms['cube'] string; len = 54 chars [azAZ09], 9 occurences of each character, 6 distincs characters, 
+#        parms['cube'] string; len = 54 chars [azAZ09], 9 occurences of each character, 6 distinct characters, 
 #               middle will be one of the six; mandatory; arrives unvalidated
 #        parms['rotate'] string; len >=0, [FfRrBbLlUuDd]; optional, defaulting to F if missing; arrives unvalidated
 

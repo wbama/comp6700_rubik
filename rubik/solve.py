@@ -214,10 +214,10 @@ def turn_cclock(orig_side):
 def _solve(parms):
     
     inputDict = {}
-    ctr = 0
+    result = {}
     inputDict['op'] = 'solve'
     inputDict['rotate'] = parms.get("rotate")
-    inputDict['cube'] = parms.get("cube")
+    inputDict['cube'] = parms.get("cube") #where does this cube come from?
     
     lst_cube = ([x for x in inputDict.get("cube")])
     lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) 
@@ -230,9 +230,14 @@ def _solve(parms):
     lst_opposite_cnt = []
     for i in range(1,7):
         exec(f'lst_cube.append(lst_in{i})')
-    
+        
+###############################################################################        
+    #is a string  
+    if isinstance(parms.get("cube"), str) != True:
+        result['status'] = 'error: cube not a string'
+
 ###############################################################################
-    result = {}
+    
     if  inputDict['rotate'] == '':
             c_rotate_cube = (turn_clock(lst_cube)) 
     
@@ -300,8 +305,7 @@ def _solve(parms):
         #rotate Right side clockwise
         c_rotate_cube = (turn_clock(lst_cube))       
         
-        rotate_cube_to_right(c_rotate_cube)  
-             
+        rotate_cube_to_right(c_rotate_cube)      
         
         
     elif inputDict['rotate'] == 'l':        
@@ -371,6 +375,9 @@ def _solve(parms):
 
 
     return result    
+
+
+
 
 
 # validate my parms, if invalid, need to return status with error
