@@ -311,25 +311,19 @@ def _solve(parms):
         print(lst_cube)
 
         side_0 = lst_cube[4]
-
         side_1 = lst_cube[1]
         #rotate it correctly
         side_1 = (turn_type2(side_1))
-
         side_2 = lst_cube[5]
         #rotate side 2
         side_2 = (turn_type3(side_2))
-
         side_3 = lst_cube[3]
         #rotate side 3
         side_3 = (turn_type1(side_3))
-
         #rotate side 4
         side_4 = lst_cube[2]
         side_4 = (turn_type3(side_4))
-
         side_5 = lst_cube[0]
-
         
         lst_cube = []
         for i in range(6):
@@ -342,6 +336,8 @@ def _solve(parms):
         flip_cube_top_side(c_rotate_cube)
         flip_cube_top_side(c_rotate_cube)
         flip_cube_top_side(c_rotate_cube)
+        
+        print(c_rotate_cube)
         
               
     elif inputDict['rotate'] == 'u':
