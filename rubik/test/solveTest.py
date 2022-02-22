@@ -5,14 +5,6 @@ import rubik.solve as solve
 
 class SolveTest(unittest.TestCase):
 
-
-    def setUp(self):
-        pass
-
-
-    def tearDown(self):
-        pass
-    
     def test_solve_010_ShouldRotateValidNominalCubeF(self):
         inputDict = {}
         inputDict['cube'] = 'rbywbwgbwrybrryrogyowogyygorrbgoobgwbboyybyrgowgrwgwwo'
@@ -28,6 +20,8 @@ class SolveTest(unittest.TestCase):
         
         
         
+        
+
         
 
     

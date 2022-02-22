@@ -1,6 +1,14 @@
 import rubik.cube as rubik
 
 def _solve(parms):
+    inputDict = {}
+    inputDict['cube'] = 'rbywbwgbwrybrryrogyowogyygorrbgoobgwbboyybyrgowgrwgwwo'
+    inputDict['rotate'] = 'F'
+    inputDict['op'] = 'solve'
+    
+    
+    
+    
     result = {}
     result['cube'] = 'gwrbbbwwyyybrrygogyowogyygorrogowbggbboyybwobrrrrwgwwo'
     result['rotate'] = 'F'
