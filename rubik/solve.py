@@ -232,7 +232,6 @@ def _solve(parms):
         exec(f'lst_cube.append(lst_in{i})')
     
 ###############################################################################
-    global warnstring
 
     if inputDict['rotate'] == 'F':
          c_rotate_cube = (turn_clock(lst_cube))  
