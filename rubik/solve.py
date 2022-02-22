@@ -310,13 +310,13 @@ def _solve(parms):
         print(lst_cube)
         
         flip_cube_one = flip_cube_top_side(lst_cube)
-#        c_rotate_cube = (turn_cclock(flip_cube_one)) 
-        flip_cube_two = flip_cube_top_side(flip_cube_one)
+        c_rotate_cube = (turn_cclock(flip_cube_one)) 
+        flip_cube_two = flip_cube_top_side(c_rotate_cube)
         flip_cube_three= flip_cube_top_side(flip_cube_two)
-        flip_cube_four= flip_cube_top_side(flip_cube_three)
+        lst_cube= flip_cube_top_side(flip_cube_three)
 
         print("\nflipped")        
-        print(flip_cube_four)        
+        print(lst_cube)        
      
               
     elif inputDict['rotate'] == 'u':
