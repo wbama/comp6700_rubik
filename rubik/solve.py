@@ -67,7 +67,7 @@ def flip_cube_top_side(cube):
         side_4 = cube[2]
         side_4 = (turn_type3(side_4))
         side_5 = cube[0]        
-        cube = []
+
         for i in range(6):
             exec(f'cube.append(side_{i})') 
                
