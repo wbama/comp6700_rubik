@@ -295,7 +295,6 @@ def _solve(parms):
         rotate_cube_to_right(c_rotate_cube)         
         
         
-        
     elif inputDict['rotate'] == 'l':        
         
         rotate_cube_to_right(lst_cube)
@@ -308,7 +307,9 @@ def _solve(parms):
         rotate_cube_to_right(c_rotate_cube)         
         
     elif inputDict['rotate'] == 'U':
+        print(lst_cube)
         rotate_cube_top_side(lst_cube)
+        print(lst_cube)
         
         c_rotate_cube = (turn_clock(lst_cube))  
     
@@ -324,7 +325,6 @@ def _solve(parms):
     elif inputDict['rotate'] == 'd':
         c_rotate_cube = (turn_cclock(lst_cube))
     else:
-        print("missing rotate")
         c_rotate_cube = (turn_clock(lst_cube))
         
    
