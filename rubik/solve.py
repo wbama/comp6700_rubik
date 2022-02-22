@@ -336,18 +336,12 @@ def _solve(parms):
 
     elif inputDict['rotate'] == 'D':
          
-        flip_cube_one = flip_cube_top_side(lst_cube)
-        
+        flip_cube_one = flip_cube_top_side(lst_cube)        
         flip_cube_two = flip_cube_top_side(flip_cube_one)
-
         flip_cube_three = flip_cube_top_side(flip_cube_two)
-
-        c_rotate_cube = (turn_clock(flip_cube_three)) 
-
+        c_rotate_cube = (turn_clock(flip_cube_three))
         flip_cube_four = flip_cube_top_side(c_rotate_cube)
         c_rotate_cube= flip_cube_four
-       
-
         
     elif inputDict['rotate'] == 'd':
         flip_cube_one = flip_cube_top_side(lst_cube)        
