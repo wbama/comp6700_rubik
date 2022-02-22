@@ -234,18 +234,10 @@ def _solve(parms):
 ###############################################################################
     result = {}
     if  inputDict['rotate'] == '':
-        try:
             c_rotate_cube = (turn_clock(lst_cube)) 
-            result['status'] = 'ok'  
-        except:
-            result['status'] = 'error: warning'
     
     elif inputDict['rotate'] == 'F':
-        try:
-            c_rotate_cube = (turn_clock(lst_cube))   
-            result['status'] = 'ok'
-        except:
-            result['status'] = 'error: warning'
+            c_rotate_cube = (turn_clock(lst_cube))               
         
     elif inputDict['rotate'] == 'f':
         c_rotate_cube = (turn_cclock(lst_cube))          
@@ -358,7 +350,6 @@ def _solve(parms):
         c_rotate_cube = (turn_cclock(flip_cube_three)) 
         flip_cube_four = flip_cube_top_side(c_rotate_cube)
         c_rotate_cube= flip_cube_four
-
         
     else:
         c_rotate_cube = (turn_clock(lst_cube))     
@@ -375,6 +366,7 @@ def _solve(parms):
     
     result = {}
     result['cube'] = str_cube
+    result['status'] = 'ok'
 
 
 
