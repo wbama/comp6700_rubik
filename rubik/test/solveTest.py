@@ -30,7 +30,7 @@ class SolveTest(unittest.TestCase):
         inputDict['op'] = 'solve'
         try:              
             expectedResult = {}
-            expectedResult['cube'] = 'bbgrbgrbgyyyyyoooyogryggobbwwywwbwwbgrboorryrwwwrrgoo'
+            expectedResult['cube'] = 'bbgrbgrbgyyyyyoooyogryggobbwwywwbwwbgrboorryrwwwrrgoog'
             expectedResult['status'] = 'ok'
             actualResult = solve._solve(inputDict)
             self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
