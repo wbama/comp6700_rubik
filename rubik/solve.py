@@ -308,87 +308,13 @@ def _solve(parms):
         
     elif inputDict['rotate'] == 'U':
         print(lst_cube)
-        side_0 = lst_cube[4]
+        flip_cube_top_side(lst_cube)
 
-        side_1 = lst_cube[1]
-        #rotate it correctly
-        side_1 = (turn_type2(side_1))
-        side_2 = lst_cube[5]
-        #rotate side 2
-        side_2 = (turn_type3(side_2))
-        side_3 = lst_cube[3]
-        #rotate side 3
-        side_3 = (turn_type1(side_3))
-        #rotate side 4
-        side_4 = lst_cube[2]
-        side_4 = (turn_type3(side_4))
-        side_5 = lst_cube[0]        
-        cube = []
-        for i in range(6):
-            exec(f'cube.append(side_{i})') 
         print("\nflipped")
         
         print(lst_cube)
         
-        c_rotate_cube = (turn_clock(lst_cube))  
-    
-        side_0 = cube[4]
-
-        side_1 = cube[1]
-        #rotate it correctly
-        side_1 = (turn_type2(side_1))
-        side_2 = lst_cube[5]
-        #rotate side 2
-        side_2 = (turn_type3(side_2))
-        side_3 = lst_cube[3]
-        #rotate side 3
-        side_3 = (turn_type1(side_3))
-        #rotate side 4
-        side_4 = lst_cube[2]
-        side_4 = (turn_type3(side_4))
-        side_5 = lst_cube[0]        
-        cube = []
-        for i in range(6):
-            exec(f'cube.append(side_{i})') 
-        side_0 = cube[4]
-
-        side_1 = lst_cube[1]
-        #rotate it correctly
-        side_1 = (turn_type2(side_1))
-        side_2 = lst_cube[5]
-        #rotate side 2
-        side_2 = (turn_type3(side_2))
-        side_3 = lst_cube[3]
-        #rotate side 3
-        side_3 = (turn_type1(side_3))
-        #rotate side 4
-        side_4 = cube[2]
-        side_4 = (turn_type3(side_4))
-        side_5 = cube[0]        
-        cube = []
-        for i in range(6):
-            exec(f'cube.append(side_{i})') 
-        side_0 = lst_cube[4]
-
-        side_1 = cube[1]
-        #rotate it correctly
-        side_1 = (turn_type2(side_1))
-        side_2 = lst_cube[5]
-        #rotate side 2
-        side_2 = (turn_type3(side_2))
-        side_3 = lst_cube[3]
-        #rotate side 3
-        side_3 = (turn_type1(side_3))
-        #rotate side 4
-        side_4 = lst_cube[2]
-        side_4 = (turn_type3(side_4))
-        side_5 = lst_cube[0]        
-        cube = []
-        for i in range(6):
-            exec(f'cube.append(side_{i})') 
-        
-        print(c_rotate_cube)
-        
+        c_rotate_cube = (turn_clock(lst_cube))          
               
     elif inputDict['rotate'] == 'u':
         c_rotate_cube = (turn_cclock(lst_cube))
