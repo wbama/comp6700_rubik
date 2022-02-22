@@ -146,6 +146,7 @@ class SolveTest(unittest.TestCase):
            
         expectedResult = {}
         expectedResult['cube'] = 'rrbbbbwwwryyyyogggogryggroywwwwwwobbgrboorbbyorooryggy'
+
         expectedResult['status'] = 'ok'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))

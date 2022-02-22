@@ -94,11 +94,11 @@ def turn_clock(orig_side):
     zero_side[5].insert(8, orig_side [5][8])
     return zero_side
 
-    turned = turn_clock(lst_cube)
-    print("original cube")
-    print(lst_cube)
-    print("turned_cube")
-    print(turned)
+turned = turn_clock(lst_cube)
+print("original cube")
+print(lst_cube)
+print("turned_cube")
+print(turned)
 
 
 def turn_cclock(orig_side):
@@ -182,32 +182,61 @@ print(turned)
 
 
 
+    inputDict = {}
+    inputDict['op'] = 'solve'
+    inputDict['rotate'] = 'F'
+    inputDict['cube'] = 'rbywbwgbwrybrryrogyowogyygorrbgoobgwbboyybyrgowgrwgwwo'
 
+    lst_cube = ([x for x in inputDict.get("cube")])
+    lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) 
 
-print(turn_side)
-print(lst_cube[0][6])
+    for i in range (1,7):
+        for j in range(1,10):
+            exec(f"lst_in{i}.append(lst_cube.pop(0))")  
+        
+    #create list within a list of the cube.   
+    lst_opposite_cnt = []
+    for i in range(1,7):
+        exec(f'lst_cube.append(lst_in{i})')
+    
+    print("\n")
+    print(lst_cube) #blue - front, yellow - right, green - back, yellow - top
 
-F_side = lst_cube.pop(0)
-print(F_side)
+    c_rotate_cube = (turn_clock(lst_cube))
+    
+    result = {}
+    result['cube'] = 'gwrbbbwwyyybrrygogyowogyygorrogowbggbboyybwobrrrrwgwwo'
+    result['rotate'] = 'F'
+    result['status'] = 'ok'
 
+for i in range(0,6):
+    exec(f'str{i}="".join(c_rotate_cube[{i}])')
+    
+str_cube = str1+str2+str3+str4+str5
+print(str_cube)
+    
 
-
-
-lst_cube.insert(4, turn_type1(orig_side))
-print(lst_cube)
-
-
-
-lst_cube_orig = lst_cube[:]
-
-print(lst_cube)
-
-print(inputDict)
-
-parm_string = inputDict.get("cube") 
-print(parm_string)
-
-inputDict = {}
-inputDict['cube'] = 'rbywbwgbwrybrryrogyowogyygorrbgoobgwbboyybyrgowgrwgwwo'
-inputDict['rotate'] = 'F'
-inputDict['op'] = 'solve'
+lst_cube = ['1', '2', '3']
+str1 = "".join(lst_cube[0])
+print(str1)
+    
+print(string)
+    
+print(lst_cube2)
+    
+def listToString(s): 
+    
+    # initialize an empty string
+    str1 = "" 
+    
+    # traverse in the string  
+    for ele in s: 
+        str1 += ele  
+    
+    # return string  
+    return str1 
+        
+        
+# Driver code    
+s = lst_cube
+print(listToString(s)) 
