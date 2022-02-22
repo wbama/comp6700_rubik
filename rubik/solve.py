@@ -309,6 +309,7 @@ def _solve(parms):
     elif inputDict['rotate'] == 'U':
         print(lst_cube)
         flip_cube_top_side(lst_cube)
+        print("\nflipped")
         print(lst_cube)
         
         c_rotate_cube = (turn_clock(lst_cube))  
