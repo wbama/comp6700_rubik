@@ -8,7 +8,7 @@ class SolveTest(unittest.TestCase):
     def test_solve_010_ShouldRotateValidNominalCube_F(self):
 
         inputDict = {}
-        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoogo'
         inputDict['rotate'] = 'F'
         inputDict['op'] = 'solve'
            
@@ -20,7 +20,7 @@ class SolveTest(unittest.TestCase):
             self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
             self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         except:
-            print("error: warning")
+            print("error: test_solve_010_ShouldRotateValidNominalCube_F")
         
         
     def test_solve_020_ShouldRotateValidNominalCube_f(self):
