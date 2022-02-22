@@ -232,16 +232,10 @@ def _solve(parms):
         exec(f'lst_cube.append(lst_in{i})')
     
 ###############################################################################
-    result = {}
-    if inputDict['rotate'] == 'F':
-        try:
-            c_rotate_cube = (turn_clock(lst_cube))  
-            result['status'] = 'ok'
 
-        except AssertionError:
-            result['status'] = 'error: warning'
-        
-      
+    if inputDict['rotate'] == 'F':
+        c_rotate_cube = (turn_clock(lst_cube))    
+        result['status'] = 'error: no cube found'    
         
     elif inputDict['rotate'] == 'f':
         c_rotate_cube = (turn_cclock(lst_cube))          
@@ -375,14 +369,16 @@ def _solve(parms):
  
     str_cube = str1+str2+str3+str4+str5+str6
     
+    result = {}
     result['cube'] = str_cube
+    #result['status'] = 'ok'
 
 
     return result    
 
 
 # validate my parms, if invalid, need to return status with error
-# if everything is valid, load parms into cube modell
+# if everything is valid, load parms into cube model
 # then rotate the cube model in the desired direction
 # serialize the cube model in encoded cube into a string
 # return the string result + status of "ok"
