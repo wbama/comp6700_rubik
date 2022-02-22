@@ -1,10 +1,14 @@
 
 from rubik.solve import turn_clock
+from rubik.solve import turn_type1
+from rubik.solve import turn_type2
+from rubik.solve import turn_type3
+import rubik.cube as rubik
 
 inputDict = {}
 inputDict['op'] = 'solve'
 inputDict['rotate'] = 'F'
-inputDict['cube'] = 'rbywbwgbwrybrryrogyowogyygorrbgoobgwbboyybyrgowgrwgwwo'
+inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 
 lst_cube = ([x for x in inputDict.get("cube")])
 lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) 
@@ -17,23 +21,30 @@ for i in range (1,7):
 lst_opposite_cnt = []
 for i in range(1,7):
     exec(f'lst_cube.append(lst_in{i})')
-    
-print("\n")
-print(lst_cube) #blue - front, yellow - right, green - back, yellow - top
+print(lst_cube)    
 
-c_rotate_cube = (turn_clock(lst_cube))
-    
-result = {}
-result['cube'] = 'gwrbbbwwyyybrrygogyowogyygorrogowbggbboyybwobrrrrwgwwo'
-result['rotate'] = 'F'
-result['status'] = 'ok'
 
-print('\nRotatedCube')
-print(c_rotate_cube)
+def flip_cube_top_side(cube):
+        side_0 = cube[4]
 
-for i in range(1,6):
-    exec(f'str{i}="".join(c_rotate_cube[{i-1}])')
+        side_1 = cube[1]
+        #rotate it correctly
+        side_1 = (turn_type2(side_1))
+        side_2 = cube[5]
+        #rotate side 2
+        side_2 = (turn_type3(side_2))
+        side_3 = cube[3]
+        #rotate side 3
+        side_3 = (turn_type1(side_3))
+        #rotate side 4
+        side_4 = cube[2]
+        side_4 = (turn_type3(side_4))
+        side_5 = cube[0]   
+             
+        cube = []
+        for i in range(6):
+            exec(f'cube.append(side_{i})') 
+               
+        return cube
     
-str_cube = str1+str2+str3+str4+str5
-print(str_cube)
-    
+print(flip_cube_top_side(lst_cube))
