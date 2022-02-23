@@ -270,13 +270,13 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_solve_940_CubeFewerThan54Elements(self):
+    def test_solve_950_CubeNotSixColors(self):
         inputDict = {}
         inputDict['cube'] = 'bbbbbbbbbbbbbbbbbbgggggggggoooooooooyyyyyyyyywwwwwwwww'
         inputDict['op'] = 'solve'
 
         expectedResult = {}
-        expectedResult['status'] = 'error: cube string has to have 54 elements'
+        expectedResult['status'] = 'error: There should be 6 colors'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 
