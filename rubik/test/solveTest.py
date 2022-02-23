@@ -212,6 +212,18 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
+    def test_solve_160_OnlyLettersAndNumbersInCubeString(self):
+
+        inputDict = {}
+        inputDict['cube'] = 'rybbbr..ryrybyoyyyb.ry..obbwwwwwwwww.rrooyb.ooo.rrboo.'
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: only letters and numbers in the cube string'
+        
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
     def test_910_IncorrectCubeString(self):
 
         inputDict = {}
