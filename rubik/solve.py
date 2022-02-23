@@ -1,7 +1,3 @@
-#import rubik.cube as rubik
-#from rubik.solveRotations import turn_type1
-#from rubik.solveRotations import turn_type2
-#from rubik.solveRotations import turn_type3
 from rubik.solveRotations import rotate_cube_to_right
 from rubik.solveRotations import flip_cube_top_side
 from rubik.solveRotations import turn_clock
