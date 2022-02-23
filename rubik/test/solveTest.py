@@ -3,22 +3,6 @@ import rubik.solve as solve
 
 
 class SolveTest(unittest.TestCase):  
-    
-    def test_solve_001_ShouldRotateValidNominalCube_Null(self):
-
-        inputDict = {}
-        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
-        inputDict['rotate'] = ''
-        inputDict['op'] = 'solve'           
-
-        expectedResult = {}
-        expectedResult['cube'] = 'gbrgbrgbbbyybyoyoyogryggobbwwowwywwygrboorwwwryrrrgoog'
-        expectedResult['status'] = 'ok'
-        
-        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-
  
     def test_solve_010_ShouldRotateValidNominalCube_F(self):
 
@@ -191,6 +175,48 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_solve_130_ShouldRotateValidNominalCube_NullStr(self):
+
+        inputDict = {}
+        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+        inputDict['rotate'] = ''
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['cube'] = 'gbrgbrgbbbyybyoyoyogryggobbwwowwywwygrboorwwwryrrrgoog'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_solve_140_ShouldRotateValidNominalCube_Missing(self):
+
+        inputDict = {}
+        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['cube'] = 'gbrgbrgbbbyybyoyoyogryggobbwwowwywwygrboorwwwryrrrgoog'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+        
+    def test_solve_910_MissingCube(self):
+
+        inputDict = {}
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: no cube found'
+        
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        #self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 
     
 # analysis of solve
@@ -217,7 +243,7 @@ class SolveTest(unittest.TestCase):
 #            test 010: nominal valid cube with F rotation
 #            test 020: nominal valid cube with f rotation
 #            test 030: nominal valid cube with missing rotation
-#            test 040: nominal valie cube with "" null string as rotation
+#            test 040: nominal valid cube with "" null string as rotation
 #            test 050: boundary analysis for each of the rotations
 
 #        sad path:
