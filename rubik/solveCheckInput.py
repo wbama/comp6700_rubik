@@ -55,7 +55,7 @@ def solveCheck(parms):
                 
         #create list within a list of the cube.   
         lst_cube = []
-        lst_opposite_cnt = []
+#        lst_opposite_cnt = []
         for i in range(1,7):
             exec(f'lst_cube.append(lst_in{i})')        
   
