@@ -256,7 +256,17 @@ class SolveTest(unittest.TestCase):
         inputDict['op'] = 'solve'
 
         expectedResult = {}
-        expectedResult['status'] = 'error: optional rotate should be single letter [FfRrBbLlUuDd], '' or None'
+        expectedResult['status'] = 'error: cube string has to have 54 elements'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_solve_940_CubeFewerThan54Elements(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboo'
+        inputDict['op'] = 'solve'
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: cube string has to have 54 elements'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 
