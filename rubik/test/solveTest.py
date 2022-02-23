@@ -207,7 +207,6 @@ class SolveTest(unittest.TestCase):
         
         
     def test_solve_910_MissingCube(self):
-
         inputDict = {}
         inputDict['op'] = 'solve'           
 
@@ -215,7 +214,17 @@ class SolveTest(unittest.TestCase):
         expectedResult['status'] = 'error: no cube found'
         
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-        #self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_solve_920_ParmsRotate(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
+        inputDict['rotate'] = 'Dd'
+        inputDict['op'] = 'solve'
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: optional rotate should be single letter [FfRrBbLlUuDd], '' or None'
+        actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 
     
