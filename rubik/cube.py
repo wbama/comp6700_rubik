@@ -6,7 +6,7 @@ class Cube:
         self.rotate_str = rotate_str
         self.op_str = op_str
         
-        print(self.cube_str)
+
         
 
     
