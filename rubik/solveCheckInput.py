@@ -81,11 +81,10 @@ def solveCheck(parms):
     except:
         pass #one of the below will catch errors
             
-    encodedCube = parms.get('cube',None)  
-    
+   
     # is present 
-    if(encodedCube == None):
-        result['status'] = 'error: no cube found'
+    if(parms.get('cube',None) == None):
+        result['status'] = ('error: no cube found')
     
     #is a string  
     elif isinstance(parms.get("cube"), str) != True:
@@ -93,11 +92,11 @@ def solveCheck(parms):
         
     #has 54 elements
     elif (len(parms.get("cube")) != 54): 
-        result['status'] = (f'error: cube string has to have 54 elements')
+        result['status'] = ('error: cube string has to have 54 elements')
            
     #has 6 colors
     elif len(set(parms.get("cube"))) != 6:    
-        result['status'] = (f'error: There should be 6 colors')        
+        result['status'] = ('error: There should be 6 colors')        
      
     #has 9 occurrences of the 6 colors
     elif (max(lst_cnt_blocks)!= 9):
@@ -114,7 +113,7 @@ def solveCheck(parms):
             result['status'] = 'ok'   
             
     elif (parms.get('cube',None)).isalnum() == False:
-        result['status'] = 'error: only letters and numbers in the cube string'
+        result['status'] = ('error: only letters and numbers in the cube string')
        
     else:
         result['status'] = 'ok'
