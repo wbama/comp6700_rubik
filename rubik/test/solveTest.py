@@ -51,8 +51,7 @@ class SolveTest(unittest.TestCase):
         inputDict = {}
         inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
         inputDict['rotate'] = 'r'
-        inputDict['op'] = 'solve'
-           
+        inputDict['op'] = 'solve'           
 
         expectedResult = {}
         expectedResult['cube'] = 'rrbbbrggyyoyyyoryrggrgggybbwwwwwwwwwgroooybbooybrrboog'
@@ -79,16 +78,14 @@ class SolveTest(unittest.TestCase):
         inputDict = {}
         inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
         inputDict['rotate'] = 'b'
-        inputDict['op'] = 'solve'
-           
+        inputDict['op'] = 'solve'           
 
         expectedResult = {}
         expectedResult['cube'] = 'rrbbbbgggrygyyrrobrgbggboyoowwowwgwwwwwoorbbyoyyrrgyoy'
         expectedResult['status'] = 'ok'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))   
-        
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))           
         
     def test_solve_070_ShouldRotateValidNominalCube_L(self):
         inputDict = {}
@@ -117,7 +114,6 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-
         
     def test_solve_090_ShouldRotateValidNominalCube_U(self):
         inputDict = {}
