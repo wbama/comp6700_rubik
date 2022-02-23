@@ -111,7 +111,10 @@ def solveCheck(parms):
         if (parms.get('rotate', None)) not in ['F','f','R','r','B','b','L','l','U','u','D','d', '', None]:
             result['status'] = ('error: optional rotate should be single letter [FfRrBbLlUuDd], '' or None')   
         else:
-            result['status'] = 'ok'            
+            result['status'] = 'ok'   
+            
+    elif (parms.get('cube',None)).isalnum() == False:
+        result['status'] = 'error: only letters and numbers in the cube string'
        
     else:
         result['status'] = 'ok'
