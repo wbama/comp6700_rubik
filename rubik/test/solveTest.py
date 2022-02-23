@@ -282,7 +282,7 @@ class SolveTest(unittest.TestCase):
 
     def test_solve_960_CubeNineOccurencesOfSixColors(self):
         inputDict = {}
-        inputDict['cube'] = 'bbbbbbbbbbbbbbbbbbgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        inputDict['cube'] = 'bbbbbbbbbbrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
         inputDict['op'] = 'solve'
 
         expectedResult = {}
