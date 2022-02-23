@@ -204,6 +204,18 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
+    def test_910_IncorrectCube(self):
+
+        inputDict = {}
+        inputDict['cube'] = '123456789'
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: cube string has to have 54 elements'
+        
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+
         
     def test_solve_910_MissingCube(self):
         inputDict = {}
@@ -215,7 +227,7 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_solve_920_ParmsRotate(self):
+    def test_solve_920_IncorrectParmsRotate(self):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
         inputDict['rotate'] = 'Dd'
@@ -258,8 +270,6 @@ class SolveTest(unittest.TestCase):
 #            test 910: missing cube
 #            test 920: valid cube, invalid rotation
 #            test 930: have to test parms['cube'] and parms['rotate'] as they arrive unvalidated
-
-
 
 
     def testName(self):
