@@ -37,9 +37,7 @@ def solveCheck(parms):
         for i in range (1,7):
             for j in range(1,10):
                 exec(f"lst_in{i}.append(lst_cube.pop(0))")   
-        
-        #if front cube is solved, back cube should also be solved
-#        lst_cb_out = []
+
         for i in range(1,7):
             exec(f'lst_cb_out.append(lst_in{i})')
             
@@ -54,7 +52,7 @@ def solveCheck(parms):
                 exec(f"lst_in{i}.append(lst_cube.pop(0))")  
                 
         #create list within a list of the cube.   
-        lst_cube = []
+#        lst_cube = []
 
         for i in range(1,7):
             exec(f'lst_cube.append(lst_in{i})')        
