@@ -269,6 +269,16 @@ class SolveTest(unittest.TestCase):
         expectedResult['status'] = 'error: cube string has to have 54 elements'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_solve_940_CubeFewerThan54Elements(self):
+        inputDict = {}
+        inputDict['cube'] = 'bbbbbbbbbbbbbbbbbbgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        inputDict['op'] = 'solve'
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: cube string has to have 54 elements'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 
     
 # analysis of solve
