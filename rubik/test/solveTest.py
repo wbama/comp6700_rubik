@@ -204,10 +204,22 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_910_IncorrectCube(self):
+    def test_910_IncorrectCubeString(self):
 
         inputDict = {}
         inputDict['cube'] = '123456789'
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: cube string has to have 54 elements'
+        
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_920_CubeInteger(self):
+
+        inputDict = {}
+        inputDict['cube'] = 42
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
