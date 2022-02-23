@@ -250,7 +250,7 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_solve_940_CubeMoreThan54Elements(self):
+    def test_solve_950_CubeMoreThan54Elements(self):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboogo'
         inputDict['op'] = 'solve'
@@ -260,7 +260,7 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_solve_940_CubeFewerThan54Elements(self):
+    def test_solve_960_CubeFewerThan54Elements(self):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboo'
         inputDict['op'] = 'solve'
@@ -270,7 +270,7 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_solve_950_CubeNotSixColors(self):
+    def test_solve_970_CubeNotSixColors(self):
         inputDict = {}
         inputDict['cube'] = 'bbbbbbbbbbbbbbbbbbgggggggggoooooooooyyyyyyyyywwwwwwwww'
         inputDict['op'] = 'solve'
@@ -280,13 +280,23 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 
-    def test_solve_960_CubeNineOccurencesOfSixColors(self):
+    def test_solve_980_CubeNineOccurencesOfSixColors(self):
         inputDict = {}
         inputDict['cube'] = 'bbbbbbbbbbrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
         inputDict['op'] = 'solve'
 
         expectedResult = {}
         expectedResult['status'] = 'error: one of the colors is more or less than 9 occurrences'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_solve_990_MiddleFaceDifferentColor(self):
+        inputDict = {}
+        inputDict['cube'] = 'bbbbrbbbbrrrrrrrbrgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        inputDict['op'] = 'solve'
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: two middle faces are the same colors'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 
