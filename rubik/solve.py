@@ -17,7 +17,6 @@ def _solve(parms):
             for j in range(1,10):
                 exec(f"lst_in{i}.append(lst_cube.pop(0))")  
             
-        # lst_opposite_cnt = []
         for i in range(1,7):
             exec(f'lst_cube.append(lst_in{i})')
             

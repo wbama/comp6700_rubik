@@ -69,13 +69,8 @@ def solveCheck(parms):
             for j in range(1,10):
                 exec(f"lst_in{i}.append(lst_cube.pop(0))")  
                 
-        #create list within a list of the cube.                  
-        lst_opposite_cnt = []
         for i in range(1,7):
-            exec(f'lst_cube.append(lst_in{i})')      
-
-        
-        lst_cube_orig = lst_cube[:]                   
+            exec(f'lst_cube.append(lst_in{i})')           
 
           
     except:
