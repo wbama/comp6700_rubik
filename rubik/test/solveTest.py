@@ -239,10 +239,20 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_solve_920_IncorrectParmsRotate(self):
+    def test_solve_940_IncorrectParmsRotate(self):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
         inputDict['rotate'] = 'Dd'
+        inputDict['op'] = 'solve'
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: optional rotate should be single letter [FfRrBbLlUuDd], '' or None'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_solve_940_CubeMoreThan54Elements(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboogo'
         inputDict['op'] = 'solve'
 
         expectedResult = {}
