@@ -228,10 +228,7 @@ class SolveTest(unittest.TestCase):
         
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-        
-
-        
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))              
 
         
 # Sad path tests
@@ -386,7 +383,7 @@ class SolveTest(unittest.TestCase):
 #            dictionary['status']: 'ok'
 
 #        abnormal or sad path:
-#            dictionary['status']: 'error: danger_error'
+#            dictionary['status']: 'error: xxxx'
 #        confidence level: written unittests to the level of boundary level analysis
 
 #        happy path:
@@ -400,15 +397,6 @@ class SolveTest(unittest.TestCase):
 #            test 910: missing cube
 #            test 920: valid cube, invalid rotation
 #            test 930: have to test parms['cube'] and parms['rotate'] as they arrive unvalidated
-
-#print(solveCheck(inputDict))
-
-#    inputs:
-#        parms: dictionary input that is validated. Do not have to validate 
-#        parms['op'] have to validate the keys ['op'] string, "solve", mandatory, arrives validated
-#        parms['cube'] string; len = 54 chars [azAZ09], 9 occurences of each character, 6 distinct characters, 
-#               middle will be one of the six; mandatory; arrives unvalidated
-#        parms['rotate'] string; len >=0, [FfRrBbLlUuDd]; optional, defaulting to F if missing; arrives unvalidated
 
 
     def testName(self):
