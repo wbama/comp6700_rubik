@@ -36,7 +36,6 @@ def _check(parms):
               
         #create an instance of the cube by creating nested list
         lst_cube = ([x for x in parms.get("cube")])
-        print(lst_cube)
 
         lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) #
 
@@ -198,9 +197,7 @@ def _check(parms):
         for i in range(1,7):
             exec(f'lst_cube.append(lst_in{i})')
             
-        print("\n")
-        print(lst_cube) #blue - front, red - right, green - back, yellow - top
-        
+     
         lst_cube_orig = lst_cube[:]  
                     
         ########################################
@@ -307,7 +304,6 @@ def _check(parms):
         #last bottom part
         
         lst_cube = lst_cube_orig[:]
-        print(lst_cube)
         
         #flip the cube - white - front, red - right, yellow - back, blue - top
         side_0 = lst_cube[5]
