@@ -358,7 +358,7 @@ def _check(parms):
     #has 54 elements
     elif (len(parms.get("cube")) != 54):
    #     cub_len = len((parms.get("cube")))  #get the length of the cube   
-        result['status'] = ('error: cube string has to have 54 elements.')
+        result['status'] = ('error: cube string has to have 54 elements')
            
     #has 6 colors
     elif len(set(parms.get("cube"))) != 6:    
