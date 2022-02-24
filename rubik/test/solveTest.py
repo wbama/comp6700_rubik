@@ -207,7 +207,7 @@ class SolveTest(unittest.TestCase):
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
-        expectedResult['cube'] = 'bywrbyroroyygwgbwwrbbogrrryybwwygoobowgyroorgwwyboggbg'
+        expectedResult['cube'] = 'rrbobyrywoyyrwggwwrbbogrrryybwwywooyowgyrobgwbgoboggbg'
         expectedResult['status'] = 'ok'
         
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
