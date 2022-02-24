@@ -81,7 +81,7 @@ class CheckTest(TestCase):
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
-        self.assertEqual(status, 'error: two middle faces are the same colors')
+        self.assertEqual(status, 'error: adjacent color to color that would appear on opposite side')
 
 #works
 
