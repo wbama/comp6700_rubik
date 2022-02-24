@@ -67,7 +67,7 @@ class CheckTest(TestCase):
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
-        self.assertEqual(status, 'error: there should be 6 colors')
+        self.assertEqual(status, 'error: one of the colors is more or less than 9 occurrences')
 
 #works
 
