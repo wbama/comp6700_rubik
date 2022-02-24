@@ -38,6 +38,8 @@ def _check(parms):
         lst_cube = ([x for x in parms.get("cube")])
 
         lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) #
+        
+        print(lst_in1)
 
         for i in range (1,7):
             for j in range(1,10):
