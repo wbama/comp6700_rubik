@@ -24,6 +24,13 @@ class CheckTest(TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'ok')
         
+    def test_check_040_ShouldReturnOkOnSolvedCube(self):
+        parm = {'op':'check', 'cube': 'wyrwbbowwyrgyrwbrwyywggbggygoowoobyyrrrbybbobgrrgwgooo'}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'ok')
+        
 # Sad Patch Tests
         
     def test_check_090_ReturnErrorOnSmallCube(self):
@@ -97,19 +104,6 @@ class CheckTest(TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'error: adjacent color to color that would appear on opposite side')
 
-#works
-
-# 'rbywbwgbwrybrryrogyowogyygorrbgoobgwbboyybyrgowgrwgwwo'
-
-#  parm = {'op':'check', 'cube': '11w11w11wrrrrrrrrryggyggyggaaaaaaaaayy1yy1yy1wwgwwgwwg'}
-#  parms = {'op':'check', 'cube': 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
-#  parm = {'op':'check', 'cube' : 'wyrwbbowwyrgyrwbrwyywggbggygoowoobyyrrrbybbobgrrgwgooo'}
-
-
-
-#adjacent color
-# parm = {'op':'check', 'cube':'wwwbbbyyygggwrwbrbyyyrggwwwbobyoygogrrrgybrrrooobwgooo'}
-# parm = {'op':'check', 'cube' : 'wyrwbbowwyggyrwbrwyywrgbggygoowoobyyrrrbybbobgrrgwgooo'}
 
 
 
