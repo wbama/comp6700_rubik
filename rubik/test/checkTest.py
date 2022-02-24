@@ -45,7 +45,15 @@ class CheckTest(TestCase):
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
-        self.assertEqual(status, 'error: no cube found')
+        self.assertEqual(status, 'error: cube string has to have 54 elements')
+        
+        
+    def test_check_090_ReturnErrorOnLess54Elements(self):
+        parm = {'op':'check', 'cube': 'bbbbbbbbbrrrrrrrrrgggggggggooooooooyyyyyyyyyfffffwwww'}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube string has to have 54 elements')
 
 #works
 
@@ -55,12 +63,6 @@ class CheckTest(TestCase):
 #  parms = {'op':'check', 'cube': 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
 #  parm = {'op':'check', 'cube' : 'wyrwbbowwyrgyrwbrwyywggbggygoowoobyyrrrbybbobgrrgwgooo'}
 
-
-
-
-
-# has 55 elements
-#       parm = {'op':'check', 'cube': 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyyffffffwwww'}
 
 # has 53 elements
 #       parm = {'op':'check', 'cube': 'bbbbbbbbbrrrrrrrrrgggggggggooooooooyyyyyyyyyfffffwwww'}
