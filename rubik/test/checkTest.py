@@ -18,7 +18,7 @@ class CheckTest(TestCase):
         self.assertEqual(status, 'ok')
         
     def test_check_090_ReturnErrorOnSmallCube(self):
-        parm = {'op':'check', 'cube': 'gwrbbbwwyyybrrygogyowogyygorrogowbggbboyybwobrrrrwgwwo'}
+        parm = {'op':'check', 'cube': '123456789'}
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
