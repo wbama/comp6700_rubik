@@ -23,6 +23,13 @@ class CheckTest(TestCase):
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube string has to have 54 elements')
+        
+    def test_check_090_ReturnErrorOnNumberCube(self):
+        parm = {'op':'check', 'cube': 42}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube string has to have 54 elements')
 
 #works
 
@@ -34,7 +41,6 @@ class CheckTest(TestCase):
 
 #errors
 
-#    parm = {'op':'check', 'cube': '123456789'}
 #    parm = {'op':'check', 'cube': 42}
 #    parm = {'op':'check'}
 
