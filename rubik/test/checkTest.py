@@ -68,6 +68,13 @@ class CheckTest(TestCase):
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: one of the colors is more or less than 9 occurrences')
+        
+    def test_check_090_ReturnErrorEachMiddleFaceDifferentColor(self):
+        parm = {'op':'check', 'cube': 'bbbbrbbbbrrrrrrrbrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: one of the colors is more or less than 9 occurrences')
 
 #works
 
@@ -78,12 +85,6 @@ class CheckTest(TestCase):
 #  parm = {'op':'check', 'cube' : 'wyrwbbowwyrgyrwbrwyywggbggygoowoobyyrrrbybbobgrrgwgooo'}
 
 
-
-
-
-
-# has 9 occurrences of the 6 colors
-#       parm = {'op':'check', 'cube': 'bbbbbbbbbbrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
 
 #each middle face is a different color
 #     parm = {'op':'check', 'cube': 'bbbbrbbbbrrrrrrrbrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
