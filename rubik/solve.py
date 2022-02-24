@@ -169,23 +169,6 @@ def _solve(parms):
     return result
  
  
- 
- 
 
-#    inputs:
-#        parms: dictionary input that is validated. Do not have to validate i
-#        parms['op'] have to validate the keys ['op'] string, "solve", mandatory, arrives validated
-#        parms['cube'] string; len = 54 chars [azAZ09], 9 occurences of each character, 6 distinct characters, 
-#               middle will be one of the six; mandatory; arrives unvalidated
-#        parms['rotate'] string; len >=0, [FfRrBbLlUuDd]; optional, defaulting to F if missing; arrives unvalidated
-
-# validate my parms, if invalid, need to return status with error
-# if everything is valid, load parms into cube model
-# then rotate the cube model in the desired direction
-# serialize the cube model in encoded cube into a string
-# return the string result + status of "ok"
-
-
-# but have to write the test code first
 
 

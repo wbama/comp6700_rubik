@@ -186,6 +186,8 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
+
+        
     def test_140_ShouldRotateValidNominalCube_Missing(self):
 
         inputDict = {}
@@ -275,10 +277,21 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_940_IncorrectParmsRotate(self):
+    def test_940_IncorrectParmsRotateString(self):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
         inputDict['rotate'] = 'Dd'
+        inputDict['op'] = 'solve'
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: optional rotate should be single letter [FfRrBbLlUuDd], '' or None'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_941_IncorrectParmsRotateString(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
+        inputDict['rotate'] = ' '
         inputDict['op'] = 'solve'
 
         expectedResult = {}
