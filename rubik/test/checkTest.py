@@ -74,7 +74,14 @@ class CheckTest(TestCase):
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
-        self.assertEqual(status, 'error: one of the colors is more or less than 9 occurrences')
+        self.assertEqual(status, 'error: two middle faces are the same colors')
+        
+    def test_check_090_ReturnErrorIncorrectAdjacentColor(self):
+        parm = {'op':'check', 'cube': 'wwwbbbyyygggwrwbrbyyyrggwwwbobyoygogrrrgybrrrooobwgooo'}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: two middle faces are the same colors')
 
 #works
 
@@ -85,9 +92,6 @@ class CheckTest(TestCase):
 #  parm = {'op':'check', 'cube' : 'wyrwbbowwyrgyrwbrwyywggbggygoowoobyyrrrbybbobgrrgwgooo'}
 
 
-
-#each middle face is a different color
-#     parm = {'op':'check', 'cube': 'bbbbrbbbbrrrrrrrbrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
 
 #adjacent color
 # parm = {'op':'check', 'cube':'wwwbbbyyygggwrwbrbyyyrggwwwbobyoygogrrrgybrrrooobwgooo'}
