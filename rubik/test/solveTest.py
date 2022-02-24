@@ -291,7 +291,7 @@ class SolveTest(unittest.TestCase):
     def test_941_IncorrectParmsRotateString(self):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
-        inputDict['rotate'] = " "
+        inputDict['rotate'] = "None"
         inputDict['op'] = 'solve'
 
         expectedResult = {}
