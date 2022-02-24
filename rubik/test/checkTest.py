@@ -17,6 +17,8 @@ class CheckTest(TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'ok')
         
+# Sad Patch Tests
+        
     def test_check_090_ReturnErrorOnSmallCube(self):
         parm = {'op':'check', 'cube': '123456789'}
         result = check._check(parm)
@@ -37,6 +39,13 @@ class CheckTest(TestCase):
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: no cube found')
+        
+    def test_check_090_ReturnErrorOnMore54Elements(self):
+        parm = {'op':'check', 'cube': 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyyffffffwwww'}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: no cube found')
 
 #works
 
@@ -46,15 +55,9 @@ class CheckTest(TestCase):
 #  parms = {'op':'check', 'cube': 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
 #  parm = {'op':'check', 'cube' : 'wyrwbbowwyrgyrwbrwyywggbggygoowoobyyrrrbybbobgrrgwgooo'}
 
-#errors
 
-#    parm = {'op':'check'}
 
-# is present 
-#       parm = {'op':'check'}
 
-#is a string  
-#       parm = {'op':'check', 'cube': 42}
 
 # has 55 elements
 #       parm = {'op':'check', 'cube': 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyyffffffwwww'}
