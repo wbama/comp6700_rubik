@@ -17,6 +17,13 @@ class CheckTest(TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'ok')
         
+    def test_check_030_ShouldReturnOkOnSolvedCube(self):
+        parm = {'op':'check', 'cube': '11w11w11wrrrrrrrrryggyggyggaaaaaaaaayy1yy1yy1wwgwwgwwg'}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'ok')
+        
 # Sad Patch Tests
         
     def test_check_090_ReturnErrorOnSmallCube(self):
