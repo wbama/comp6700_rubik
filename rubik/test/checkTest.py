@@ -36,7 +36,7 @@ class CheckTest(TestCase):
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
-        self.assertEqual(status, 'error: cube not a string')
+        self.assertEqual(status, 'error: no cube found')
 
 #works
 
