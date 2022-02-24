@@ -44,9 +44,9 @@ def _check(parms):
                 exec(f"lst_in{i}.append(lst_cube.pop(0))")   
         
         #if front cube is solved, back cube should also be solved
-        lst_cb_out = []
-        for i in range(1,7):
-            exec(f'lst_cb_out.append(lst_in{i})')
+        # lst_cb_out = []
+        # for i in range(1,7):
+        #     exec(f'lst_cb_out.append(lst_in{i})')
             
         #this function looks at the colors around the edge and compares to the back colors to add to counter
         def verify_adj_col():
