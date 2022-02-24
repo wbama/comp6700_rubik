@@ -186,7 +186,7 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_131_ShouldRotateValidNominalCube_NoneStr(self):
+    def test_131_ShouldRotateValidCube_RotateNone(self):
 
         inputDict = {}
         inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
@@ -199,11 +199,10 @@ class SolveTest(unittest.TestCase):
         
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-        
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))        
 
         
-    def test_140_ShouldRotateValidNominalCube_Missing(self):
+    def test_140_ShouldRotateValidCube_RotateMissing(self):
 
         inputDict = {}
         inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
@@ -217,7 +216,7 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_141_ShouldRotateValidNominalCube_Missing(self):
+    def test_141_ShouldRotateValidCube_RotateMissing(self):
 
         inputDict = {}
         inputDict['cube'] = 'bywrbyroroyygwgbwwrbbogrrryybwwygoobowgyroorgwwyboggbg'
@@ -231,29 +230,9 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_150_OnlyLettersAndNumbersInCubeString(self):
 
-        inputDict = {}
-        inputDict['cube'] = 'rrbbbbgggr????oro?ogr?ggobbwwwwwwwwwgrboorbb?o??rrgoog'
-        inputDict['op'] = 'solve'           
-
-        expectedResult = {}
-        expectedResult['status'] = 'error: only letters and numbers in the cube string'
         
-        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-        
-    def test_160_OnlyLettersAndNumbersInCubeString(self):
 
-        inputDict = {}
-        inputDict['cube'] = 'rybbbr..ryrybyoyyyb.ry..obbwwwwwwwww.rrooyb.ooo.rrboo.'
-        inputDict['op'] = 'solve'           
-
-        expectedResult = {}
-        expectedResult['status'] = 'error: only letters and numbers in the cube string'
-        
-        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
 # Sad path tests
         
@@ -363,6 +342,30 @@ class SolveTest(unittest.TestCase):
         expectedResult = {}
         expectedResult['status'] = 'error: two middle faces are the same colors'
         actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_991_OnlyLettersAndNumbersInCubeString(self):
+
+        inputDict = {}
+        inputDict['cube'] = 'rrbbbbgggr????oro?ogr?ggobbwwwwwwwwwgrboorbb?o??rrgoog'
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: only letters and numbers in the cube string'
+        
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    def test_992_OnlyLettersAndNumbersInCubeString(self):
+
+        inputDict = {}
+        inputDict['cube'] = 'rybbbr..ryrybyoyyyb.ry..obbwwwwwwwww.rrooyb.ooo.rrboo.'
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: only letters and numbers in the cube string'
+        
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 
   
