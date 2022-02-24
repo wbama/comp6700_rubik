@@ -24,12 +24,19 @@ class CheckTest(TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube string has to have 54 elements')
         
-    def test_check_090_ReturnErrorOnNumberCube(self):
+    def test_check_090_ReturnErrorOnNotStringCube(self):
         parm = {'op':'check', 'cube': 42}
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
-        self.assertEqual(status, 'error: cube string has to have 54 elements')
+        self.assertEqual(status, 'error: cube not a string')
+        
+    def test_check_090_ReturnErrorOnMissingCube(self):
+        parm = {'op':'check'}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube not a string')
 
 #works
 
@@ -41,7 +48,6 @@ class CheckTest(TestCase):
 
 #errors
 
-#    parm = {'op':'check', 'cube': 42}
 #    parm = {'op':'check'}
 
 # is present 
