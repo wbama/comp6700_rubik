@@ -203,11 +203,11 @@ class SolveTest(unittest.TestCase):
     def test_solve_141_ShouldRotateValidNominalCube_Missing(self):
 
         inputDict = {}
-        inputDict['cube'] = 'oyoobyryyyggryobbgygwygworrrwbowbgwyborgorwbgbgobrrwww'
+        inputDict['cube'] = 'bywrbyroroyygwgbwwrbbogrrryybwwygoobowgyroorgwwyboggbg'
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
-        expectedResult['cube'] = 'rooybyyyowggbyogbgygwygworrrwbowggwoborgorybbbrybrrwww'
+        expectedResult['cube'] = 'bywrbyroroyygwgbwwrbbogrrryybwwygoobowgyroorgwwyboggbg'
         expectedResult['status'] = 'ok'
         
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
