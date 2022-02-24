@@ -22,7 +22,7 @@ class CheckTest(TestCase):
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
-        self.assertEqual(status, 'ok')
+        self.assertEqual(status, 'error: cube string has to have 54 elements')
 
 #works
 
