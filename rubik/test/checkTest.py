@@ -61,6 +61,13 @@ class CheckTest(TestCase):
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: there should be 6 colors')
+        
+    def test_check_090_ReturnErrorOn9OccurencesOf6Colors(self):
+        parm = {'op':'check', 'cube': 'bbbbbbbbbbrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: there should be 6 colors')
 
 #works
 
@@ -73,10 +80,7 @@ class CheckTest(TestCase):
 
 
 
-# has 6 colors
-#       parm = {'op':'check', 'cube': 'bbbbbbbbbbbbbbbbbbgggggggggoooooooooyyyyyyyyywwwwwwwww'}
 
-#       parm = {'op':'check', 'cube': 'bbbbbzzzzrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
 
 # has 9 occurrences of the 6 colors
 #       parm = {'op':'check', 'cube': 'bbbbbbbbbbrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
