@@ -299,6 +299,7 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
+        
     def test_950_CubeMoreThan54Elements(self):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboogo'
