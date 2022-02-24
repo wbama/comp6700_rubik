@@ -200,6 +200,20 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
+    def test_solve_141_ShouldRotateValidNominalCube_Missing(self):
+
+        inputDict = {}
+        inputDict['cube'] = 'oyoobyryyyggryobbgygwygworrrwbowbgwyborgorwbgbgobrrwww'
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['cube'] = 'rooybyyyowggbyogbgygwygworrrwbowggwoborgorybbbrybrrwww'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
     def test_solve_150_OnlyLettersAndNumbersInCubeString(self):
 
         inputDict = {}
