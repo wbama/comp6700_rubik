@@ -81,7 +81,8 @@ def _solve(parms):
                     
                     rotate_cube_to_right(c_rotate_cube)
                     rotate_cube_to_right(c_rotate_cube)
-                    rotate_cube_to_right(c_rotate_cube)  
+                    rotate_cube_to_right(c_rotate_cube) 
+                    lst_cube =  c_rotate_cube
                           
                     
                 elif rotation == 'B':
