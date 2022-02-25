@@ -27,7 +27,14 @@ def solveCheck(parms):
         unique_center = []
         for char in lst_cube_center:
             if char not in unique_center:
-                unique_center.append(char)       
+                unique_center.append(char)     
+                
+        if ('rotate' in parms) and (parms.get('rotate')) == None:
+            rotate_length = 0
+        elif ('rotate' in parms) and (parms.get('rotate')) != None:
+            rotate_length = len(parms.get('rotate'))
+        elif 'rotate' not in parms:
+            rotate_length = 0           
               
 
           
@@ -61,10 +68,10 @@ def solveCheck(parms):
         
     #only certain rotations are accepted or blank 
    
-    elif 'rotate' in parms and len(parms.get('rotate')) == 0:
+    elif 'rotate' in parms and rotate_length == 0:
             result['status'] = 'ok'
         
-    elif 'rotate' in parms and len(parms.get('rotate')) > 0:
+    elif 'rotate' in parms and rotate_length > 0:
         for rotation in (parms.get('rotate')):
             if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
                 result['status'] = 'ok' 
