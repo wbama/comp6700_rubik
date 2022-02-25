@@ -16,7 +16,7 @@ class SolveTest(unittest.TestCase):
         expectedResult['status'] = 'ok'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))       
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))        
        
        
         
@@ -187,20 +187,20 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))    
         
-    # def test_131_ShouldRotateValidCube_RotateNone(self):
-    #
-    #     inputDict = {}
-    #     inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
-    #     inputDict['rotate'] = None
-    #     inputDict['op'] = 'solve'           
-    #
-    #     expectedResult = {}
-    #     expectedResult['cube'] = 'gggggggggwrrwrrwrrbbbbbbbbbooyooyooywwwwwwooorrryyyyyy'
-    #     expectedResult['status'] = 'ok'
-    #
-    #     actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-    #     self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))   
+    def test_131_ShouldRotateValidCube_RotateNone(self):
+    
+        inputDict = {}
+        inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
+        inputDict['rotate'] = None
+        inputDict['op'] = 'solve'           
+    
+        expectedResult = {}
+        expectedResult['cube'] = 'gggggggggwrrwrrwrrbbbbbbbbbooyooyooywwwwwwooorrryyyyyy'
+        expectedResult['status'] = 'ok'
+    
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))   
 
         
     def test_140_ShouldRotateValidCube_RotateMissing(self):
