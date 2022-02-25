@@ -1,9 +1,3 @@
-lst1 = ["a", "b", "", "c"]
+dict1 = {"a": None, "b": 1}
 
-for vals in lst1:
-    print(vals)
-    
-var2 = ""
-print(len(var2))
-
-print(var2 in lst1)
+print(dict1)
