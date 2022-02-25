@@ -192,11 +192,11 @@ class SolveTest(unittest.TestCase):
     def test_140_ShouldRotateValidCube_RotateMissing(self):
 
         inputDict = {}
-        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+        inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
-        expectedResult['cube'] = 'gbrgbrgbbbyybyoyoyogryggobbwwowwywwygrboorwwwryrrrgoog'
+        expectedResult['cube'] = 'gggggggggwrrwrrwrrbbbbbbbbbooyooyooywwwwwwooorrryyyyyy'
         expectedResult['status'] = 'ok'
         
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
@@ -257,8 +257,8 @@ class SolveTest(unittest.TestCase):
         
     def test_940_IncorrectParmsRotateString(self):
         inputDict = {}
-        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
-        inputDict['rotate'] = 'De'
+        inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
+        inputDict['rotate'] = 'w'
         inputDict['op'] = 'solve'
 
         expectedResult = {}
