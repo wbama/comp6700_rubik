@@ -35,12 +35,12 @@ def _solve(parms):
                 result['cube'] = str_cube
                 result['status'] = 'ok' 
                 
-        # if 'rotate' in parms and (parms.get('rotate')) == None:
-        #     rotate_length = 0
-        # else:
-        #     rotate_length = len(parms.get('rotate'))
-        #
-        # print(rotate_length)
+        if ('rotate' in parms) and (parms.get('rotate')) == None:
+            rotate_length = 0
+        else:
+            rotate_length = len(parms.get('rotate'))
+            
+        print(rotate_length)
             
   
             
