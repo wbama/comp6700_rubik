@@ -22,8 +22,6 @@ def _solve(parms):
        
         if 'rotate' in parms and len(parms.get("rotate")) == 0:
                 c_rotate_cube = (turn_clock(lst_cube)) 
-                result['rotate'] = parms.get("rotate")
-                result['op'] = 'solve'
                 result['status'] = 'ok'  
         
         if 'rotate' not in parms:
@@ -160,9 +158,6 @@ def _solve(parms):
         
         result = {}
         result['cube'] = str_cube
-        if 'rotate' in parms:
-            result['rotate'] = parms.get("rotate")
-        result['op'] = 'solve'
         result['status'] = 'ok'   
 
        
@@ -172,9 +167,6 @@ def _solve(parms):
     else:
         if (ci.solveCheck(parms)['status']) == 'ok':
             result['cube'] = str_cube
-            if 'rotate' in parms:
-                result['rotate'] = (parms.get("rotate"))
-            result['op'] = 'solve'
         else:
             result = (ci.solveCheck(parms))             
         
