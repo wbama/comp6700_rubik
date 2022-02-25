@@ -62,10 +62,11 @@ def solveCheck(parms):
     elif 'rotate' in parms:
         for rotation in (parms.get('rotate')):
             print(rotation)
-            if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d'] or rotation == "":                
-                result['status'] = 'ok'                
+            if rotation not in ['F','f','R','r','B','b','L','l','U','u','D','d', ""]: 
+                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd] or ""')                                    
             else:
-                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd] or ""')
+                result['status'] = 'ok' 
+                
                   
             
     elif (parms.get('cube',None)).isalnum() == False:
