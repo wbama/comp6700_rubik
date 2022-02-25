@@ -35,7 +35,8 @@ def _solve(parms):
                 result['cube'] = str_cube
                 result['status'] = 'ok' 
                 
-        if 'rotate' in parms and len(parms.get('rotate')) == 0:
+  
+        if ('rotate' in parms and parms.get('rotate') == None):
                 c_rotate_cube = (turn_clock(lst_cube)) 
                 str1 = "".join(c_rotate_cube[0])
                 str2 = "".join(c_rotate_cube[1])
@@ -48,10 +49,24 @@ def _solve(parms):
                 result = {}
                 result['cube'] = str_cube
                 result['status'] = 'ok'   
+                
+        if ('rotate' in parms and parms.get('rotate') != None):
+            if  len(parms.get('rotate')) == 0):
+                    c_rotate_cube = (turn_clock(lst_cube)) 
+                    str1 = "".join(c_rotate_cube[0])
+                    str2 = "".join(c_rotate_cube[1])
+                    str3 = "".join(c_rotate_cube[2])
+                    str4 = "".join(c_rotate_cube[3])
+                    str5 = "".join(c_rotate_cube[4])
+                    str6 = "".join(c_rotate_cube[5])                       
+             
+                    str_cube = str1+str2+str3+str4+str5+str6                    
+                    result = {}
+                    result['cube'] = str_cube
+                    result['status'] = 'ok'   
         
-        if 'rotate' in parms and len(parms.get('rotate')) > 0:
+        if 'rotate' in parms and parms.get('rotate') != None and len(parms.get('rotate')) > 0:
             for rotation in (parms.get('rotate')):   
-                print(rotation)         
             
                 if rotation == 'F':
                         lst_cube = (turn_clock(lst_cube))                                   
@@ -151,7 +166,8 @@ def _solve(parms):
                     c_rotate_cube = (turn_cclock(flip_cube_one)) 
                     flip_cube_two = flip_cube_top_side(c_rotate_cube)
                     flip_cube_three= flip_cube_top_side(flip_cube_two)
-                    c_rotate_cube= flip_cube_top_side(flip_cube_three)        
+                    c_rotate_cube= flip_cube_top_side(flip_cube_three) 
+                    lst_cube =  c_rotate_cube       
             
                 elif rotation== 'D':
                      
@@ -161,6 +177,7 @@ def _solve(parms):
                     c_rotate_cube = (turn_clock(flip_cube_three))
                     flip_cube_four = flip_cube_top_side(c_rotate_cube)
                     c_rotate_cube= flip_cube_four
+                    lst_cube =  c_rotate_cube
                     
                 elif rotation == 'd':
                     flip_cube_one = flip_cube_top_side(lst_cube)        
@@ -169,6 +186,7 @@ def _solve(parms):
                     c_rotate_cube = (turn_cclock(flip_cube_three)) 
                     flip_cube_four = flip_cube_top_side(c_rotate_cube)
                     c_rotate_cube= flip_cube_four
+                    lst_cube =  c_rotate_cube
             
                 # else:
                 #     c_rotate_cube = (turn_clock(lst_cube))         
