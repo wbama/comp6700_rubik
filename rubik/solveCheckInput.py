@@ -59,9 +59,8 @@ def solveCheck(parms):
     elif len(unique_center) != 6:
         result['status'] = ('error: two middle faces are the same colors')  
         
-    #only certain rotations are accepted or blank
-           
-            
+    #only certain rotations are accepted or blank 
+   
     elif 'rotate' in parms and len(parms.get('rotate')) == 0:
             result['status'] = 'ok'
         
