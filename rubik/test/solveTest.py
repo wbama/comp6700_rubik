@@ -275,7 +275,7 @@ class SolveTest(unittest.TestCase):
         inputDict['op'] = 'solve'
 
         expectedResult = {}
-        expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd], "" or None'
+        expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd] or ""'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
@@ -286,7 +286,7 @@ class SolveTest(unittest.TestCase):
         inputDict['op'] = 'solve'
 
         expectedResult = {}
-        expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd], "" or None'
+        expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd] or ""'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
