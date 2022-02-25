@@ -36,7 +36,7 @@ class SolveTest(unittest.TestCase):
 
         inputDict = {}
         inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
-        inputDict['rotate'] = 'Ff'
+        inputDict['rotate'] = 'FfB'
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
