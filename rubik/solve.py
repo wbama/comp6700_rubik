@@ -22,9 +22,16 @@ def _solve(parms):
        
         if 'rotate' in parms and len(parms.get("rotate")) == 0:
                 c_rotate_cube = (turn_clock(lst_cube)) 
+                result['rotate'] = parms.get("rotate")
+                result['op'] = 'solve'
+                result['status'] = 'ok'  
         
         if 'rotate' not in parms:
                 c_rotate_cube = (turn_clock(lst_cube)) 
+                c_rotate_cube = (turn_clock(lst_cube)) 
+                result['rotate'] = parms.get("rotate")
+                result['op'] = 'solve'
+                result['status'] = 'ok' 
         
         for rotation in (parms.get('rotate')):   
             print(rotation)         
