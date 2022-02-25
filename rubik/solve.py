@@ -37,7 +37,7 @@ def _solve(parms):
                 
         if ('rotate' in parms) and (parms.get('rotate')) == None:
             rotate_length = 0
-        else:
+        elif ('rotate' in parms) and (parms.get('rotate')) != None:
             rotate_length = len(parms.get('rotate'))
             
         print(rotate_length)
