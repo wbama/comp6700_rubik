@@ -59,15 +59,20 @@ def solveCheck(parms):
     elif len(unique_center) != 6:
         result['status'] = ('error: two middle faces are the same colors')  
         
+    #only certain rotations are accepted or blank
+           
+            
     elif 'rotate' in parms:
-        for rotation in (parms.get('rotate')):
-            print(rotation)
-            if rotation == "":
-                result['status'] = 'ok'  
-            elif rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
-                result['status'] = 'ok'                   
-            else:                
-                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd] or ""')                   
+        if len(parms.get('rotate')) > 0:
+            for rotation in (parms.get('rotate')):
+                print(rotation)
+                if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
+                    result['status'] = 'ok'   
+        elif len(parms.get('rotate')) == 0:
+            result['status'] = 'ok'                         
+        else:                
+            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd] or ""')         
+              
                   
             
     elif (parms.get('cube',None)).isalnum() == False:
