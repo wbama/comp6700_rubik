@@ -62,7 +62,7 @@ def solveCheck(parms):
     elif 'rotate' in parms:
         for rotation in (parms.get('rotate')):
             print(rotation)
-            if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d'] or rotation == '':                
+            if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']:                
                 result['status'] = 'ok'                
             else:
                 result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], "" or None')
