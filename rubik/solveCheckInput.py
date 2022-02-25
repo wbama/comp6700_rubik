@@ -66,7 +66,6 @@ def solveCheck(parms):
         
     elif 'rotate' in parms and len(parms.get('rotate')) > 0:
         for rotation in (parms.get('rotate')):
-            print(rotation)
             if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
                 result['status'] = 'ok' 
                       
