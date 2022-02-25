@@ -49,7 +49,7 @@ class SolveTest(unittest.TestCase):
     def test_020_ShouldRotateValidNominalCube_Ff(self):
         inputDict = {}
         inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
-        inputDict['rotate'] = 'f'
+        inputDict['rotate'] = 'Ff'
         inputDict['op'] = 'solve'
           
         expectedResult = {}
