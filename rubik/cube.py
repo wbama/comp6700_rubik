@@ -7,7 +7,7 @@ class Cube:
         self.op_str = op_str
         
 
-        
+   
 
     
         
