@@ -51,7 +51,7 @@ def _solve(parms):
                 result['status'] = 'ok'   
                 
         if ('rotate' in parms and parms.get('rotate') != None):
-            if  len(parms.get('rotate')) == 0):
+            if  len(parms.get('rotate')) == 0:
                     c_rotate_cube = (turn_clock(lst_cube)) 
                     str1 = "".join(c_rotate_cube[0])
                     str2 = "".join(c_rotate_cube[1])
