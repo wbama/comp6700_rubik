@@ -54,10 +54,12 @@ def _solve(parms):
                 print(rotation)         
             
                 if rotation == 'F':
-                        c_rotate_cube = (turn_clock(lst_cube))               
-                    
+                        lst_cube = (turn_clock(lst_cube))                                   
+                        print(lst_cube)
+                        
                 elif rotation == 'f':
-                    c_rotate_cube = (turn_cclock(lst_cube))          
+                    lst_cube = (turn_cclock(lst_cube)) 
+                    print(lst_cube)         
                          
                 elif rotation == 'R':
                    

@@ -3,7 +3,7 @@ from rubik.solveCheckInput import solveCheck
 
 
 inputDict = {}
-inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+inputDict['cube'] = 'yyobbbbbbyrrrrrrrrggrggggggyyboooooobyybyyoogwwwwwwwww'
 inputDict['rotate'] = 'Ff'
 inputDict['op'] = 'solve' 
 
