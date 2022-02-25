@@ -49,7 +49,7 @@ def _solve(parms):
                 result['cube'] = str_cube
                 result['status'] = 'ok'   
         
-        if 'rotate' in parms and len(parms.get('rotate')) > 0:
+        if 'rotate' in parms and parms.get('rotate') != None and len(parms.get('rotate')) > 0:
             for rotation in (parms.get('rotate')):   
             
                 if rotation == 'F':
