@@ -402,7 +402,5 @@ class SolveTest(unittest.TestCase):
 #            test 930: have to test parms['cube'] and parms['rotate'] as they arrive unvalidated
 
 
-    def testName(self):
-        pass
 
 
