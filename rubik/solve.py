@@ -37,6 +37,10 @@ def _solve(parms):
                 # result['status'] = 'ok' 
                 stringjoins(c_rotate_cube)
                 
+                result = {}
+                result['cube'] = str_cube
+                result['status'] = 'ok' 
+                
         if 'rotate' in parms and (parms.get('rotate')) == None:
                 c_rotate_cube = (turn_clock(lst_cube)) 
                 str1 = "".join(c_rotate_cube[0])

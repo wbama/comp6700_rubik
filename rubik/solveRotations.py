@@ -8,9 +8,7 @@ def stringjoins(c_rotate_cube):
     str6 = "".join(c_rotate_cube[5])                       
          
     str_cube = str1+str2+str3+str4+str5+str6                    
-    result = {}
-    result['cube'] = str_cube
-    result['status'] = 'ok' 
+
 
 def turn_type1(orig_side):
     turned_side = []
