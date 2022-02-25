@@ -73,16 +73,16 @@ def _solve(parms):
                     rotate_cube_to_right(lst_cube)          
                           
                 elif rotation == 'r':
-                    c_rotate_cube = (turn_cclock(lst_cube))        
+                    lst_cube = (turn_cclock(lst_cube))        
                   
                     rotate_cube_to_right(lst_cube)
                     
                     #rotate Right side clockwise
-                    c_rotate_cube = (turn_cclock(lst_cube)) 
+                    lst_cube = (turn_cclock(lst_cube)) 
                     
-                    rotate_cube_to_right(c_rotate_cube)
-                    rotate_cube_to_right(c_rotate_cube)
-                    rotate_cube_to_right(c_rotate_cube)  
+                    rotate_cube_to_right(lst_cube)
+                    rotate_cube_to_right(lst_cube)
+                    rotate_cube_to_right(lst_cube)  
                           
                     
                 elif rotation == 'B':
