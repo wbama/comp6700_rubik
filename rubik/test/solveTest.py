@@ -37,12 +37,12 @@ class SolveTest(unittest.TestCase):
         
     def test_030_ShouldRotateValidNominalCube_R(self):
         inputDict = {}
-        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+        inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         inputDict['rotate'] = 'R'
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
-        expectedResult['cube'] = 'rrybbggggryroyyyoyygrrggbbbwwwwwwwwwgrboobbbgoyorryooo'
+        expectedResult['cube'] = 'ggyggyggyrrrrrrrrrwbbwbbwbbooooooooowwgwwgwwgyybyybyyb'
         expectedResult['status'] = 'ok'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
