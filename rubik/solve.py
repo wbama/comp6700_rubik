@@ -51,7 +51,6 @@ def _solve(parms):
         
         if 'rotate' in parms and len(parms.get('rotate')) > 0:
             for rotation in (parms.get('rotate')):   
-                print(rotation)         
             
                 if rotation == 'F':
                         lst_cube = (turn_clock(lst_cube))                                   
