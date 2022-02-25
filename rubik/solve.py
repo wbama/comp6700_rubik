@@ -20,11 +20,7 @@ def _solve(parms):
         for i in range(1,7):
             exec(f'lst_cube.append(lst_in{i})')            
        
-        # if 'rotate' in parms and len(parms.get("rotate")) == 0:
-        #         c_rotate_cube = (turn_clock(lst_cube)) 
-        #         result['cube'] = c_rotate_cube
-        #         result['status'] = 'ok'  
-        
+       
         if 'rotate' not in parms:
                 c_rotate_cube = (turn_clock(lst_cube)) 
                 str1 = "".join(c_rotate_cube[0])
@@ -53,7 +49,7 @@ def _solve(parms):
                 result['cube'] = str_cube
                 result['status'] = 'ok'   
         
-        if 'rotate' in parms:
+        if 'rotate' in parms and len(parms.get('rotate')) > 0:
             for rotation in (parms.get('rotate')):   
                 print(rotation)         
             
