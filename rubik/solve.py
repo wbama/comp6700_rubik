@@ -167,8 +167,8 @@ def _solve(parms):
                     flip_cube_four = flip_cube_top_side(c_rotate_cube)
                     c_rotate_cube= flip_cube_four
             
-                else:
-                    c_rotate_cube = (turn_clock(lst_cube))         
+                # else:
+                #     c_rotate_cube = (turn_clock(lst_cube))         
            
             str1 = "".join(c_rotate_cube[0])
             str2 = "".join(c_rotate_cube[1])
