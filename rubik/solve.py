@@ -20,7 +20,7 @@ def _solve(parms):
         for i in range(1,7):
             exec(f'lst_cube.append(lst_in{i})')            
        
-        if  len(parms.get("rotate")) == 0:
+        if 'rotate' in parms and len(parms.get("rotate")) == 0:
                 c_rotate_cube = (turn_clock(lst_cube)) 
         
         elif parms.get("rotate") == 'F':
