@@ -20,17 +20,17 @@ def _solve(parms):
         for i in range(1,7):
             exec(f'lst_cube.append(lst_in{i})')            
        
-        if 'rotate' in parms and len(parms.get("rotate")) == 0:
-                c_rotate_cube = (turn_clock(lst_cube)) 
-                result['cube'] = c_rotate_cube
-                result['status'] = 'ok'  
+        # if 'rotate' in parms and len(parms.get("rotate")) == 0:
+        #         c_rotate_cube = (turn_clock(lst_cube)) 
+        #         result['cube'] = c_rotate_cube
+        #         result['status'] = 'ok'  
         
         if 'rotate' not in parms:
                 c_rotate_cube = (turn_clock(lst_cube)) 
                 result['cube'] = c_rotate_cube
                 result['status'] = 'ok' 
         
-        if 'rotate' in parms and len(parms.get("rotate")) > 0:
+        if 'rotate' in parms and len(parms.get("rotate")) >= 0:
             for rotation in (parms.get('rotate')):   
                 print(rotation)         
             
@@ -144,21 +144,21 @@ def _solve(parms):
                     flip_cube_four = flip_cube_top_side(c_rotate_cube)
                     c_rotate_cube= flip_cube_four
             
-            # else:
-            #     c_rotate_cube = (turn_clock(lst_cube))         
+                else:
+                    c_rotate_cube = (turn_clock(lst_cube))         
            
-            str1 = "".join(c_rotate_cube[0])
-            str2 = "".join(c_rotate_cube[1])
-            str3 = "".join(c_rotate_cube[2])
-            str4 = "".join(c_rotate_cube[3])
-            str5 = "".join(c_rotate_cube[4])
-            str6 = "".join(c_rotate_cube[5])                       
+                str1 = "".join(c_rotate_cube[0])
+                str2 = "".join(c_rotate_cube[1])
+                str3 = "".join(c_rotate_cube[2])
+                str4 = "".join(c_rotate_cube[3])
+                str5 = "".join(c_rotate_cube[4])
+                str6 = "".join(c_rotate_cube[5])                       
          
-        str_cube = str1+str2+str3+str4+str5+str6
-            
-        result = {}
-        result['cube'] = str_cube
-        result['status'] = 'ok'   
+                str_cube = str1+str2+str3+str4+str5+str6
+                    
+                result = {}
+                result['cube'] = str_cube
+                result['status'] = 'ok'   
 
        
     except:
