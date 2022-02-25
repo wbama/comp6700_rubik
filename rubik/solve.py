@@ -23,7 +23,8 @@ def _solve(parms):
        
        
         if 'rotate' not in parms:
-            stringjoins(lst_cube)
+            c_rotate_cube = (turn_clock(lst_cube))
+            stringjoins(c_rotate_cube)
                 
         if 'rotate' in parms and (parms.get('rotate')) == None:
                 c_rotate_cube = (turn_clock(lst_cube)) 
