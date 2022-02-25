@@ -62,18 +62,17 @@ def solveCheck(parms):
     #only certain rotations are accepted or blank
            
             
-    elif 'rotate' in parms:
-        if len(parms.get('rotate')) == 0:
+    elif 'rotate' in parms and len(parms.get('rotate')) == 0:
             result['status'] = 'ok'
-                    
-        elif len(parms.get('rotate')) > 0:
-            for rotation in (parms.get('rotate')):
-                print(rotation)
-                if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
-                    result['status'] = 'ok' 
+        
+    elif 'rotate' in parms and len(parms.get('rotate')) > 0:
+        for rotation in (parms.get('rotate')):
+            print(rotation)
+            if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
+                result['status'] = 'ok' 
                       
-        else:                
-            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd] or ""')         
+            else:                
+                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd] or ""')         
               
                   
             
