@@ -177,7 +177,7 @@ class SolveTest(unittest.TestCase):
 
         inputDict = {}
         inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
-        inputDict['rotate'] = ""
+        inputDict['rotate'] = 
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
@@ -255,7 +255,7 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
         
-    def test_940_IncorrectParmsRotateString(self):
+    def test_940_InvalidRotation(self):
         inputDict = {}
         inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         inputDict['rotate'] = 'w'
