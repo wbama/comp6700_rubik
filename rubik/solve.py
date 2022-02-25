@@ -26,7 +26,8 @@ def _solve(parms):
         if 'rotate' not in parms:
                 c_rotate_cube = (turn_clock(lst_cube)) 
         
-        for rotation in (parms.get('rotate')):            
+        for rotation in (parms.get('rotate')):   
+            print(rotation)         
         
             if rotation == 'F':
                     c_rotate_cube = (turn_clock(lst_cube))               
