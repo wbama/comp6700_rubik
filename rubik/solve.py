@@ -33,8 +33,7 @@ def _solve(parms):
                 str_cube = str1+str2+str3+str4+str5+str6                    
                 result = {}
                 result['cube'] = str_cube
-                result['status'] = 'ok' 
-                
+                result['status'] = 'ok'                 
   
             
         if ('rotate' in parms and len(parms.get('rotate')) == 0):
