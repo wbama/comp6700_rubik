@@ -46,7 +46,7 @@ def _solve(parms):
         print(rotate_length)           
   
             
-        if ('rotate' in parms and len(parms.get('rotate')) == 0):
+        if ('rotate' in parms and rotate_length == 0):
             
             c_rotate_cube = (turn_clock(lst_cube)) 
             str1 = "".join(c_rotate_cube[0])
@@ -61,7 +61,7 @@ def _solve(parms):
             result['cube'] = str_cube
             result['status'] = 'ok'   
         
-        if 'rotate' in parms and len(parms.get('rotate')) > 0:
+        if 'rotate' in parms and rotate_length > 0:
             for rotation in (parms.get('rotate')):   
             
                 if rotation == 'F':
