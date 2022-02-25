@@ -18,12 +18,7 @@ def _solve(parms):
                 exec(f"lst_in{i}.append(lst_cube.pop(0))")  
             
         for i in range(1,7):
-            exec(f'lst_cube.append(lst_in{i})')    
-            
-        if ('rotate' in parms and parms.get('rotate') == None):
-             rotate_length = 0  
-        else:
-            rotate_length = len(parms.get('rotate'))
+            exec(f'lst_cube.append(lst_in{i})')            
        
        
         if 'rotate' not in parms:
@@ -55,7 +50,7 @@ def _solve(parms):
                 result['cube'] = str_cube
                 result['status'] = 'ok'   
                 
-        if ('rotate' in parms and rotate_length == 0):
+        if ('rotate' in parms and len(parms.get('rotate')) == 0):
             
             c_rotate_cube = (turn_clock(lst_cube)) 
             str1 = "".join(c_rotate_cube[0])
@@ -70,7 +65,7 @@ def _solve(parms):
             result['cube'] = str_cube
             result['status'] = 'ok'   
         
-        if 'rotate' in parms and rotate_length > 0:
+        if 'rotate' in parms and parms.get('rotate') != None and len(parms.get('rotate')) > 0:
             for rotation in (parms.get('rotate')):   
             
                 if rotation == 'F':
