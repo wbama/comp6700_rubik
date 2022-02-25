@@ -60,7 +60,7 @@ def solveCheck(parms):
         result['status'] = ('error: two middle faces are the same colors')  
         
     elif 'rotate' in parms:
-        for rotation in (parms.get('rotate', None)):
+        for rotation in (parms.get('rotate')):
             print(rotation)
             if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d', '']:                
                 result['status'] = 'ok'                
