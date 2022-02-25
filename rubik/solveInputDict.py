@@ -3,8 +3,8 @@ from rubik.solveCheckInput import solveCheck
 
 
 inputDict = {}
-inputDict['cube'] = 'rbbgbobbgrgwyrywyobggrggywgoryyowowwyoobyrgwyrorrwbwob'
-inputDict['rotate'] = None
+inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+inputDict['rotate'] = " "
 inputDict['op'] = 'solve' 
 
 print(_solve(inputDict))
