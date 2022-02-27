@@ -1,3 +1,9 @@
+def result_ok(str_cube):
+    result = {}
+    result['cube'] = str_cube
+    result['status'] = 'ok'
+    return result
+
 
 def stringjoins(lst_cube):
     c_rotate_cube = (turn_clock(lst_cube)) 
