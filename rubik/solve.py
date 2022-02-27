@@ -32,10 +32,9 @@ def _solve(parms):
                 # str6 = "".join(c_rotate_cube[5])                       
                 #
                 # str_cube = str1+str2+str3+str4+str5+str6  
-                stringjoins(lst_cube)
                                   
                 result = {}
-                result['cube'] = str_cube
+                result['cube'] = stringjoins(lst_cube)
                 result['status'] = 'ok' 
                 
         if 'rotate' in parms and (parms.get('rotate')) == None:
