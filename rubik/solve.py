@@ -8,6 +8,7 @@ import rubik.solveCheckInput as ci
 
 def _solve(parms):
     result = {}    
+    str_cube = ''
       
     try:         
 
@@ -34,7 +35,6 @@ def _solve(parms):
                 # str_cube = str1+str2+str3+str4+str5+str6  
                                   
                 result = {}
-                str_cube = ''
                 result['cube'] = stringjoins(lst_cube)
                 result['status'] = 'ok' 
                 
