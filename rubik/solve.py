@@ -2,7 +2,6 @@ from rubik.solveRotations import rotate_cube_to_right
 from rubik.solveRotations import flip_cube_top_side
 from rubik.solveRotations import turn_clock
 from rubik.solveRotations import turn_cclock
-from rubik.solveRotations import result_ok
 import rubik.solveCheckInput as ci
 
 
@@ -33,10 +32,9 @@ def _solve(parms):
                 str6 = "".join(c_rotate_cube[5])                       
                 
                 str_cube = str1+str2+str3+str4+str5+str6  
-                result_ok(str_cube)      
-                # result = {}
-                # result['cube'] = str_cube
-                # result['status'] = 'ok' 
+                result = {}
+                result['cube'] = str_cube
+                result['status'] = 'ok' 
                 
         if 'rotate' in parms and (parms.get('rotate')) == None:
                 c_rotate_cube = (turn_clock(lst_cube)) 
