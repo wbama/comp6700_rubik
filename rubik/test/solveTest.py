@@ -318,7 +318,7 @@ class SolveTest(unittest.TestCase):
         inputDict['op'] = 'solve'
 
         expectedResult = {}
-        expectedResult['status'] = 'error: There should be 6 colors'
+        expectedResult['status'] = 'error: there should be 6 colors'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 

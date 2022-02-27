@@ -56,7 +56,7 @@ def solveCheck(parms):
            
     #has 6 colors
     elif len(set(parms.get("cube"))) != 6:    
-        result['status'] = ('error: There should be 6 colors')        
+        result['status'] = ('error: there should be 6 colors')        
      
     #has 9 occurrences of the 6 colors
     elif (max(lst_cnt_blocks)!= 9):
