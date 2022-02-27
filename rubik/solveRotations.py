@@ -2,7 +2,7 @@ def result_ok(str_cube):
     result = {}
     result['cube'] = str_cube
     result['status'] = 'ok'
-    return result
+    return result['cube'],result['status']
 
 
 def stringjoins(lst_cube):
