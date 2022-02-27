@@ -1,5 +1,4 @@
 from rubik.solve import _solve
-from rubik.solveCheckInput import solveCheck
 
 
 inputDict = {}
