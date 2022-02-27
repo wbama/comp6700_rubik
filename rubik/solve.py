@@ -32,8 +32,7 @@ def _solve(parms):
                 str5 = "".join(c_rotate_cube[4])
                 str6 = "".join(c_rotate_cube[5])                       
                 
-                str_cube = str1+str2+str3+str4+str5+str6  
-                print(str_cube)                 
+                str_cube = str1+str2+str3+str4+str5+str6        
                 result = {}
                 result['cube'] = stringjoins(lst_cube)
                 result['status'] = 'ok' 
