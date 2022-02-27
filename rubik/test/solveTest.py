@@ -187,8 +187,6 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))    
         
-
-
         
     def test_140_ShouldRotateValidCube_RotateMissing(self):
 
