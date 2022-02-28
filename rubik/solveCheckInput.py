@@ -52,7 +52,7 @@ def solveCheck(parms):
         
     #valid characters   
     elif ((parms.get('cube')).isalnum())== False:
-        result['status'] = ('error: only letters and numbers in the cube string')   
+        result['status'] = ('error: only alphanumeric characters in the cube string')  
 
         
     #has 54 elements

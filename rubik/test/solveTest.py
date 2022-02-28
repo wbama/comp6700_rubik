@@ -350,7 +350,7 @@ class SolveTest(unittest.TestCase):
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
-        expectedResult['status'] = 'error: only letters and numbers in the cube string'
+        expectedResult['status'] = 'error: only alphanumeric characters in the cube string'
         
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
