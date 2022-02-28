@@ -46,13 +46,14 @@ def solveCheck(parms):
     if ('cube' not in parms):
         result['status'] = ('error: no cube found')
         
-    #valid characters   
-    elif ((parms.get('cube')).isalnum())== False:
-        result['status'] = ('error: only letters and numbers in the cube string')
-    
     #is a string  
     elif isinstance(parms.get("cube"), str) == False:
-        result['status'] = 'error: cube not a string'
+        result['status'] = 'error: cube not a string'    
+        
+    #valid characters   
+    elif ((parms.get('cube')).isalnum())== False:
+        result['status'] = ('error: only letters and numbers in the cube string')   
+
         
     #has 54 elements
     elif (len(parms.get("cube")) != 54): 
