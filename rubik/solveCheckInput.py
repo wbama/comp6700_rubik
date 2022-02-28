@@ -43,7 +43,7 @@ def solveCheck(parms):
             
    
     # is present 
-    if(parms.get('cube') == None):
+    if 'cube' not in parms and (parms.get('cube', None) == None):
         result['status'] = ('error: no cube found')
         
     #valid characters   
@@ -82,7 +82,6 @@ def solveCheck(parms):
                       
             else:                
                 result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')               
-                  
             
 
        
