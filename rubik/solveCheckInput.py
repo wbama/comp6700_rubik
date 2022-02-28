@@ -77,14 +77,15 @@ def solveCheck(parms):
                 result['status'] = 'ok' 
                       
             else:                
-                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')        
-              
+                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')               
                   
             
-    elif (parms.get('cube',None)).isalpha() == False:
+    elif (parms.get('cube')).isalpha() != True:
         result['status'] = ('error: only letters and numbers in the cube string')
        
-    else:
-        result['status'] = 'ok'
+    # else:
+    #     result['status'] = 'ok'
+        
+    print((parms.get('cube')).isalpha())
     return result
 
