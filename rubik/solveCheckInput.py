@@ -81,7 +81,7 @@ def solveCheck(parms):
               
                   
             
-    elif (parms.get('cube',None)).isalnum() == False:
+    elif (parms.get('cube',None)).isalpha() == False:
         result['status'] = ('error: only letters and numbers in the cube string')
        
     else:
