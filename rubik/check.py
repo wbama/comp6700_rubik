@@ -346,6 +346,10 @@ def _check(parms):
     elif isinstance(parms.get("cube"), str) != True:
         result['status'] = 'error: cube not a string'
         
+    #valid characters   
+    elif ((parms.get('cube')).isalnum())== False:
+        result['status'] = ('error: only letters and numbers in the cube string')   
+        
     #has 54 elements
     elif (len(parms.get("cube")) != 54):
         result['status'] = ('error: cube string has to have 54 elements')
