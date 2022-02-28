@@ -51,7 +51,7 @@ def solveCheck(parms):
         result['status'] = ('error: only letters and numbers in the cube string')
     
     #is a string  
-    elif isinstance(parms.get("cube"), str) != True:
+    elif isinstance(parms.get("cube"), str) == False:
         result['status'] = 'error: cube not a string'
         
     #has 54 elements
