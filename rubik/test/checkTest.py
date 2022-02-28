@@ -111,7 +111,7 @@ class CheckTest(TestCase):
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
-        self.assertEqual(status, 'error: only letters and numbers in the cube string')
+        self.assertEqual(status, 'error: only alphanumeric characters in the cube string')
 
 
 
