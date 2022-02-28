@@ -4,11 +4,11 @@ from rubik.solveCheckInput import solveCheck
 
 
 inputDict = {}
-inputDict['cube'] = 'rrbbbbgggr????oro?ogr?ggobbwwwwwwwwwgrboorbb?o??rrgoog'
+inputDict['cube'] = ""
 inputDict['rotate'] = 'FLFFBUUdLfDrFLdRRdLLdRRu'
 inputDict['op'] = 'solve' 
 
-#print(_solve(inputDict))
+print(_solve(inputDict))
 
-print(solveCheck(inputDict))
+
 
