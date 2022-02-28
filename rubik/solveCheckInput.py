@@ -43,7 +43,7 @@ def solveCheck(parms):
             
    
     # is present 
-    if(parms.get('cube',None) == None):
+    if(parms.get('cube', None) == None):
         result['status'] = ('error: no cube found')
         
     #valid characters   
