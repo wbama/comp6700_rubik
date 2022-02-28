@@ -88,6 +88,5 @@ def solveCheck(parms):
     else:
         result['status'] = 'ok'
         
-    print((parms.get('cube')).isalnum())
     return result
 
