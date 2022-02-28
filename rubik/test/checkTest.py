@@ -107,7 +107,7 @@ class CheckTest(TestCase):
         self.assertEqual(status, 'error: adjacent color to color that would appear on opposite side')
         
     def test_9100_ReturnErrorIllegalCharacters(self):
-        parm = {'op':'check', 'cube': 'rbbgbobbgrgw.r.w.obggrgg.wgor..owoww.oob.rgw.rorrwbwob'}
+        parm = {'op':'check', 'cube': 'rbbgbobbgrgw$r$w$obggrgg$wgor$$owoww$oob$rgw$rorrwbwob'}
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
