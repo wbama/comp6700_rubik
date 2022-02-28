@@ -82,8 +82,7 @@ def solveCheck(parms):
                 result['status'] = 'ok' 
                       
             else:                
-                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')               
-            
+                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')            
 
        
     else:
