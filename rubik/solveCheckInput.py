@@ -45,6 +45,10 @@ def solveCheck(parms):
     # is present 
     if(parms.get('cube',None) == None):
         result['status'] = ('error: no cube found')
+        
+    #valid characters   
+    elif ((parms.get('cube')).isalnum())== False:
+        result['status'] = ('error: only letters and numbers in the cube string')
     
     #is a string  
     elif isinstance(parms.get("cube"), str) != True:
@@ -80,8 +84,7 @@ def solveCheck(parms):
                 result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')               
                   
             
-    elif ((parms.get('cube')).isalnum())== False:
-        result['status'] = ('error: only letters and numbers in the cube string')
+
        
     else:
         result['status'] = 'ok'
