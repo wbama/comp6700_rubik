@@ -2,7 +2,7 @@ from rubik.solve import _solve
 
 
 inputDict = {}
-inputDict['cube'] = 'rbbgbobbgrgwyrywyobggrggywgoryyowowwyoobyrgwyrorrwbwob'
+inputDict['cube'] = 'rrbbbbgggr????oro?ogr?ggobbwwwwwwwwwgrboorbb?o??rrgoog'
 inputDict['rotate'] = 'FLFFBUUdLfDrFLdRRdLLdRRu'
 inputDict['op'] = 'solve' 
 
