@@ -9,7 +9,7 @@ STATUS = 'status'
 OP = 'op'
 OPS = {
     'check' : check._check,
-    'solve' : solve._solve,
+    'solve' : solve._solve, #looks at solve. for an _solve
     'info' : info._info,
     }
 
@@ -27,5 +27,5 @@ def _dispatch(parms = None):
     elif(not(parms[OP] in OPS)):
         result[STATUS] = ERROR03
     else:
-        result = OPS[parms[OP]](parms)
+        result = OPS[parms[OP]](parms) #going to the ops dictionary, line 10. Choosing the solve element, calling _solve
     return result

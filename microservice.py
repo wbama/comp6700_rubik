@@ -13,7 +13,8 @@ app = Flask(__name__)
 #  Parameters are passed as a URL query:
 #        /rubik?parm1=value1&parm2=value2
 #
-@app.route('/rubik')
+@app.route('/rubik') #this is an http listener
+#op = solve
 def server():
     try:
         userParms = {}
