@@ -5,13 +5,13 @@ from rubik.solveRotations import createCubeListFromInputParms
 
 class SolveWhiteCrossTest(unittest.TestCase):
     
-        def test_010_ShouldRotateYellowCenterToFront(self):
+        def test_010_RotateYellowCenterToFront(self):
             inputDict = {}
-            inputDict['cube'] = 'ggrggoggoyroyyygbrbbbgbbybbwwwwwwwwwrryrryrrbooyooyoog'
+            inputDict['cube'] = 'wwbrorrygogyygywoogbbbrowbgyobwbwrryoroyworgwbgrgybywg'
             inputDict['op'] = 'solve'           
     
             expectedResult = {}
-            expectedResult['cube'] = 'yroyyygbrbbbgbbybbwwwwwwwwwggrggoggorrrrrrbyyyygoooooo'
+            expectedResult['cube'] = 'bgrgybywgwyooggoyywgrowyorobwyobrywrwwbrorryggbworbbbg'
             expectedResult['status'] = 'ok'
             actualResult = sc.solveWhiteCross(inputDict)
             self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
