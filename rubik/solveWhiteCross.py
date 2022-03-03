@@ -1,6 +1,7 @@
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotate_cube_to_right
 from rubik.solveRotations import flip_cube_top_side
+from rubik.solveRotations import createStringFromCube
 
 
 def solveWhiteCross(parms):
@@ -37,20 +38,11 @@ def solveWhiteCross(parms):
         
     print(lst_cube)
     #now we have the yellow in front.
-    #find white leaves
-    
+    #find white leaves   
        
-    str1 = "".join(lst_cube[0])
-    str2 = "".join(lst_cube[1])
-    str3 = "".join(lst_cube[2])
-    str4 = "".join(lst_cube[3])
-    str5 = "".join(lst_cube[4])
-    str6 = "".join(lst_cube[5])                       
-         
-    str_cube = str1+str2+str3+str4+str5+str6
-                    
+                   
     result = {}
-    result['cube'] = str_cube
+    result['cube'] = createStringFromCube(lst_cube)
     result['status'] = 'ok'                   
 
     

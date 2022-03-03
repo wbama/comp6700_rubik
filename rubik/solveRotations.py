@@ -1,3 +1,15 @@
+def createStringFromCube(lst_cube):
+    str1 = "".join(lst_cube[0])
+    str2 = "".join(lst_cube[1])
+    str3 = "".join(lst_cube[2])
+    str4 = "".join(lst_cube[3])
+    str5 = "".join(lst_cube[4])
+    str6 = "".join(lst_cube[5])                       
+         
+    str_cube = str1+str2+str3+str4+str5+str6
+    return str_cube
+
+
 def createCubeListFromInputParms(parms):
     parm_string = parms.get("cube")  #get the string
     
