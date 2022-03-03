@@ -48,7 +48,20 @@ def solveWhiteCross(parms):
             cc_rotate_cube = turn_cclock(lst_cube)
             lst_cube = rotate_cube_to_right(cc_rotate_cube)
             lst_cube = rotate_cube_to_right(cc_rotate_cube)
-            lst_cube = rotate_cube_to_right(cc_rotate_cube)           
+            lst_cube = rotate_cube_to_right(cc_rotate_cube)  
+        elif lst_cube[2][1] == 'w': 
+            lst_cube = rotate_cube_to_right(lst_cube)
+            cc_rotate_cube = turn_cclock(lst_cube)
+            cc_rotate_cube = turn_cclock(cc_rotate_cube)
+            lst_cube = rotate_cube_to_right(cc_rotate_cube)
+            lst_cube = rotate_cube_to_right(cc_rotate_cube)
+            lst_cube = rotate_cube_to_right(cc_rotate_cube) 
+        elif lst_cube[5][5] == 'w': 
+            lst_cube = rotate_cube_to_right(lst_cube)
+            cc_rotate_cube = turn_clock(lst_cube)
+            lst_cube = rotate_cube_to_right(cc_rotate_cube)
+            lst_cube = rotate_cube_to_right(cc_rotate_cube)
+            lst_cube = rotate_cube_to_right(cc_rotate_cube) 
 
    
     print(lst_cube)
