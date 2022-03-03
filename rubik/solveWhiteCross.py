@@ -41,7 +41,11 @@ def solveWhiteCross(parms):
     #now we have the yellow in front.
     #find white leaves   
        
-    print(lst_cube)              
+    print(lst_cube)        
+    lst_cube[1] = 'y'    
+    lst_cube[3] = 'y'  
+    lst_cube[5] = 'y'    
+    lst_cube[7] = 'y'      
     result = {}
     result['cube'] = createStringFromCube(lst_cube)
     result['status'] = 'ok'                   
