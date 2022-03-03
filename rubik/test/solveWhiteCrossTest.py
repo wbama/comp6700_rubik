@@ -23,7 +23,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             inputDict['cube'] = 'ggrggoggoyroyyygbrbbbgbbybbwwwwwwwwwrryrryrrbooyooyoog'
             inputDict['op'] = 'solve'  
             
-            inputResult = createCubeListFromInputParms(inputDict)         
+            actualResult = createCubeListFromInputParms(inputDict)         
     
             expectedResult = [['g', 'g', 'g', 'g', 'g', 'g', 'o', 'o', 'r'], ['r', 'r', 'r', 'r', 'r', 'r', 'b', 'y', 'y'], ['b', 'b', 'b', 'b', 'b', 'b', 'b', 'g', 'y'], ['o', 'o', 'o', 'o', 'o', 'o', 'g', 'y', 'y'], ['w', 'w', 'w', 'w', 'w', 'w', 'w', 'w', 'w'], ['g', 'y', 'y', 'b', 'y', 'r', 'r', 'y', 'o']]
 
