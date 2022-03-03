@@ -1,10 +1,7 @@
-from rubik.solveRotations import createCubeListFromInputParms
-import rubik.solveWhiteCross as swc
 
 
-inputDict = {}
-inputDict['cube'] = "rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog"
-#inputDict['rotate'] = 'FLFFBUUdLfDrFLdRRdLLdRRu'
-inputDict['op'] = 'solve' 
-
-print(createCubeListFromInputParms(inputDict))
+expectedResult = {}
+expectedResult['cube'][1] = 'y'
+expectedResult['cube'][3] = 'y'
+expectedResult['cube'][5] = 'y'
+expectedResult['cube'][7] = 'y'   
