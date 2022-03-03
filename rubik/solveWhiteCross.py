@@ -35,6 +35,12 @@ def solveWhiteCross(parms):
         lst_cube = flip_cube_top_side(lst_cube)
         lst_cube = flip_cube_top_side(lst_cube)
         
+    print(lst_cube)
+    #now we have the yellow in front.
+    #find white leaves
+    
+    if lst_cube[0][5] == "w"
+        
     str1 = "".join(lst_cube[0])
     str2 = "".join(lst_cube[1])
     str3 = "".join(lst_cube[2])

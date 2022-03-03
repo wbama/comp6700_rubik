@@ -1,5 +1,6 @@
 import unittest
 import rubik.solveWhiteCross as sc
+from rubik.solveRotations import rotateCubeClockwise
 
 class SolveWhiteCrossTest(unittest.TestCase):
     
@@ -24,7 +25,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             expectedResult = {}
             expectedResult['cube'] = 'ggggggoorrrrrrrbyybbbbbbbgyoooooogyywwwwwwwwwgyybyrryo'
             expectedResult['status'] = 'ok'
-            actualResult = sc.solveWhiteCross(inputDict)
+            actualResult = rotateCubeClockwise(inputDict)
             self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
             self.assertEqual(expectedResult.get('status'), actualResult.get('status'))  
     
