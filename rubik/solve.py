@@ -3,7 +3,7 @@ from rubik.solveRotations import flip_cube_top_side
 from rubik.solveRotations import turn_clock
 from rubik.solveRotations import turn_cclock
 import rubik.solveCheckInput as ci
-from rubik.solveRotations import create_cube_from_string
+from rubik.solveRotations import createCubeStringFromInputParms
 
 
 def _solve(parms):
@@ -22,7 +22,7 @@ def _solve(parms):
         # for i in range(1,7):
         #     exec(f'lst_cube.append(lst_in{i})') 
         
-        lst_cube = create_cube_from_string(parms)           
+        lst_cube = createCubeStringFromInputParms(parms)           
        
        
         if 'rotate' not in parms:
