@@ -1,4 +1,4 @@
-def createCubeStringFromInputParms(parms):
+def createCubeListFromInputParms(parms):
     parm_string = parms.get("cube")  #get the string
     
     lst_cube = ([x for x in parms.get("cube")])
