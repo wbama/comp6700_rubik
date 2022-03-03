@@ -22,7 +22,7 @@ def _solve(parms):
         # for i in range(1,7):
         #     exec(f'lst_cube.append(lst_in{i})') 
         
-        create_cube_from_string(parms)           
+        lst_cube = create_cube_from_string(parms)           
        
        
         if 'rotate' not in parms:

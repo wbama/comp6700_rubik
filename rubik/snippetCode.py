@@ -6,3 +6,4 @@ inputDict['cube'] = "rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog"
 #inputDict['rotate'] = 'FLFFBUUdLfDrFLdRRdLLdRRu'
 inputDict['op'] = 'solve' 
 
+print(create_cube_from_string(inputDict))
