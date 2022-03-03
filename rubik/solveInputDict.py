@@ -5,11 +5,12 @@
 from rubik.solveRotations import rotateCubeClockwise
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotate_cube_to_left
+from rubik.solveRotations import rotate_cube_to_right
 
 
 
 inputDict = {}
-inputDict['cube'] = "ggrggoggoyroyyygbrbbbgbbybbwwwwwwwwwrryrryrrbooyooyoog"
+inputDict['cube'] = "oogyowrwywgybyygwggbbbrrwbyoryyworybwrowgrbgowgrgbobor"
 #inputDict['rotate'] = 'FLFFBUUdLfDrFLdRRdLLdRRu'
 inputDict['op'] = 'solve' 
 
@@ -17,7 +18,8 @@ inputDict['op'] = 'solve'
 
 #print(solveWhiteCross(inputDict))
 lst_cube = createCubeListFromInputParms(inputDict)
-print(rotateCubeClockwise(lst_cube))
+print(lst_cube)
+print(rotate_cube_to_left(lst_cube))
 
 
 

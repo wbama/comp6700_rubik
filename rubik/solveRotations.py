@@ -137,16 +137,34 @@ def turn_type3(orig_side):
     return turned_side
 
 def rotate_cube_to_left(cube):
-        #rotate cube to left
-        first_side = cube.pop(0)
-        cube.insert(3, first_side)        
-        # rotate the top
-        orig_side = cube.pop(4)
-        cube.insert(4, turn_type1(orig_side))        
-        #now rotate the bottom
-        orig_side = cube.pop(5) 
-        cube.insert(5, turn_type2(orig_side))
-        return cube
+        new_cube = [[], [], [], [], [], []]
+        
+        new_cube[0] = cube[3]
+        new_cube[1] = cube[0]
+        new_cube[2] = cube[1]
+        new_cube[3] = cube[2]
+        
+        new_cube[4].insert(0, cube [4][2])
+        new_cube[4].insert(1, cube [4][5])
+        new_cube[4].insert(2, cube [4][8])
+        new_cube[4].insert(3, cube [4][1])
+        new_cube[4].insert(4, cube [4][4])
+        new_cube[4].insert(5, cube [4][7])
+        new_cube[4].insert(6, cube [4][0])
+        new_cube[4].insert(7, cube [4][3])
+        new_cube[4].insert(8, cube [4][6])     
+
+        new_cube[5].insert(0, cube [5][6])
+        new_cube[5].insert(1, cube [5][3])
+        new_cube[5].insert(2, cube [5][0])
+        new_cube[5].insert(3, cube [5][7])
+        new_cube[5].insert(4, cube [5][4])
+        new_cube[5].insert(5, cube [5][1])
+        new_cube[5].insert(6, cube [5][8])
+        new_cube[5].insert(7, cube [5][5])
+        new_cube[5].insert(8, cube [5][2])  
+
+        return new_cube
 
 def rotate_cube_to_right(cube):
         #rotate cube to right
