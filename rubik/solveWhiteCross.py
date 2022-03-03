@@ -9,7 +9,9 @@ def solveWhiteCross(parms):
     #rotate the cube so that the front center is yellow for the daisy   
     
     if createCubeListFromInputParms(parms)[0][4] == 'y':
-        print(createCubeListFromInputParms(parms))
+        result = {}
+        result['cube'] = createStringFromCube(parms)
+        result['status'] = 'ok' 
     
     #check right side if yellow
     elif createCubeListFromInputParms(parms)[1][4] == 'y':
@@ -36,6 +38,7 @@ def solveWhiteCross(parms):
         lst_cube = flip_cube_top_side(lst_cube)
         lst_cube = flip_cube_top_side(lst_cube)
         
+         
     print(lst_cube)
     #now we have the yellow in front.
     #find white leaves   
