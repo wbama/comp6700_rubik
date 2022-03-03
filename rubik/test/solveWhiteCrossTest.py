@@ -38,4 +38,21 @@ class SolveWhiteCrossTest(unittest.TestCase):
 
             str_cube = str1+str2+str3+str4+str5+str6              
             self.assertEqual(expectedResult.get('cube'), str_cube)
+            
+            
+        def test_030_TestWhiteLeavesYellowCenter(self):
+            inputDict = {}
+            inputDict['cube'] = 'ggrggoggoyroyyygbrbbbgbbybbwwwwwwwwwrryrryrrbooyooyoog'
+            inputDict['op'] = 'solve'           
+    
+            expectedResult = {}
+            expectedResult['cube'][1] = 'y'
+            expectedResult['cube'][3] = 'y'
+            expectedResult['cube'][5] = 'y'
+            expectedResult['cube'][7] = 'y'            
+            
+            expectedResult['status'] = 'ok'
+            actualResult1 = sc.solveWhiteCross(inputDict)
+            self.assertEqual(expectedResult.get('cube')[1], actualResult.get('cube'))
+
     
