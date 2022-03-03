@@ -4,14 +4,13 @@ import rubik.solveWhiteCross as sc
 
 class SolveWhiteCrossTest(unittest.TestCase):
     
-        def test_010_ShouldRotateValidNominalCube_F(self):
+        def test_010_ShouldRotateYellowCenterToTop(self):
             inputDict = {}
             inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
-            inputDict['rotate'] = 'F'
             inputDict['op'] = 'solve'           
     
             expectedResult = {}
-            expectedResult['cube'] = 'gbrgbrgbbbyybyoyoyogryggobbwwowwywwygrboorwwwryrrrgoog'
+            expectedResult['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
             expectedResult['status'] = 'ok'
             actualResult = sc.solveWhiteCross(inputDict)
             self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
