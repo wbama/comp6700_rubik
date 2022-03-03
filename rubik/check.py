@@ -35,15 +35,15 @@ def _check(parms):
                 unique_center.append(char)               
               
         #create an instance of the cube by creating nested list
-        # lst_cube = ([x for x in parms.get("cube")])
-        #
-        # lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6))         
-        #
-        # for i in range (1,7):
-        #     for j in range(1,10):
-        #         exec(f"lst_in{i}.append(lst_cube.pop(0))")
+        lst_cube = ([x for x in parms.get("cube")])
         
-        lst_cube = createCubeStringFromInputParms(parms)             
+        lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6))         
+        
+        for i in range (1,7):
+             for j in range(1,10):
+                 exec(f"lst_in{i}.append(lst_cube.pop(0))")
+        
+ 
         
         #this function looks at the colors around the edge and compares to the back colors to add to counter
         def verify_adj_col():
