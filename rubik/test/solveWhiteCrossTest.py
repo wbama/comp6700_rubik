@@ -43,7 +43,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
         def test_030_TestWhiteLeavesYellowCenter(self):
             inputDict = {}
             inputDict['cube'] = 'ggrggoggoyroyyygbrbbbgbbybbwwwwwwwwwrryrryrrbooyooyoog'    
-            expectedResult = 'y'             
+            expectedResult = 'r'             
 
             actualResult = sc.solveWhiteCross(inputDict)
             print(actualResult)
