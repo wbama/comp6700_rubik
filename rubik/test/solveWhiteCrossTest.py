@@ -29,5 +29,5 @@ class SolveWhiteCrossTest(unittest.TestCase):
 
 
             actualResult = rotateCubeClockwise(inputDict)
-            self.assertEqual(expectedResult, inputResult)
+            self.assertEqual(expectedResult, actualResult)
     
