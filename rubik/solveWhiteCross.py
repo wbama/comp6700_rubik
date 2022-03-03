@@ -5,9 +5,7 @@ from rubik.solveRotations import flip_cube_top_side
 
 def solveWhiteCross(parms):
     
-    #rotate the cube so that the front center is yellow for the daisy
-    
-    print(createCubeListFromInputParms(parms))
+    #rotate the cube so that the front center is yellow for the daisy   
     
     if createCubeListFromInputParms(parms)[0][4] == 'y':
         print(createCubeListFromInputParms(parms))
