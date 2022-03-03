@@ -1,7 +1,9 @@
-from rubik.solveRotations import create_cube_from_string
+from rubik.solveRotations import createCubeStringFromInputParms
 
 
 def solveWhiteCross(parms):
+    
+    #rotate the cube so that the front center is yellow for the daisy
     
     parm_string = parms.get("cube")  #get the string
     

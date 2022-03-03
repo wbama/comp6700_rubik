@@ -1,4 +1,5 @@
-from rubik.solveRotations import create_cube_from_string
+from rubik.solveRotations import createCubeStringFromInputParms
+import rubik.solveWhiteCross as swc
 
 
 inputDict = {}
@@ -6,4 +7,4 @@ inputDict['cube'] = "rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog"
 #inputDict['rotate'] = 'FLFFBUUdLfDrFLdRRdLLdRRu'
 inputDict['op'] = 'solve' 
 
-print(create_cube_from_string(inputDict))
+print(createCubeStringFromInputParms(inputDict))
