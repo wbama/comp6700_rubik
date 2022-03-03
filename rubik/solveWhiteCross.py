@@ -50,7 +50,7 @@ def solveWhiteCross(parms):
     # lst_cube[0][5] = 'y'    
     # lst_cube[0][7] = 'y'  
     
-        
+    print(lst_cube)
     result = {}
     result['cube'] = createStringFromCube(lst_cube)
     result['status'] = 'ok'                   
