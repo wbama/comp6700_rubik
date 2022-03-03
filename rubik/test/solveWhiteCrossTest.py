@@ -4,7 +4,7 @@ import rubik.solveWhiteCross as sc
 
 class SolveWhiteCrossTest(unittest.TestCase):
     
-        def test_010_ShouldRotateYellowCenterToTop(self):
+        def test_010_ShouldRotateYellowCenterToFront(self):
             inputDict = {}
             inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
             inputDict['op'] = 'solve'           

@@ -1,4 +1,8 @@
-lst1 = [1, 2, 3, 4, 5, 6]
+from rubik.solveRotations import create_cube_from_string
 
-for i in lst1:
-    print(i)
+
+inputDict = {}
+inputDict['cube'] = "rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog"
+#inputDict['rotate'] = 'FLFFBUUdLfDrFLdRRdLLdRRu'
+inputDict['op'] = 'solve' 
+
