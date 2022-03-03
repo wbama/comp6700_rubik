@@ -169,7 +169,7 @@ def flip_cube_top_side(cube):
             exec(f'cube.append(side_{i})') 
                
         return cube
-
+#turns the front side clockwise - spin the cube to get to the front side
 def turn_clock(orig_side):
     new_cube = [[], [], [], [], [], []]
     #front
@@ -239,6 +239,7 @@ def turn_clock(orig_side):
     new_cube[5].insert(8, orig_side [5][8])
     return new_cube
 
+#turns the front side counter clockwise - spin the cube to get to the front side
 def turn_cclock(orig_side):
     new_cube = [[], [], [], [], [], []]
     #front
