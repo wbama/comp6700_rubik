@@ -37,6 +37,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             str5 = "".join(rotatedCube[4])
             str6 = "".join(rotatedCube[5]) 
             str_cube = str1+str2+str3+str4+str5+str  
+            print(str_cube)
               
             self.assertEqual(expectedResult.get('cube'), str_cube)
     
