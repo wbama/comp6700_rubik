@@ -136,6 +136,18 @@ def turn_type3(orig_side):
     turned_side.insert(8, orig_side [0])
     return turned_side
 
+def rotate_cube_to_left(cube):
+        #rotate cube to left
+        first_side = cube.pop(0)
+        cube.insert(3, first_side)        
+        # rotate the top
+        orig_side = cube.pop(4)
+        cube.insert(4, turn_type1(orig_side))        
+        #now rotate the bottom
+        orig_side = cube.pop(5) 
+        cube.insert(5, turn_type2(orig_side))
+        return cube
+
 def rotate_cube_to_right(cube):
         #rotate cube to right
         first_side = cube.pop(0)
@@ -147,6 +159,28 @@ def rotate_cube_to_right(cube):
         orig_side = cube.pop(5) 
         cube.insert(5, turn_type2(orig_side))
         return cube
+ 
+def flip_cube_bottom_side(cube):
+        side_0 = cube[4]
+
+        side_1 = cube[1]
+        #rotate it correctly
+        side_1 = (turn_type2(side_1))
+        side_2 = cube[5]
+        #rotate side 2
+        side_2 = (turn_type3(side_2))
+        side_3 = cube[3]
+        #rotate side 3
+        side_3 = (turn_type1(side_3))
+        #rotate side 4
+        side_4 = cube[2]
+        side_4 = (turn_type3(side_4))
+        side_5 = cube[0]        
+        cube = []
+        for i in range(6):
+            exec(f'cube.append(side_{i})') 
+               
+        return cube 
     
 def flip_cube_top_side(cube):
         side_0 = cube[4]

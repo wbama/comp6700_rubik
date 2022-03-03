@@ -3,6 +3,7 @@ from rubik.solveRotations import rotate_cube_to_right
 from rubik.solveRotations import flip_cube_top_side
 from rubik.solveRotations import createStringFromCube
 from rubik.solveRotations import turn_cclock
+from rubik.solveRotations import turn_clock
 
 
 def solveWhiteCross(parms):
@@ -62,7 +63,28 @@ def solveWhiteCross(parms):
             lst_cube = rotate_cube_to_right(cc_rotate_cube)
             lst_cube = rotate_cube_to_right(cc_rotate_cube)
             lst_cube = rotate_cube_to_right(cc_rotate_cube) 
-
+        elif lst_cube[1][3] == 'w': 
+            lst_cube = rotate_cube_to_right(lst_cube)
+            c_rotate_cube = turn_clock(lst_cube)
+            lst_cube = rotate_cube_to_right(c_rotate_cube)
+            lst_cube = rotate_cube_to_right(lst_cube)
+            lst_cube = rotate_cube_to_right(lst_cube) 
+            lst_cube = flip_cube_top_side(lst_cube) 
+            c_rotate_cube = turn_clock(lst_cube)
+            lst_cube = flip_cube_top_side(c_rotate_cube)
+            lst_cube = flip_cube_top_side(c_rotate_cube)
+            lst_cube = flip_cube_top_side(c_rotate_cube)
+        elif lst_cube[2][1] == 'w': 
+            lst_cube = rotate_cube_to_right(lst_cube)
+            c_rotate_cube = turn_clock(lst_cube)
+            lst_cube = rotate_cube_to_right(c_rotate_cube)
+            lst_cube = rotate_cube_to_right(lst_cube)
+            lst_cube = rotate_cube_to_right(lst_cube) 
+            lst_cube = flip_cube_top_side(lst_cube) 
+            c_rotate_cube = turn_clock(lst_cube)
+            lst_cube = flip_cube_top_side(c_rotate_cube)
+            lst_cube = flip_cube_top_side(c_rotate_cube)
+            lst_cube = flip_cube_top_side(c_rotate_cube)
    
     print(lst_cube)
     print(lst_cube[0][5])

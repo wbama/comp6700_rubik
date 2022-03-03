@@ -2,6 +2,8 @@ import unittest
 from rubik.solveWhiteCross import solveWhiteCross
 from rubik.solveRotations import rotateCubeClockwise
 from rubik.solveRotations import createCubeListFromInputParms
+from rubik.solveRotations import rotate_cube_to_right
+from rubik.solveRotations import rotate_cube_to_left
 
 class SolveWhiteCrossTest(unittest.TestCase):
     
@@ -50,5 +52,28 @@ class SolveWhiteCrossTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult.get('cube')[3])
             # self.assertEqual(expectedResult, actualResult.get('cube')[5])
             # self.assertEqual(expectedResult, actualResult.get('cube')[7])
+            
+        def test_040_TestRotateCubeToLeft(self):
+            inputDict = {}
+            inputDict['cube'] = 'oogyowrwywgybyygwggbbbrrwbyoryyworybwrowgrbgowgrgbobor'
+ 
+    
+            expectedResult = {}
+            expectedResult['cube'] = 'wgybyygwggbbbrrwbyoryyworyboogrwybwwggrorororgbowgb'
+            
+            lst_cube = createCubeListFromInputParms(inputDict)  
+            rotatedCube = rotate_cube_to_right(lst_cube)
+            
+            str1 = "".join(rotatedCube[0])
+            str2 = "".join(rotatedCube[1])
+            str3 = "".join(rotatedCube[2])
+            str4 = "".join(rotatedCube[3])
+            str5 = "".join(rotatedCube[4])
+            str6 = "".join(rotatedCube[5]) 
+
+            str_cube = str1+str2+str3+str4+str5+str6  
+                        
+            self.assertEqual(expectedResult.get('cube'), str_cube)  
+
 
     
