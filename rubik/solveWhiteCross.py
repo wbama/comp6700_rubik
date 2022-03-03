@@ -41,8 +41,10 @@ def solveWhiteCross(parms):
     #now we have the yellow in front.
     #find white leaves   
     if lst_cube[5] != 'y':
-            print("Not yellow") 
-        
+        print("Not yellow") 
+    else:
+        print("yellow")
+         
        
        
     # lst_cube[0][1] = 'y'    
