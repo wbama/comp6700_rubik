@@ -6,11 +6,11 @@ class SolveWhiteCrossTest(unittest.TestCase):
     
         def test_010_ShouldRotateYellowCenterToFront(self):
             inputDict = {}
-            inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+            inputDict['cube'] = 'ggrggoggoyroyyygbrbbbgbbybbwwwwwwwwwrryrryrrbooyooyoog'
             inputDict['op'] = 'solve'           
     
             expectedResult = {}
-            expectedResult['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+            expectedResult['cube'] = 'yroyyygbrbbbgbbybbwwwwwwwwwggrggoggorrrrrrbyyyygoooooo'
             expectedResult['status'] = 'ok'
             actualResult = sc.solveWhiteCross(inputDict)
             self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
