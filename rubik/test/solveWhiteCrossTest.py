@@ -20,13 +20,19 @@ class SolveWhiteCrossTest(unittest.TestCase):
             
         def test_020_RotateWholeCubeClockwise(self):
             inputDict = {}
-            inputDict['cube'] = 'ggrggoggoyroyyygbrbbbgbbybbwwwwwwwwwrryrryrrbooyooyoog'
+            inputDict['cube'] = 'bgbgyrywgogyygywooggrbwywrobwyobrywrwworoorywgbrorbbbg'
             inputDict['op'] = 'solve'  
             
-            cubeList = createCubeListFromInputParms(inputDict)     
-            expectedResult = [['g', 'g', 'g', 'g', 'g', 'g', 'o', 'o', 'r'], ['r', 'r', 'r', 'r', 'r', 'r', 'b', 'y', 'y'], ['b', 'b', 'b', 'b', 'b', 'b', 'b', 'g', 'y'], ['o', 'o', 'o', 'o', 'o', 'o', 'g', 'y', 'y'], ['w', 'w', 'w', 'w', 'w', 'w', 'w', 'w', 'w'], ['g', 'y', 'y', 'b', 'y', 'r', 'r', 'y', 'o']]
-
-
-            actualResult = rotateCubeClockwise(cubeList)
+            lst_cube = createCubeListFromInputParms(inputDict) 
+            str1 = "".join(lst_cube[0])
+            str2 = "".join(lst_cube[1])
+            str3 = "".join(lst_cube[2])
+            str4 = "".join(lst_cube[3])
+            str5 = "".join(lst_cube[4])
+            str6 = "".join(lst_cube[5])                       
+         
+            str_cube = str1+str2+str3+str4+str5+str    
+            expectedResult = str_cube
+            actualResult = rotateCubeClockwise(lst_cube)
             self.assertEqual(expectedResult, actualResult)
     
