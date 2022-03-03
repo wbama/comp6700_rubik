@@ -15,6 +15,7 @@ def createCubeListFromInputParms(parms):
 
 def rotateCubeClockwise(orig_side):
     new_cube = [[], [], [], [], [], []]
+    
     #front
     new_cube[0].insert(0, orig_side [0][6])
     new_cube[0].insert(1, orig_side [0][3])
