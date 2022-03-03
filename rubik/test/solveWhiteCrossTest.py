@@ -30,20 +30,12 @@ class SolveWhiteCrossTest(unittest.TestCase):
             rotatedCube = rotateCubeClockwise(lst_cube)
             
             str1 = "".join(rotatedCube[0])
-            print(str1)
             str2 = "".join(rotatedCube[1])
-            print(str2)
             str3 = "".join(rotatedCube[2])
-            print(str3)
             str4 = "".join(rotatedCube[3])
-            print(str4)
             str5 = "".join(rotatedCube[4])
-            print(str5)
             str6 = "".join(rotatedCube[5]) 
-            print(str6)
-            str_cube = str1+str2+str3+str4+str5+str6
-            print(str_cube) 
 
-              
+            str_cube = str1+str2+str3+str4+str5+str6              
             self.assertEqual(expectedResult.get('cube'), str_cube)
     
