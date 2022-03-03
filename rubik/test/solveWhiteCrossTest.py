@@ -1,5 +1,4 @@
 import unittest
-import rubik.solve as solve
 import rubik.solveWhiteCross as sc
 
 class SolveWhiteCrossTest(unittest.TestCase):
