@@ -13,6 +13,9 @@ def createCubeListFromInputParms(parms):
     
     return lst_cube
 
+def rotateCubeClockwise(parms):
+    pass
+
 
 def turn_type1(orig_side):
     turned_side = []

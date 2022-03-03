@@ -13,5 +13,18 @@ class SolveWhiteCrossTest(unittest.TestCase):
             expectedResult['status'] = 'ok'
             actualResult = sc.solveWhiteCross(inputDict)
             self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-            self.assertEqual(expectedResult.get('status'), actualResult.get('status'))   
+            self.assertEqual(expectedResult.get('status'), actualResult.get('status'))  
+            
+            
+        def test_020_RotateWholeCubeClockwise(self):
+            inputDict = {}
+            inputDict['cube'] = 'ggrggoggoyroyyygbrbbbgbbybbwwwwwwwwwrryrryrrbooyooyoog'
+            inputDict['op'] = 'solve'           
+    
+            expectedResult = {}
+            expectedResult['cube'] = 'ggggggoorrrrrrrbyybbbbbbbgyoooooogyywwwwwwwwwgyybyrryo'
+            expectedResult['status'] = 'ok'
+            actualResult = sc.solveWhiteCross(inputDict)
+            self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+            self.assertEqual(expectedResult.get('status'), actualResult.get('status'))  
     
