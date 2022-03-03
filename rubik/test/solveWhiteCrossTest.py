@@ -23,16 +23,19 @@ class SolveWhiteCrossTest(unittest.TestCase):
             inputDict['cube'] = 'bgbgyrywgogyygywooggrbwywrobwyobrywrwworoorywgbrorbbbg'
             inputDict['op'] = 'solve'  
             
-            lst_cube = createCubeListFromInputParms(inputDict) 
-            str1 = "".join(lst_cube[0])
-            str2 = "".join(lst_cube[1])
-            str3 = "".join(lst_cube[2])
-            str4 = "".join(lst_cube[3])
-            str5 = "".join(lst_cube[4])
-            str6 = "".join(lst_cube[5])                       
-         
-            str_cube = str1+str2+str3+str4+str5+str    
-            expectedResult = str_cube
-            actualResult = rotateCubeClockwise(lst_cube)
-            self.assertEqual(expectedResult, actualResult)
+            expectedResult = {} 
+            expectedResult['cube'] = 'yroyyygbrbbbgbbybbwwwwwwwwwggrggoggorrrrrrbyyyygoooooo'
+            
+            lst_cube = createCubeListFromInputParms(inputDict)           
+            rotatedCube = rotateCubeClockwise(lst_cube)
+            
+            str1 = "".join(rotatedCube[0])
+            str2 = "".join(rotatedCube[1])
+            str3 = "".join(rotatedCube[2])
+            str4 = "".join(rotatedCube[3])
+            str5 = "".join(rotatedCube[4])
+            str6 = "".join(rotatedCube[5]) 
+            str_cube = str1+str2+str3+str4+str5+str  
+              
+            self.assertEqual(expectedResult.get('cube'), str_cube)
     
