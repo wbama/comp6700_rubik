@@ -40,19 +40,9 @@ def solveWhiteCross(parms):
 
     #now we have the yellow in front.
     #find white leaves   
-    if lst_cube[0][5] != 'y':
-        print("Not yellow") 
-    else:
-        print("yellow")
-         
-       
-       
-    # lst_cube[0][1] = 'y'    
-    # lst_cube[0][3] = 'y'  
-    # lst_cube[0][5] = 'y'    
-    # lst_cube[0][7] = 'y'  
-    
-    print(lst_cube)
+   
+ 
+    print(lst_cube[0][5])
     result = {}
     result['cube'] = createStringFromCube(lst_cube)
     result['status'] = 'ok'                   
