@@ -48,5 +48,8 @@ class SolveWhiteCrossTest(unittest.TestCase):
             actualResult = sc.solveWhiteCross(inputDict)
             print(actualResult)
             self.assertEqual(expectedResult, actualResult.get('cube')[1])
+            self.assertEqual(expectedResult, actualResult.get('cube')[3])
+            self.assertEqual(expectedResult, actualResult.get('cube')[5])
+            self.assertEqual(expectedResult, actualResult.get('cube')[7])
 
     
