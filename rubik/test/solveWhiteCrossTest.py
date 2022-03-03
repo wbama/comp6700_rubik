@@ -53,7 +53,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             # self.assertEqual(expectedResult, actualResult.get('cube')[5])
             # self.assertEqual(expectedResult, actualResult.get('cube')[7])
             
-        def test_040_TestRotateCubeToLeft(self):
+        def test_040_TestRotateCubeToRight(self):
             inputDict = {}
             inputDict['cube'] = 'oogyowrwywgybyygwggbbbrrwbyoryyworybwrowgrbgowgrgbobor'
  
