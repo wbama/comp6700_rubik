@@ -4,6 +4,8 @@ from rubik.solveRotations import rotateCubeClockwise
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeToRight
+from rubik.solveRotations import rotateCubeToBottom
+from rubik.solveRotations import rotateCubeToTop
 
 class SolveWhiteCrossTest(unittest.TestCase):
     
