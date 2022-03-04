@@ -4,6 +4,7 @@ from rubik.solveRotations import rotateCubeToRight
 from rubik.solveRotations import rotateCubeToTop
 from rubik.solveRotations import createStringFromCube
 from rubik.solveRotations import turnSideCounterClock
+from rubik.solveRotations import turnSideClock
 
 
 
@@ -58,29 +59,29 @@ def solveWhiteCross(parms):
             lst_cube = rotateCubeToLeft(cc_rotate_cube) 
         elif lst_cube[5][5] == 'w': 
             lst_cube = rotateCubeToLeft(lst_cube)
-            cc_rotate_cube = turn_clock(lst_cube)
+            cc_rotate_cube = turnSideClock(lst_cube)
             lst_cube = rotateCubeToLeft(cc_rotate_cube)
             lst_cube = rotateCubeToLeft(cc_rotate_cube)
             lst_cube = rotateCubeToLeft(cc_rotate_cube) 
         elif lst_cube[1][3] == 'w': 
             lst_cube = rotateCubeToLeft(lst_cube)
-            c_rotate_cube = turn_clock(lst_cube)
+            c_rotate_cube = turnSideClock(lst_cube)
             lst_cube = rotateCubeToLeft(c_rotate_cube)
             lst_cube = rotateCubeToLeft(lst_cube)
             lst_cube = rotateCubeToLeft(lst_cube) 
             lst_cube = rotateCubeToTop(lst_cube) 
-            c_rotate_cube = turn_clock(lst_cube)
+            c_rotate_cube = turnSideClock(lst_cube)
             lst_cube = rotateCubeToTop(c_rotate_cube)
             lst_cube = rotateCubeToTop(c_rotate_cube)
             lst_cube = rotateCubeToTop(c_rotate_cube)
         elif lst_cube[2][1] == 'w': 
             lst_cube = rotateCubeToLeft(lst_cube)
-            c_rotate_cube = turn_clock(lst_cube)
+            c_rotate_cube = turnSideClock(lst_cube)
             lst_cube = rotateCubeToLeft(c_rotate_cube)
             lst_cube = rotateCubeToLeft(lst_cube)
             lst_cube = rotateCubeToLeft(lst_cube) 
             lst_cube = rotateCubeToTop(lst_cube) 
-            c_rotate_cube = turn_clock(lst_cube)
+            c_rotate_cube = turnSideClock(lst_cube)
             lst_cube = rotateCubeToTop(c_rotate_cube)
             lst_cube = rotateCubeToTop(c_rotate_cube)
             lst_cube = rotateCubeToTop(c_rotate_cube)
