@@ -222,7 +222,7 @@ def rotateCubeToTop(cube):
                
         return cube
 #turns the front side clockwise - spin the cube to get to the front side
-def turn_clock(orig_side):
+def turnSideClockwise(orig_side):
     new_cube = [[], [], [], [], [], []]
     #front
     new_cube[0].insert(0, orig_side [0][6])
