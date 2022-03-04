@@ -1,7 +1,7 @@
 from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeToTop
 from rubik.solveRotations import turnSideClock
-from rubik.solveRotations import turn_cclock
+from rubik.solveRotations import turnSideCounterClock
 import rubik.solveCheckInput as ci
 from rubik.solveRotations import createCubeListFromInputParms
 
@@ -74,7 +74,7 @@ def _solve(parms):
                         lst_cube = (turnSideClock(lst_cube))                                   
                         
                 elif rotation == 'f':
-                    lst_cube = (turn_cclock(lst_cube)) 
+                    lst_cube = (turnSideCounterClock(lst_cube)) 
                          
                 elif rotation == 'R':
                    
@@ -89,12 +89,12 @@ def _solve(parms):
                     lst_cube =  c_rotate_cube      
                           
                 elif rotation == 'r':
-                    c_rotate_cube = (turn_cclock(lst_cube))        
+                    c_rotate_cube = (turnSideCounterClock(lst_cube))        
                   
                     rotateCubeToLeft(lst_cube)
                     
                     #rotate Right side clockwise
-                    c_rotate_cube = (turn_cclock(lst_cube)) 
+                    c_rotate_cube = (turnSideCounterClock(lst_cube)) 
                     
                     rotateCubeToLeft(c_rotate_cube)
                     rotateCubeToLeft(c_rotate_cube)
@@ -119,7 +119,7 @@ def _solve(parms):
                     rotateCubeToLeft(lst_cube)
                     
                     #rotate Right side clockwise
-                    c_rotate_cube = (turn_cclock(lst_cube))         
+                    c_rotate_cube = (turnSideCounterClock(lst_cube))         
                     
                     rotateCubeToLeft(c_rotate_cube)
                     rotateCubeToLeft(c_rotate_cube)
@@ -146,7 +146,7 @@ def _solve(parms):
                     rotateCubeToLeft(lst_cube)
                     
                     #rotate Right side clockwise
-                    c_rotate_cube = (turn_cclock(lst_cube))       
+                    c_rotate_cube = (turnSideCounterClock(lst_cube))       
                     
                     rotateCubeToLeft(c_rotate_cube)  
                     lst_cube =  c_rotate_cube
@@ -165,7 +165,7 @@ def _solve(parms):
                 elif rotation == 'u':
                     
                     flip_cube_one = rotateCubeToTop(lst_cube)
-                    c_rotate_cube = (turn_cclock(flip_cube_one)) 
+                    c_rotate_cube = (turnSideCounterClock(flip_cube_one)) 
                     flip_cube_two = rotateCubeToTop(c_rotate_cube)
                     flip_cube_three= rotateCubeToTop(flip_cube_two)
                     c_rotate_cube= rotateCubeToTop(flip_cube_three) 
@@ -185,7 +185,7 @@ def _solve(parms):
                     flip_cube_one = rotateCubeToTop(lst_cube)        
                     flip_cube_two = rotateCubeToTop(flip_cube_one)
                     flip_cube_three = rotateCubeToTop(flip_cube_two)
-                    c_rotate_cube = (turn_cclock(flip_cube_three)) 
+                    c_rotate_cube = (turnSideCounterClock(flip_cube_three)) 
                     flip_cube_four = rotateCubeToTop(c_rotate_cube)
                     c_rotate_cube= flip_cube_four
                     lst_cube =  c_rotate_cube
