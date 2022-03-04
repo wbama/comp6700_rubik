@@ -178,7 +178,7 @@ def rotateCubeToLeft(cube):
         cube.insert(5, turn_type2(orig_side))
         return cube
  
-def flip_cube_bottom_side(cube):
+def rotateCubeToBottom(cube):
         side_0 = cube[4]
 
         side_1 = cube[1]
@@ -200,7 +200,7 @@ def flip_cube_bottom_side(cube):
                
         return cube 
     
-def flip_cube_top_side(cube):
+def rotateCubeToTop(cube):
         side_0 = cube[4]
 
         side_1 = cube[1]

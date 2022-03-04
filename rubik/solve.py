@@ -1,5 +1,5 @@
 from rubik.solveRotations import rotateCubeToLeft
-from rubik.solveRotations import flip_cube_top_side
+from rubik.solveRotations import rotateCubeToTop
 from rubik.solveRotations import turn_clock
 from rubik.solveRotations import turn_cclock
 import rubik.solveCheckInput as ci
@@ -154,39 +154,39 @@ def _solve(parms):
                     
                 elif rotation == 'U':
                     
-                    flip_cube_one = flip_cube_top_side(lst_cube)
+                    flip_cube_one = rotateCubeToTop(lst_cube)
                     c_rotate_cube = (turn_clock(flip_cube_one)) 
-                    flip_cube_two = flip_cube_top_side(c_rotate_cube)
-                    flip_cube_three= flip_cube_top_side(flip_cube_two)
-                    c_rotate_cube= flip_cube_top_side(flip_cube_three)  
+                    flip_cube_two = rotateCubeToTop(c_rotate_cube)
+                    flip_cube_three= rotateCubeToTop(flip_cube_two)
+                    c_rotate_cube= rotateCubeToTop(flip_cube_three)  
                     lst_cube =  c_rotate_cube 
                       
                           
                 elif rotation == 'u':
                     
-                    flip_cube_one = flip_cube_top_side(lst_cube)
+                    flip_cube_one = rotateCubeToTop(lst_cube)
                     c_rotate_cube = (turn_cclock(flip_cube_one)) 
-                    flip_cube_two = flip_cube_top_side(c_rotate_cube)
-                    flip_cube_three= flip_cube_top_side(flip_cube_two)
-                    c_rotate_cube= flip_cube_top_side(flip_cube_three) 
+                    flip_cube_two = rotateCubeToTop(c_rotate_cube)
+                    flip_cube_three= rotateCubeToTop(flip_cube_two)
+                    c_rotate_cube= rotateCubeToTop(flip_cube_three) 
                     lst_cube =  c_rotate_cube       
             
                 elif rotation== 'D':
                      
-                    flip_cube_one = flip_cube_top_side(lst_cube)        
-                    flip_cube_two = flip_cube_top_side(flip_cube_one)
-                    flip_cube_three = flip_cube_top_side(flip_cube_two)
+                    flip_cube_one = rotateCubeToTop(lst_cube)        
+                    flip_cube_two = rotateCubeToTop(flip_cube_one)
+                    flip_cube_three = rotateCubeToTop(flip_cube_two)
                     c_rotate_cube = (turn_clock(flip_cube_three))
-                    flip_cube_four = flip_cube_top_side(c_rotate_cube)
+                    flip_cube_four = rotateCubeToTop(c_rotate_cube)
                     c_rotate_cube= flip_cube_four
                     lst_cube =  c_rotate_cube
                     
                 elif rotation == 'd':
-                    flip_cube_one = flip_cube_top_side(lst_cube)        
-                    flip_cube_two = flip_cube_top_side(flip_cube_one)
-                    flip_cube_three = flip_cube_top_side(flip_cube_two)
+                    flip_cube_one = rotateCubeToTop(lst_cube)        
+                    flip_cube_two = rotateCubeToTop(flip_cube_one)
+                    flip_cube_three = rotateCubeToTop(flip_cube_two)
                     c_rotate_cube = (turn_cclock(flip_cube_three)) 
-                    flip_cube_four = flip_cube_top_side(c_rotate_cube)
+                    flip_cube_four = rotateCubeToTop(c_rotate_cube)
                     c_rotate_cube= flip_cube_four
                     lst_cube =  c_rotate_cube
             
