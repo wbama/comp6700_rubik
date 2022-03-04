@@ -55,7 +55,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             
         def test_040_TestRotateCubeToRight(self):
             inputDict = {}
-            inputDict['cube'] = 'oogyowrwywgybyygwggbbbrrwbyoryyworybwrowgrbgowgrgbobor'
+            inputDict['cube'] = 'rgbwywgooybwrgybbyggbrwbgygrowybbyowywrgoobrooywwrrogr'
  
     
             expectedResult = {}
@@ -77,7 +77,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             
         def test_050_TestRotateCubeToLeft(self):
             inputDict = {}
-            inputDict['cube'] = 'oogyowrwywgybyygwggbbbrrwbyoryyworybwrowgrbgowgrgbobor'
+            inputDict['cube'] = 'rgbwywgooybwrgybbyggbrwbgygrowybbyowywrgoobrooywwrrogr'
  
     
             expectedResult = {}
