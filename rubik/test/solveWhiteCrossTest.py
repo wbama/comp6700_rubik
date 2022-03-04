@@ -4,8 +4,8 @@ from rubik.solveRotations import rotateCubeClockwise
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeToRight
-from rubik.solveRotations import rotateCubeToBottom
-from rubik.solveRotations import rotateCubeToTop
+from rubik.solveRotations import putWhiteLeafPosition0_5
+
 
 class SolveWhiteCrossTest(unittest.TestCase):
     
@@ -97,7 +97,31 @@ class SolveWhiteCrossTest(unittest.TestCase):
 
             str_cube = str1+str2+str3+str4+str5+str6  
                         
+            self.assertEqual(expectedResult.get('cube'), str_cube) 
+            
+        def test_060_TestPutWhiteLeafPostion0_5(self):
+            inputDict = {}
+            inputDict['cube'] = 'gwrbwrybowgobggorwwogwyroobyoyybyrgbrybgryobgrobrowwww'
+ 
+    
+            expectedResult = {}
+            expectedResult['cube'] = 'gwbbwwybwybwrggggogogyyrbobyoyybyrgbryrgrroboroorowwww'
+            
+            lst_cube = createCubeListFromInputParms(inputDict)  
+            newCube = putWhiteLeafPosition0_5(lst_cube)
+            
+            str1 = "".join(newCube[0])
+            str2 = "".join(newCube[1])
+            str3 = "".join(newCube[2])
+            str4 = "".join(newCube[3])
+            str5 = "".join(newCube[4])
+            str6 = "".join(newCube[5]) 
+
+            str_cube = str1+str2+str3+str4+str5+str6  
+                        
             self.assertEqual(expectedResult.get('cube'), str_cube)  
+            
+        
 
 
     

@@ -360,3 +360,49 @@ def rotateSideCounterClock(orig_side):
     new_cube[5].insert(7, orig_side [5][7])
     new_cube[5].insert(8, orig_side [5][8])
     return new_cube
+
+def putWhiteLeafPosition0_5(lst_cube):
+    
+#inside cells
+    if lst_cube[4][5] == 'w':
+        lst_cube = rotateCubeToLeft(lst_cube)
+        lst_cube = rotateSideCounterClock(lst_cube)
+        lst_cube = rotateCubeToRight(lst_cube)
+    elif lst_cube[2][3] == 'w': 
+        lst_cube = rotateCubeToLeft(lst_cube)
+        lst_cube = rotateSideCounterClock(lst_cube)
+        lst_cube = rotateSideCounterClock(lst_cube)
+        lst_cube = rotateCubeToRight(lst_cube)
+    elif lst_cube[5][5] == 'w': 
+        lst_cube = rotateCubeToLeft(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToRight(lst_cube)
+        #outside cells - more complicated
+    elif lst_cube[1][3] == 'w': 
+        lst_cube = rotateCubeToLeft(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateCubeToTop(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToBottom(lst_cube)
+    elif lst_cube[1][1] == 'w': 
+        lst_cube = rotateCubeToTop(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToBottom(lst_cube)
+    elif lst_cube[1][5] == 'w': 
+        lst_cube = rotateCubeToLeft(lst_cube)
+        lst_cube = rotateSideCounterClock(lst_cube)
+        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateCubeToTop(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToBottom(lst_cube)
+    elif lst_cube[1][7] == 'w': 
+        lst_cube = rotateCubeToLeft(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateCubeToTop(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToBottom(lst_cube)
+            
+    return lst_cube
