@@ -1,7 +1,7 @@
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeToRight
-from rubik.solveRotations import flip_cube_top_side
+from rubik.solveRotations import rotateCubeToTop
 from rubik.solveRotations import createStringFromCube
 from rubik.solveRotations import turn_cclock
 from rubik.solveRotations import turn_clock
@@ -34,13 +34,13 @@ def solveWhiteCross(parms):
         
     #check top side if yellow
     elif createCubeListFromInputParms(parms)[4][4] == 'y':
-        lst_cube = flip_cube_top_side(createCubeListFromInputParms(parms))
+        lst_cube = rotateCubeToTop(createCubeListFromInputParms(parms))
         
     #check bottom side if yellow
     elif createCubeListFromInputParms(parms)[5][4] == 'y':
-        lst_cube = flip_cube_top_side(createCubeListFromInputParms(parms))
-        lst_cube = flip_cube_top_side(lst_cube)
-        lst_cube = flip_cube_top_side(lst_cube)        
+        lst_cube = rotateCubeToTop(createCubeListFromInputParms(parms))
+        lst_cube = rotateCubeToTop(lst_cube)
+        lst_cube = rotateCubeToTop(lst_cube)        
 
     #now we have the yellow in front.
     #find white leaves   
@@ -48,7 +48,7 @@ def solveWhiteCross(parms):
         if lst_cube[4][5] == 'w':
             lst_cube = rotateCubeToLeft(lst_cube)
             cc_rotate_cube = turn_cclock(lst_cube)
-            lst_cube = rotate_cube_to_left(cc_rotate_cube)
+            lst_cube = rotateCubeToLeft(cc_rotate_cube)
         elif lst_cube[2][1] == 'w': 
             lst_cube = rotateCubeToLeft(lst_cube)
             cc_rotate_cube = turn_cclock(lst_cube)
@@ -68,22 +68,22 @@ def solveWhiteCross(parms):
             lst_cube = rotateCubeToLeft(c_rotate_cube)
             lst_cube = rotateCubeToLeft(lst_cube)
             lst_cube = rotateCubeToLeft(lst_cube) 
-            lst_cube = flip_cube_top_side(lst_cube) 
+            lst_cube = rotateCubeToTop(lst_cube) 
             c_rotate_cube = turn_clock(lst_cube)
-            lst_cube = flip_cube_top_side(c_rotate_cube)
-            lst_cube = flip_cube_top_side(c_rotate_cube)
-            lst_cube = flip_cube_top_side(c_rotate_cube)
+            lst_cube = rotateCubeToTop(c_rotate_cube)
+            lst_cube = rotateCubeToTop(c_rotate_cube)
+            lst_cube = rotateCubeToTop(c_rotate_cube)
         elif lst_cube[2][1] == 'w': 
             lst_cube = rotateCubeToLeft(lst_cube)
             c_rotate_cube = turn_clock(lst_cube)
             lst_cube = rotateCubeToLeft(c_rotate_cube)
             lst_cube = rotateCubeToLeft(lst_cube)
             lst_cube = rotateCubeToLeft(lst_cube) 
-            lst_cube = flip_cube_top_side(lst_cube) 
+            lst_cube = rotateCubeToTop(lst_cube) 
             c_rotate_cube = turn_clock(lst_cube)
-            lst_cube = flip_cube_top_side(c_rotate_cube)
-            lst_cube = flip_cube_top_side(c_rotate_cube)
-            lst_cube = flip_cube_top_side(c_rotate_cube)
+            lst_cube = rotateCubeToTop(c_rotate_cube)
+            lst_cube = rotateCubeToTop(c_rotate_cube)
+            lst_cube = rotateCubeToTop(c_rotate_cube)
    
     print(lst_cube)
     print(lst_cube[0][5])
