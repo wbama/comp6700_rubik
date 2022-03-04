@@ -273,7 +273,7 @@ class SolveTest(unittest.TestCase):
     def test_940_InvalidRotation(self):
         inputDict = {}
         inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
-        inputDict['rotate'] = 'w'
+        inputDict['rotate'] = 'Ff Bb'
         inputDict['op'] = 'solve'
 
         expectedResult = {}
