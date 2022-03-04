@@ -1,6 +1,6 @@
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotateCubeToLeft
-from rubik.solveRotations import rotate_cube_to_left
+from rubik.solveRotations import rotateCubeToRight
 from rubik.solveRotations import flip_cube_top_side
 from rubik.solveRotations import createStringFromCube
 from rubik.solveRotations import turn_cclock
