@@ -84,7 +84,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             expectedResult['cube'] = 'oryyworyboogyowrwywgybyygwggbbbrrwbyororggwwbbgwobgror'
             
             lst_cube = createCubeListFromInputParms(inputDict)  
-            rotatedCube = rotateCubeToLeft(cube)(lst_cube)
+            rotatedCube = rotateCubeToLeft(lst_cube)
             
             str1 = "".join(rotatedCube[0])
             str2 = "".join(rotatedCube[1])
