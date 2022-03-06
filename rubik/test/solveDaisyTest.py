@@ -9,7 +9,7 @@ from rubik.solveRotations import putWhiteLeafPosition0_5
 from rubik.solveDaisy import solveDaisy
 
 
-class SolveWhiteCrossTest(unittest.TestCase):
+class SolveDaisyTest(unittest.TestCase):
     
         def test_010_RotateYellowCenterToFront(self):
         
