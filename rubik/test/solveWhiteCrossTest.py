@@ -212,11 +212,11 @@ class SolveWhiteCrossTest(unittest.TestCase):
             
         def test_060_WhiteLeafPos1_3To0_5(self):
             inputDict = {}
-            inputDict['cube'] = 'gywgyrbbbgrywoyroworrowgooogwywrowgrygbbbyobryrwygbgwb'
+            inputDict['cube'] = 'bgwbyrbbygrywoyobborrowgroogwywrrwgoygbbbyrorwogygygww'
  
     
             expectedResult = {}
-            expectedResult['cube'] = 'byrrywygrbwgrbygowogrwrobgroobggogryoyyroybwgywwobwwb'
+            expectedResult['cube'] = 'bgrbywbbgbrrrorwyygwyywgboogyywrrwgoobybbgrowworygogwo'
             
             lst_cube = createCubeListFromInputParms(inputDict)  
             newCube = putWhiteLeafPosition0_5(lst_cube)

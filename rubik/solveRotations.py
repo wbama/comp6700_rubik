@@ -501,8 +501,9 @@ def putWhiteLeafPosition0_5(lst_cube):
             print(f"rotateSideClock{lst_cube}")
             lst_cube = rotateCubeUp(lst_cube)
             print(f"rotateCubeUp{lst_cube}")
-            lst_cube = rotateCubeUp(lst_cube)
-            print(f"rotateCubeUp{lst_cube}")
+            lst_cube = rotateSideClock(lst_cube)
+            print(f"rotateSideClock{lst_cube}")
+
         elif lst_cube[1][1] == 'w':
             lst_cube = rotateSideCounterClock(lst_cube)
             lst_cube = rotateCubeDown(lst_cube)
