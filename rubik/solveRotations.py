@@ -384,7 +384,7 @@ def putWhiteLeafPosition0_5(lst_cube):
             print(lst_cube)
             lst_cube = rotateCubeToLeft(lst_cube)
             print(lst_cube)
-            lst_cube = rotateSideCounterClock(lst_cube)
+            lst_cube = rotateSideClock(lst_cube)
             print(lst_cube)
             lst_cube = rotateCubeToRight(lst_cube)
             print(lst_cube)
