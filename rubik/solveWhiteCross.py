@@ -92,6 +92,26 @@ def solveWhiteCross(parms):
         lst_cube = rotateSideClock(lst_cube)
         lst_cube = rotateCubeToRight(lst_cube)   
         
+    #rotate the whole cube and, do the again  
+    lst_cube = rotateCubeClockwise(lst_cube)    
+    while lst_cube[1][3] != lst_cube[1][5]:
+        lst_cube = rotateSideClock(lst_cube)
+    else:
+        lst_cube = rotateCubeToLeft(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToRight(lst_cube)  
+        
+    #rotate the whole cube and, do the again  
+    lst_cube = rotateCubeClockwise(lst_cube)    
+    while lst_cube[1][3] != lst_cube[1][5]:
+        lst_cube = rotateSideClock(lst_cube)
+    else:
+        lst_cube = rotateCubeToLeft(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToRight(lst_cube)   
+        
        
     #make white cross the front
     lst_cube =   rotateCubeToLeft(lst_cube)
