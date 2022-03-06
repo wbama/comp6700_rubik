@@ -34,9 +34,7 @@ def solveWhiteCross(parms):
         
     #check left side if yellow
     elif createCubeListFromInputParms(parms)[3][4] == 'y':
-        lst_cube = rotateCubeToLeft(createCubeListFromInputParms(parms))
-        lst_cube = rotateCubeToLeft(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube)
+        lst_cube = rotateCubeToRight(createCubeListFromInputParms(parms))
         
     #check top side if yellow
     elif createCubeListFromInputParms(parms)[4][4] == 'y':
@@ -44,9 +42,8 @@ def solveWhiteCross(parms):
         
     #check bottom side if yellow
     elif createCubeListFromInputParms(parms)[5][4] == 'y':
-        lst_cube = rotateCubeDown(createCubeListFromInputParms(parms))
-        lst_cube = rotateCubeDown(lst_cube)
-        lst_cube = rotateCubeDown(lst_cube)    
+        lst_cube = rotateCubeUp(createCubeListFromInputParms(parms))
+
         
     #now we have the yellow in front.
     #find white leaves   
