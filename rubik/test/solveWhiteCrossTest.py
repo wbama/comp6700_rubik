@@ -10,13 +10,13 @@ from rubik.solveRotations import putWhiteLeafPosition0_5
 
 class SolveWhiteCrossTest(unittest.TestCase):
     
-        def test_010_RotateYellowCenterToFront(self):
-           
-            inputDict = {}
-            inputDict['cube'] = 'ygbwwwrygyywogoorwbbbbygrgyryoobbgybyroorggwowbwrowrrg'    
-            expectedResult = 'y'           
-            actualResult = solveWhiteCross(inputDict)
-            self.assertEqual(expectedResult, actualResult.get('cube')[4])
+        # def test_010_RotateYellowCenterToFront(self):
+        #
+        #     inputDict = {}
+        #     inputDict['cube'] = 'ygbwwwrygyywogoorwbbbbygrgyryoobbgybyroorggwowbwrowrrg'    
+        #     expectedResult = 'y'           
+        #     actualResult = solveWhiteCross(inputDict)
+        #     self.assertEqual(expectedResult, actualResult.get('cube')[4])
             
             
         def test_020_RotateWholeCubeClockwise(self):
