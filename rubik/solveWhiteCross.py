@@ -84,7 +84,7 @@ def solveWhiteCross(parms):
         
     # have the daisy now. match up colors and rotate sides down for white cross
     
-    while lst_cube[1][3] != lst_cube[1][5]:
+    while lst_cube[0][5] == 'w' and (lst_cube[1][3] != lst_cube[1][5]):
         lst_cube = rotateSideClock(lst_cube)
     else:
         lst_cube = rotateCubeToLeft(lst_cube)
@@ -94,7 +94,7 @@ def solveWhiteCross(parms):
         
     #rotate the whole cube and, do the again  
     lst_cube = rotateCubeClockwise(lst_cube)    
-    while lst_cube[1][3] != lst_cube[1][5]:
+    while lst_cube[0][5] == 'w' and (lst_cube[1][3] != lst_cube[1][5]):
         lst_cube = rotateSideClock(lst_cube)
     else:
         lst_cube = rotateCubeToLeft(lst_cube)
@@ -104,7 +104,7 @@ def solveWhiteCross(parms):
         
     #rotate the whole cube and, do the again  
     lst_cube = rotateCubeClockwise(lst_cube)    
-    while lst_cube[1][3] != lst_cube[1][5]:
+    while lst_cube[0][5] == 'w' and (lst_cube[1][3] != lst_cube[1][5]):
         lst_cube = rotateSideClock(lst_cube)
     else:
         lst_cube = rotateCubeToLeft(lst_cube)
