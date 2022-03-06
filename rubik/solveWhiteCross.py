@@ -1,8 +1,8 @@
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeToRight
-from rubik.solveRotations import rotateCubeToTop
-from rubik.solveRotations import rotateCubeToBottom
+from rubik.solveRotations import rotateCubeDown
+from rubik.solveRotations import rotateCubeUp
 from rubik.solveRotations import createStringFromCube
 from rubik.solveRotations import rotateSideCounterClock
 from rubik.solveRotations import rotateSideClock
@@ -39,13 +39,13 @@ def solveWhiteCross(parms):
         
     #check top side if yellow
     elif createCubeListFromInputParms(parms)[4][4] == 'y':
-        lst_cube = rotateCubeToTop(createCubeListFromInputParms(parms))
+        lst_cube = rotateCubeDown(createCubeListFromInputParms(parms))
         
     #check bottom side if yellow
     elif createCubeListFromInputParms(parms)[5][4] == 'y':
-        lst_cube = rotateCubeToTop(createCubeListFromInputParms(parms))
-        lst_cube = rotateCubeToTop(lst_cube)
-        lst_cube = rotateCubeToTop(lst_cube)    
+        lst_cube = rotateCubeDown(createCubeListFromInputParms(parms))
+        lst_cube = rotateCubeDown(lst_cube)
+        lst_cube = rotateCubeDown(lst_cube)    
         
     #now we have the yellow in front.
     #find white leaves   
