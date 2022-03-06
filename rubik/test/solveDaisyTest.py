@@ -6,17 +6,18 @@ from rubik.solveRotations import rotateCubeDown
 from rubik.solveRotations import rotateCubeUp
 from rubik.solveRotations import rotateCubeClock
 from rubik.solveRotations import putWhiteLeafPosition0_5
+from rubik.solveDaisy import solveDaisy
 
 
 class SolveWhiteCrossTest(unittest.TestCase):
     
-        # def test_010_RotateYellowCenterToFront(self):
-        #
-        #     inputDict = {}
-        #     inputDict['cube'] = 'ygbwwwrygyywogoorwbbbbygrgyryoobbgybyroorggwowbwrowrrg'    
-        #     expectedResult = 'y'           
-        #     actualResult = solveWhiteCross(inputDict)
-        #     self.assertEqual(expectedResult, actualResult.get('cube')[4])
+        def test_010_RotateYellowCenterToFront(self):
+        
+            inputDict = {}
+            inputDict['cube'] = 'ygbwwwrygyywogoorwbbbbygrgyryoobbgybyroorggwowbwrowrrg'    
+            expectedResult = 'y'           
+            actualResult = solveDaisy(inputDict)
+            self.assertEqual(expectedResult, actualResult.get('cube')[4])
             
             
         def test_020_RotateWholeCubeClockwise(self):
@@ -227,18 +228,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             str_cube = str1+str2+str3+str4+str5+str6                          
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-            
-        def test_060_SolveWhiteCross(self):
-            inputDict = {}
-            inputDict['cube'] = 'ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo'    
-            expectedResult = 'w'             
 
-            actualResult = solveWhiteCross(inputDict)
-            self.assertEqual(expectedResult, actualResult.get('cube')[1])
-            self.assertEqual(expectedResult, actualResult.get('cube')[3])
-            self.assertEqual(expectedResult, actualResult.get('cube')[4])
-            self.assertEqual(expectedResult, actualResult.get('cube')[5])
-            self.assertEqual(expectedResult, actualResult.get('cube')[7])
             
         
 

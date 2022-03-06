@@ -4,14 +4,12 @@ from rubik.solveRotations import rotateCubeToRight
 from rubik.solveRotations import rotateCubeDown
 from rubik.solveRotations import rotateCubeUp
 from rubik.solveRotations import createStringFromCube
-from rubik.solveRotations import rotateSideCounterClock
-from rubik.solveRotations import rotateSideClock
 from rubik.solveRotations import putWhiteLeafPosition0_5
 from rubik.solveRotations import rotateCubeClock
-from rubik.solveRotations import rotateIntoWhiteCross
 
 
-def solveWhiteCross(parms):
+
+def solveDaisy(parms):
     
     #rotate the cube so that the front center is yellow for the daisy   
     
@@ -75,34 +73,9 @@ def solveWhiteCross(parms):
         lst_cube = lst_cube
     else:
         #inside cells
-        lst_cube = putWhiteLeafPosition0_5(lst_cube) 
-          
-    lst_cube_daisy = lst_cube
+        lst_cube = putWhiteLeafPosition0_5(lst_cube)           
 
-    print(f"daisy {lst_cube_daisy}")
-        
-    # have the daisy now. match up colors and rotate sides down for white cross
-    
-    lst_cube = rotateIntoWhiteCross(lst_cube)
-         
-    #rotate the whole cube and do again  - make function later on
-    lst_cube = rotateCubeClock(lst_cube)
-    lst_cube = rotateIntoWhiteCross(lst_cube)
-        
-    #rotate the whole cube and do again  - make function later on
-    lst_cube = rotateCubeClock(lst_cube)
-    lst_cube = rotateIntoWhiteCross(lst_cube)
-        
-    #rotate the whole cube and do again  - make function later on
-    lst_cube = rotateCubeClock(lst_cube)    
-    lst_cube = rotateIntoWhiteCross(lst_cube)        
-       
-    #make white cross the front
-    lst_cube =   rotateCubeToLeft(lst_cube)
-    lst_cube =   rotateCubeToLeft(lst_cube)
-               
-
-    print(f"White cross {lst_cube}")
+    print(f"daisy {lst_cube}")
     result = {}
     result['cube'] = createStringFromCube(lst_cube)
     result['status'] = 'ok'                   
