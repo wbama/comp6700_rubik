@@ -219,11 +219,11 @@ def rotateCubeUp(cube):
     
 #front side goes down    
 def rotateCubeDown(cube):
-        new_cube = [[], [], [], [], [], []]
+        new_cube = [[], [], [], [], [], []]       
         
         new_cube[0] = cube[4]
         
-        new_cube[1].insert(0, cube [1][2])
+        new_cube[1].insert(0, cube [1][3])
         new_cube[1].insert(1, cube [1][5])
         new_cube[1].insert(2, cube [1][8])
         new_cube[1].insert(3, cube [1][1])
@@ -233,20 +233,37 @@ def rotateCubeDown(cube):
         new_cube[1].insert(7, cube [1][3])
         new_cube[1].insert(8, cube [1][6])  
                  
-        new_cube[2] = cube[5]
+        new_cube[2].insert(0, cube [4][8])
+        new_cube[2].insert(1, cube [4][7])
+        new_cube[2].insert(2, cube [4][6])
+        new_cube[2].insert(3, cube [4][5])
+        new_cube[2].insert(4, cube [4][4])
+        new_cube[2].insert(5, cube [4][3])
+        new_cube[2].insert(6, cube [4][2])
+        new_cube[2].insert(7, cube [4][1])
+        new_cube[2].insert(8, cube [4][0]) 
         
-        new_cube[3].insert(0, cube [3][6])
-        new_cube[3].insert(1, cube [3][3])
-        new_cube[3].insert(2, cube [3][0])
-        new_cube[3].insert(3, cube [3][7])
+        new_cube[3].insert(0, cube [3][2])
+        new_cube[3].insert(1, cube [3][5])
+        new_cube[3].insert(2, cube [3][8])
+        new_cube[3].insert(3, cube [3][1])
         new_cube[3].insert(4, cube [3][4])
-        new_cube[3].insert(5, cube [3][1])
-        new_cube[3].insert(6, cube [3][8])
-        new_cube[3].insert(7, cube [3][5])
-        new_cube[3].insert(8, cube [3][2]) 
+        new_cube[3].insert(5, cube [3][7])
+        new_cube[3].insert(6, cube [3][0])
+        new_cube[3].insert(7, cube [3][3])
+        new_cube[3].insert(8, cube [3][6]) 
            
-        new_cube[4] = cube[2]   
-        new_cube[5] = cube[0]   
+        new_cube[4] = cube[0]   
+        
+        new_cube[5].insert(0, cube [2][8])
+        new_cube[5].insert(1, cube [2][7])
+        new_cube[5].insert(2, cube [2][6])
+        new_cube[5].insert(3, cube [2][5])
+        new_cube[5].insert(4, cube [2][4])
+        new_cube[5].insert(5, cube [2][3])
+        new_cube[5].insert(6, cube [2][2])
+        new_cube[5].insert(7, cube [2][1])
+        new_cube[5].insert(8, cube [2][0]) 
 
         return new_cube
 
