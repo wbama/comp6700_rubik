@@ -1,6 +1,5 @@
 import unittest
 from rubik.solveWhiteCross import solveWhiteCross
-from rubik.solveRotations import rotateCubeClockwise
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotateCubeToLeft, rotateCubeToRight
 from rubik.solveRotations import rotateCubeDown
