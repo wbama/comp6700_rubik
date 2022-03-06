@@ -143,6 +143,28 @@ class SolveWhiteCrossTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube)  
             
+        def test_060_WhiteLeafPos2_3To0_5(self):
+            inputDict = {}
+            inputDict['cube'] = 'rwyroyryobgogbowyrywbwrbygwybwwgboyworgoyrbgrgogbwrbog'
+ 
+    
+            expectedResult = {}
+            expectedResult['cube'] = 'rwyrowryyrywobgogbowbyrbygwybwwgboyworgoyrbgggogbwrbor'
+            
+            lst_cube = createCubeListFromInputParms(inputDict)  
+            newCube = putWhiteLeafPosition0_5(lst_cube)
+            
+            str1 = "".join(newCube[0])
+            str2 = "".join(newCube[1])
+            str3 = "".join(newCube[2])
+            str4 = "".join(newCube[3])
+            str5 = "".join(newCube[4])
+            str6 = "".join(newCube[5]) 
+
+            str_cube = str1+str2+str3+str4+str5+str6  
+                        
+            self.assertEqual(expectedResult.get('cube'), str_cube) 
+            
         
 
 
