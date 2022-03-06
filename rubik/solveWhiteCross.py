@@ -8,6 +8,7 @@ from rubik.solveRotations import rotateSideCounterClock
 from rubik.solveRotations import rotateSideClock
 from rubik.solveRotations import putWhiteLeafPosition0_5
 from rubik.solveRotations import rotateCubeClock
+from rubik.solveRotations import rotateIntoWhiteCross
 
 
 def solveWhiteCross(parms):
@@ -81,114 +82,19 @@ def solveWhiteCross(parms):
         
     # have the daisy now. match up colors and rotate sides down for white cross
     
-    if lst_cube[1][3] == lst_cube[1][4]:
-        lst_cube = rotateCubeToLeft(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)  
-    elif lst_cube[1][3] == lst_cube[4][4]:
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateCubeDown(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeUp(lst_cube)
-    elif lst_cube[1][3] == lst_cube[3][4]:
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube) 
-    elif lst_cube[1][3] == lst_cube[5][4]:
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeUp(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeDown(lst_cube) 
+    lst_cube = rotateIntoWhiteCross(lst_cube)
         
     #rotate the whole cube and do again  - make function later on
     lst_cube = rotateCubeClock(lst_cube)
-    
-    if lst_cube[1][3] == lst_cube[1][4]:
-        lst_cube = rotateCubeToLeft(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)  
-    elif lst_cube[1][3] == lst_cube[4][4]:
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateCubeDown(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeUp(lst_cube)
-    elif lst_cube[1][3] == lst_cube[3][4]:
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube) 
-    elif lst_cube[1][3] == lst_cube[5][4]:
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeUp(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeDown(lst_cube) 
+    lst_cube = rotateIntoWhiteCross(lst_cube)
         
     #rotate the whole cube and do again  - make function later on
     lst_cube = rotateCubeClock(lst_cube)
-    
-    if lst_cube[1][3] == lst_cube[1][4]:
-        lst_cube = rotateCubeToLeft(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)  
-    elif lst_cube[1][3] == lst_cube[4][4]:
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateCubeDown(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeUp(lst_cube)
-    elif lst_cube[1][3] == lst_cube[3][4]:
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube) 
-    elif lst_cube[1][3] == lst_cube[5][4]:
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeUp(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeDown(lst_cube) 
+    lst_cube = rotateIntoWhiteCross(lst_cube)
         
     #rotate the whole cube and do again  - make function later on
-    lst_cube = rotateCubeClock(lst_cube)
-    
-    if lst_cube[1][3] == lst_cube[1][4]:
-        lst_cube = rotateCubeToRight(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube)  
-    elif lst_cube[1][3] == lst_cube[4][4]:
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateCubeDown(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeUp(lst_cube)
-    elif lst_cube[1][3] == lst_cube[3][4]:
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube) 
-    elif lst_cube[1][3] == lst_cube[5][4]:
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeUp(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeDown(lst_cube) 
+    lst_cube = rotateCubeClock(lst_cube)    
+    lst_cube = rotateIntoWhiteCross(lst_cube)
         
        
     #make white cross the front
