@@ -46,13 +46,11 @@ def solveWhiteCross(parms):
         lst_cube = rotateCubeToTop(lst_cube)
         lst_cube = rotateCubeToTop(lst_cube)    
         
-    lst_cube_yellow = lst_cube    
-
     #now we have the yellow in front.
     #find white leaves   
-    if lst_cube[0][5] != 'w':
-        #inside cells
-        lst_cube = putWhiteLeafPosition0_5(lst_cube)
+    # if lst_cube[0][5] != 'w':
+    #     #inside cells
+    #     lst_cube = putWhiteLeafPosition0_5(lst_cube)
             
     #now rotate the whole cube, and do the yellow[0][5] again
    
