@@ -56,10 +56,8 @@ def solveWhiteCross(parms):
         lst_cube = putWhiteLeafPosition0_5(lst_cube)
 
             
-    #now rotate the whole cube, and do the yellow[0][5] again
-   
-    print(lst_cube)
-    print(lst_cube[0][5])
+    #now rotate the whole cube, and do the yellow[0][5] again   
+
     result = {}
     result['cube'] = createStringFromCube(lst_cube)
     result['status'] = 'ok'                   
