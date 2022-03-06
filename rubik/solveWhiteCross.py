@@ -129,7 +129,7 @@ def solveWhiteCross(parms):
     lst_cube =   rotateCubeToLeft(lst_cube)
                
 
-
+    print(lst_cube)
     result = {}
     result['cube'] = createStringFromCube(lst_cube)
     result['status'] = 'ok'                   
