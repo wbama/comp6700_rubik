@@ -73,11 +73,7 @@ def solveDaisy(parms):
         lst_cube = lst_cube
     else:
         #inside cells
-        lst_cube = putWhiteLeafPosition0_5(lst_cube)           
-
-    result = {}
-    result['cube'] = createStringFromCube(lst_cube)
-    result['status'] = 'ok'                   
+        lst_cube = putWhiteLeafPosition0_5(lst_cube)            
 
     
-    return result 
+    return lst_cube 

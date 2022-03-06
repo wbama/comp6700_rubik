@@ -14,11 +14,10 @@ from rubik.solveDaisy import solveDaisy
 
 def solveWhiteCross(parms):
     
-    lst_cube = solveDaisy(parms)
-        
+       
     # have the daisy now. match up colors and rotate sides down for white cross
     
-    lst_cube = rotateIntoWhiteCross(lst_cube)
+    lst_cube = rotateIntoWhiteCross(solveDaisy(parms))
          
     #rotate the whole cube and do again  - make function later on
     lst_cube = rotateCubeClock(lst_cube)
