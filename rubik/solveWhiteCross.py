@@ -10,6 +10,7 @@ from rubik.solveRotations import putWhiteLeafPosition0_5
 
 
 
+
 def solveWhiteCross(parms):
     
     #rotate the cube so that the front center is yellow for the daisy   
@@ -43,10 +44,15 @@ def solveWhiteCross(parms):
     elif createCubeListFromInputParms(parms)[5][4] == 'y':
         lst_cube = rotateCubeToTop(createCubeListFromInputParms(parms))
         lst_cube = rotateCubeToTop(lst_cube)
-        lst_cube = rotateCubeToTop(lst_cube)        
+        lst_cube = rotateCubeToTop(lst_cube)    
+        
+    lst_cube_yellow = lst_cube    
 
     #now we have the yellow in front.
-
+    #find white leaves   
+    if lst_cube[0][5] != 'w':
+        #inside cells
+        lst_cube = putWhiteLeafPosition0_5(lst_cube)
             
     #now rotate the whole cube, and do the yellow[0][5] again
    
