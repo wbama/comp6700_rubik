@@ -7,7 +7,7 @@ from rubik.solveRotations import createStringFromCube
 from rubik.solveRotations import rotateSideCounterClock
 from rubik.solveRotations import rotateSideClock
 from rubik.solveRotations import putWhiteLeafPosition0_5
-from rubik.solveInputDict import lst_cube
+
 
 
 
