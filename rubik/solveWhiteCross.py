@@ -7,6 +7,7 @@ from rubik.solveRotations import createStringFromCube
 from rubik.solveRotations import rotateSideCounterClock
 from rubik.solveRotations import rotateSideClock
 from rubik.solveRotations import putWhiteLeafPosition0_5
+from rubik.solveInputDict import lst_cube
 
 
 
@@ -48,7 +49,9 @@ def solveWhiteCross(parms):
         
     #now we have the yellow in front.
     #find white leaves   
-    if lst_cube[0][5] != 'w':
+    if lst_cube[0][5] == 'w':
+        lst_cube = lst_cube
+    else:
         #inside cells
         lst_cube = putWhiteLeafPosition0_5(lst_cube)
 
