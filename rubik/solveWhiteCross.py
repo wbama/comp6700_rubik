@@ -43,7 +43,6 @@ def solveWhiteCross(parms):
     #check bottom side if yellow
     elif createCubeListFromInputParms(parms)[5][4] == 'y':
         lst_cube = rotateCubeUp(createCubeListFromInputParms(parms))
-
         
     #now we have the yellow in front.
     #find white leaves   
@@ -78,7 +77,9 @@ def solveWhiteCross(parms):
         lst_cube = lst_cube
     else:
         #inside cells
-        lst_cube = putWhiteLeafPosition0_5(lst_cube)            
+        lst_cube = putWhiteLeafPosition0_5(lst_cube)   
+        
+    # have the daisy now. match up colors and rotate sides down for white cross         
 
 
     result = {}
