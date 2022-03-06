@@ -136,6 +136,7 @@ def turn_type3(orig_side):
     turned_side.insert(8, orig_side [0])
     return turned_side
 
+#front side goes to the right
 def rotateCubeToRight(cube):
         new_cube = [[], [], [], [], [], []]
         
@@ -166,6 +167,7 @@ def rotateCubeToRight(cube):
 
         return new_cube
     
+#font side goes up   
 def rotateCubeUp(cube):
         new_cube = [[], [], [], [], [], []]       
         
@@ -198,6 +200,7 @@ def rotateCubeUp(cube):
 
         return new_cube
     
+#front side goes down    
 def rotateCubeDown(cube):
         new_cube = [[], [], [], [], [], []]
         
@@ -230,6 +233,7 @@ def rotateCubeDown(cube):
 
         return new_cube
 
+#front side goes to the left
 def rotateCubeToLeft(cube):
         #rotate cube to right
         first_side = cube.pop(0)
