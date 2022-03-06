@@ -488,13 +488,13 @@ def putWhiteLeafPosition0_5(lst_cube):
         elif lst_cube[1][3] == 'w':
             print(f"The list cube{lst_cube}")
             lst_cube = rotateCubeToLeft(lst_cube)
-            print(lst_cube)
+            print(f"rotateCubeToLeft{lst_cube}")
             lst_cube = rotateSideClock(lst_cube)
-            print(lst_cube)
+            print(f"rotateSideClock{lst_cube}")
             lst_cube = rotateCubeToRight(lst_cube)
-            print(lst_cube)
+            print(f"rotateCubeToRight{lst_cube}")
             lst_cube = rotateSideCounterClock(lst_cube)
-            print(lst_cube)
+            print(f"rotateSideCounterClock{lst_cube}")
             lst_cube = rotateCubeDown(lst_cube) #check
             print(f"rotateCubeDown{lst_cube}")
             # lst_cube = rotateSideClock(lst_cube)
