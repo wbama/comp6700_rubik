@@ -75,7 +75,6 @@ def solveDaisy(parms):
         #inside cells
         lst_cube = putWhiteLeafPosition0_5(lst_cube)           
 
-    print(f"daisy {lst_cube}")
     result = {}
     result['cube'] = createStringFromCube(lst_cube)
     result['status'] = 'ok'                   
