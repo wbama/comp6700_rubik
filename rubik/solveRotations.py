@@ -183,7 +183,15 @@ def rotateCubeUp(cube):
         new_cube[1].insert(7, cube [1][5])
         new_cube[1].insert(8, cube [1][2])  
                  
-        new_cube[2] = cube[4]
+        new_cube[2].insert(0, cube [4][8])
+        new_cube[2].insert(1, cube [4][7])
+        new_cube[2].insert(2, cube [4][6])
+        new_cube[2].insert(3, cube [4][5])
+        new_cube[2].insert(4, cube [4][4])
+        new_cube[2].insert(5, cube [4][3])
+        new_cube[2].insert(6, cube [4][2])
+        new_cube[2].insert(7, cube [4][1])
+        new_cube[2].insert(8, cube [4][0]) 
         
         new_cube[3].insert(0, cube [3][2])
         new_cube[3].insert(1, cube [3][5])
