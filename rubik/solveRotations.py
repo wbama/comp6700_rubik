@@ -363,7 +363,9 @@ def rotateSideCounterClock(orig_side):
 
 def putWhiteLeafPosition0_5(lst_cube):
     
-        if lst_cube[4][5] == 'w':
+        if lst_cube[0][5] == 'w':
+            lst_cube = lst_cube
+        elif lst_cube[4][5] == 'w':
             lst_cube = rotateCubeToLeft(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
             lst_cube = rotateCubeToRight(lst_cube)
