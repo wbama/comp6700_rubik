@@ -261,8 +261,7 @@ def rotateCubeDown(cube):
         new_cube[4].insert(5, cube [2][3])
         new_cube[4].insert(6, cube [2][2])
         new_cube[4].insert(7, cube [2][1])
-        new_cube[4].insert(8, cube [2][0]) 
-           
+        new_cube[4].insert(8, cube [2][0])            
 
         new_cube[5] = cube[0]    
         
@@ -496,13 +495,13 @@ def putWhiteLeafPosition0_5(lst_cube):
             print(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
             print(lst_cube)
-            lst_cube = rotateCubeDown(lst_cube)
+            lst_cube = rotateCubeDown(lst_cube) #check
             print(lst_cube)
-            lst_cube = rotateSideClock(lst_cube)
-            print(lst_cube)
-            lst_cube = rotateCubeUp(lst_cube)
-            print(lst_cube)
-            lst_cube = rotateSideClock(lst_cube)
+            # lst_cube = rotateSideClock(lst_cube)
+            # print(lst_cube)
+            # lst_cube = rotateCubeUp(lst_cube)
+            # print(lst_cube)
+            # lst_cube = rotateSideClock(lst_cube)
             print(lst_cube)
         elif lst_cube[1][1] == 'w':
             lst_cube = rotateSideCounterClock(lst_cube)
