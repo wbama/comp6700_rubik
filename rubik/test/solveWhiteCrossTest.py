@@ -5,6 +5,7 @@ from rubik.solveRotations import rotateCubeToLeft, rotateCubeToRight
 from rubik.solveRotations import rotateCubeDown
 from rubik.solveRotations import rotateCubeUp
 from rubik.solveRotations import rotateCubeClock
+from rubik.solveRotations import putWhiteLeafPosition0_5
 
 
 class SolveWhiteCrossTest(unittest.TestCase):
