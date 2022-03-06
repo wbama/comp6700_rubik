@@ -99,13 +99,13 @@ class SolveWhiteCrossTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-        def test_060_TestPutWhiteLeafPostion0_5(self):
+        def test_060_WhiteLeafPos0_5NotMove(self):
             inputDict = {}
-            inputDict['cube'] = 'gwrbwrybowgobggyrgwogwyroobyoyybyrgbrybgryobgrobrowwww'
+            inputDict['cube'] = 'rwyrowryyrywobgogbowbyrbygwybwwgboyworgoyrbgggogbwrbor'
  
     
             expectedResult = {}
-            expectedResult['cube'] = 'gwobwwybwgryggbogwoogryrrobyoyybyrgbrobgrwobwrobroywwg'
+            expectedResult['cube'] = 'rwyrowryyrywobgogbowbyrbygwybwwgboyworgoyrbgggogbwrbor'
             
             lst_cube = createCubeListFromInputParms(inputDict)  
             newCube = putWhiteLeafPosition0_5(lst_cube)

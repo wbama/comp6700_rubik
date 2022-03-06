@@ -88,6 +88,8 @@ def solveWhiteCross(parms):
             lst_cube = rotateCubeToTop(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
             lst_cube = rotateCubeToBottom(lst_cube)
+        else:
+            lst_cube = lst_cube
    
     print(lst_cube)
     print(lst_cube[0][5])
