@@ -10,9 +10,6 @@ from rubik.solveRotations import putWhiteLeafPosition0_5
 from rubik.solveRotations import rotateCubeClock
 
 
-
-
-
 def solveWhiteCross(parms):
     
     #rotate the cube so that the front center is yellow for the daisy   
