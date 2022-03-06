@@ -79,7 +79,53 @@ def solveWhiteCross(parms):
         #inside cells
         lst_cube = putWhiteLeafPosition0_5(lst_cube)   
         
-    # have the daisy now. match up colors and rotate sides down for white cross         
+    # have the daisy now. match up colors and rotate sides down for white cross
+    
+    if  lst_cube[0][5] != lst_cube[1][3]:
+        lst_cube = rotateSideClock(lst_cube)
+    else:
+        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToLeft(lst_cube)
+        
+    #rotate the whole cube and to again  
+    lst_cube = rotateCubeClockwise(lst_cube)
+    
+    if  lst_cube[0][5] != lst_cube[1][3]:
+        lst_cube = rotateSideClock(lst_cube)
+    else:
+        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToLeft(lst_cube)
+        
+    #rotate the whole cube and to again  
+    lst_cube = rotateCubeClockwise(lst_cube)
+    
+    if  lst_cube[0][5] != lst_cube[1][3]:
+        lst_cube = rotateSideClock(lst_cube)
+    else:
+        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToLeft(lst_cube)
+        
+    #rotate the whole cube and to again  
+    lst_cube = rotateCubeClockwise(lst_cube)
+    
+    if  lst_cube[0][5] != lst_cube[1][3]:
+        lst_cube = rotateSideClock(lst_cube)
+    else:
+        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateSideClock(lst_cube)
+        lst_cube = rotateCubeToLeft(lst_cube) 
+        
+    #make white cross the front
+    lst_cube =   rotateCubeToLeft(lst_cube)
+    lst_cube =   rotateCubeToLeft(lst_cube)
+               
 
 
     result = {}
