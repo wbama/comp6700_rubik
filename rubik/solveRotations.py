@@ -377,17 +377,27 @@ def putWhiteLeafPosition0_5(lst_cube):
         elif lst_cube[5][5] == 'w': 
             lst_cube = rotateCubeToLeft(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)            
+            lst_cube = rotateCubeToRight(lst_cube) 
+                       
         #outside cells - more complicated
         elif lst_cube[1][3] == 'w':
+            print(lst_cube)
             lst_cube = rotateCubeToLeft(lst_cube)
+            print(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
+            print(lst_cube)
             lst_cube = rotateCubeToRight(lst_cube)
+            print(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
+            print(lst_cube)
             lst_cube = rotateCubeToTop(lst_cube)
+            print(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
+            print(lst_cube)
             lst_cube = rotateCubeToBottom(lst_cube)
+            print(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
+            print(lst_cube)
         elif lst_cube[1][1] == 'w':
             lst_cube = rotateSideCounterClock(lst_cube)
             lst_cube = rotateCubeToTop(lst_cube)
