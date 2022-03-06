@@ -78,6 +78,8 @@ def solveWhiteCross(parms):
     else:
         #inside cells
         lst_cube = putWhiteLeafPosition0_5(lst_cube)   
+
+    print(lst_cube)
         
     # have the daisy now. match up colors and rotate sides down for white cross
     
