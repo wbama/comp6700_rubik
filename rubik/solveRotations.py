@@ -252,18 +252,21 @@ def rotateCubeDown(cube):
         new_cube[3].insert(6, cube [3][8])
         new_cube[3].insert(7, cube [3][5])
         new_cube[3].insert(8, cube [3][2]) 
-           
-        new_cube[4] = cube[0]   
         
-        new_cube[5].insert(0, cube [2][8])
-        new_cube[5].insert(1, cube [2][7])
-        new_cube[5].insert(2, cube [2][6])
-        new_cube[5].insert(3, cube [2][5])
-        new_cube[5].insert(4, cube [2][4])
-        new_cube[5].insert(5, cube [2][3])
-        new_cube[5].insert(6, cube [2][2])
-        new_cube[5].insert(7, cube [2][1])
-        new_cube[5].insert(8, cube [2][0]) 
+        new_cube[4].insert(0, cube [2][8])
+        new_cube[4].insert(1, cube [2][7])
+        new_cube[4].insert(2, cube [2][6])
+        new_cube[4].insert(3, cube [2][5])
+        new_cube[4].insert(4, cube [2][4])
+        new_cube[4].insert(5, cube [2][3])
+        new_cube[4].insert(6, cube [2][2])
+        new_cube[4].insert(7, cube [2][1])
+        new_cube[4].insert(8, cube [2][0]) 
+           
+
+        new_cube[5] = cube[0]    
+        
+
 
         return new_cube
 
