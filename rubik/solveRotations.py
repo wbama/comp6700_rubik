@@ -570,6 +570,7 @@ def putWhiteLeafPosition0_5(lst_cube):
         return lst_cube
     
 def rotateIntoWhiteCross(lst_cube):
+    
     if lst_cube[1][3] == lst_cube[1][4]:
         lst_cube = rotateCubeToLeft(lst_cube)
         lst_cube = rotateSideClock(lst_cube)
@@ -600,6 +601,8 @@ def rotateIntoWhiteCross(lst_cube):
         lst_cube = rotateCubeClock(lst_cube) 
         lst_cube = rotateCubeClock(lst_cube) 
         lst_cube = rotateCubeClock(lst_cube) 
+        
+    return lst_cube
         
         
         
