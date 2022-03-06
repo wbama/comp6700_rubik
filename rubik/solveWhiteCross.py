@@ -53,7 +53,7 @@ def solveWhiteCross(parms):
         lst_cube = putWhiteLeafPosition0_5(lst_cube)
         
     #rotate the whole cube and, do the yellow[0][5] again  
-    lst_cube = rotateCubeClockwise(lst_cube)
+    lst_cube = rotateCubeClock(lst_cube)
         #find white leaves   
     if lst_cube[0][5] == 'w':
         lst_cube = lst_cube
@@ -62,7 +62,7 @@ def solveWhiteCross(parms):
         lst_cube = putWhiteLeafPosition0_5(lst_cube)
         
     #rotate the whole cube and, do the yellow[0][5] again  
-    lst_cube = rotateCubeClockwise(lst_cube)
+    lst_cube = rotateCubeClock(lst_cube)
         #find white leaves   
     if lst_cube[0][5] == 'w':
         lst_cube = lst_cube
@@ -71,7 +71,7 @@ def solveWhiteCross(parms):
         lst_cube = putWhiteLeafPosition0_5(lst_cube)
         
     #rotate the whole cube and, do the yellow[0][5] again  
-    lst_cube = rotateCubeClockwise(lst_cube)
+    lst_cube = rotateCubeClock(lst_cube)
         #find white leaves   
     if lst_cube[0][5] == 'w':
         lst_cube = lst_cube
@@ -110,7 +110,7 @@ def solveWhiteCross(parms):
         lst_cube = rotateCubeDown(lst_cube) 
         
     #rotate the whole cube and do again  - make function later on
-    lst_cube = rotateCubeClockwise(lst_cube)
+    lst_cube = rotateCubeClock(lst_cube)
     
     if lst_cube[1][3] == lst_cube[1][4]:
         lst_cube = rotateCubeToLeft(lst_cube)
@@ -138,7 +138,7 @@ def solveWhiteCross(parms):
         lst_cube = rotateCubeDown(lst_cube) 
         
     #rotate the whole cube and do again  - make function later on
-    lst_cube = rotateCubeClockwise(lst_cube)
+    lst_cube = rotateCubeClock(lst_cube)
     
     if lst_cube[1][3] == lst_cube[1][4]:
         lst_cube = rotateCubeToLeft(lst_cube)
@@ -166,7 +166,7 @@ def solveWhiteCross(parms):
         lst_cube = rotateCubeDown(lst_cube) 
         
     #rotate the whole cube and do again  - make function later on
-    lst_cube = rotateCubeClockwise(lst_cube)
+    lst_cube = rotateCubeClock(lst_cube)
     
     if lst_cube[1][3] == lst_cube[1][4]:
         lst_cube = rotateCubeToRight(lst_cube)
