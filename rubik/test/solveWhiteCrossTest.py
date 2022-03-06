@@ -231,17 +231,18 @@ class SolveWhiteCrossTest(unittest.TestCase):
             str_cube = str1+str2+str3+str4+str5+str6                          
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-        def test_060_SolveDaisy(self):
-            inputDict = {}
-            inputDict['cube'] = 'ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo'    
-            expectedResult = 'w'             
+        # def test_060_SolveDaisy(self):
+        #     inputDict = {}
+        #     inputDict['cube'] = 'ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo'    
+        #     expectedResult = 'w'             
+        #
+        #     actualResult = solveWhiteCross(inputDict)
+        #     self.assertEqual(expectedResult, actualResult.get('cube')[1])
+        #     self.assertEqual(expectedResult, actualResult.get('cube')[3])
+        #     self.assertEqual(expectedResult, actualResult.get('cube')[5])
+        #     self.assertEqual(expectedResult, actualResult.get('cube')[7])
+        #
 
-            actualResult = solveWhiteCross(inputDict)
-            self.assertEqual(expectedResult, actualResult.get('cube')[1])
-            self.assertEqual(expectedResult, actualResult.get('cube')[3])
-            self.assertEqual(expectedResult, actualResult.get('cube')[5])
-            self.assertEqual(expectedResult, actualResult.get('cube')[7])
-            
         
 
 
