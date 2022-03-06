@@ -223,7 +223,7 @@ def rotateCubeDown(cube):
         
         new_cube[0] = cube[4]
         
-        new_cube[1].insert(0, cube [1][3])
+        new_cube[1].insert(0, cube [1][2])
         new_cube[1].insert(1, cube [1][5])
         new_cube[1].insert(2, cube [1][8])
         new_cube[1].insert(3, cube [1][1])
