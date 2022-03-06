@@ -92,8 +92,6 @@ def solveWhiteCross(parms):
             lst_cube = rotateSideClock(lst_cube)
             lst_cube = rotateCubeToLeft(lst_cube)
         
-
-        
     #rotate the whole cube and to again  
     lst_cube = rotateCubeClockwise(lst_cube)
     
@@ -132,7 +130,7 @@ def solveWhiteCross(parms):
     lst_cube =   rotateCubeToLeft(lst_cube)
                
 
-    print(lst_cube)
+    print(f"White cross {lst_cube}")
     result = {}
     result['cube'] = createStringFromCube(lst_cube)
     result['status'] = 'ok'                   
