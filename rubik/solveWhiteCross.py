@@ -19,7 +19,7 @@ def solveWhiteCross(parms):
         # result = {}
         # result['cube'] = createStringFromCube(parms)
         # result['status'] = 'ok' 
-        print("yellow front")
+        lst_cube = (createCubeListFromInputParms(parms))
     
     #check right side if yellow
     elif createCubeListFromInputParms(parms)[1][4] == 'y':
@@ -48,9 +48,9 @@ def solveWhiteCross(parms):
         
     #now we have the yellow in front.
     #find white leaves   
-    # if lst_cube[0][5] != 'w':
-    #     #inside cells
-    #     lst_cube = putWhiteLeafPosition0_5(lst_cube)
+    if lst_cube[0][5] != 'w':
+        #inside cells
+        lst_cube = putWhiteLeafPosition0_5(lst_cube)
             
     #now rotate the whole cube, and do the yellow[0][5] again
    
