@@ -145,7 +145,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             
         def test_060_WhiteLeafPos2_3To0_5(self):
             inputDict = {}
-            inputDict['cube'] = 'rwyroyryobgogbowyrywbwrbygwybwwgboyworgoyrbgrgogbwrbog'
+            inputDict['cube'] = 'rwgrorrygwgbybgroorwbrrbggwybwwgboyworyoyybgogoybwwboy'
  
     
             expectedResult = {}
