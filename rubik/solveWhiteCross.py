@@ -113,10 +113,10 @@ def solveWhiteCross(parms):
     lst_cube = rotateCubeClockwise(lst_cube)
     
     if lst_cube[1][3] == lst_cube[1][4]:
-        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateCubeToLeft(lst_cube)
         lst_cube = rotateSideClock(lst_cube)
         lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube)  
+        lst_cube = rotateCubeToRight(lst_cube)  
     elif lst_cube[1][3] == lst_cube[4][4]:
         lst_cube = rotateSideCounterClock(lst_cube)
         lst_cube = rotateCubeDown(lst_cube)
