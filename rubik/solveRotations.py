@@ -165,6 +165,70 @@ def rotateCubeToRight(cube):
         new_cube[5].insert(8, cube [5][2])  
 
         return new_cube
+    
+def rotateCubeUp(cube):
+        new_cube = [[], [], [], [], [], []]       
+        
+        new_cube[0] = cube[5]
+        
+        new_cube[1].insert(0, cube [1][6])
+        new_cube[1].insert(1, cube [1][3])
+        new_cube[1].insert(2, cube [1][0])
+        new_cube[1].insert(3, cube [1][7])
+        new_cube[1].insert(4, cube [1][4])
+        new_cube[1].insert(5, cube [1][1])
+        new_cube[1].insert(6, cube [1][8])
+        new_cube[1].insert(7, cube [1][5])
+        new_cube[1].insert(8, cube [1][2])  
+                 
+        new_cube[2] = cube[4]
+        
+        new_cube[3].insert(0, cube [3][2])
+        new_cube[3].insert(1, cube [3][5])
+        new_cube[3].insert(2, cube [3][8])
+        new_cube[3].insert(3, cube [3][1])
+        new_cube[3].insert(4, cube [3][4])
+        new_cube[3].insert(5, cube [3][7])
+        new_cube[3].insert(6, cube [3][0])
+        new_cube[3].insert(7, cube [3][3])
+        new_cube[3].insert(8, cube [3][6]) 
+           
+        new_cube[4] = cube[0]   
+        new_cube[5] = cube[2]   
+
+        return new_cube
+    
+def rotateCubeDown(cube):
+        new_cube = [[], [], [], [], [], []]
+        
+        new_cube[0] = cube[4]
+        
+        new_cube[1].insert(0, cube [1][2])
+        new_cube[1].insert(1, cube [1][5])
+        new_cube[1].insert(2, cube [1][8])
+        new_cube[1].insert(3, cube [1][1])
+        new_cube[1].insert(4, cube [1][4])
+        new_cube[1].insert(5, cube [1][7])
+        new_cube[1].insert(6, cube [1][0])
+        new_cube[1].insert(7, cube [1][3])
+        new_cube[1].insert(8, cube [1][6])  
+                 
+        new_cube[2] = cube[5]
+        
+        new_cube[3].insert(0, cube [3][6])
+        new_cube[3].insert(1, cube [3][3])
+        new_cube[3].insert(2, cube [3][0])
+        new_cube[3].insert(3, cube [3][7])
+        new_cube[3].insert(4, cube [3][4])
+        new_cube[3].insert(5, cube [3][1])
+        new_cube[3].insert(6, cube [3][8])
+        new_cube[3].insert(7, cube [3][5])
+        new_cube[3].insert(8, cube [3][2]) 
+           
+        new_cube[4] = cube[2]   
+        new_cube[5] = cube[0]   
+
+        return new_cube
 
 def rotateCubeToLeft(cube):
         #rotate cube to right
@@ -179,48 +243,49 @@ def rotateCubeToLeft(cube):
         return cube
  
 def rotateCubeToBottom(cube):
-        side_0 = cube[4]
+         side_0 = cube[4]
 
-        side_1 = cube[1]
-        #rotate it correctly
-        side_1 = (turn_type2(side_1))
-        side_2 = cube[5]
+         side_1 = cube[1]
+         #rotate it correctly
+         side_1 = (turn_type2(side_1))
+         side_2 = cube[5]
         #rotate side 2
-        side_2 = (turn_type3(side_2))
-        side_3 = cube[3]
-        #rotate side 3
-        side_3 = (turn_type1(side_3))
-        #rotate side 4
-        side_4 = cube[2]
-        side_4 = (turn_type3(side_4))
-        side_5 = cube[0]        
-        cube = []
-        for i in range(6):
-            exec(f'cube.append(side_{i})') 
-               
-        return cube 
+         side_2 = (turn_type3(side_2))
+         side_3 = cube[3]
+         #rotate side 3
+         side_3 = (turn_type1(side_3))
+         #rotate side 4
+         side_4 = cube[2]
+         side_4 = (turn_type3(side_4))
+         side_5 = cube[0]        
+         cube = []
+         for i in range(6):
+             exec(f'cube.append(side_{i})') 
+
+         return cube 
     
 def rotateCubeToTop(cube):
         side_0 = cube[4]
 
         side_1 = cube[1]
-        #rotate it correctly
+         #rotate it correctly
         side_1 = (turn_type2(side_1))
         side_2 = cube[5]
-        #rotate side 2
+         #rotate side 2
         side_2 = (turn_type3(side_2))
         side_3 = cube[3]
-        #rotate side 3
+         #rotate side 3
         side_3 = (turn_type1(side_3))
-        #rotate side 4
+         #rotate side 4
         side_4 = cube[2]
         side_4 = (turn_type3(side_4))
         side_5 = cube[0]        
         cube = []
         for i in range(6):
             exec(f'cube.append(side_{i})') 
-               
+
         return cube
+    
 #turns the front side clockwise - spin the cube to get to the front side
 def rotateSideClock(orig_side):
     new_cube = [[], [], [], [], [], []]
