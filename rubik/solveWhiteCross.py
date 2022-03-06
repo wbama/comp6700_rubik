@@ -80,7 +80,7 @@ def solveWhiteCross(parms):
         lst_cube = putWhiteLeafPosition0_5(lst_cube)   
     lst_cube_daisy = lst_cube
 
-    print(lst_cube_daisy)
+    print(f"daisy {lst_cube_daisy}")
         
     # have the daisy now. match up colors and rotate sides down for white cross
     
