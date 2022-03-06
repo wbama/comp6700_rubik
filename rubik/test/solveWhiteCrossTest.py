@@ -2,8 +2,9 @@ import unittest
 from rubik.solveWhiteCross import solveWhiteCross
 from rubik.solveRotations import rotateCubeClockwise
 from rubik.solveRotations import createCubeListFromInputParms
-from rubik.solveRotations import rotateCubeToLeft
-from rubik.solveRotations import rotateCubeToRight
+from rubik.solveRotations import rotateCubeToLeft, rotateCubeToRight
+from rubik.solveRotations import rotateCubeDown
+from rubik.solveRotations import rotateCubeUp
 from rubik.solveRotations import putWhiteLeafPosition0_5
 
 
@@ -108,7 +109,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             expectedResult['cube'] = 'rgywyrwybrbbgoyobgrowrwrororogbrggwbbyygbowygobyogwyww'
             
             lst_cube = createCubeListFromInputParms(inputDict)  
-            rotatedCube = rotateCubeToLeft(lst_cube)
+            rotatedCube = rotateCubeUp(lst_cube)
             
             str1 = "".join(rotatedCube[0])
             str2 = "".join(rotatedCube[1])
@@ -130,7 +131,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             expectedResult['cube'] = 'byygbowygbygbobrgowwywgoybogbrwrobggororwrworrgywyrwyb'
             
             lst_cube = createCubeListFromInputParms(inputDict)  
-            rotatedCube = rotateCubeToLeft(lst_cube)
+            rotatedCube = rotateCubeDown(lst_cube)
             
             str1 = "".join(rotatedCube[0])
             str2 = "".join(rotatedCube[1])
