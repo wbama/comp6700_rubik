@@ -216,7 +216,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
  
     
             expectedResult = {}
-            expectedResult['cube'] = 'byyrywoogbwwggryogrwwbwbrgroroobggywgbbyorybrbwogrywoy'
+            expectedResult['cube'] = 'byrrywygrbwgrbygowogrwrobgroobggogryoyyroybwgywwobwwb'
             
             lst_cube = createCubeListFromInputParms(inputDict)  
             newCube = putWhiteLeafPosition0_5(lst_cube)
