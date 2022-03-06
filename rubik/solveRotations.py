@@ -283,7 +283,7 @@ def rotateCubeToLeft(cube):
         cube.insert(5, turn_type2(orig_side))
         return cube
  
-# def rotateCubeToBottom(cube):
+# def rotateCubeUp(cube):
 #          side_0 = cube[4]
 #
 #          side_1 = cube[1]
@@ -305,7 +305,7 @@ def rotateCubeToLeft(cube):
 #
 #          return cube 
     
-# def rotateCubeToTop(cube):
+# def rotateCubeDown(cube):
 #         side_0 = cube[4]
 #
 #         side_1 = cube[1]
@@ -496,28 +496,28 @@ def putWhiteLeafPosition0_5(lst_cube):
             print(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
             print(lst_cube)
-            lst_cube = rotateCubeToTop(lst_cube)
+            lst_cube = rotateCubeDown(lst_cube)
             print(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
             print(lst_cube)
-            lst_cube = rotateCubeToBottom(lst_cube)
+            lst_cube = rotateCubeUp(lst_cube)
             print(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
             print(lst_cube)
         elif lst_cube[1][1] == 'w':
             lst_cube = rotateSideCounterClock(lst_cube)
-            lst_cube = rotateCubeToTop(lst_cube)
+            lst_cube = rotateCubeDown(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
-            lst_cube = rotateCubeToBottom(lst_cube)
+            lst_cube = rotateCubeUp(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
         elif lst_cube[1][5] == 'w':
             lst_cube = rotateCubeToLeft(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
             lst_cube = rotateCubeToRight(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
-            lst_cube = rotateCubeToTop(lst_cube)
+            lst_cube = rotateCubeDown(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
-            lst_cube = rotateCubeToBottom(lst_cube)
+            lst_cube = rotateCubeUp(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
         elif lst_cube[1][7] == 'w': 
             lst_cube = rotateCubeToLeft(lst_cube)
@@ -525,9 +525,9 @@ def putWhiteLeafPosition0_5(lst_cube):
             lst_cube = rotateSideClock(lst_cube)
             lst_cube = rotateCubeToRight(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
-            lst_cube = rotateCubeToTop(lst_cube)
+            lst_cube = rotateCubeDown(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
-            lst_cube = rotateCubeToBottom(lst_cube)
+            lst_cube = rotateCubeUp(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
         #back part
             
@@ -539,9 +539,9 @@ def putWhiteLeafPosition0_5(lst_cube):
             lst_cube = rotateSideCounterClock(lst_cube)
             lst_cube = rotateCubeToRight(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
-            lst_cube = rotateCubeToTop(lst_cube)
+            lst_cube = rotateCubeDown(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
-            lst_cube = rotateCubeToBottom(lst_cube)
+            lst_cube = rotateCubeUp(lst_cube)
             lst_cube = rotateSideClock(lst_cube)           
             
         elif lst_cube[5][7] == 'w':
@@ -552,9 +552,9 @@ def putWhiteLeafPosition0_5(lst_cube):
             lst_cube = rotateSideCounterClock(lst_cube)
             lst_cube = rotateCubeToRight(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
-            lst_cube = rotateCubeToTop(lst_cube)
+            lst_cube = rotateCubeDown(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
-            lst_cube = rotateCubeToBottom(lst_cube)
+            lst_cube = rotateCubeUp(lst_cube)
             lst_cube = rotateSideClock(lst_cube)  
             
         elif lst_cube[3][3] == 'w':
@@ -566,9 +566,9 @@ def putWhiteLeafPosition0_5(lst_cube):
             lst_cube = rotateSideCounterClock(lst_cube)
             lst_cube = rotateCubeToRight(lst_cube)
             lst_cube = rotateSideCounterClock(lst_cube)
-            lst_cube = rotateCubeToTop(lst_cube)
+            lst_cube = rotateCubeDown(lst_cube)
             lst_cube = rotateSideClock(lst_cube)
-            lst_cube = rotateCubeToBottom(lst_cube)
+            lst_cube = rotateCubeUp(lst_cube)
             lst_cube = rotateSideClock(lst_cube)  
         else:
             lst_cube = lst_cube
