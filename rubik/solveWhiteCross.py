@@ -84,30 +84,13 @@ def solveWhiteCross(parms):
         
     # have the daisy now. match up colors and rotate sides down for white cross
     
-    if lst_cube[0][5] == lst_cube[1][3]:
-        lst_cube = rotateCubeToRight(lst_cube)
+    while lst_cube[1][3] != lst_cube[1][5]:
+        lst_cube = rotateSideClock(lst_cube)
+    else:
+        lst_cube = rotateCubeToLeft(lst_cube)
         lst_cube = rotateSideClock(lst_cube)
         lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube)  
-    elif lst_cube[0][5] == lst_cube[4][7]:
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube)  
-    elif lst_cube[0][5] == lst_cube[3][5]:
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube)  
-    elif lst_cube[0][5] == lst_cube[5][1]:
-        lst_cube = rotateSideCounterClock(lst_cube)
-        lst_cube = rotateCubeToRight(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateSideClock(lst_cube)
-        lst_cube = rotateCubeToLeft(lst_cube)  
+        lst_cube = rotateCubeToRight(lst_cube)   
         
        
     #make white cross the front
