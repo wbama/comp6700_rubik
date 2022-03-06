@@ -3,7 +3,6 @@ from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeToRight
 from rubik.solveRotations import rotateCubeDown
 from rubik.solveRotations import rotateCubeUp
-from rubik.solveRotations import createStringFromCube
 from rubik.solveRotations import putWhiteLeafPosition0_5
 from rubik.solveRotations import rotateCubeClock
 
