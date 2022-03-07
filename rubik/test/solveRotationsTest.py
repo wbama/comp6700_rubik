@@ -191,7 +191,7 @@ class SolveDaisyTest(unittest.TestCase):
  
     
             expectedResult = {}
-            expectedResult['cube'] = 'gwrwybbgggwworyoyrgywrwwbrobgyoogyywoorogboryrrwbbgbby'
+            expectedResult['cube'] = 'ybrwwggwbwywoggrbborgyywwyoorrrbbyoyybggrrbogrgwwoyboo'
             
             lst_cube = createCubeListFromInputParms(inputDict)  
             rotatedCube = rotateSide_b(lst_cube)
