@@ -531,9 +531,9 @@ def rotateSide_U(orig_cube):
 
     new_cube = [[], [], [], [], [], []]
     #front
-    new_cube[0].insert(0, orig_cube [3][0])
-    new_cube[0].insert(1, orig_cube [3][1])
-    new_cube[0].insert(2, orig_cube [3][2])
+    new_cube[0].insert(0, orig_cube [1][0])
+    new_cube[0].insert(1, orig_cube [1][1])
+    new_cube[0].insert(2, orig_cube [1][2])
     new_cube[0].insert(3, orig_cube [0][3])
     new_cube[0].insert(4, orig_cube [0][4])
     new_cube[0].insert(5, orig_cube [0][5])
@@ -541,9 +541,9 @@ def rotateSide_U(orig_cube):
     new_cube[0].insert(7, orig_cube [0][7])
     new_cube[0].insert(8, orig_cube [0][8])
     
-    new_cube[1].insert(0, orig_cube [0][0])
-    new_cube[1].insert(1, orig_cube [0][1])
-    new_cube[1].insert(2, orig_cube [0][2])
+    new_cube[1].insert(0, orig_cube [2][0])
+    new_cube[1].insert(1, orig_cube [2][1])
+    new_cube[1].insert(2, orig_cube [2][2])
     new_cube[1].insert(3, orig_cube [1][3])
     new_cube[1].insert(4, orig_cube [1][4])
     new_cube[1].insert(5, orig_cube [1][5])
@@ -551,9 +551,9 @@ def rotateSide_U(orig_cube):
     new_cube[1].insert(7, orig_cube [1][7])
     new_cube[1].insert(8, orig_cube [1][8])
     
-    new_cube[2].insert(0, orig_cube [1][0])
-    new_cube[2].insert(1, orig_cube [1][1])
-    new_cube[2].insert(2, orig_cube [1][2])
+    new_cube[2].insert(0, orig_cube [3][0])
+    new_cube[2].insert(1, orig_cube [3][1])
+    new_cube[2].insert(2, orig_cube [3][2])
     new_cube[2].insert(3, orig_cube [2][3])
     new_cube[2].insert(4, orig_cube [2][4])
     new_cube[2].insert(5, orig_cube [2][5])
@@ -562,9 +562,9 @@ def rotateSide_U(orig_cube):
     new_cube[2].insert(8, orig_cube [2][8])
     
 
-    new_cube[3].insert(0, orig_cube [2][0])
-    new_cube[3].insert(1, orig_cube [2][1])
-    new_cube[3].insert(2, orig_cube [2][2])
+    new_cube[3].insert(0, orig_cube [0][0])
+    new_cube[3].insert(1, orig_cube [0][1])
+    new_cube[3].insert(2, orig_cube [0][2])
     new_cube[3].insert(3, orig_cube [3][3])
     new_cube[3].insert(4, orig_cube [3][4])
     new_cube[3].insert(5, orig_cube [3][5])
