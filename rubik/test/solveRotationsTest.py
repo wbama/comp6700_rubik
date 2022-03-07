@@ -121,7 +121,7 @@ class SolveDaisyTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-        def test_050_TestRotateCube_R(self):
+        def test_060_TestRotateCube_R(self):
             inputDict = {}
             inputDict['cube'] = 'wwoywrgrbbbrbbrygwbwggywgbrooorgoybrygwgoyboywyrwrygoo'
  
@@ -144,7 +144,7 @@ class SolveDaisyTest(unittest.TestCase):
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
             
-        def test_050_TestRotateCube_r(self):
+        def test_070_TestRotateCube_r(self):
             inputDict = {}
             inputDict['cube'] = 'wwrywygroybbgbbwrrywgyywwbrooorgoybrygogorbobwygwrggob'
  
@@ -166,7 +166,7 @@ class SolveDaisyTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-        def test_050_TestRotateCube_B(self):
+        def test_080_TestRotateCube_B(self):
             inputDict = {}
             inputDict['cube'] = 'gwrwybbgggwworyoyrgywrwwbrobgyoogyywoorogboryrrwbbgbby'
  
@@ -188,7 +188,7 @@ class SolveDaisyTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-        def test_050_TestRotateCube_b(self):
+        def test_090_TestRotateCube_b(self):
             inputDict = {}
             inputDict['cube'] = 'gwrwybbgggwyorboybbrgrwyowwrgyoogoywwyrogboryrrwbbgboy'
  
@@ -210,7 +210,7 @@ class SolveDaisyTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-        def test_050_TestRotateCube_L(self):
+        def test_100_TestRotateCube_L(self):
             inputDict = {}
             inputDict['cube'] = 'rbrwwgbwbwywoggrbborbyygwyyrbyrbooryybgwrrgogogwwoygoo'
  
@@ -232,7 +232,7 @@ class SolveDaisyTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-        def test_050_TestRotateCube_l(self):
+        def test_110_TestRotateCube_l(self):
             inputDict = {}
             inputDict['cube'] = 'ybrwwggwbwywoggrbborgyywwyoorrrbbyoyybggrrbogrgwwoyboo'
  
@@ -242,6 +242,28 @@ class SolveDaisyTest(unittest.TestCase):
             
             lst_cube = createCubeListFromInputParms(inputDict)  
             rotatedCube = rotateSide_l(lst_cube)
+            
+            str1 = "".join(rotatedCube[0])
+            str2 = "".join(rotatedCube[1])
+            str3 = "".join(rotatedCube[2])
+            str4 = "".join(rotatedCube[3])
+            str5 = "".join(rotatedCube[4])
+            str6 = "".join(rotatedCube[5]) 
+
+            str_cube = str1+str2+str3+str4+str5+str6  
+                        
+            self.assertEqual(expectedResult.get('cube'), str_cube) 
+            
+        def test_110_TestRotateCube_U(self):
+            inputDict = {}
+            inputDict['cube'] = 'rbrwwgbwbwywoggrbborbyygwyyrbyrbooryybgwrrgogogwwoygoo'
+ 
+    
+            expectedResult = {}
+            expectedResult['cube'] = 'wywwwgbwborboggrbbrbyyygwyyrbrrboorygwyorbgrgogwwoygoo'
+            
+            lst_cube = createCubeListFromInputParms(inputDict)  
+            rotatedCube = rotateSide_U(lst_cube)
             
             str1 = "".join(rotatedCube[0])
             str2 = "".join(rotatedCube[1])
