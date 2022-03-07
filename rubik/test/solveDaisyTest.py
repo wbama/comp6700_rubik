@@ -11,7 +11,7 @@ from rubik.solveDaisy import solveDaisy
 class SolveDaisyTest(unittest.TestCase):   
             
   
-        def test_060_WhiteLeafPos0_5NotMove(self):
+        def test_010_WhiteLeafPos0_5NotMove(self):
             inputDict = {}
             #here yellow is in front
             inputDict['cube'] = 'byorywoogyobrgywoyrbrrwggbwbwowbggywwryboyybgbwrgrgoor'
@@ -34,7 +34,7 @@ class SolveDaisyTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube)  
             
-        def test_060_WhiteLeafPos4_5To0_5(self):
+        def test_020_WhiteLeafPos4_5To0_5(self):
             inputDict = {}
             inputDict['cube'] = 'rwgrorryroorgbybgwgwbrrbggwybwwgboyworyoywbgygoybwyboo'
  
@@ -56,7 +56,7 @@ class SolveDaisyTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube)  
             
-        def test_060_WhiteLeafPos2_3To0_5(self):
+        def test_030_WhiteLeafPos2_3To0_5(self):
             inputDict = {}
             inputDict['cube'] = 'rwgrorrygwgbybgroorwbrrbggwybwwgboyworyoyybgogoybwwboy'
  
@@ -78,7 +78,7 @@ class SolveDaisyTest(unittest.TestCase):
                         
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-        def test_060_WhiteLeafPos1_3To0_5(self):
+        def test_040_WhiteLeafPos1_3To0_5(self):
             inputDict = {}
             inputDict['cube'] = 'bgwbyrbbygrywoyobborrowgroogwywrrwgoygbbbyrorwogygygww'    
             expectedResult = {}
@@ -94,7 +94,7 @@ class SolveDaisyTest(unittest.TestCase):
             str_cube = str1+str2+str3+str4+str5+str6                          
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
-        def test_060_WhiteLeafPos1_1To0_5(self):
+        def test_050_WhiteLeafPos1_1To0_5(self):
             inputDict = {}
             inputDict['cube'] = 'bgbbyobbowwgyoryrrwwggwwygyryybrrogowrobbororwobygygwg'    
             expectedResult = {}
