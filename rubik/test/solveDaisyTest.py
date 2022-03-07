@@ -1,11 +1,7 @@
 import unittest
 from rubik.solveRotations import createCubeListFromInputParms
-from rubik.solveRotations import rotateCubeToLeft, rotateCubeToRight
-from rubik.solveRotations import rotateCubeDown
-from rubik.solveRotations import rotateCubeUp
-from rubik.solveRotations import rotateCubeClock
 from rubik.solveRotations import putWhiteLeafPosition0_5
-from rubik.solveDaisy import solveDaisy
+
 
 
 class SolveDaisyTest(unittest.TestCase):   
