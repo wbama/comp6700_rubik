@@ -220,7 +220,7 @@ def rotateSide_r(orig_side):
     new_cube[1].insert(3, orig_side [1][1])
     new_cube[1].insert(4, orig_side [1][4])
     new_cube[1].insert(5, orig_side [1][7])
-    new_cube[1].insert(6, orig_side [1][8])
+    new_cube[1].insert(6, orig_side [1][0])
     new_cube[1].insert(7, orig_side [1][3])
     new_cube[1].insert(8, orig_side [1][6])
     
