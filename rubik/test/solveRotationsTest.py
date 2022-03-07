@@ -165,11 +165,11 @@ class SolveDaisyTest(unittest.TestCase):
             
         def test_050_TestRotateCube_B(self):
             inputDict = {}
-            inputDict['cube'] = 'wwrywygroybbgbbwrrywgyywwbrooorgoybrygogorbobwygwrggob'
+            inputDict['cube'] = 'gwrwybbgggwworyoyrgywrwwbrobgyoogyywoorogboryrrwbbgbby'
  
     
             expectedResult = {}
-            expectedResult['cube'] = 'wwoywrgrbbbrbbrygwbwggywgbrooorgoybrygwgoyboywyrwrygoo'
+            expectedResult['cube'] = 'gwrwybbgggwyorboybbrgrwyowwrgyoogoywwyrogboryrrwbbgboy'
             
             lst_cube = createCubeListFromInputParms(inputDict)  
             rotatedCube = rotateSide_B(lst_cube)
