@@ -4,6 +4,7 @@ from rubik.solveRotations import rotateSideClock
 from rubik.solveRotations import rotateSideCounterClock
 import rubik.solveCheckInput as ci
 from rubik.solveRotations import createCubeListFromInputParms
+from rubik.solveWhiteCross import solveWhiteCross
 
 
 def _solve(parms):
@@ -17,18 +18,7 @@ def _solve(parms):
        
        
         if 'rotate' not in parms:
-                c_rotate_cube = (rotateSideClock(lst_cube)) 
-                str1 = "".join(c_rotate_cube[0])
-                str2 = "".join(c_rotate_cube[1])
-                str3 = "".join(c_rotate_cube[2])
-                str4 = "".join(c_rotate_cube[3])
-                str5 = "".join(c_rotate_cube[4])
-                str6 = "".join(c_rotate_cube[5])                       
-                
-                str_cube = str1+str2+str3+str4+str5+str6  
-                result = {}
-                result['cube'] = str_cube
-                result['status'] = 'ok' 
+            solveWhiteCross(parms)
                 
         if 'rotate' in parms and (parms.get('rotate')) == None:
                 c_rotate_cube = (rotateSideClock(lst_cube)) 
