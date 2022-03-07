@@ -1,5 +1,6 @@
 import unittest
 import rubik.solve as solve
+from rubik.solveWhiteCross import solveWhiteCross
 
 
 class SolveTest(unittest.TestCase):  
@@ -189,18 +190,18 @@ class SolveTest(unittest.TestCase):
         
         
     def test_140_ShouldRotateValidCube_RotateMissing(self):
+        #should be a white cross now
 
         inputDict = {}
-        inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
-        inputDict['op'] = 'solve'           
+        inputDict['cube'] = 'ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo'    
+        expectedResult = 'w'             
 
-        expectedResult = {}
-        expectedResult['cube'] = 'gggggggggwrrwrrwrrbbbbbbbbbooyooyooywwwwwwooorrryyyyyy'
-        expectedResult['status'] = 'ok'
-        
-        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        actualResult = solveWhiteCross(inputDict)
+        self.assertEqual(expectedResult, actualResult.get('cube')[1])
+        self.assertEqual(expectedResult, actualResult.get('cube')[3])
+        self.assertEqual(expectedResult, actualResult.get('cube')[4])
+        self.assertEqual(expectedResult, actualResult.get('cube')[5])
+        self.assertEqual(expectedResult, actualResult.get('cube')[7])
         
     def test_150_ShouldRotateValidNominalCube_FLFFBUUdLfDrFLdRRdLLdRRu(self):
 
