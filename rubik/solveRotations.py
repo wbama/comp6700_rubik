@@ -527,7 +527,7 @@ def rotateSide_l(orig_cube):
     new_cube[5].insert(8, orig_cube [5][8])
     return new_cube
 
-def rotateSide_U(orig_cube)
+def rotateSide_U(orig_cube):
 
     new_cube = [[], [], [], [], [], []]
     #front
