@@ -11,6 +11,7 @@ from rubik.solveRotations import rotateCubeClock
 def solveDaisy(parms):
     
     #rotate the cube so that the front center is yellow for the daisy   
+    #fix this so front top is the daisy
     
     if createCubeListFromInputParms(parms)[0][4] == 'y':
         # result = {}
