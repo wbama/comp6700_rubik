@@ -321,7 +321,7 @@ class SolveDaisyTest(unittest.TestCase):
             self.assertEqual(expectedResult.get('cube'), str_cube) 
             
             
-        def test_140_TestRotateCube_d(self):
+        def test_150_TestRotateCube_d(self):
             inputDict = {}
             inputDict['cube'] = 'rbrwwgorywywoggbwborbyygrbbrbyrbowyyybgwrrgoggwooogoyw'
  

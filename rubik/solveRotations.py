@@ -741,9 +741,9 @@ def rotateSide_d(orig_cube):
     new_cube[0].insert(3, orig_cube [0][3])
     new_cube[0].insert(4, orig_cube [0][4])
     new_cube[0].insert(5, orig_cube [0][5])
-    new_cube[0].insert(6, orig_cube [3][6])
-    new_cube[0].insert(7, orig_cube [3][7])
-    new_cube[0].insert(8, orig_cube [3][8])
+    new_cube[0].insert(6, orig_cube [1][6])
+    new_cube[0].insert(7, orig_cube [1][7])
+    new_cube[0].insert(8, orig_cube [1][8])
     
     new_cube[1].insert(0, orig_cube [1][0])
     new_cube[1].insert(1, orig_cube [1][1])
@@ -751,9 +751,9 @@ def rotateSide_d(orig_cube):
     new_cube[1].insert(3, orig_cube [1][3])
     new_cube[1].insert(4, orig_cube [1][4])
     new_cube[1].insert(5, orig_cube [1][5])
-    new_cube[1].insert(6, orig_cube [0][6])
-    new_cube[1].insert(7, orig_cube [0][7])
-    new_cube[1].insert(8, orig_cube [0][8])
+    new_cube[1].insert(6, orig_cube [2][6])
+    new_cube[1].insert(7, orig_cube [2][7])
+    new_cube[1].insert(8, orig_cube [2][8])
     
     new_cube[2].insert(0, orig_cube [2][0])
     new_cube[2].insert(1, orig_cube [2][1])
@@ -761,9 +761,9 @@ def rotateSide_d(orig_cube):
     new_cube[2].insert(3, orig_cube [2][3])
     new_cube[2].insert(4, orig_cube [2][4])
     new_cube[2].insert(5, orig_cube [2][5])
-    new_cube[2].insert(6, orig_cube [1][6])
-    new_cube[2].insert(7, orig_cube [1][7])
-    new_cube[2].insert(8, orig_cube [1][8])
+    new_cube[2].insert(6, orig_cube [3][6])
+    new_cube[2].insert(7, orig_cube [3][7])
+    new_cube[2].insert(8, orig_cube [3][8])
     
 
     new_cube[3].insert(0, orig_cube [3][0])
@@ -772,9 +772,9 @@ def rotateSide_d(orig_cube):
     new_cube[3].insert(3, orig_cube [3][3])
     new_cube[3].insert(4, orig_cube [3][4])
     new_cube[3].insert(5, orig_cube [3][5])
-    new_cube[3].insert(6, orig_cube [2][6])
-    new_cube[3].insert(7, orig_cube [2][7])
-    new_cube[3].insert(8, orig_cube [2][8])      
+    new_cube[3].insert(6, orig_cube [0][6])
+    new_cube[3].insert(7, orig_cube [0][7])
+    new_cube[3].insert(8, orig_cube [0][8])      
    
     #stays the same
     new_cube[4].insert(0, orig_cube [4][0])
@@ -787,16 +787,17 @@ def rotateSide_d(orig_cube):
     new_cube[4].insert(7, orig_cube [4][7])
     new_cube[4].insert(8, orig_cube [4][8])   
    
-    #side that rotates clock
-    new_cube[5].insert(0, orig_cube [5][6])
-    new_cube[5].insert(1, orig_cube [5][3])
-    new_cube[5].insert(2, orig_cube [5][0])
-    new_cube[5].insert(3, orig_cube [5][7])
+    #side that rotates cc
+    new_cube[5].insert(0, orig_cube [5][2])
+    new_cube[5].insert(1, orig_cube [5][5])
+    new_cube[5].insert(2, orig_cube [5][8])
+    new_cube[5].insert(3, orig_cube [5][1])
     new_cube[5].insert(4, orig_cube [5][4])
-    new_cube[5].insert(5, orig_cube [5][1])
-    new_cube[5].insert(6, orig_cube [5][8])
-    new_cube[5].insert(7, orig_cube [5][5])
-    new_cube[5].insert(8, orig_cube [5][2])    
+    new_cube[5].insert(5, orig_cube [5][7])
+    new_cube[5].insert(6, orig_cube [5][0])
+    new_cube[5].insert(7, orig_cube [5][3])
+    new_cube[5].insert(8, orig_cube [5][6])    
+  
   
     return new_cube
 
