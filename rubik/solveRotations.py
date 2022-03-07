@@ -326,8 +326,8 @@ def rotateSide_B(orig_cube):
     new_cube[5].insert(4, orig_cube [5][4])
     new_cube[5].insert(5, orig_cube [5][5])
     new_cube[5].insert(6, orig_cube [3][0])
-    new_cube[5].insert(7, orig_cube [3][1])
-    new_cube[5].insert(8, orig_cube [3][2])
+    new_cube[5].insert(7, orig_cube [3][3])
+    new_cube[5].insert(8, orig_cube [3][6])
     return new_cube
 
 def rotateSide_b(parms):
