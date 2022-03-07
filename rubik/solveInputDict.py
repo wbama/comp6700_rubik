@@ -15,7 +15,7 @@ inputDict['cube'] = "ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo"
 inputDict['op'] = 'solve' 
 
 
-print(solveWhiteCross(inputDict))
+
 
 
 
