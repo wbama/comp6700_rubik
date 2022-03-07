@@ -80,7 +80,7 @@ class SolveDaisyTest(unittest.TestCase):
             
         def test_040_WhiteLeafPos1_3To0_5(self):
             inputDict = {}
-            inputDict['cube'] = 'bgwbyrbbygrywoyobborrowgroogwywrrwgoygbbbyrorwogygygww'    
+            inputDict['cube'] = 'orwyygyowbgowoyrbrbbygwgbrbrywororyggwyrbrgboowgbgowwy'    
             expectedResult = {}
             expectedResult['cube'] = 'bgrbywbbgbrrrorwyygwyywgboogyywrrwgoobybbgrowworygogwo'            
             lst_cube = createCubeListFromInputParms(inputDict)  
