@@ -424,10 +424,10 @@ def rotateSide_L(orig_cube):
     new_cube[2].insert(2, orig_cube [5][6])
     new_cube[2].insert(3, orig_cube [2][3])
     new_cube[2].insert(4, orig_cube [2][4])
-    new_cube[2].insert(5, orig_cube [5][7])
+    new_cube[2].insert(5, orig_cube [5][3])
     new_cube[2].insert(6, orig_cube [2][6])
     new_cube[2].insert(7, orig_cube [2][7])
-    new_cube[2].insert(8, orig_cube [5][8])
+    new_cube[2].insert(8, orig_cube [5][0])
     
     #side that rotates clock
     new_cube[3].insert(0, orig_cube [3][6])
