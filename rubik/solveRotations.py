@@ -451,8 +451,8 @@ def rotateSide_L(orig_cube):
     new_cube[4].insert(8, orig_cube [4][8])
     
     new_cube[5].insert(0, orig_cube [0][0])
-    new_cube[5].insert(1, orig_cube [5][5])
-    new_cube[5].insert(2, orig_cube [5][8])
+    new_cube[5].insert(1, orig_cube [5][1])
+    new_cube[5].insert(2, orig_cube [5][2])
     new_cube[5].insert(3, orig_cube [0][3])
     new_cube[5].insert(4, orig_cube [5][4])
     new_cube[5].insert(5, orig_cube [5][5])
