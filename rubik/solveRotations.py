@@ -286,7 +286,7 @@ def rotateSide_B(orig_cube):
     new_cube[1].insert(4, orig_cube [1][4])
     new_cube[1].insert(5, orig_cube [5][7])
     new_cube[1].insert(6, orig_cube [1][8])
-    new_cube[1].insert(7, orig_cube [1][5])
+    new_cube[1].insert(7, orig_cube [1][7])
     new_cube[1].insert(8, orig_cube [5][6])
     #rotates
     new_cube[2].insert(0, orig_cube [2][6])
