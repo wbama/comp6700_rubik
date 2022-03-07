@@ -3,8 +3,8 @@ from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotateCubeToLeft, rotateCubeToRight
 from rubik.solveRotations import rotateCubeUp, rotateCubeDown
 from rubik.solveRotations import rotateCubeClock
-from rubik.solveRotations import rotateSide_R
-from rubik.solveRotations import rotateSide_r
+from rubik.solveRotations import rotateSide_R, rotateSide_r
+from rubik.solveRotations import rotateSide_B, rotateSide_b
 
 class SolveDaisyTest(unittest.TestCase):
             
@@ -172,7 +172,7 @@ class SolveDaisyTest(unittest.TestCase):
             expectedResult['cube'] = 'wwoywrgrbbbrbbrygwbwggywgbrooorgoybrygwgoyboywyrwrygoo'
             
             lst_cube = createCubeListFromInputParms(inputDict)  
-            rotatedCube = rotateSide_r(lst_cube)
+            rotatedCube = rotateSide_B(lst_cube)
             
             str1 = "".join(rotatedCube[0])
             str2 = "".join(rotatedCube[1])
