@@ -246,13 +246,13 @@ def rotateSide_r(orig_side):
 
     new_cube[4].insert(0, orig_side [4][0])
     new_cube[4].insert(1, orig_side [4][1])
-    new_cube[4].insert(2, orig_side [2][2])
+    new_cube[4].insert(2, orig_side [2][6])
     new_cube[4].insert(3, orig_side [4][3])
     new_cube[4].insert(4, orig_side [4][4])
-    new_cube[4].insert(5, orig_side [2][5])
+    new_cube[4].insert(5, orig_side [2][3])
     new_cube[4].insert(6, orig_side [4][6])
     new_cube[4].insert(7, orig_side [4][7])
-    new_cube[4].insert(8, orig_side [2][8])
+    new_cube[4].insert(8, orig_side [2][0])
     
     new_cube[5].insert(0, orig_side [5][0])
     new_cube[5].insert(1, orig_side [5][1])
