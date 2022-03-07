@@ -8,6 +8,7 @@ from rubik.solveRotations import rotateSideCounterClock
 from rubik.solveRotations import rotateSideClock
 from rubik.solveRotations import putWhiteLeafPosition0_5
 from rubik.solveWhiteCross import solveWhiteCross
+from rubik.solve import _solve
 
 
 inputDict = {}
@@ -15,7 +16,7 @@ inputDict['cube'] = "ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo"
 inputDict['op'] = 'solve' 
 
 
-
+print(_solve(inputDict))
 
 
 
