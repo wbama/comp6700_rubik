@@ -33,11 +33,7 @@ def solveWhiteCross(parms):
        
     #make white cross the front
     lst_cube =   rotateCubeToLeft(lst_cube)
-    lst_cube =   rotateCubeToLeft(lst_cube)
-
-    result = {}
-    result['cube'] = createStringFromCube(lst_cube)
-    result['status'] = 'ok'                   
+    lst_cube =   rotateCubeToLeft(lst_cube)          
 
     
-    return result 
+    return lst_cube 

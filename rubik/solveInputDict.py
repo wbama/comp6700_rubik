@@ -14,9 +14,11 @@ from rubik.solve import _solve
 inputDict = {}
 inputDict['cube'] = "ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo"
 inputDict['op'] = 'solve' 
+#inputDict['rotate'] = 'F' 
 
 
 print(_solve(inputDict))
+#print(solveWhiteCross(inputDict))
 
 
 
