@@ -48,7 +48,7 @@ def solveDaisy(parms):
         lst_cube = lst_cube
     else:
         #inside cells
-        lst_cube = putWhiteLeafPosition0_5(lst_cube)            
+        lst_cube = putWhiteLeafPosition0_5(lst_cube)           
 
     
     return lst_cube 
