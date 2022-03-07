@@ -10,37 +10,12 @@ from rubik.solveRotations import rotateCubeClock
 
 def solveDaisy(parms):
     
-    #rotate the cube so that the front center is yellow for the daisy   
-    #fix this so daisy stays where the input string is
+    #find out where the yellow center is. Solve from that vantage point
     
+    #yellow is in front    
     if createCubeListFromInputParms(parms)[0][4] == 'y':
-        # result = {}
-        # result['cube'] = createStringFromCube(parms)
-        # result['status'] = 'ok' 
-        lst_cube = (createCubeListFromInputParms(parms))
-    
-    #check right side if yellow
-    elif createCubeListFromInputParms(parms)[1][4] == 'y':
-        lst_cube = rotateCubeToLeft(createCubeListFromInputParms(parms))
-        
-    #check back side if yellow
-    elif createCubeListFromInputParms(parms)[2][4] == 'y':
-        lst_cube = rotateCubeToLeft(createCubeListFromInputParms(parms))
-        lst_cube = rotateCubeToLeft(lst_cube)
-        
-    #check left side if yellow
-    elif createCubeListFromInputParms(parms)[3][4] == 'y':
-        lst_cube = rotateCubeToRight(createCubeListFromInputParms(parms))
-        
-    #check top side if yellow
-    elif createCubeListFromInputParms(parms)[4][4] == 'y':
-        lst_cube = rotateCubeDown(createCubeListFromInputParms(parms))
-        
-    #check bottom side if yellow
-    elif createCubeListFromInputParms(parms)[5][4] == 'y':
-        lst_cube = rotateCubeUp(createCubeListFromInputParms(parms))
-        
-    #now we have the yellow in front.
+        lst_cube = (createCubeListFromInputParms(parms))  
+                
     #find white leaves   
     if lst_cube[0][5] == 'w':
         lst_cube = lst_cube
