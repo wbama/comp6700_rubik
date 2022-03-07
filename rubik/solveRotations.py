@@ -464,13 +464,13 @@ def rotateSide_L(orig_cube):
 def rotateSide_l(orig_cube):
     new_cube = [[], [], [], [], [], []]
     #front
-    new_cube[0].insert(0, orig_cube [4][0])
+    new_cube[0].insert(0, orig_cube [5][0])
     new_cube[0].insert(1, orig_cube [0][1])
     new_cube[0].insert(2, orig_cube [0][2])
-    new_cube[0].insert(3, orig_cube [4][3])
+    new_cube[0].insert(3, orig_cube [5][3])
     new_cube[0].insert(4, orig_cube [0][4])
     new_cube[0].insert(5, orig_cube [0][5])
-    new_cube[0].insert(6, orig_cube [4][6])
+    new_cube[0].insert(6, orig_cube [5][6])
     new_cube[0].insert(7, orig_cube [0][7])
     new_cube[0].insert(8, orig_cube [0][8])
     
@@ -487,15 +487,15 @@ def rotateSide_l(orig_cube):
     
     new_cube[2].insert(0, orig_cube [2][0])
     new_cube[2].insert(1, orig_cube [2][1])
-    new_cube[2].insert(2, orig_cube [5][6])
+    new_cube[2].insert(2, orig_cube [4][6])
     new_cube[2].insert(3, orig_cube [2][3])
     new_cube[2].insert(4, orig_cube [2][4])
-    new_cube[2].insert(5, orig_cube [5][3])
+    new_cube[2].insert(5, orig_cube [4][3])
     new_cube[2].insert(6, orig_cube [2][6])
     new_cube[2].insert(7, orig_cube [2][7])
-    new_cube[2].insert(8, orig_cube [5][0])
+    new_cube[2].insert(8, orig_cube [4][0])
     
-    #side that rotates counter clock
+    #side that rotates counterc
     new_cube[3].insert(0, orig_cube [3][2])
     new_cube[3].insert(1, orig_cube [3][5])
     new_cube[3].insert(2, orig_cube [3][8])
@@ -506,23 +506,23 @@ def rotateSide_l(orig_cube):
     new_cube[3].insert(7, orig_cube [3][3])
     new_cube[3].insert(8, orig_cube [3][6])      
    
-    new_cube[4].insert(0, orig_cube [2][8])
+    new_cube[4].insert(0, orig_cube [0][0])
     new_cube[4].insert(1, orig_cube [4][1])
     new_cube[4].insert(2, orig_cube [4][2])
-    new_cube[4].insert(3, orig_cube [2][5])
+    new_cube[4].insert(3, orig_cube [0][3])
     new_cube[4].insert(4, orig_cube [4][4])
     new_cube[4].insert(5, orig_cube [4][5])
-    new_cube[4].insert(6, orig_cube [2][2])
+    new_cube[4].insert(6, orig_cube [0][6])
     new_cube[4].insert(7, orig_cube [4][7])
     new_cube[4].insert(8, orig_cube [4][8])
     
-    new_cube[5].insert(0, orig_cube [0][0])
+    new_cube[5].insert(0, orig_cube [2][2])
     new_cube[5].insert(1, orig_cube [5][1])
     new_cube[5].insert(2, orig_cube [5][2])
-    new_cube[5].insert(3, orig_cube [0][3])
+    new_cube[5].insert(3, orig_cube [2][5])
     new_cube[5].insert(4, orig_cube [5][4])
     new_cube[5].insert(5, orig_cube [5][5])
-    new_cube[5].insert(6, orig_cube [0][6])
+    new_cube[5].insert(6, orig_cube [2][8])
     new_cube[5].insert(7, orig_cube [5][7])
     new_cube[5].insert(8, orig_cube [5][8])
     return new_cube
