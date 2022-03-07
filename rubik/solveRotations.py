@@ -399,14 +399,14 @@ def rotateSide_L(orig_cube):
     new_cube = [[], [], [], [], [], []]
     #front
     new_cube[0].insert(0, orig_cube [4][0])
-    new_cube[0].insert(1, orig_cube [0][5])
-    new_cube[0].insert(2, orig_cube [0][8])
+    new_cube[0].insert(1, orig_cube [0][1])
+    new_cube[0].insert(2, orig_cube [0][2])
     new_cube[0].insert(3, orig_cube [4][3])
     new_cube[0].insert(4, orig_cube [0][4])
-    new_cube[0].insert(5, orig_cube [0][7])
+    new_cube[0].insert(5, orig_cube [0][5])
     new_cube[0].insert(6, orig_cube [4][6])
-    new_cube[0].insert(7, orig_cube [0][3])
-    new_cube[0].insert(8, orig_cube [0][6])
+    new_cube[0].insert(7, orig_cube [0][7])
+    new_cube[0].insert(8, orig_cube [0][8])
     
     #stays the same
     new_cube[1].insert(0, orig_cube [4][0])
