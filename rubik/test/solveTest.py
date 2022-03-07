@@ -196,7 +196,7 @@ class SolveTest(unittest.TestCase):
         inputDict['cube'] = 'rbbgbobbgrgwyrywyobggrggywgoryyowowwyoobyrgwyrorrwbwob'    
         expectedResult = 'w'             
 
-        actualResult = solveWhiteCross(inputDict)
+        actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult, actualResult.get('cube')[1])
         self.assertEqual(expectedResult, actualResult.get('cube')[3])
         self.assertEqual(expectedResult, actualResult.get('cube')[4])
