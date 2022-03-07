@@ -13,6 +13,7 @@ class SolveDaisyTest(unittest.TestCase):
   
         def test_060_WhiteLeafPos0_5NotMove(self):
             inputDict = {}
+            #here yellow is in front
             inputDict['cube'] = 'byorywoogyobrgywoyrbrrwggbwbwowbggywwryboyybgbwrgrgoor'
  
     

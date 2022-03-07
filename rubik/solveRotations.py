@@ -1092,96 +1092,54 @@ def putWhiteLeafPosition0_5(lst_cube):
         if lst_cube[0][5] == 'w':
             lst_cube = lst_cube
         elif lst_cube[4][5] == 'w':
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
         elif lst_cube[2][3] == 'w': 
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
         elif lst_cube[5][5] == 'w': 
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube) 
+            lst_cube = rotateSide_R(lst_cube)
                        
         #outside cells - more complicated
         elif lst_cube[1][3] == 'w':
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeDown(lst_cube) 
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeUp(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_F(lst_cube)        
 
         elif lst_cube[1][1] == 'w':
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeDown(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeUp(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_F(lst_cube)   
+            
         elif lst_cube[1][5] == 'w':
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeDown(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeUp(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_F(lst_cube)
         elif lst_cube[1][7] == 'w': 
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeDown(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeUp(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_F(lst_cube)  
         #back part
             
         elif lst_cube[4][1] == 'w':
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)            
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeDown(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeUp(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)           
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_F(lst_cube) 
+         
             
         elif lst_cube[5][7] == 'w':
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)            
-            lst_cube = rotateCubeToRight(lst_cube)            
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeDown(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeUp(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)  
+            lst_cube = rotateSide_B(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_F(lst_cube) 
             
         elif lst_cube[3][3] == 'w':
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateCubeToLeft(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)  
-            lst_cube = rotateSide_F(lst_cube)            
-            lst_cube = rotateCubeToRight(lst_cube)            
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeToRight(lst_cube)
-            lst_cube = rotateSide_f(lst_cube)
-            lst_cube = rotateCubeDown(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateCubeUp(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)  
+            lst_cube = rotateSide_B(lst_cube)
+            lst_cube = rotateSide_B(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_F(lst_cube) 
+ 
         else:
             lst_cube = lst_cube
             
