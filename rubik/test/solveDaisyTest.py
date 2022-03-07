@@ -82,7 +82,7 @@ class SolveDaisyTest(unittest.TestCase):
             inputDict = {}
             inputDict['cube'] = 'orwyygyowbgowoyrbrbbygwgbrbrywororyggwyrbrgboowgbgowwy'    
             expectedResult = {}
-            expectedResult['cube'] = 'bgrbywbbgbrrrorwyygwyywgboogyywrrwgoobybbgrowworygogwo'            
+            expectedResult['cube'] = 'yyroywyobwbygogwyorywrwgyrboroorwrybgrgbbwgogrbobggwwb'            
             lst_cube = createCubeListFromInputParms(inputDict)  
             newCube = putWhiteLeafPosition0_5(lst_cube)            
             str1 = "".join(newCube[0])
