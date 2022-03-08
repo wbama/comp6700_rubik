@@ -1,6 +1,4 @@
 import unittest
-from rubik.solveRotations import createCubeListFromInputParms
-from rubik.solveRotations import y_0_WhiteLeafPos0_5
 from rubik.solveDaisy import solveDaisy
 
 
@@ -8,7 +6,7 @@ from rubik.solveDaisy import solveDaisy
 class SolveDaisyTest(unittest.TestCase):   
             
   
-        def test_010_SolveWhiteCross(self):
+        def test_010_SolveDaisy_y_0(self):
             inputDict = {}
             inputDict['cube'] = 'ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo'    
             expectedResult = 'w'             

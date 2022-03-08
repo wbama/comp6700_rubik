@@ -4,7 +4,7 @@ from rubik.solveDaisy import solveDaisy
 
 
 inputDict = {}
-inputDict['cube'] = "brooyygroyobbogwobywwrwgwwrgrryrybwyrgobbgwygrwgbgbyoo"
+inputDict['cube'] = "brorybgygggowobwbgbwwowrrobbyygrbrgoooygborwwyrrwgywyy"
 inputDict['op'] = 'solve' 
 #inputDict['rotate'] = 'F' 
 
