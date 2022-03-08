@@ -14,8 +14,7 @@ lst_cube = solveDaisy(inputDict)[0]
 rotations = solveDaisy(inputDict)[1]
 print(lst_cube)
 print(rotations)
-print(lst_cube, rotations)
-#print(rotateIntoWhiteCross_y_0(solveDaisy(inputDict)[0], solveDaisy(inputDict)[1]))
+print(rotateIntoWhiteCross_y_0(lst_cube, rotations))
 
 
 
