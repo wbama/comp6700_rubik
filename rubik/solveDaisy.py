@@ -27,54 +27,39 @@ def solveDaisy(parms):
     #first leaf position [0][5]
     #solve only this position. Then rotate the front edge and solve it again and again
         print(f"lst_cube in {lst_cube}")
-        lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0] #this output is a tuple
-        print(f"lst_cube 1 {lst_cube}")
-    #rotate the face, so that there is now non white leaf
-        lst_cube = rotateSide_F(lst_cube)
-        print(f"lst_cube 2 {lst_cube}")
-        lst_rotate.append("F")
-        lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0]
-        print(f"lst_cube 3 {lst_cube}")
-    #rotate the face, so that there is now non white leaf
-        lst_cube = rotateSide_F(lst_cube)
-        lst_rotate.append("F")
-        lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0]
-        print(f"lst_cube 4 {lst_cube}")
-    #rotate the face, so that there is now non white leaf
-        if lst_cube[0][5] == "w":
+        while lst_cube[0][5] == "w":
             lst_cube = rotateSide_F(lst_cube)
             lst_rotate.append("F")
         else:
-            lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0]
-            print(f"lst_cube 5 {lst_cube}")   
+            lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0] #this output is a tuple
+            print(f"lst_cube 1 {lst_cube}")
+    #rotate the face, so that there is now non white leaf
+        while lst_cube[0][5] == "w":
+            lst_cube = rotateSide_F(lst_cube)
+            lst_rotate.append("F")
+        else:
+            lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0] #this output is a tuple
+            print(f"lst_cube 2 {lst_cube}")
             
-    #rotate the face, so that there is now non white leaf
-        if lst_cube[0][5] == "w":
+        while lst_cube[0][5] == "w":
             lst_cube = rotateSide_F(lst_cube)
             lst_rotate.append("F")
         else:
-            lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0]
-            print(f"lst_cube 6 {lst_cube}") 
+            lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0] #this output is a tuple
+            print(f"lst_cube 3 {lst_cube}")
     #rotate the face, so that there is now non white leaf
-        if lst_cube[0][5] == "w":
+        while lst_cube[0][5] == "w":
             lst_cube = rotateSide_F(lst_cube)
             lst_rotate.append("F")
         else:
-            lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0]
-            print(f"lst_cube 7 {lst_cube}")                 
+            lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0] #this output is a tuple
+            print(f"lst_cube 4 {lst_cube}")     
+   
 
-    # #rotate the face, so that there is now non white leaf
-    #     lst_cube = rotateSide_F(lst_cube)
-    #     lst_rotate.append("F")
-    #     lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0]
-    #     print(f"lst_cube 5 {lst_cube}")
+
          
     print(lst_rotate)
             
-        #third leaf position [0][3]
         
-        
-        
-        #forth leaf position [0][7]           
 
     return lst_cube 
