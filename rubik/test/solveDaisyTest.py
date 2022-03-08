@@ -17,7 +17,6 @@ class SolveDaisyTest(unittest.TestCase):
             print(actualResult)
             self.assertEqual(expectedResult, actualResult[1])
             self.assertEqual(expectedResult, actualResult[3])
-            self.assertEqual(expectedResult, actualResult[4])
             self.assertEqual(expectedResult, actualResult[5])
             self.assertEqual(expectedResult, actualResult[7])
 
