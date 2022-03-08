@@ -13,10 +13,10 @@ class SolveDaisyTest(unittest.TestCase):
 
             actualResult = solveDaisy(inputDict)[0]
             print(actualResult)
-            self.assertEqual(expectedResult, actualResult[1])
-            self.assertEqual(expectedResult, actualResult[3])
-            self.assertEqual(expectedResult, actualResult[5])
-            self.assertEqual(expectedResult, actualResult[7])
+            self.assertEqual(expectedResult, actualResult[0][1])
+            self.assertEqual(expectedResult, actualResult[0][3])
+            self.assertEqual(expectedResult, actualResult[0][5])
+            self.assertEqual(expectedResult, actualResult[0][7])
 
 
     
