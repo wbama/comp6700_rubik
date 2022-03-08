@@ -13,7 +13,7 @@ class SolveDaisyTest(unittest.TestCase):
             inputDict['cube'] = 'ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo'    
             expectedResult = 'w'             
 
-            actualResult = solveDaisy(inputDict)
+            actualResult = solveDaisy(inputDict)[0]
             self.assertEqual(expectedResult, actualResult[2][1])
             self.assertEqual(expectedResult, actualResult[2][3])
             self.assertEqual(expectedResult, actualResult[2][4])
