@@ -1325,9 +1325,7 @@ def rotateIntoWhiteCross_y_0(lst_cube, lst_rotate):
     if lst_cube[0][7] == "w" and (lst_cube[5][1] == lst_cube[5][4]):
         lst_cube = rotateSide_D
         lst_cube = rotateSide_D
-        lst_rotate.append("DD")   
-    
- 
+        lst_rotate.append("DD")     
         
     return lst_cube, lst_rotate
         

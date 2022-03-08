@@ -26,7 +26,6 @@ def solveDaisy(parms):
               
     #first leaf position [0][5]
     #solve only this position. Then rotate the front edge and solve it again and again
-        print(f"lst_cube in {lst_cube}")
         while (lst_cube[0][5] != "w" or  lst_cube[0][1] != "w" or lst_cube[0][3] != "w" or lst_cube[0][7] != "w") and lst_cube[0][5] == "w":
             lst_cube = rotateSide_F(lst_cube)
             lst_rotate.append("F")
