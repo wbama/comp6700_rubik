@@ -1092,7 +1092,7 @@ def y_0_WhiteLeafPos0_5(lst_cube, lst_rotate):
         #one line
         if lst_cube[0][5] == "w":
             lst_cube = lst_cube
-            lst_rotate.append("No changes") 
+            lst_rotate.append("NoChanges") 
         
         elif lst_cube[5][5] == 'w': 
             lst_cube = rotateSide_R(lst_cube)
