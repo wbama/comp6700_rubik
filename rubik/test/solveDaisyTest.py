@@ -8,7 +8,7 @@ from rubik.solveDaisy import solveDaisy
 class SolveDaisyTest(unittest.TestCase):   
             
   
-         def test_010_SolveWhiteCross(self):
+        def test_010_SolveWhiteCross(self):
             inputDict = {}
             inputDict['cube'] = 'ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo'    
             expectedResult = 'w'             
