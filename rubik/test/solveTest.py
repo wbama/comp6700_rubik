@@ -189,7 +189,7 @@ class SolveTest(unittest.TestCase):
         
         
     def test_140_ShouldRotateValidCube_RotateMissing(self):
-        #should be a white cross now
+        #should be a white cross on the back now
 
         inputDict = {}
         inputDict['cube'] = 'rbbgbobbgrgwyrywyobggrggywgoryyowowwyoobyrgwyrorrwbwob'    
