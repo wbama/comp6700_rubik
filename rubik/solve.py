@@ -14,7 +14,7 @@ def _solve(parms):
     try:         
 
  
-        lst_cube = createCubeListFromInputParms(parms)           
+        lst_cube = createCubeListFromInputParms(parms)          
        
        
         if 'rotate' not in parms:
@@ -25,13 +25,14 @@ def _solve(parms):
             str4 = "".join(lst_cube[3])
             str5 = "".join(lst_cube[4])
             str6 = "".join(lst_cube[5])                       
-         
+            
             str_cube = str1+str2+str3+str4+str5+str6   
+            
             str_rotations = "".join(solveWhiteCross(parms)[1])                  
             result = {}
             result['cube'] = str_cube
             result['status'] = 'ok' 
-            result['rotate'] = str_rotations
+            result['solution'] = str_rotations
                 
         if 'rotate' in parms and (parms.get('rotate')) == None:
                 c_rotate_cube = (rotateSide_F(lst_cube)) 
@@ -217,9 +218,12 @@ def _solve(parms):
         if (ci.solveCheck(parms)['status']) == 'ok':
             result['cube'] = str_cube
         else:
-            result = (ci.solveCheck(parms))             
+            result = (ci.solveCheck(parms))   
+                      
+    #delete the cube string if giving solutions    
+    if 'rotate' not in parms:
+        del result['cube']
         
-    
     return result
  
  
