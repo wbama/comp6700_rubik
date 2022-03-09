@@ -188,11 +188,11 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))    
         
         
-    def test_140_ShouldRotateValidCube_RotateMissing(self):
+    def test_140_ShouldRotateValidCube_RotateMissing_y0(self):
         #should be a white cross on the back now
 
         inputDict = {}
-        inputDict['cube'] = 'rbbgbobbgrgwyrywyobggrggywgoryyowowwyoobyrgwyrorrwbwob'    
+        inputDict['cube'] = 'yrybyoyggogowowrrwggwgwbrrwrorwryoogbrwbbybbbooyygwbyg'    
         expectedResult = 'w'   
                   
         actualResult = solve._solve(inputDict)
