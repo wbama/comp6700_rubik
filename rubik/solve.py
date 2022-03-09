@@ -18,7 +18,7 @@ def _solve(parms):
        
        
         if 'rotate' not in parms:
-            lst_cube = solveWhiteCross(parms)
+            lst_cube = solveWhiteCross(parms)[0]
             str1 = "".join(lst_cube[0])
             str2 = "".join(lst_cube[1])
             str3 = "".join(lst_cube[2])

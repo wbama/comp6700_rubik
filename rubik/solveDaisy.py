@@ -15,8 +15,7 @@ from rubik.solveRotations import y_0_WhiteLeafPos0_5, y_0_WhiteLeafPos0_1
 
 def solveDaisy(parms):
     
-    #find out where the yellow center is. Solve from that vantage point
-    
+    #find out where the yellow center is. Solve from that vantage point    
 
     lst_cube = (createCubeListFromInputParms(parms)) 
     lst_rotate = [] 
@@ -55,4 +54,5 @@ def solveDaisy(parms):
             lst_rotate.append("F")
         else:
             lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0] 
+            
     return lst_cube, lst_rotate
