@@ -12,7 +12,6 @@ class SolveDaisyTest(unittest.TestCase):
             expectedResult = 'w'             
 
             actualResult = solveDaisy(inputDict)[0]
-            print(actualResult)
             self.assertEqual(expectedResult, actualResult[0][1])
             self.assertEqual(expectedResult, actualResult[0][3])
             self.assertEqual(expectedResult, actualResult[0][5])
