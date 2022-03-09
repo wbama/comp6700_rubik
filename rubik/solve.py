@@ -26,10 +26,12 @@ def _solve(parms):
             str5 = "".join(lst_cube[4])
             str6 = "".join(lst_cube[5])                       
          
-            str_cube = str1+str2+str3+str4+str5+str6                    
+            str_cube = str1+str2+str3+str4+str5+str6   
+            str_rotations = "".join(solveWhiteCross(parms)[1])                  
             result = {}
             result['cube'] = str_cube
             result['status'] = 'ok' 
+            result['rotate'] = str_rotations
                 
         if 'rotate' in parms and (parms.get('rotate')) == None:
                 c_rotate_cube = (rotateSide_F(lst_cube)) 
