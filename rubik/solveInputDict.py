@@ -12,7 +12,6 @@ inputDict['op'] = 'solve'
 
 
 lst_cube = solveDaisy(inputDict)[0]
-print(lst_cube)
 # rotations = solveWhiteCross(inputDict)[1]
 # print(f"lst cube {lst_cube}")
 # print(f"rotations {rotations}")

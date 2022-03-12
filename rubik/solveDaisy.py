@@ -31,14 +31,32 @@ def solveDaisy(parms):
             else:
                 lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0]            
  
-    if createCubeListFromInputParms(parms)[1][4] == 'y':   
-        while (lst_cube[1][5] != "w" or  lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[0][5] == "w":
+    if createCubeListFromInputParms(parms)[1][4] == 'y':  
+        print(f"start cube {lst_cube}") 
+        while (lst_cube[1][5] != "w" or  lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[1][5] == "w":
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("R")
+        else:
+            lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
+            
+        while (lst_cube[1][5] != "w" or  lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[1][5] == "w":
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("R")
+        else:
+            lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
+        while (lst_cube[1][5] != "w" or  lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[1][5] == "w":
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("R")
+        else:
+            lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
+        while (lst_cube[1][5] != "w" or  lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[1][5] == "w":
             lst_cube = rotateSide_R(lst_cube)
             lst_rotate.append("R")
         else:
             lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
             
     print(lst_cube)
+    print(lst_rotate)
             
 
              
