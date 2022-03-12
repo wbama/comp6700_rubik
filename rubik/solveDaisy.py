@@ -30,8 +30,7 @@ def solveDaisy(parms):
                 lst_cube = rotateSide_F(lst_cube)
                 lst_rotate.append("F")
             else:
-                lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0] 
-            
+                lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0]            
  
             
 
