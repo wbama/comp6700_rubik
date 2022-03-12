@@ -221,8 +221,8 @@ def _solve(parms):
             result = (ci.solveCheck(parms))   
                       
     #delete the cube string if giving solutions    
-    if 'rotate' not in parms:
-        del result['cube']
+    # if 'rotate' not in parms:
+    #     del result['cube']
         
     return result
  
