@@ -49,6 +49,25 @@ def solveDaisy(parms):
             lst_rotate.append("R")
         else:
             lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
+            
+        while (lst_cube[1][5] != "w" or  lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[1][5] == "w":
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("R")
+        else:
+            lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
+            
+        while (lst_cube[1][5] != "w" or  lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[1][5] == "w":
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("R")
+        else:
+            lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
+            
+        while (lst_cube[1][5] != "w" or  lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[1][5] == "w":
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("R")
+        else:
+            lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
+            
         while (lst_cube[1][5] != "w" or  lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[1][5] == "w":
             lst_cube = rotateSide_R(lst_cube)
             lst_rotate.append("R")
