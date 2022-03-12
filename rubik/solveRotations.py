@@ -1326,16 +1326,13 @@ def y_1_WhiteLeafPos1_5(lst_cube, lst_rotate):
             lst_cube = rotateSide_F(lst_cube)
             lst_cube = rotateSide_R(lst_cube)
             lst_cube = rotateSide_R(lst_cube) 
-            lst_rotate.append("rrFRR")                          
-
+            lst_rotate.append("rrFRR")      
         elif lst_cube[5][3] == 'w':
             lst_cube = rotateSide_l(lst_cube)
             lst_cube = rotateSide_l(lst_cube)
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_b(lst_cube) 
             lst_rotate.append("llUb")   
-            
-        #six lines of movement  
         elif lst_cube[0][7] == 'w':
             lst_cube = rotateSide_R(lst_cube)
             lst_cube = rotateSide_d(lst_cube)
@@ -1351,7 +1348,6 @@ def y_1_WhiteLeafPos1_5(lst_cube, lst_rotate):
             lst_cube = rotateSide_U(lst_cube) 
             lst_cube = rotateSide_R(lst_cube) 
             lst_rotate.append("llbrUR")            
-        #more than six
         elif lst_cube[0][1] == 'w':
             lst_cube = rotateSide_f(lst_cube)
             lst_cube = rotateSide_l(lst_cube)
@@ -1384,7 +1380,143 @@ def y_1_WhiteLeafPos1_5(lst_cube, lst_rotate):
     
 
 def y_2_WhiteLeafPos2_5(lst_cube, lst_rotate):
-    pass
+           if lst_cube[2][5] == "w":
+            lst_cube = lst_cube
+            lst_rotate.append("")         
+        elif lst_cube[5][3] == 'w': 
+            lst_cube = rotateSide_B(lst_cube)
+            lst_rotate.append("B")   
+        elif lst_cube[4][3] == 'w':
+            lst_cube = rotateSide_b(lst_cube)
+            lst_rotate.append("b") 
+        #two lines of movement
+        elif lst_cube[0][3] == 'w':
+            lst_cube = rotateSide_B(lst_cube)
+            lst_cube = rotateSide_B(lst_cube)
+            lst_rotate.append("BB")               
+        elif lst_cube[4][1] == 'w':
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_rotate.append("ub")  
+        elif lst_cube[5][7] == 'w': 
+            lst_cube = rotateSide_D(lst_cube)
+            lst_cube = rotateSide_B(lst_cube)
+            lst_rotate.append("DB")             
+        #three lines of movement
+        elif lst_cube[3][1] == 'w':
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)  
+            lst_rotate.append("rUR")  
+        #four lines of movement  
+        elif lst_cube[3][3] == 'w':
+            lst_cube = rotateSide_B(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)  
+            lst_rotate.append("BrUR")  
+        elif lst_cube[3][5] == 'w':
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)  
+            lst_rotate.append("brUR")
+        elif lst_cube[0][1] == 'w':
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("rUUR")             
+            
+        #five lines of movement     
+        elif lst_cube[4][7] == 'w':
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)   
+            lst_rotate.append("lbrUR")             
+        elif lst_cube[3][7] == 'w': 
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("bbrUF")    
+        elif lst_cube[0][5] == 'w':
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("lrUUR") 
+            
+        elif lst_cube[5][5] == 'w':
+            lst_cube = rotateSide_R(lst_cube)
+            lst_cube = rotateSide_d(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_rotate.append("RdrLLUb") 
+        elif lst_cube[4][5] == 'w':
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_r(lst_cube)
+            lst_cube = rotateSide_F(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)
+            lst_cube = rotateSide_R(lst_cube) 
+            lst_rotate.append("rrFRR")      
+        elif lst_cube[5][1] == 'w':
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_b(lst_cube) 
+            lst_rotate.append("llUb")   
+        elif lst_cube[1][7] == 'w':
+            lst_cube = rotateSide_R(lst_cube)
+            lst_cube = rotateSide_d(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_rotate.append("RdLbb")  
+        elif lst_cube[1][3] == 'w':
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_r(lst_cube) 
+            lst_cube = rotateSide_U(lst_cube) 
+            lst_cube = rotateSide_R(lst_cube) 
+            lst_rotate.append("llbrUR")            
+        elif lst_cube[1][1] == 'w':
+            lst_cube = rotateSide_f(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_F(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_r(lst_cube) 
+            lst_cube = rotateSide_U(lst_cube) 
+            lst_cube = rotateSide_R(lst_cube) 
+            lst_rotate.append("flFlbrUR")      
+        elif lst_cube[1][5] == 'w':
+            lst_cube = rotateSide_f(lst_cube)
+            lst_cube = rotateSide_f(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_r(lst_cube) 
+            lst_cube = rotateSide_U(lst_cube) 
+            lst_cube = rotateSide_R(lst_cube) 
+            lst_rotate.append("ffllbrUR")             
+        elif lst_cube[0][7] == 'w':
+            lst_cube = rotateSide_L(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_cube = rotateSide_b(lst_cube)
+            lst_rotate.append("Lbb")   
+        else:
+            lst_cube = lst_cube     
+            lst_rotate.append("")         
+        return lst_cube, lst_rotate
 
 def y_3_WhiteLeafPos3_5(lst_cube, lst_rotate):
     pass
