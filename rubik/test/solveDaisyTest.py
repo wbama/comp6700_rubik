@@ -25,8 +25,8 @@ class SolveDaisyTest(unittest.TestCase):
             actualResult = solveDaisy(inputDict)[0]
             self.assertEqual(expectedResult, actualResult[1][1])
             self.assertEqual(expectedResult, actualResult[1][3])
-            # self.assertEqual(expectedResult, actualResult[1][5])
-            # self.assertEqual(expectedResult, actualResult[1][7])
+            self.assertEqual(expectedResult, actualResult[1][5])
+            self.assertEqual(expectedResult, actualResult[1][7])
 
 
     
