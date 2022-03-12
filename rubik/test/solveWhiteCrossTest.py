@@ -4,7 +4,7 @@ from rubik.solveWhiteCross import solveWhiteCross
 
 class SolveWhiteCrossTest(unittest.TestCase):                 
             
-        def test_010_SolveWhiteCross(self):
+        def test_010_SolveWhiteCross_y0(self):
             inputDict = {}
             inputDict['cube'] = 'ygrgybbbbwroogowyygyrwwwbgybygbbooyrwbwrowrrgyroorggwo'    
             expectedResult = 'w'             
