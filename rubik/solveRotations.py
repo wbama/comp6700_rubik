@@ -1241,13 +1241,13 @@ def y_0_WhiteLeafPos0_5(lst_cube, lst_rotate):
 def y_1_WhiteLeafPos1_5(lst_cube, lst_rotate):
     
     #easiest movements first
-        if lst_cube[4][1] == 'w' and lst_cube[2][5] != "w":
+        if lst_cube[4][1] == 'w' and lst_cube[1][5] != "w":
             lst_cube = rotateSide_b(lst_cube)
             lst_rotate.append("b") 
-        elif lst_cube[3][3] == 'w' and lst_cube[2][5] != "w":
+        elif lst_cube[3][3] == 'w' and lst_cube[1][5] != "w":
             lst_cube = rotateSide_b(lst_cube)
             lst_cube = rotateSide_b(lst_cube)            
-        elif lst_cube[5][7] == 'w' and lst_cube[2][5] != "w":
+        elif lst_cube[5][7] == 'w' and lst_cube[1][5] != "w":
             lst_rotate.append("B")  
             lst_rotate.append("bb")             
         elif lst_cube[0][1] == 'w' and lst_cube[1][1] != "w":
@@ -1418,7 +1418,7 @@ def y_1_WhiteLeafPos1_5(lst_cube, lst_rotate):
             lst_cube = rotateSide_b(lst_cube)
             lst_cube = rotateSide_b(lst_cube)
             lst_rotate.append("Lbb")   
-        else:
+        else:        
             lst_cube = lst_cube     
             lst_rotate.append("")         
         return lst_cube, lst_rotate
