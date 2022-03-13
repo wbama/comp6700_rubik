@@ -1837,7 +1837,7 @@ def y_4_WhiteLeafPos4_1(lst_cube, lst_rotate):
             lst_rotate.append("") 
 
 def y_5_WhiteLeafPos5_5(lst_cube, lst_rotate):
-            if lst_cube[0][1] == 'w':
+        if lst_cube[0][1] == 'w':
             lst_cube = rotateSide_(lst_cube)
             lst_cube = rotateSide_(lst_cube)
             lst_cube = rotateSide_(lst_cube)
