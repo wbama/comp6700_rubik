@@ -38,7 +38,16 @@ def solveDaisy(parms):
                 lst_cube = rotateSide_R(lst_cube)
                 lst_rotate.append("R")
             else:
-                lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0]  
+                lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
+                
+    if createCubeListFromInputParms(parms)[2][4] == 'y':  
+        
+        for i in range(5):
+            while (lst_cube[2][1] != "w" or lst_cube[2][3] != "w" or lst_cube[2][7] != "w") and lst_cube[0][5] == "w":
+                lst_cube = rotateSide_B(lst_cube)
+                lst_rotate.append("B")
+            else:
+                lst_cube = (y_2_WhiteLeafPos2_5(lst_cube, lst_rotate))[0]   
                 
            
     print(lst_cube)
