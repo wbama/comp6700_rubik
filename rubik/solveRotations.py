@@ -1823,6 +1823,8 @@ def y_3_WhiteLeafPos3_5(lst_cube, lst_rotate):
         else:
             lst_cube = lst_cube     
             lst_rotate.append("") 
+            
+        return lst_cube, lst_rotate
 
 def y_4_WhiteLeafPos4_1(lst_cube, lst_rotate):
         if lst_cube[0][1] == 'w':
