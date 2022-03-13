@@ -1281,6 +1281,20 @@ def y_0_SolveWhiteLeaves(lst_cube, lst_rotate):
     
 def y_1_SolveWhiteLeaves(lst_cube, lst_rotate):
     
+        if lst_cube[1][5] == "w" and lst_cube[1][7] != "w":
+            lst_cube = rotateSide_r(lst_cube)
+            lst_rotate.append("r")  
+        elif lst_cube[1][3] == "w" and lst_cube[1][7] != "w":
+            lst_cube = rotateSide_R(lst_cube)
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("RR")  
+        elif lst_cube[1][1] == "w" and lst_cube[1][7] != "w":
+            lst_cube = rotateSide_R(lst_cube)
+            lst_rotate.append("R") 
+        else:
+            lst_cube = lst_cube
+            lst_rotate.append("") 
+    
     #easiest movements first. 
         if lst_cube[4][1] == 'w' and lst_cube[1][5] != "w":
             lst_cube = rotateSide_b(lst_cube)
@@ -1320,13 +1334,8 @@ def y_1_SolveWhiteLeaves(lst_cube, lst_rotate):
         elif lst_cube[3][7] == 'w' and lst_cube[1][7] != "w":
             lst_cube = rotateSide_D(lst_cube)
             lst_cube = rotateSide_D(lst_cube)
-            lst_rotate.append("DD")  
-            
-        #got stuck here, running in the back
-                  
-        #now run again to put in [1][5]
-        #rotate to non white in [1][5]
-        
+            lst_rotate.append("DD")           
+       
         elif lst_cube[1][5] == "w" and lst_cube[1][7] != "w":
             lst_cube = rotateSide_r(lst_cube)
             lst_rotate.append("r")  
