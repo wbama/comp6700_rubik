@@ -2172,6 +2172,92 @@ def rotateIntoWhiteCross_y_0(lst_cube, lst_rotate):
     lst_cube = rotateSide_F(lst_cube)
     lst_rotate.append("F")  
     
+    # #if statements. Can have more than one outcome
+    # if lst_cube[0][5] == "w" and (lst_cube[1][3] == lst_cube[1][4]):
+    #     lst_cube = rotateSide_R(lst_cube)
+    #     lst_cube = rotateSide_R(lst_cube)
+    #     lst_rotate.append("RR")
+    # if lst_cube[0][1] == "w" and (lst_cube[4][7] == lst_cube[4][4]):
+    #     lst_cube = rotateSide_U(lst_cube)
+    #     lst_cube = rotateSide_U(lst_cube)
+    #     lst_rotate.append("UU")   
+    # if lst_cube[0][3] == "w" and (lst_cube[3][5] == lst_cube[3][4]):
+    #     lst_cube = rotateSide_L(lst_cube)
+    #     lst_cube = rotateSide_L(lst_cube)
+    #     lst_rotate.append("LL") 
+    # if lst_cube[0][7] == "w" and (lst_cube[5][1] == lst_cube[5][4]):
+    #     lst_cube = rotateSide_D(lst_cube)
+    #     lst_cube = rotateSide_D(lst_cube)
+    #     lst_rotate.append("DD")  
+    # lst_cube = rotateSide_F(lst_cube)
+    # lst_rotate.append("F") 
+    #
+    # #if statements. Can have more than one outcome
+    # if lst_cube[0][5] == "w" and (lst_cube[1][3] == lst_cube[1][4]):
+    #     lst_cube = rotateSide_R(lst_cube)
+    #     lst_cube = rotateSide_R(lst_cube)
+    #     lst_rotate.append("RR")
+    # if lst_cube[0][1] == "w" and (lst_cube[4][7] == lst_cube[4][4]):
+    #     lst_cube = rotateSide_U(lst_cube)
+    #     lst_cube = rotateSide_U(lst_cube)
+    #     lst_rotate.append("UU")   
+    # if lst_cube[0][3] == "w" and (lst_cube[3][5] == lst_cube[3][4]):
+    #     lst_cube = rotateSide_L(lst_cube)
+    #     lst_cube = rotateSide_L(lst_cube)
+    #     lst_rotate.append("LL") 
+    # if lst_cube[0][7] == "w" and (lst_cube[5][1] == lst_cube[5][4]):
+    #     lst_cube = rotateSide_D(lst_cube)
+    #     lst_cube = rotateSide_D(lst_cube)
+    #     lst_rotate.append("DD")  
+    # lst_cube = rotateSide_F(lst_cube)
+    # lst_rotate.append("F") 
+    #
+    #
+    # #if statements. Can have more than one outcome
+    # if lst_cube[0][5] == "w" and (lst_cube[1][3] == lst_cube[1][4]):
+    #     lst_cube = rotateSide_R(lst_cube)
+    #     lst_cube = rotateSide_R(lst_cube)
+    #     lst_rotate.append("RR")
+    # if lst_cube[0][1] == "w" and (lst_cube[4][7] == lst_cube[4][4]):
+    #     lst_cube = rotateSide_U(lst_cube)
+    #     lst_cube = rotateSide_U(lst_cube)
+    #     lst_rotate.append("UU")   
+    # if lst_cube[0][3] == "w" and (lst_cube[3][5] == lst_cube[3][4]):
+    #     lst_cube = rotateSide_L(lst_cube)
+    #     lst_cube = rotateSide_L(lst_cube)
+    #     lst_rotate.append("LL") 
+    # if lst_cube[0][7] == "w" and (lst_cube[5][1] == lst_cube[5][4]):
+    #     lst_cube = rotateSide_D(lst_cube)
+    #     lst_cube = rotateSide_D(lst_cube)
+    #     lst_rotate.append("DD")  
+    # lst_cube = rotateSide_F(lst_cube)
+    # lst_rotate.append("F") 
+        
+ 
+        
+    return lst_cube, lst_rotate
+
+def rotateIntoWhiteCross_y_1(lst_cube, lst_rotate):
+    #if statements. Can have more than one outcome
+    if lst_cube[1][5] == "w" and (lst_cube[1][3] == lst_cube[1][4]):
+        lst_cube = rotateSide_R(lst_cube)
+        lst_cube = rotateSide_R(lst_cube)
+        lst_rotate.append("RR")
+    if lst_cube[1][1] == "w" and (lst_cube[4][7] == lst_cube[4][4]):
+        lst_cube = rotateSide_U(lst_cube)
+        lst_cube = rotateSide_U(lst_cube)
+        lst_rotate.append("UU")   
+    if lst_cube[1][3] == "w" and (lst_cube[3][5] == lst_cube[3][4]):
+        lst_cube = rotateSide_L(lst_cube)
+        lst_cube = rotateSide_L(lst_cube)
+        lst_rotate.append("LL") 
+    if lst_cube[1][7] == "w" and (lst_cube[5][1] == lst_cube[5][4]):
+        lst_cube = rotateSide_D(lst_cube)
+        lst_cube = rotateSide_D(lst_cube)
+        lst_rotate.append("DD")  
+    lst_cube = rotateSide_R(lst_cube)
+    lst_rotate.append("R")  
+    
     #if statements. Can have more than one outcome
     if lst_cube[0][5] == "w" and (lst_cube[1][3] == lst_cube[1][4]):
         lst_cube = rotateSide_R(lst_cube)
@@ -2236,6 +2322,7 @@ def rotateIntoWhiteCross_y_0(lst_cube, lst_rotate):
  
         
     return lst_cube, lst_rotate
+        
         
         
         
