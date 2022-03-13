@@ -10,7 +10,7 @@ from rubik.solveRotations import rotateSide_B, rotateSide_b
 from rubik.solveRotations import rotateSide_L, rotateSide_l
 from rubik.solveRotations import rotateSide_U, rotateSide_u
 from rubik.solveRotations import rotateSide_D, rotateSide_d
-from rubik.solveRotations import y_0_WhiteLeafPos0_5, y_1_WhiteLeafPos1_5 
+from rubik.solveRotations import y_0_WhiteLeafPos0_5, y_1_WhiteLeafPos1_5, y_2_WhiteLeafPos2_5
 
 
 def solveDaisy(parms):
