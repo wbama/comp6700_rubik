@@ -1276,9 +1276,7 @@ def y_0_SolveWhiteLeaves(lst_cube, lst_rotate):
             lst_cube = rotateSide_U(lst_cube) 
             lst_cube = rotateSide_F(lst_cube) 
             lst_rotate.append("lblbrfUF")   
-        else:
-            lst_cube = lst_cube     
-            lst_rotate.append("")         
+       
         return lst_cube, lst_rotate
     
 def y_1_SolveWhiteLeaves(lst_cube, lst_rotate):
@@ -1461,9 +1459,7 @@ def y_1_SolveWhiteLeaves(lst_cube, lst_rotate):
             lst_cube = rotateSide_b(lst_cube)
             lst_cube = rotateSide_b(lst_cube)
             lst_rotate.append("Lbb")   
-        else:        
-            lst_cube = lst_cube     
-            lst_rotate.append("")         
+     
         return lst_cube, lst_rotate
     
 
@@ -1637,10 +1633,7 @@ def y_2_SolveWhiteLeaves(lst_cube, lst_rotate):
             lst_cube = rotateSide_D(lst_cube)
             lst_cube = rotateSide_L(lst_cube)
             lst_rotate.append("DL")           
- 
-        else:
-            lst_cube = lst_cube     
-            lst_rotate.append("")         
+      
         return lst_cube, lst_rotate
 
 def y_3_SolveWhiteLeaves(lst_cube, lst_rotate):
@@ -1819,9 +1812,6 @@ def y_3_SolveWhiteLeaves(lst_cube, lst_rotate):
             lst_cube = rotateSide_L(lst_cube)
             lst_cube = rotateSide_L(lst_cube)
             lst_cube = rotateSide_b(lst_cube)
-            lst_rotate.append("") 
-        else:
-            lst_cube = lst_cube     
             lst_rotate.append("") 
             
         return lst_cube, lst_rotate
