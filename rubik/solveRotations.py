@@ -1992,6 +1992,8 @@ def y_4_SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one
             lst_cube = rotateSide_R(lst_cube)
             lst_cube = rotateSide_R(lst_cube)
             lst_rotate.append("dRR")   
+            
+        return lst_cube, lst_rotate
 
 def y_5_SolveWhiteLeaves(lst_cube, lst_rotate):
         if lst_cube[0][1] == 'w':
