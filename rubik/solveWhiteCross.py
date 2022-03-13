@@ -9,7 +9,8 @@ def solveWhiteCross(parms):
        
     # have the daisy now. match up colors and rotate sides down for white cross
     if createCubeListFromInputParms(parms)[0][4] == 'y': 
-        lst_cube_rotations = (rotateIntoWhiteCross_y_0(solveDaisy(parms)[0], solveDaisy(parms)[1]))   
+        for i in range(20):
+            lst_cube_rotations = (rotateIntoWhiteCross_y_0(solveDaisy(parms)[0], solveDaisy(parms)[1]))   
 
     
     return lst_cube_rotations 
