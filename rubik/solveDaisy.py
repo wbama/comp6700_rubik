@@ -32,12 +32,12 @@ def solveDaisy(parms):
     #             lst_cube = (y_0_WhiteLeafPos0_5(lst_cube, lst_rotate))[0]            
  
     if createCubeListFromInputParms(parms)[1][4] == 'y': 
+        #just run through the code 20 times. Take out the no movements in the end
         for i in range(20):
             lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
 
         
-        # if (lst_cube[1][1] != "w" or lst_cube[1][3] != "w" or lst_cube[1][7] != "w") and lst_cube[0][5] == "w":
-        #         lst_cube = (y_1_WhiteLeafPos1_5(lst_cube, lst_rotate))[0] 
+
                 
     # if createCubeListFromInputParms(parms)[2][4] == 'y':  
     #
