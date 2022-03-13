@@ -1283,14 +1283,14 @@ def y_1_WhiteLeafPos1_5(lst_cube, lst_rotate):
         #now run again to put in [1][5]
         #rotate to non white in [1][5]
         
-        elif [1][5] == "w" and [1][7] != "w":
+        elif lst_cube[1][5] == "w" and lst_cube[1][7] != "w":
             lst_cube = rotateSide_r(lst_cube)
             lst_rotate.append("r")  
-        elif [1][3] == "w" and [1][7] != "w":
+        elif lst_cube[1][3] == "w" and lst_cube[1][7] != "w":
             lst_cube = rotateSide_R(lst_cube)
             lst_cube = rotateSide_R(lst_cube)
             lst_rotate.append("RR")  
-        elif [1][1] == "w" and [1][7] != "w":
+        elif lst_cube[1][1] == "w" and lst_cube[1][7] != "w":
             lst_cube = rotateSide_R(lst_cube)
             lst_rotate.append("R") 
       
