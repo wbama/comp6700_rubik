@@ -21,7 +21,7 @@ def solveWhiteCross(parms):
         rotation_from_daisy = ((rotateIntoWhiteCross_y_1(solveDaisy(parms)[0], solveDaisy(parms)[1])))[1]
         
         whiteCrossCube = (rotateIntoWhiteCross_y_1(lst_cube_from_daisy, rotation_from_daisy ))             
-        while not ("LL" in whiteCrossCube[1] and "RR" in whiteCrossCube[1] and "DD" in whiteCrossCube[1] and "UU" in whiteCrossCube[1]):
+        for i in range(20):
             whiteCrossCube = (rotateIntoWhiteCross_y_1(whiteCrossCube[0], whiteCrossCube[1])) 
                
     

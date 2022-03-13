@@ -1284,18 +1284,17 @@ def y_1_SolveWhiteLeaves(lst_cube, lst_rotate):
         if lst_cube[1][5] == "w" and lst_cube[1][7] != "w":
             lst_cube = rotateSide_r(lst_cube)
             lst_rotate.append("r")  
-        elif lst_cube[1][3] == "w" and lst_cube[1][7] != "w":
+        elif lst_cube[1][5] == "w" and lst_cube[1][1] != "w":
             lst_cube = rotateSide_R(lst_cube)
-            lst_cube = rotateSide_R(lst_cube)
-            lst_rotate.append("RR")  
-        elif lst_cube[1][1] == "w" and lst_cube[1][7] != "w":
-            lst_cube = rotateSide_R(lst_cube)
-            lst_rotate.append("R") 
+            lst_rotate.append("R")  
+        elif lst_cube[1][5] == "w" and lst_cube[1][7] != "w":
+            lst_cube = rotateSide_r(lst_cube)
+            lst_rotate.append("r") 
         else:
             lst_cube = lst_cube
             lst_rotate.append("") 
     
-    #easiest movements first. 
+        #solve for [1][5]
         if lst_cube[4][1] == 'w' and lst_cube[1][5] != "w":
             lst_cube = rotateSide_b(lst_cube)
             lst_rotate.append("b") 
@@ -1304,50 +1303,8 @@ def y_1_SolveWhiteLeaves(lst_cube, lst_rotate):
             lst_cube = rotateSide_b(lst_cube)            
         elif lst_cube[5][7] == 'w' and lst_cube[1][5] != "w":
             lst_rotate.append("B")  
-            lst_rotate.append("bb")             
-        elif lst_cube[0][1] == 'w' and lst_cube[1][1] != "w":
-            lst_cube = rotateSide_u(lst_cube)
-            lst_rotate.append("u") 
-        elif lst_cube[3][1] == 'w' and lst_cube[1][1] != "w":
-            lst_cube = rotateSide_u(lst_cube)
-            lst_cube = rotateSide_u(lst_cube)
-            lst_rotate.append("uu") 
-        elif lst_cube[2][1] == 'w' and lst_cube[1][1] != "w":
-            lst_cube = rotateSide_U(lst_cube)
-            lst_rotate.append("U")     
-        elif lst_cube[4][7] == 'w' and lst_cube[1][3] != "w":
-            lst_cube = rotateSide_F(lst_cube)
-            lst_rotate.append("F") 
-        elif lst_cube[5][1] == 'w' and lst_cube[1][3] != "w":
-            lst_cube = rotateSide_f(lst_cube)
-            lst_rotate.append("f") 
-        elif lst_cube[3][5] == 'w' and lst_cube[1][3] != "w":
-            lst_cube = rotateSide_F(lst_cube)
-            lst_cube = rotateSide_F(lst_cube)
-            lst_rotate.append("FF") 
-        elif lst_cube[0][7] == 'w' and lst_cube[1][7] != "w":
-            lst_cube = rotateSide_D(lst_cube)
-            lst_rotate.append("D") 
-        elif lst_cube[2][7] == 'w' and lst_cube[1][7] != "w":
-            lst_cube = rotateSide_d(lst_cube)
-            lst_rotate.append("d") 
-        elif lst_cube[3][7] == 'w' and lst_cube[1][7] != "w":
-            lst_cube = rotateSide_D(lst_cube)
-            lst_cube = rotateSide_D(lst_cube)
-            lst_rotate.append("DD")           
-       
-        elif lst_cube[1][5] == "w" and lst_cube[1][7] != "w":
-            lst_cube = rotateSide_r(lst_cube)
-            lst_rotate.append("r")  
-        elif lst_cube[1][3] == "w" and lst_cube[1][7] != "w":
-            lst_cube = rotateSide_R(lst_cube)
-            lst_cube = rotateSide_R(lst_cube)
-            lst_rotate.append("RR")  
-        elif lst_cube[1][1] == "w" and lst_cube[1][7] != "w":
-            lst_cube = rotateSide_R(lst_cube)
-            lst_rotate.append("R") 
-      
-        #solve for [1][5]
+            lst_rotate.append("bb")   
+
         elif lst_cube[3][3] == 'w':
             lst_cube = rotateSide_B(lst_cube)
             lst_cube = rotateSide_B(lst_cube)
@@ -2253,19 +2210,19 @@ def rotateIntoWhiteCross_y_1(lst_cube, lst_rotate):
     if lst_cube[1][5] == "w" and (lst_cube[2][3] == lst_cube[2][4]):
         lst_cube = rotateSide_B(lst_cube)
         lst_cube = rotateSide_B(lst_cube)
-        lst_rotate.append("BB")
+        lst_rotate.append("BBx")
     if lst_cube[1][1] == "w" and (lst_cube[4][5] == lst_cube[4][4]):
         lst_cube = rotateSide_U(lst_cube)
         lst_cube = rotateSide_U(lst_cube)
-        lst_rotate.append("UU")   
+        lst_rotate.append("UUx")   
     if lst_cube[1][3] == "w" and (lst_cube[0][4] == lst_cube[0][5]):
         lst_cube = rotateSide_F(lst_cube)
         lst_cube = rotateSide_F(lst_cube)
-        lst_rotate.append("FF") 
+        lst_rotate.append("FFx") 
     if lst_cube[1][7] == "w" and (lst_cube[5][4] == lst_cube[5][5]):
         lst_cube = rotateSide_D(lst_cube)
         lst_cube = rotateSide_D(lst_cube)
-        lst_rotate.append("DD")  
+        lst_rotate.append("DDx")  
     lst_cube = rotateSide_R(lst_cube)
     lst_rotate.append("R")  
     
