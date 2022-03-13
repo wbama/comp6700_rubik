@@ -12,9 +12,9 @@ def solveWhiteCross(parms):
         lst_cube_from_daisy = ((rotateIntoWhiteCross_y_0(solveDaisy(parms)[0], solveDaisy(parms)[1])))[0]
         rotation_from_daisy = ((rotateIntoWhiteCross_y_0(solveDaisy(parms)[0], solveDaisy(parms)[1])))[1]
         
-        whiteCrossCube = (rotateIntoWhiteCross_y_0(lst_cube_from_daisy, rotation_from_daisy ))
-        
-        for i in range(10):
-             whiteCrossCube = (rotateIntoWhiteCross_y_0(whiteCrossCube[0], whiteCrossCube[1]))               
+        whiteCrossCube = (rotateIntoWhiteCross_y_0(lst_cube_from_daisy, rotation_from_daisy ))             
+        while not ("LL" in whiteCrossCube[1] and "RR" in whiteCrossCube[1] and "DD" in whiteCrossCube[1] and "UU" in whiteCrossCube[1]):
+            whiteCrossCube = (rotateIntoWhiteCross_y_0(whiteCrossCube[0], whiteCrossCube[1])) 
+               
     
     return whiteCrossCube 
