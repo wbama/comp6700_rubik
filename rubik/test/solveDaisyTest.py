@@ -49,6 +49,17 @@ class SolveDaisyTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[3][3])
             self.assertEqual(expectedResult, actualResult[3][5])
             self.assertEqual(expectedResult, actualResult[3][7])
+            
+        def test_050_SolveDaisy_y_4(self):
+            inputDict = {}
+            inputDict['cube'] = 'grygoogyrorgwwwbrbwbrgrbwbrrywwyowroyyoobbrybygyggwboo'    
+            expectedResult = 'w'             
+
+            actualResult = solveDaisy(inputDict)[0]
+            self.assertEqual(expectedResult, actualResult[4][1])
+            self.assertEqual(expectedResult, actualResult[4][3])
+            self.assertEqual(expectedResult, actualResult[4][5])
+            self.assertEqual(expectedResult, actualResult[4][7])
 
 
 
