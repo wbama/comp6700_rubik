@@ -226,7 +226,7 @@ def _solve(parms):
                       
     #delete the cube string if giving solutions    
     if 'rotate' not in parms:
-         del result['cube']
+        del result['cube']
         
     return result
  
