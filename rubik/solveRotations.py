@@ -1300,7 +1300,8 @@ def y_1_SolveWhiteLeaves(lst_cube, lst_rotate):
             lst_rotate.append("b") 
         elif lst_cube[3][3] == 'w' and lst_cube[1][5] != "w":
             lst_cube = rotateSide_b(lst_cube)
-            lst_cube = rotateSide_b(lst_cube)            
+            lst_cube = rotateSide_b(lst_cube)   
+            lst_rotate.append("bb")          
         elif lst_cube[5][7] == 'w' and lst_cube[1][5] != "w":
             lst_cube = rotateSide_B(lst_cube)
             lst_rotate.append("B")

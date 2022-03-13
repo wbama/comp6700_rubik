@@ -17,7 +17,7 @@ rotations = solveDaisy(inputDict)[1]
 print(f"lst cube {lst_cube}")
 print(f"rotations {rotations}")
 
-# print(_solve(inputDict))
+print(_solve(inputDict))
 
 #print(solveWhiteCross(inputDict))
 
