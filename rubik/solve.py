@@ -28,10 +28,10 @@ def _solve(parms):
             
             str_cube = str1+str2+str3+str4+str5+str6   
             
-            str_rotations_long = "".join(solveWhiteCross(parms)[1])  
-            last_x = str_rotations_long.rfind('x')
-            str_rotations_short = str_rotations_long[:last_x]
-            str_rotations = str_rotations_short.replace("x", "")
+            str_rotations = "".join(solveWhiteCross(parms)[1])  
+            # last_x = str_rotations_long.rfind('x')
+            # str_rotations_short = str_rotations_long[:last_x]
+            # str_rotations = str_rotations_short.replace("x", "")
           
             result = {}
             result['cube'] = str_cube
