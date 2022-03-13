@@ -3,10 +3,10 @@ from rubik.solveDaisy import solveDaisy
 
 
 
-class SolveDaisyTest(unittest.TestCase):   
-            
-  
-        def test_010_SolveDaisy_y_0(self):
+class SolveDaisyTest(unittest.TestCase):  
+
+    
+    def test_010_SolveDaisy_y_0(self):
             inputDict = {}
             inputDict['cube'] = 'boygygrrbrwywbyyowgoorwobrogywwgyyrwwbobrboygggrwogbbr'    
             expectedResult = 'w'             
@@ -17,7 +17,7 @@ class SolveDaisyTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[0][5])
             self.assertEqual(expectedResult, actualResult[0][7])
             
-        def test_020_SolveDaisy_y_1(self):
+    def test_020_SolveDaisy_y_1(self):
             inputDict = {}
             inputDict['cube'] = 'rggboyrgoygboyrwboroogrbbbobwgowrgrbywyrgwwyrwogybyyww'    
             expectedResult = 'w'             
@@ -28,7 +28,7 @@ class SolveDaisyTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[1][5])
             self.assertEqual(expectedResult, actualResult[1][7])
             
-        def test_030_SolveDaisy_y_2(self):
+    def test_030_SolveDaisy_y_2(self):
             inputDict = {}
             inputDict['cube'] = 'rygbwrrggobwgrorroggowyoybbgwwborwoywyrrbwboybwyggyoyb'    
             expectedResult = 'w'             
@@ -39,7 +39,7 @@ class SolveDaisyTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[2][5])
             self.assertEqual(expectedResult, actualResult[2][7])
             
-        def test_040_SolveDaisy_y_3(self):
+    def test_040_SolveDaisy_y_3(self):
             inputDict = {}
             inputDict['cube'] = 'grygoogyrorgwwwbrbwbrgrbwbrrywwyowroyyoobbrybygyggwboo'    
             expectedResult = 'w'             
@@ -50,7 +50,7 @@ class SolveDaisyTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[3][5])
             self.assertEqual(expectedResult, actualResult[3][7])
             
-        def test_050_SolveDaisy_y_4(self):
+    def test_050_SolveDaisy_y_4(self):
             inputDict = {}
             inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'    
             expectedResult = 'w'             
@@ -61,7 +61,7 @@ class SolveDaisyTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[4][5])
             self.assertEqual(expectedResult, actualResult[4][7])
             
-        def test_060_SolveDaisy_y_5(self):
+    def test_060_SolveDaisy_y_5(self):
             inputDict = {}
             inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'    
             expectedResult = 'w'             
