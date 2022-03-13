@@ -1,7 +1,7 @@
 
 from rubik.solve import _solve
 from rubik.solveDaisy import solveDaisy
-from rubik.solveRotations import createCubeListFromInputParms, rotateCubeToRight
+from rubik.solveRotations import createCubeListFromInputParms, rotateCubeToRight, rotateCubeDown
 from rubik.solveWhiteCross import solveWhiteCross
 
 
@@ -13,7 +13,7 @@ inputDict['op'] = 'solve'
 lst_cube = createCubeListFromInputParms(inputDict)
 print(lst_cube)
 #rotate the cube
-lst_cube = rotateCubeToRight(lst_cube)
+lst_cube = rotateCubeDown(lst_cube)
 print(lst_cube)
 str1 = "".join(lst_cube[0])
 str2 = "".join(lst_cube[1])
