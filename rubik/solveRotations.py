@@ -1285,15 +1285,8 @@ def y_1_WhiteLeafPos1_5(lst_cube, lst_rotate):
             lst_cube = rotateSide_D(lst_cube)
             lst_rotate.append("DD")            
         #now run again to put in [1][5]
-    
-        # elif lst_cube[1][5] == "w":
-        #     lst_cube = lst_cube
-        #     lst_rotate.append("")         
-        elif lst_cube[5][7] == 'w': 
-            lst_cube = rotateSide_B(lst_cube)
-            lst_rotate.append("B")   
+      
 
-        #two lines of movement
         elif lst_cube[3][3] == 'w':
             lst_cube = rotateSide_B(lst_cube)
             lst_cube = rotateSide_B(lst_cube)

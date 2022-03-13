@@ -19,7 +19,7 @@ class SolveDaisyTest(unittest.TestCase):
             
         def test_020_SolveDaisy_y_1(self):
             inputDict = {}
-            inputDict['cube'] = 'wwrbrgrrowgbyygbworoorobgywbbbywrgrgywyoborbgywwyggooy'    
+            inputDict['cube'] = 'roggoorgoobwwyoybbgrobrrwyygwwbwrrggwyrrgwbgyyybwbyboo'    
             expectedResult = 'w'             
 
             actualResult = solveDaisy(inputDict)[0]
