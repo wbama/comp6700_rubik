@@ -10,7 +10,8 @@ from rubik.solveRotations import rotateSide_B, rotateSide_b
 from rubik.solveRotations import rotateSide_L, rotateSide_l
 from rubik.solveRotations import rotateSide_U, rotateSide_u
 from rubik.solveRotations import rotateSide_D, rotateSide_d
-from rubik.solveRotations import y_0_SolveWhiteLeaves, y_1_SolveWhiteLeaves, y_2_SolveWhiteLeaves, y_3_SolveWhiteLeaves, y_4_SolveWhiteLeaves
+from rubik.solveRotations import y_0_SolveWhiteLeaves, y_1_SolveWhiteLeaves, y_2_SolveWhiteLeaves, y_3_SolveWhiteLeaves
+from rubik.solveRotations import y_4_SolveWhiteLeaves, y_5_SolveWhiteLeaves
 
 
 def solveDaisy(parms):
@@ -44,6 +45,11 @@ def solveDaisy(parms):
     if createCubeListFromInputParms(parms)[4][4] == 'y': 
         #just run through the code 20 times. Take out the no movements in the end
         for i in range(20):
-            lst_cube = (y_4_SolveWhiteLeaves(lst_cube, lst_rotate))[0]            
+            lst_cube = (y_4_SolveWhiteLeaves(lst_cube, lst_rotate))[0] 
+            
+    if createCubeListFromInputParms(parms)[5][4] == 'y': 
+        #just run through the code 20 times. Take out the no movements in the end
+        for i in range(20):
+            lst_cube = (y_5_SolveWhiteLeaves(lst_cube, lst_rotate))[0]              
 
     return lst_cube, lst_rotate
