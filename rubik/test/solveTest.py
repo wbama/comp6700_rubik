@@ -284,7 +284,7 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
         
-    def test_941_IncorrectParmsRotateString(self):
+    def test_942_IncorrectParmsRotateString(self):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
         inputDict['rotate'] = 'Ff Bb'
