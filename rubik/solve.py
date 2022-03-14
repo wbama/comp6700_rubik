@@ -16,9 +16,12 @@ def _solve(parms):
  
         lst_cube = createCubeListFromInputParms(parms)   
                
-        if 'rotate' not in parms:
-            for i in range (0,6):
-                exec(f"s{1}=set(lst_cube[{i}])  ")
+        # if 'rotate' not in parms:
+        #
+        #     for i in range (0,6):
+        #         exec(f"s{1}=set(lst_cube[{i}])  ")
+        #
+        #     print(s0)
 
        
         if 'rotate' not in parms:
