@@ -52,14 +52,12 @@ def _solve(parms):
             s2=set(lst_cube[2])
             s3=set(lst_cube[3])
             s4=set(lst_cube[4])
-            s5=set(lst_cube[5])
-        
-            
+            s5=set(lst_cube[5])            
           
             result = {}
             result['cube'] = str_cube
             result['status'] = 'ok' 
-            if len(s0) == len(s1) == len(s2) == len(s3) == len(s4) == len(s5):
+            if len(s0) == len(s1) == len(s2) == len(s3) == len(s4) == len(s5) == 1:
                 result['solution'] = ""
             else:
                 result['solution'] = str_rotation_cleanup

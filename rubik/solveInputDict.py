@@ -6,7 +6,7 @@ from rubik.solveWhiteCross import solveWhiteCross
 
 
 inputDict = {}
-inputDict['cube'] = "gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy"
+inputDict['cube'] = "ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg"
 inputDict['op'] = 'solve' 
 # inputDict['rotate'] = 'F'
 print(createCubeListFromInputParms(inputDict))
