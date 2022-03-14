@@ -11,7 +11,8 @@ def _solve(parms):
     result = {}    
     str_cube = ''
     
-    if ("y") in createCubeListFromInputParms(parms):
+    lst_cube = createCubeListFromInputParms(parms)
+    if ("y") in lst_cube:
         if ("y" in lst_cube[0][4] or "Y" in lst_cube[0][4]):
             var_w = lst_cube[2][4]
             var_y = lst_cube[0][4]
