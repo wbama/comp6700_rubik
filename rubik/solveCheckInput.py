@@ -79,12 +79,13 @@ def solveCheck(parms):
         result['status'] = ('error: one of the sides has to be white')  
         
     #only certain rotations are accepted or blank 
-   
+    elif 'rotate' in parms and " " in (parms.get('rotate')):
+            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')  
+               
     elif 'rotate' in parms and rotate_length == 0:
             result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]') 
             
-    elif 'rotate' in parms and " " in (parms.get('rotate')):
-            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')    
+  
         
     elif 'rotate' in parms and rotate_length > 0:
         for rotation in (parms.get('rotate')):
