@@ -2004,7 +2004,7 @@ def rotateIntoWhiteCross_y_0(lst_cube, lst_rotate):
         lst_cube = rotateSide_D(lst_cube)
         lst_rotate.append("DDx")  
     lst_cube = rotateSide_F(lst_cube)
-    lst_rotate.append("Fx")  
+    lst_rotate.append("Fy")  
 
             
     return lst_cube, lst_rotate
@@ -2028,7 +2028,7 @@ def rotateIntoWhiteCross_y_1(lst_cube, lst_rotate):
         lst_cube = rotateSide_D(lst_cube)
         lst_rotate.append("DDx")  
     lst_cube = rotateSide_R(lst_cube)
-    lst_rotate.append("Rx")      
+    lst_rotate.append("Ry")      
        
     return lst_cube, lst_rotate
 
@@ -2052,7 +2052,7 @@ def rotateIntoWhiteCross_y_2(lst_cube, lst_rotate):
         lst_cube = rotateSide_D(lst_cube)
         lst_rotate.append("DDx")  
     lst_cube = rotateSide_B(lst_cube)
-    lst_rotate.append("Bx")      
+    lst_rotate.append("By")      
        
     return lst_cube, lst_rotate
 
@@ -2075,7 +2075,7 @@ def rotateIntoWhiteCross_y_3(lst_cube, lst_rotate):
         lst_cube = rotateSide_D(lst_cube)
         lst_rotate.append("DDx")  
     lst_cube = rotateSide_L(lst_cube)
-    lst_rotate.append("Lx")      
+    lst_rotate.append("Ly")      
        
     return lst_cube, lst_rotate
 
@@ -2098,7 +2098,7 @@ def rotateIntoWhiteCross_y_4(lst_cube, lst_rotate):
         lst_cube = rotateSide_F(lst_cube)
         lst_rotate.append("FFx")  
     lst_cube = rotateSide_U(lst_cube)
-    lst_rotate.append("Ux")      
+    lst_rotate.append("Uy")      
        
     return lst_cube, lst_rotate
 
@@ -2121,7 +2121,7 @@ def rotateIntoWhiteCross_y_5(lst_cube, lst_rotate):
         lst_cube = rotateSide_B(lst_cube)
         lst_rotate.append("BBx")  
     lst_cube = rotateSide_D(lst_cube)
-    lst_rotate.append("Dx")      
+    lst_rotate.append("Dy")      
        
     return lst_cube, lst_rotate
         
