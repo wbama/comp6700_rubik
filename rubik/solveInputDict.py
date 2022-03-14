@@ -8,31 +8,27 @@ from rubik.solveRotations import createYellowAndWhiteSides
 # inputDict['cube'] = "gwwboboyboygwbyyyrygwrrgwowggyogrowbrwrrygoogyorrwbbbb"
 
 inputDict = {}
-inputDict['cube'] = "wwwwwwwwwkkkkkkkkkYYYYYYYYYoooooooooeeeeeeeeeQQQQQQQQQ"
+inputDict['cube'] = "sssssssssdddddddddvvvvvvvvvVVVVVVVVwVwwwwwwww111111111"
 inputDict['op'] = 'solve' 
 # inputDict['rotate'] = 'F'
 lst_cube = (createCubeListFromInputParms(inputDict))
 print(lst_cube)
 
 var_y = createYellowAndWhiteSides(inputDict)[0]
-var_w = createYellowAndWhiteSides(inputDict)[1]
-#     VAR_Y = lst_cube[0][4]
-#     VAR_W = lst_cube[2][4]
-
-    
+var_w = createYellowAndWhiteSides(inputDict)[1]   
     
 print(f"var yellow is: {var_y}")
 print(f"var white is: {var_w}")
 # lst_rotate = []
-# lst_cube = solveDaisy(inputDict)[0]
-# rotations = solveDaisy(inputDict)[1]
+lst_cube = solveDaisy(inputDict)[0]
+rotations = solveDaisy(inputDict)[1]
 #
-# print(f"lst cube {lst_cube}")
-# print(f"rotations {rotations}")
+print(f"lst cube {lst_cube}")
+print(f"rotations {rotations}")
 #
-# print(f"WC {solveWhiteCross(inputDict)}")
+print(f"WC {solveWhiteCross(inputDict)}")
 #
-# print(_solve(inputDict))
+print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 

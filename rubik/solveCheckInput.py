@@ -69,14 +69,8 @@ def solveCheck(parms):
             
     #each middle face is a different color
     elif len(unique_center) != 6:
-        result['status'] = ('error: two middle faces are the same colors')  
-        
-    #one of the sides have to be yellow
-    elif ("y") not in (parms.get("cube")).lower():
-        result['status'] = ('error: one of the sides has to be yellow')  
-        
-    elif ("w") not in (parms.get("cube")).lower():
-        result['status'] = ('error: one of the sides has to be white')  
+        result['status'] = ('error: two middle faces are the same colors')     
+ 
         
     #only certain rotations are accepted or blank             
     elif 'rotate' in parms and " " in (parms.get('rotate')):
