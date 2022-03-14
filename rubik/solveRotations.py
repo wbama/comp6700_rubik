@@ -2081,7 +2081,7 @@ def rotateIntoWhiteCross_y_3(lst_cube, lst_rotate):
 
 def rotateIntoWhiteCross_y_4(lst_cube, lst_rotate):
     #if statements. Can have more than one outcome
-    if lst_cube[4][5] == "w" and (lst_cube[1][3] == lst_cube[2][4]):
+    if lst_cube[4][5] == "w" and (lst_cube[1][1] == lst_cube[1][4]):
         lst_cube = rotateSide_R(lst_cube)
         lst_cube = rotateSide_R(lst_cube)
         lst_rotate.append("RRx")
