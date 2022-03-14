@@ -2126,6 +2126,7 @@ def rotateIntoWhiteCross_y_5(lst_cube, lst_rotate):
     return lst_cube, lst_rotate
 
 def createYellowAndWhiteSides(parms):
+    global var_y, var_w
     lst_cube = createCubeListFromInputParms(parms)
     if ("y") in (parms.get("cube")) or "Y" in (parms.get("cube")):
         if ("y" in lst_cube[0][4] or "Y" in lst_cube[0][4]):
@@ -2146,6 +2147,7 @@ def createYellowAndWhiteSides(parms):
     else:
         var_y = lst_cube[0][4]
         var_w = lst_cube[2][4]
+        
     return var_y, var_w
         
         
