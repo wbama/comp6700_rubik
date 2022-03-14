@@ -1,6 +1,13 @@
-str1 = "DBRbrURBBxRUUxFFxRDDxRRRRRRRRRRRRRRRRRRRR"
+from rubik.solveRotations import createCubeListFromInputParms
 
-last_x = str1.rfind('x')
-substr = str1[:last_x]
-substr2 = substr.replace("x", "")
-print(substr2)
+inputDict = {}
+inputDict['cube'] = "rbgryyygboyobbwrwygyrowobgogwgbggbrbyrwrrowwyrywbogwoo"
+inputDict['op'] = 'solve' 
+lst_cube = createCubeListFromInputParms(inputDict)  
+print(lst_cube)
+
+
+s = set(lst_cube[0])
+print(len(s))
+
+

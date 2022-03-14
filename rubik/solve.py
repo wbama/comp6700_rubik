@@ -14,8 +14,12 @@ def _solve(parms):
     try:         
 
  
-        lst_cube = createCubeListFromInputParms(parms)          
-       
+        lst_cube = createCubeListFromInputParms(parms)   
+               
+        if 'rotate' not in parms:
+            for i in range (0,6):
+                exec(f"s{1}=set(lst_cube[{i}])  ")
+
        
         if 'rotate' not in parms:
             lst_cube = solveWhiteCross(parms)[0]
