@@ -10,7 +10,7 @@ from rubik.solveRotations import createYellowAndWhiteSides
 inputDict = {}
 inputDict['cube'] = "0O0pOoo00p0PZoOPooZOZPZPPpOpoOZ000ppo0oOpPPpZOZZZPPpoO"
 inputDict['op'] = 'solve' 
-inputDict['rotate'] = ''
+inputDict['rotate'] = ' '
 lst_cube = (createCubeListFromInputParms(inputDict))
 print(lst_cube)
 
