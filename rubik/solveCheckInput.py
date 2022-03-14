@@ -84,9 +84,7 @@ def solveCheck(parms):
             if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
                 result['status'] = 'ok'                       
             else:                
-                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')            
-
-       
+                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')       
     else:
         result['status'] = 'ok'
         
