@@ -1696,7 +1696,7 @@ def y_3_SolveWhiteLeaves(lst_cube, lst_rotate):
             lst_cube = rotateSide_D(lst_cube)
             lst_cube = rotateSide_F(lst_cube)
             lst_rotate.append("DF") 
-        elif lst_cube[5][7] == var_wand lst_cube[3][5] != var_w:
+        elif lst_cube[5][7] == var_w and lst_cube[3][5] != var_w:
             lst_cube = rotateSide_L(lst_cube)
             lst_cube = rotateSide_L(lst_cube)
             lst_cube = rotateSide_b(lst_cube)
