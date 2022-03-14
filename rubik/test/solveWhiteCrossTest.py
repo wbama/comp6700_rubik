@@ -6,7 +6,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             
         def test_010_SolveWhiteCross_y0(self):
             inputDict = {}
-            inputDict['cube'] = 'boygygrrbrwywbyyowgoorwobrogywwgyyrwwbobrboygggrwogbbr'    
+            inputDict['cube'] = 'rwrrygooggyrybyowybbbbwrroyoogwggbrywowgrrwgygwwboboyb'    
             expectedResult = 'w'             
 
             actualResult = solveWhiteCross(inputDict)[0]
