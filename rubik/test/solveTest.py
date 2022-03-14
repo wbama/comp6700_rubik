@@ -192,7 +192,7 @@ class SolveTest(unittest.TestCase):
         #should be a white cross on the back now
 
         inputDict = {}
-        inputDict['cube'] = 'yrybyoyggogowowrrwggwgwbrrwrorwryoogbrwbbybbbooyygwbyg'    
+        inputDict['cube'] = 'boygygrrbrwywbyyowgoorwobrogywwgyyrwwbobrboygggrwogbbr'    
         expectedResult = 'w'   
                   
         actualResult = solve._solve(inputDict)
