@@ -83,8 +83,7 @@ def solveCheck(parms):
             result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')  
                
     elif 'rotate' in parms and rotate_length == 0:
-            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]') 
-            
+            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')            
   
         
     elif 'rotate' in parms and rotate_length > 0:
