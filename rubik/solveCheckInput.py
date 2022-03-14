@@ -78,10 +78,7 @@ def solveCheck(parms):
     elif ("w") not in (parms.get("cube")).lower():
         result['status'] = ('error: one of the sides has to be white')  
         
-    #only certain rotations are accepted or blank 
-    elif 'rotate' in parms (parms.get('rotate')) == None:
-            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')  
-            
+    #only certain rotations are accepted or blank             
     elif 'rotate' in parms and " " in (parms.get('rotate')):
             result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')  
                
