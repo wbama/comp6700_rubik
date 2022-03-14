@@ -42,7 +42,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             
         def test_040_SolveWhiteCross_y3(self):
             inputDict = {}
-            inputDict['cube'] = 'rwywbyyowgoorwobrogywwgyyrwboygygrrbobwyrbgborgrgobgwb'    
+            inputDict['cube'] = 'gyrybyowybbbbwrroyoogwggbryrwrrygoogwgwgroyrwwbbwoygbo'    
             expectedResult = 'w'             
 
             actualResult = solveWhiteCross(inputDict)[0]
@@ -66,7 +66,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             
         def test_060_SolveWhiteCross_y5(self):
             inputDict = {}
-            inputDict['cube'] = 'yygoryrbyooorbyrgogorboobbwggbggyrrbywwrwbogywwbwywgrw'    
+            inputDict['cube'] = 'wowgrrwgyryyybwgyobyobobwwgbworgoyggyorrwbbbbrwrrygoog'    
             expectedResult = 'w'             
 
             actualResult = solveWhiteCross(inputDict)[0]
