@@ -19,8 +19,8 @@ def solveDaisy(parms):
     #find out where the yellow center is. Solve from that vantage point    
     global var_y, var_w
     lst_cube = (createCubeListFromInputParms(parms)) 
-    var_y = createYellowAndWhiteSides(parms)[0]
-    print(var_y)
+    # var_y = createYellowAndWhiteSides(parms)[0]
+    # print(var_y)
     var_w = createYellowAndWhiteSides(parms)[1]
     print(var_w)
     lst_rotate = [] 
