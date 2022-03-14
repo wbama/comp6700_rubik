@@ -14,9 +14,7 @@ def _solve(parms):
     try:         
 
         
-        lst_cube = createCubeListFromInputParms(parms)
-        var_y = createYellowAndWhiteSides(parms)[0]
-        
+        lst_cube = createCubeListFromInputParms(parms)      
       
        
         if 'rotate' not in parms:
