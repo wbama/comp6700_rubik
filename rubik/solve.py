@@ -32,6 +32,7 @@ def _solve(parms):
             last_x = str_rotations_long.rfind('x')
             str_rotations_short = str_rotations_long[:last_x]
             str_rotations_no_x = str_rotations_short.replace("x", "")
+            str_rotations_no_y = str_rotations_no_x.replace("y", "")
           
             result = {}
             result['cube'] = str_cube
