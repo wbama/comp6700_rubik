@@ -311,6 +311,7 @@ class SolveTest(unittest.TestCase):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboo'
         inputDict['op'] = 'solve'
+        inputDict['rotate'] = ''
 
         expectedResult = {}
         expectedResult['status'] = 'error: cube string has to have 54 elements'
@@ -321,6 +322,7 @@ class SolveTest(unittest.TestCase):
         inputDict = {}
         inputDict['cube'] = 'bbbbbbbbbbbbbbbbbbgggggggggoooooooooyyyyyyyyywwwwwwwww'
         inputDict['op'] = 'solve'
+        inputDict['rotate'] = ''
 
         expectedResult = {}
         expectedResult['status'] = 'error: there should be 6 colors'
@@ -331,6 +333,7 @@ class SolveTest(unittest.TestCase):
         inputDict = {}
         inputDict['cube'] = 'bbbbbbbbbbrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
         inputDict['op'] = 'solve'
+        inputDict['rotate'] = ''
 
         expectedResult = {}
         expectedResult['status'] = 'error: one of the colors is more or less than 9 occurrences'
@@ -341,6 +344,7 @@ class SolveTest(unittest.TestCase):
         inputDict = {}
         inputDict['cube'] = 'bbbbrbbbbrrrrrrrbrgggggggggoooooooooyyyyyyyyywwwwwwwww'
         inputDict['op'] = 'solve'
+        inputDict['rotate'] = ''
 
         expectedResult = {}
         expectedResult['status'] = 'error: two middle faces are the same colors'
