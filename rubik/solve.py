@@ -10,10 +10,30 @@ from rubik.solveWhiteCross import solveWhiteCross
 def _solve(parms):
     result = {}    
     str_cube = ''
-      
+    
+    if ("y") in (inputDict['cube'].lower()):
+        if ("y" in lst_cube[0][4] or "Y" in lst_cube[0][4]):
+            var_w = lst_cube[2][4]
+            var_y = lst_cube[0][4]
+        elif ("y"  in lst_cube[1][4] or "Y" in lst_cube[1][4]):
+            var_w = lst_cube[3][4]
+            var_y = lst_cube[1][4]
+        elif ("y" in lst_cube[2][4] or "Y" in lst_cube[2][4])  :
+            var_w = lst_cube[0][4] 
+            var_y = lst_cube[2][4]       
+        elif ("y" in lst_cube[3][4] or "Y" in lst_cube[3][4])  :
+            var_w = lst_cube[1][4]
+            var_y = lst_cube[3][4]
+        elif ("y" in lst_cube[4][4] or "Y" in lst_cube[4][4])  :
+            var_w = lst_cube[5][4]
+            var_y = lst_cube[4][4]
+    else:
+        var_y = lst_cube[0][4]
+        var_w = lst_cube[2][4]
+    
     try:         
 
- 
+        
         lst_cube = createCubeListFromInputParms(parms)
        
         if 'rotate' not in parms:
@@ -250,7 +270,8 @@ def _solve(parms):
     if 'rotate' not in parms:
         del result['cube']
         
-    return result
+      
+    return result, VAR_Y
  
  
 
