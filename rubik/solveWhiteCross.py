@@ -45,7 +45,7 @@ def solveWhiteCross(parms):
         for i in range(20):
             whiteCrossCube = (rotateIntoWhiteCross_y_4(whiteCrossCube[0], whiteCrossCube[1])) 
             
-    elif createCubeListFromInputParms(parms)[4][4] == 'y': 
+    elif createCubeListFromInputParms(parms)[5][4] == 'y': 
         lst_cube_from_daisy = ((rotateIntoWhiteCross_y_5(solveDaisy(parms)[0], solveDaisy(parms)[1])))[0]
         rotation_from_daisy = ((rotateIntoWhiteCross_y_5(solveDaisy(parms)[0], solveDaisy(parms)[1])))[1]        
         whiteCrossCube = (rotateIntoWhiteCross_y_5(lst_cube_from_daisy, rotation_from_daisy ))             
