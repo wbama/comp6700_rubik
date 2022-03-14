@@ -264,7 +264,8 @@ class SolveTest(unittest.TestCase):
         
     def test_930_MissingCube(self):
         inputDict = {}
-        inputDict['op'] = 'solve'           
+        inputDict['op'] = 'solve' 
+        inputDict['rotate'] = ''          
 
         expectedResult = {}
         expectedResult['status'] = 'error: no cube found'
@@ -277,6 +278,7 @@ class SolveTest(unittest.TestCase):
         inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         inputDict['rotate'] = 'w'
         inputDict['op'] = 'solve'
+        
 
         expectedResult = {}
         expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd], None or ""'
@@ -298,6 +300,7 @@ class SolveTest(unittest.TestCase):
         inputDict = {}
         inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboogo'
         inputDict['op'] = 'solve'
+        inputDict['rotate'] = ''
 
         expectedResult = {}
         expectedResult['status'] = 'error: cube string has to have 54 elements'
