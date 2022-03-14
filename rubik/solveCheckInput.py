@@ -53,6 +53,13 @@ def solveCheck(parms):
     #valid characters   
     elif ((parms.get('cube')).isalnum())== False:
         result['status'] = ('error: only alphanumeric characters in the cube string')  
+        
+    #only certain rotations are accepted or blank             
+    elif 'rotate' in parms and " " in (parms.get('rotate')):
+            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')  
+               
+    elif 'rotate' in parms and rotate_length == 0:
+            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')  
 
         
     #has 54 elements
@@ -78,12 +85,7 @@ def solveCheck(parms):
     elif ("w") not in (parms.get("cube")).lower():
         result['status'] = ('error: one of the sides has to be white')  
         
-    #only certain rotations are accepted or blank             
-    elif 'rotate' in parms and " " in (parms.get('rotate')):
-            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')  
-               
-    elif 'rotate' in parms and rotate_length == 0:
-            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')            
+          
   
         
     elif 'rotate' in parms and rotate_length > 0:

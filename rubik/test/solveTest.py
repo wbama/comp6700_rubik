@@ -313,7 +313,7 @@ class SolveTest(unittest.TestCase):
         inputDict = {}
         inputDict['cube'] = 'bbbbrbbbbrrrrrrrbrgggggggggoooooooooyyyyyyyyywwwwwwwww'
         inputDict['op'] = 'solve'
-        inputDict['rotate'] = ''
+        inputDict['rotate'] = 'f'
 
         expectedResult = {}
         expectedResult['status'] = 'error: two middle faces are the same colors'
