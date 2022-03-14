@@ -251,7 +251,7 @@ def _solve(parms):
         del result['cube']
         
       
-    return result, VAR_Y
+    return result
  
  
 
