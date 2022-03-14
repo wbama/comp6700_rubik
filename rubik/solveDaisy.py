@@ -22,6 +22,7 @@ def solveDaisy(parms):
     var_y = createYellowAndWhiteSides(parms)[0]
     print(var_y)
     var_w = createYellowAndWhiteSides(parms)[1]
+    print(var_w)
     lst_rotate = [] 
 
     #yellow is in front    
