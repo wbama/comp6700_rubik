@@ -1,17 +1,17 @@
 import unittest
 from rubik.solveDaisy import solveDaisy
-from rubik.solveRotations import createCubeListFromInputParms
+from rubik.solveRotations import createCubeListFromInputParms, createYellowAndWhiteSides
 
 
 
 class SolveDaisyTest(unittest.TestCase):  
 
-    
+   
     def test_010_SolveDaisy_y_0(self):
             inputDict = {}
             inputDict['cube'] = 'boygygrrbrwywbyyowgoorwobrogywwgyyrwwbobrboygggrwogbbr'    
             expectedResult = 'w'             
-            if createCubeListFromInputParms(inputDict)[0][4] == "y":
+            if createCubeListFromInputParms(inputDict)[0][4] == createYellowAndWhiteSides(inputDict)[0]:
                 actualResult = solveDaisy(inputDict)[0]
                 self.assertEqual(expectedResult, actualResult[0][1])
                 self.assertEqual(expectedResult, actualResult[0][3])
