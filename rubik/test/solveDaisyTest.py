@@ -35,22 +35,24 @@ class SolveDaisyTest(unittest.TestCase):
             inputDict['cube'] = 'rygbwrrggobwgrorroggowyoybbgwwborwoywyrrbwboybwyggyoyb'    
             expectedResult = 'w'             
 
-            actualResult = solveDaisy(inputDict)[0]
-            self.assertEqual(expectedResult, actualResult[2][1])
-            self.assertEqual(expectedResult, actualResult[2][3])
-            self.assertEqual(expectedResult, actualResult[2][5])
-            self.assertEqual(expectedResult, actualResult[2][7])
+            if createCubeListFromInputParms(inputDict)[2][4] == createYellowAndWhiteSides(inputDict)[0]:
+                actualResult = solveDaisy(inputDict)[0]
+                self.assertEqual(expectedResult, actualResult[2][1])
+                self.assertEqual(expectedResult, actualResult[2][3])
+                self.assertEqual(expectedResult, actualResult[2][5])
+                self.assertEqual(expectedResult, actualResult[2][7])
             
     def test_040_SolveDaisy_y_3(self):
             inputDict = {}
             inputDict['cube'] = 'grygoogyrorgwwwbrbwbrgrbwbrrywwyowroyyoobbrybygyggwboo'    
             expectedResult = 'w'             
 
-            actualResult = solveDaisy(inputDict)[0]
-            self.assertEqual(expectedResult, actualResult[3][1])
-            self.assertEqual(expectedResult, actualResult[3][3])
-            self.assertEqual(expectedResult, actualResult[3][5])
-            self.assertEqual(expectedResult, actualResult[3][7])
+            if createCubeListFromInputParms(inputDict)[3][4] == createYellowAndWhiteSides(inputDict)[0]:
+                actualResult = solveDaisy(inputDict)[0]
+                self.assertEqual(expectedResult, actualResult[3][1])
+                self.assertEqual(expectedResult, actualResult[3][3])
+                self.assertEqual(expectedResult, actualResult[3][5])
+                self.assertEqual(expectedResult, actualResult[3][7])
             
     def test_050_SolveDaisy_y_4(self):
             inputDict = {}
