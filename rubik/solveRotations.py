@@ -1990,21 +1990,21 @@ def rotateIntoWhiteCross_y_0(lst_cube, lst_rotate):
     if lst_cube[0][5] == "w" and (lst_cube[1][3] == lst_cube[1][4]):
         lst_cube = rotateSide_R(lst_cube)
         lst_cube = rotateSide_R(lst_cube)
-        lst_rotate.append("RR")
+        lst_rotate.append("RRx")
     if lst_cube[0][1] == "w" and (lst_cube[4][7] == lst_cube[4][4]):
         lst_cube = rotateSide_U(lst_cube)
         lst_cube = rotateSide_U(lst_cube)
-        lst_rotate.append("UU")   
+        lst_rotate.append("UUx")   
     if lst_cube[0][3] == "w" and (lst_cube[3][5] == lst_cube[3][4]):
         lst_cube = rotateSide_L(lst_cube)
         lst_cube = rotateSide_L(lst_cube)
-        lst_rotate.append("LL") 
+        lst_rotate.append("LLx") 
     if lst_cube[0][7] == "w" and (lst_cube[5][1] == lst_cube[5][4]):
         lst_cube = rotateSide_D(lst_cube)
         lst_cube = rotateSide_D(lst_cube)
-        lst_rotate.append("DD")  
+        lst_rotate.append("DDx")  
     lst_cube = rotateSide_F(lst_cube)
-    lst_rotate.append("F")  
+    lst_rotate.append("Fx")  
 
             
     return lst_cube, lst_rotate
@@ -2028,7 +2028,7 @@ def rotateIntoWhiteCross_y_1(lst_cube, lst_rotate):
         lst_cube = rotateSide_D(lst_cube)
         lst_rotate.append("DDx")  
     lst_cube = rotateSide_R(lst_cube)
-    lst_rotate.append("R")      
+    lst_rotate.append("Rx")      
        
     return lst_cube, lst_rotate
 
@@ -2051,77 +2051,77 @@ def rotateIntoWhiteCross_y_2(lst_cube, lst_rotate):
         lst_cube = rotateSide_D(lst_cube)
         lst_cube = rotateSide_D(lst_cube)
         lst_rotate.append("DDx")  
-    lst_cube = rotateSide_R(lst_cube)
-    lst_rotate.append("B")      
+    lst_cube = rotateSide_B(lst_cube)
+    lst_rotate.append("Bx")      
        
     return lst_cube, lst_rotate
 
 def rotateIntoWhiteCross_y_3(lst_cube, lst_rotate):
     #if statements. Can have more than one outcome
-    if lst_cube[1][5] == "w" and (lst_cube[2][3] == lst_cube[2][4]):
-        lst_cube = rotateSide_B(lst_cube)
-        lst_cube = rotateSide_B(lst_cube)
-        lst_rotate.append("BBx")
-    if lst_cube[1][1] == "w" and (lst_cube[4][5] == lst_cube[4][4]):
+    if lst_cube[3][5] == "w" and (lst_cube[0][3] == lst_cube[0][4]):
+        lst_cube = rotateSide_F(lst_cube)
+        lst_cube = rotateSide_F(lst_cube)
+        lst_rotate.append("FFx")
+    if lst_cube[3][1] == "w" and (lst_cube[4][3] == lst_cube[4][4]):
         lst_cube = rotateSide_U(lst_cube)
         lst_cube = rotateSide_U(lst_cube)
         lst_rotate.append("UUx")   
-    if lst_cube[1][3] == "w" and (lst_cube[0][4] == lst_cube[0][5]):
-        lst_cube = rotateSide_F(lst_cube)
-        lst_cube = rotateSide_F(lst_cube)
-        lst_rotate.append("FFx") 
-    if lst_cube[1][7] == "w" and (lst_cube[5][4] == lst_cube[5][5]):
+    if lst_cube[3][3] == "w" and (lst_cube[2][4] == lst_cube[2][5]):
+        lst_cube = rotateSide_B(lst_cube)
+        lst_cube = rotateSide_B(lst_cube)
+        lst_rotate.append("BBx") 
+    if lst_cube[3][7] == "w" and (lst_cube[5][4] == lst_cube[5][3]):
         lst_cube = rotateSide_D(lst_cube)
         lst_cube = rotateSide_D(lst_cube)
         lst_rotate.append("DDx")  
-    lst_cube = rotateSide_R(lst_cube)
-    lst_rotate.append("R")      
+    lst_cube = rotateSide_L(lst_cube)
+    lst_rotate.append("Lx")      
        
     return lst_cube, lst_rotate
 
 def rotateIntoWhiteCross_y_4(lst_cube, lst_rotate):
     #if statements. Can have more than one outcome
-    if lst_cube[1][5] == "w" and (lst_cube[2][3] == lst_cube[2][4]):
+    if lst_cube[4][5] == "w" and (lst_cube[1][3] == lst_cube[2][4]):
+        lst_cube = rotateSide_R(lst_cube)
+        lst_cube = rotateSide_R(lst_cube)
+        lst_rotate.append("RRx")
+    if lst_cube[4][1] == "w" and (lst_cube[2][1] == lst_cube[2][4]):
         lst_cube = rotateSide_B(lst_cube)
         lst_cube = rotateSide_B(lst_cube)
-        lst_rotate.append("BBx")
-    if lst_cube[1][1] == "w" and (lst_cube[4][5] == lst_cube[4][4]):
-        lst_cube = rotateSide_U(lst_cube)
-        lst_cube = rotateSide_U(lst_cube)
-        lst_rotate.append("UUx")   
-    if lst_cube[1][3] == "w" and (lst_cube[0][4] == lst_cube[0][5]):
+        lst_rotate.append("BBx")   
+    if lst_cube[4][3] == "w" and (lst_cube[3][1] == lst_cube[3][4]):
+        lst_cube = rotateSide_L(lst_cube)
+        lst_cube = rotateSide_L(lst_cube)
+        lst_rotate.append("LLx") 
+    if lst_cube[4][7] == "w" and (lst_cube[0][4] == lst_cube[0][1]):
         lst_cube = rotateSide_F(lst_cube)
         lst_cube = rotateSide_F(lst_cube)
-        lst_rotate.append("FFx") 
-    if lst_cube[1][7] == "w" and (lst_cube[5][4] == lst_cube[5][5]):
-        lst_cube = rotateSide_D(lst_cube)
-        lst_cube = rotateSide_D(lst_cube)
-        lst_rotate.append("DDx")  
-    lst_cube = rotateSide_R(lst_cube)
-    lst_rotate.append("R")      
+        lst_rotate.append("FFx")  
+    lst_cube = rotateSide_U(lst_cube)
+    lst_rotate.append("Ux")      
        
     return lst_cube, lst_rotate
 
-def rotateIntoWhiteCross_y_4(lst_cube, lst_rotate):
+def rotateIntoWhiteCross_y_5(lst_cube, lst_rotate):
     #if statements. Can have more than one outcome
-    if lst_cube[1][5] == "w" and (lst_cube[2][3] == lst_cube[2][4]):
-        lst_cube = rotateSide_B(lst_cube)
-        lst_cube = rotateSide_B(lst_cube)
-        lst_rotate.append("BBx")
-    if lst_cube[1][1] == "w" and (lst_cube[4][5] == lst_cube[4][4]):
-        lst_cube = rotateSide_U(lst_cube)
-        lst_cube = rotateSide_U(lst_cube)
-        lst_rotate.append("UUx")   
-    if lst_cube[1][3] == "w" and (lst_cube[0][4] == lst_cube[0][5]):
+    if lst_cube[5][5] == "w" and (lst_cube[1][7] == lst_cube[1][4]):
+        lst_cube = rotateSide_R(lst_cube)
+        lst_cube = rotateSide_R(lst_cube)
+        lst_rotate.append("RRx")
+    if lst_cube[5][1] == "w" and (lst_cube[0][7] == lst_cube[0][4]):
         lst_cube = rotateSide_F(lst_cube)
         lst_cube = rotateSide_F(lst_cube)
-        lst_rotate.append("FFx") 
-    if lst_cube[1][7] == "w" and (lst_cube[5][4] == lst_cube[5][5]):
-        lst_cube = rotateSide_D(lst_cube)
-        lst_cube = rotateSide_D(lst_cube)
-        lst_rotate.append("DDx")  
-    lst_cube = rotateSide_R(lst_cube)
-    lst_rotate.append("R")      
+        lst_rotate.append("FFx")   
+    if lst_cube[5][3] == "w" and (lst_cube[3][4] == lst_cube[3][7]):
+        lst_cube = rotateSide_L(lst_cube)
+        lst_cube = rotateSide_L(lst_cube)
+        lst_rotate.append("LLx") 
+    if lst_cube[5][7] == "w" and (lst_cube[2][4] == lst_cube[2][7]):
+        lst_cube = rotateSide_B(lst_cube)
+        lst_cube = rotateSide_B(lst_cube)
+        lst_rotate.append("BBx")  
+    lst_cube = rotateSide_D(lst_cube)
+    lst_rotate.append("Dx")      
        
     return lst_cube, lst_rotate
         
