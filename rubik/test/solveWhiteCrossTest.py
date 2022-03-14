@@ -16,6 +16,67 @@ class SolveWhiteCrossTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[2][5])
             self.assertEqual(expectedResult, actualResult[2][7])
             
+        def test_020_SolveWhiteCross_y1(self):
+            inputDict = {}
+            inputDict['cube'] = 'boygygrrbrwywbyyowgoorwobrogywwgyyrwwbobrboygggrwogbbr'    
+            expectedResult = 'w'             
+
+            actualResult = solveWhiteCross(inputDict)[0]
+            self.assertEqual(expectedResult, actualResult[3][1])
+            self.assertEqual(expectedResult, actualResult[3][3])
+            self.assertEqual(expectedResult, actualResult[3][4])
+            self.assertEqual(expectedResult, actualResult[3][5])
+            self.assertEqual(expectedResult, actualResult[3][7])
+            
+        def test_030_SolveWhiteCross_y2(self):
+            inputDict = {}
+            inputDict['cube'] = 'boygygrrbrwywbyyowgoorwobrogywwgyyrwwbobrboygggrwogbbr'    
+            expectedResult = 'w'             
+
+            actualResult = solveWhiteCross(inputDict)[0]
+            self.assertEqual(expectedResult, actualResult[0][1])
+            self.assertEqual(expectedResult, actualResult[0][3])
+            self.assertEqual(expectedResult, actualResult[0][4])
+            self.assertEqual(expectedResult, actualResult[0][5])
+            self.assertEqual(expectedResult, actualResult[0][7])
+            
+        def test_040_SolveWhiteCross_y3(self):
+            inputDict = {}
+            inputDict['cube'] = 'boygygrrbrwywbyyowgoorwobrogywwgyyrwwbobrboygggrwogbbr'    
+            expectedResult = 'w'             
+
+            actualResult = solveWhiteCross(inputDict)[0]
+            self.assertEqual(expectedResult, actualResult[1][1])
+            self.assertEqual(expectedResult, actualResult[1][3])
+            self.assertEqual(expectedResult, actualResult[1][4])
+            self.assertEqual(expectedResult, actualResult[1][5])
+            self.assertEqual(expectedResult, actualResult[1][7])
+            
+        def test_050_SolveWhiteCross_y4(self):
+            inputDict = {}
+            inputDict['cube'] = 'boygygrrbrwywbyyowgoorwobrogywwgyyrwwbobrboygggrwogbbr'    
+            expectedResult = 'w'             
+
+            actualResult = solveWhiteCross(inputDict)[0]
+            self.assertEqual(expectedResult, actualResult[5][1])
+            self.assertEqual(expectedResult, actualResult[5][3])
+            self.assertEqual(expectedResult, actualResult[5][4])
+            self.assertEqual(expectedResult, actualResult[5][5])
+            self.assertEqual(expectedResult, actualResult[5][7])
+            
+        def test_060_SolveWhiteCross_y5(self):
+            inputDict = {}
+            inputDict['cube'] = 'boygygrrbrwywbyyowgoorwobrogywwgyyrwwbobrboygggrwogbbr'    
+            expectedResult = 'w'             
+
+            actualResult = solveWhiteCross(inputDict)[0]
+            self.assertEqual(expectedResult, actualResult[4][1])
+            self.assertEqual(expectedResult, actualResult[4][3])
+            self.assertEqual(expectedResult, actualResult[4][4])
+            self.assertEqual(expectedResult, actualResult[4][5])
+            self.assertEqual(expectedResult, actualResult[4][7])
+            
+            
         
 
 
