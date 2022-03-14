@@ -239,7 +239,8 @@ class SolveTest(unittest.TestCase):
 
         inputDict = {}
         inputDict['cube'] = '123456789'
-        inputDict['op'] = 'solve'           
+        inputDict['op'] = 'solve'  
+        inputDict['rotate'] = ''         
 
         expectedResult = {}
         expectedResult['status'] = 'error: cube string has to have 54 elements'
