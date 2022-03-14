@@ -253,7 +253,6 @@ def _solve(parms):
     if 'rotate' not in parms:
         del result['cube']
         
-    print(var_y)
     return result
  
  
