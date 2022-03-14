@@ -24,7 +24,7 @@ def solveDaisy(parms):
     lst_rotate = [] 
 
     #yellow is in front    
-    if createCubeListFromInputParms(parms)[0][4] == 'y': 
+    if createCubeListFromInputParms(parms)[0][4] == createYellowAndWhiteSides(parms)[0]: 
         #just run through the code 20 times. Take out the no movements in the end
         for i in range(20):
             lst_cube = (y_0_SolveWhiteLeaves(lst_cube, lst_rotate))[0]         
