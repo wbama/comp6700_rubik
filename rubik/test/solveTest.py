@@ -252,7 +252,8 @@ class SolveTest(unittest.TestCase):
 
         inputDict = {}
         inputDict['cube'] = 42
-        inputDict['op'] = 'solve'           
+        inputDict['op'] = 'solve' 
+        inputDict['rotate'] = ''            
 
         expectedResult = {}
         expectedResult['status'] = 'error: cube not a string'
