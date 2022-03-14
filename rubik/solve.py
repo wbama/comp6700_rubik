@@ -30,22 +30,22 @@ def _solve(parms):
             str_cube = str1+str2+str3+str4+str5+str6   
             
             str_rotations_long = "".join(solveWhiteCross(parms)[1])  
-            # last_x = str_rotations_long.rfind('x')
-            # str_rotations_short = str_rotations_long[:last_x]
-            # str_rotations_no_x = str_rotations_short.replace("x", "")
-            # str_rotations_no_y = str_rotations_no_x.replace("y", "")
-            # str_rotation_cleanup = str_rotations_no_y.replace("Dd", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("rR", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("Uu", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("uU", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("Ll", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("lL", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("bB", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("Bb", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("Ff", "")
-            # str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")
+            last_x = str_rotations_long.rfind('x')
+            str_rotations_short = str_rotations_long[:last_x]
+            str_rotations_no_x = str_rotations_short.replace("x", "")
+            str_rotations_no_y = str_rotations_no_x.replace("y", "")
+            str_rotation_cleanup = str_rotations_no_y.replace("Dd", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("rR", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("Uu", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("uU", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("Ll", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("lL", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("bB", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("Bb", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("Ff", "")
+            str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")
             
             s0=set(lst_cube[0])
             s1=set(lst_cube[1])
@@ -60,7 +60,7 @@ def _solve(parms):
             if len(s0) == len(s1) == len(s2) == len(s3) == len(s4) == len(s5) == 1:
                 result['solution'] = ""
             else:
-                result['solution'] = str_rotations_long
+                result['solution'] = str_rotation_cleanup
                 
         if 'rotate' in parms and (parms.get('rotate')) == None:
                 c_rotate_cube = (rotateSide_F(lst_cube)) 
