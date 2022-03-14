@@ -19,8 +19,8 @@ def solveDaisy(parms):
     #find out where the yellow center is. Solve from that vantage point    
 
     lst_cube = (createCubeListFromInputParms(parms)) 
-    var_y = createYellowAndWhiteSides(inputDict)[0]
-    var_w = createYellowAndWhiteSides(inputDict)[1]
+    var_y = createYellowAndWhiteSides(parms)[0]
+    var_w = createYellowAndWhiteSides(parms)[1]
     lst_rotate = [] 
 
     #yellow is in front    
