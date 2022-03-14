@@ -31,12 +31,12 @@ def _solve(parms):
             str_rotations_long = "".join(solveWhiteCross(parms)[1])  
             last_x = str_rotations_long.rfind('x')
             str_rotations_short = str_rotations_long[:last_x]
-            str_rotations = str_rotations_short.replace("x", "")
+            str_rotations_no_x = str_rotations_short.replace("x", "")
           
             result = {}
             result['cube'] = str_cube
             result['status'] = 'ok' 
-            result['solution'] = str_rotations
+            result['solution'] = str_rotations_no_x
                 
         if 'rotate' in parms and (parms.get('rotate')) == None:
                 c_rotate_cube = (rotateSide_F(lst_cube)) 

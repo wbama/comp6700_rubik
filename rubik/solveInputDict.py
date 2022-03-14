@@ -6,7 +6,7 @@ from rubik.solveWhiteCross import solveWhiteCross
 
 
 inputDict = {}
-inputDict['cube'] = "yygoryrbyooorbyrgogorboobbwggbggyrrbywwrwbogywwbwywgrw"
+inputDict['cube'] = "gbygogygorygwgrbgborobrorwbgwwybrowbwyyowbrogrywryoybw"
 inputDict['op'] = 'solve' 
 #inputDict['rotate'] = 'F'
 
@@ -14,11 +14,11 @@ lst_rotate = []
 lst_cube = solveDaisy(inputDict)[0]
 rotations = solveDaisy(inputDict)[1]
 
-# print(f"lst cube {lst_cube}")
-# print(f"rotations {rotations}")
+print(f"lst cube {lst_cube}")
+print(f"rotations {rotations}")
 
 print(_solve(inputDict))
 
-#print(solveWhiteCross(inputDict))
+print(solveWhiteCross(inputDict))
 
 # print(_solve(inputDict))
