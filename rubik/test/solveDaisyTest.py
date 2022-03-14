@@ -23,11 +23,12 @@ class SolveDaisyTest(unittest.TestCase):
             inputDict['cube'] = 'ybybbrwwbgyrgyyogwwbyrgoowbrgrgwrryogwgwooboogoybrywrb'    
             expectedResult = 'w'             
 
-            actualResult = solveDaisy(inputDict)[0]
-            self.assertEqual(expectedResult, actualResult[1][1])
-            self.assertEqual(expectedResult, actualResult[1][3])
-            self.assertEqual(expectedResult, actualResult[1][5])
-            self.assertEqual(expectedResult, actualResult[1][7])
+            if createCubeListFromInputParms(inputDict)[1][4] == createYellowAndWhiteSides(inputDict)[0]:
+                actualResult = solveDaisy(inputDict)[0]
+                self.assertEqual(expectedResult, actualResult[1][1])
+                self.assertEqual(expectedResult, actualResult[1][3])
+                self.assertEqual(expectedResult, actualResult[1][5])
+                self.assertEqual(expectedResult, actualResult[1][7])
             
     def test_030_SolveDaisy_y_2(self):
             inputDict = {}
