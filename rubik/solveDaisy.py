@@ -21,7 +21,7 @@ def solveDaisy(parms):
     lst_cube = (createCubeListFromInputParms(parms)) 
     # var_y = createYellowAndWhiteSides(parms)[0]
     # print(var_y)
-    var_w = createYellowAndWhiteSides(parms)[1]
+    var_w = createYellowAndWhiteSides(parms)
     print(var_w)
     lst_rotate = [] 
 
