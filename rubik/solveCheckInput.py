@@ -75,12 +75,13 @@ def solveCheck(parms):
    
     elif 'rotate' in parms and rotate_length == 0:
             result['status'] = 'ok'
+            
+    elif 'rotate' in parms and " " in (parms.get('rotate')):
+            result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')    
         
     elif 'rotate' in parms and rotate_length > 0:
         for rotation in (parms.get('rotate')):
-            if " " in rotation:
-                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')  
-            elif rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
+            if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
                 result['status'] = 'ok'                       
             else:                
                 result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd], None or ""')            
