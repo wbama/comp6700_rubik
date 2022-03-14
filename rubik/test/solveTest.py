@@ -196,7 +196,7 @@ class SolveTest(unittest.TestCase):
         expectedResult = 'w'   
                   
         actualResult = solve._solve(inputDict)
-        print(actualResult)
+        print(actualResult.get('solution'))
         self.assertEqual(expectedResult, actualResult.get('solution')[19])
         self.assertEqual(expectedResult, actualResult.get('solution')[21])
         self.assertEqual(expectedResult, actualResult.get('solution')[22])
