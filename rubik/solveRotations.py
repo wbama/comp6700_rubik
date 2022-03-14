@@ -2124,6 +2124,29 @@ def rotateIntoWhiteCross_y_5(lst_cube, lst_rotate):
     lst_rotate.append("Dy")      
        
     return lst_cube, lst_rotate
+
+def createYellowAndWhiteSides(parms):
+    lst_cube = createCubeListFromInputParms(parms)
+    if ("y") in (parms.get("cube").lower()):
+        if ("y" in lst_cube[0][4] or "Y" in lst_cube[0][4]):
+            var_w = lst_cube[2][4]
+            var_y = lst_cube[0][4]
+        elif ("y"  in lst_cube[1][4] or "Y" in lst_cube[1][4]):
+            var_w = lst_cube[3][4]
+            var_y = lst_cube[1][4]
+        elif ("y" in lst_cube[2][4] or "Y" in lst_cube[2][4])  :
+            var_w = lst_cube[0][4] 
+            var_y = lst_cube[2][4]       
+        elif ("y" in lst_cube[3][4] or "Y" in lst_cube[3][4])  :
+            var_w = lst_cube[1][4]
+            var_y = lst_cube[3][4]
+        elif ("y" in lst_cube[4][4] or "Y" in lst_cube[4][4])  :
+            var_w = lst_cube[5][4]
+            var_y = lst_cube[4][4]
+    else:
+        var_y = lst_cube[0][4]
+        var_w = lst_cube[2][4]
+    return var_y, var_w
         
         
         
