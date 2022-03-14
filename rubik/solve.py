@@ -14,23 +14,12 @@ def _solve(parms):
     try:         
 
  
-        lst_cube = createCubeListFromInputParms(parms)   
-               
-        # if 'rotate' not in parms:
-        #     s0=set(lst_cube[0])
-        #     s1=set(lst_cube[1])
-        #     s2=set(lst_cube[2])
-        #     s3=set(lst_cube[3])
-        #     s4=set(lst_cube[4])
-        #     s5=set(lst_cube[5])
-        #
-        #     print(s0)
-                
+        lst_cube = createCubeListFromInputParms(parms)      
 
 
        
         if 'rotate' not in parms:
-            lst_cube = solveWhiteCross(parms)[0]
+            # lst_cube = solveWhiteCross(parms)[0]
             str1 = "".join(lst_cube[0])
             str2 = "".join(lst_cube[1])
             str3 = "".join(lst_cube[2])
@@ -57,11 +46,23 @@ def _solve(parms):
             str_rotation_cleanup = str_rotation_cleanup.replace("Bb", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("Ff", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")
+            
+            s0=set(lst_cube[0])
+            s1=set(lst_cube[1])
+            s2=set(lst_cube[2])
+            s3=set(lst_cube[3])
+            s4=set(lst_cube[4])
+            s5=set(lst_cube[5])
+        
+            
           
             result = {}
             result['cube'] = str_cube
             result['status'] = 'ok' 
-            result['solution'] = str_rotation_cleanup
+            if len(s0) == len(s1) == len(s2) == len(s3) == len(s4) == len(s5):
+                result['solution'] = ""
+            else:
+                result['solution'] = str_rotation_cleanup
                 
         if 'rotate' in parms and (parms.get('rotate')) == None:
                 c_rotate_cube = (rotateSide_F(lst_cube)) 
@@ -250,8 +251,8 @@ def _solve(parms):
             result = (ci.solveCheck(parms))   
                       
     #delete the cube string if giving solutions    
-    # if 'rotate' not in parms:
-    #     del result['cube']
+    if 'rotate' not in parms:
+        del result['cube']
         
     return result
  
