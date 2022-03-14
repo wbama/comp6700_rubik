@@ -22,32 +22,32 @@ def solveDaisy(parms):
     lst_rotate = [] 
 
     #yellow is in front    
-    if createCubeListFromInputParms(parms)[0][4] == 'y': 
+    if (createCubeListFromInputParms(parms)[0][4]).lower() == 'y': 
         #just run through the code 20 times. Take out the no movements in the end
         for i in range(20):
             lst_cube = (y_0_SolveWhiteLeaves(lst_cube, lst_rotate))[0]         
  
-    if createCubeListFromInputParms(parms)[1][4] == 'y': 
+    if (createCubeListFromInputParms(parms)[1][4]).lower() == 'y': 
         #just run through the code 20 times. Take out the no movements in the end
         for i in range(20):
             lst_cube = (y_1_SolveWhiteLeaves(lst_cube, lst_rotate))[0] 
 
-    if createCubeListFromInputParms(parms)[2][4] == 'y': 
+    if (createCubeListFromInputParms(parms)[2][4]).lower() == 'y': 
         #just run through the code 20 times. Take out the no movements in the end
         for i in range(20):
             lst_cube = (y_2_SolveWhiteLeaves(lst_cube, lst_rotate))[0]    
             
-    if createCubeListFromInputParms(parms)[3][4] == 'y': 
+    if (createCubeListFromInputParms(parms)[3][4]).lower() == 'y': 
         #just run through the code 20 times. Take out the no movements in the end
         for i in range(20):
             lst_cube = (y_3_SolveWhiteLeaves(lst_cube, lst_rotate))[0]    
             
-    if createCubeListFromInputParms(parms)[4][4] == 'y': 
+    if (createCubeListFromInputParms(parms)[4][4]).lower() == 'y': 
         #just run through the code 20 times. Take out the no movements in the end
         for i in range(20):
             lst_cube = (y_4_SolveWhiteLeaves(lst_cube, lst_rotate))[0] 
             
-    if createCubeListFromInputParms(parms)[5][4] == 'y': 
+    if (createCubeListFromInputParms(parms)[5][4]).lower() == 'y': 
         #just run through the code 20 times. Take out the no movements in the end
         for i in range(20):
             lst_cube = (y_5_SolveWhiteLeaves(lst_cube, lst_rotate))[0]              

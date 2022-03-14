@@ -822,7 +822,7 @@ def createCubeListFromInputParms(parms):
     
     for i in range (1,7):
         for j in range(1,10):
-            exec(f"lst_in{i}.append(lst_cube.pop(0))")  
+            exec(f"lst_in{i}.append((lst_cube.pop(0)).lower())")  
             
     for i in range(1,7):
         exec(f'lst_cube.append(lst_in{i})') 

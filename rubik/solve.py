@@ -17,11 +17,16 @@ def _solve(parms):
         lst_cube = createCubeListFromInputParms(parms)   
                
         # if 'rotate' not in parms:
-        #
-        #     for i in range (0,6):
-        #         exec(f"s{1}=set(lst_cube[{i}])  ")
+        #     s0=set(lst_cube[0])
+        #     s1=set(lst_cube[1])
+        #     s2=set(lst_cube[2])
+        #     s3=set(lst_cube[3])
+        #     s4=set(lst_cube[4])
+        #     s5=set(lst_cube[5])
         #
         #     print(s0)
+                
+
 
        
         if 'rotate' not in parms:
@@ -245,8 +250,8 @@ def _solve(parms):
             result = (ci.solveCheck(parms))   
                       
     #delete the cube string if giving solutions    
-    if 'rotate' not in parms:
-        del result['cube']
+    # if 'rotate' not in parms:
+    #     del result['cube']
         
     return result
  
