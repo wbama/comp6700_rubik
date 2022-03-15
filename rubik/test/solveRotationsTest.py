@@ -4,7 +4,7 @@ from rubik.solveRotations import rotateCubeToLeft, rotateCubeToRight, rotateCube
 from rubik.solveRotations import rotateSide_R, rotateSide_r, rotateSide_B, rotateSide_b
 from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotateSide_u
 from rubik.solveRotations import rotateSide_D, rotateSide_d
-from rubik.solveRotations import createYellowAndWhiteSides
+from rubik.solveRotations import createYellowAndWhiteVariables
 
 class SolveDaisyTest(unittest.TestCase):
             
@@ -345,8 +345,8 @@ class SolveDaisyTest(unittest.TestCase):
             inputDict['cube'] = 'sssssssssdddddddddvvvvvvvvvVVVVVVVVwVwwwwwwww111111111'
             expectedResult_y = 's'     #if no yellow, then front is yellow         
             expectedResult_w = 'v'     #other side of yellow
-            actualResult_y = createYellowAndWhiteSides(inputDict)[0]
-            actualResult_w = createYellowAndWhiteSides(inputDict)[1]
+            actualResult_y = createYellowAndWhiteVariables(inputDict)[0]
+            actualResult_w = createYellowAndWhiteVariables(inputDict)[1]
             self.assertEqual(expectedResult_y, actualResult_y)
             self.assertEqual(expectedResult_w, actualResult_w)
             
@@ -355,8 +355,8 @@ class SolveDaisyTest(unittest.TestCase):
             inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
             expectedResult_y = 'y'     #if no yellow, then front is yellow         
             expectedResult_w = 'w'     #other side of yellow
-            actualResult_y = createYellowAndWhiteSides(inputDict)[0]
-            actualResult_w = createYellowAndWhiteSides(inputDict)[1]
+            actualResult_y = createYellowAndWhiteVariables(inputDict)[0]
+            actualResult_w = createYellowAndWhiteVariables(inputDict)[1]
             self.assertEqual(expectedResult_y, actualResult_y)
             self.assertEqual(expectedResult_w, actualResult_w)
             
