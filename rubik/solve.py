@@ -79,7 +79,7 @@ def _solve(parms):
                 result['status'] = 'ok' 
                 
            
-        if ('rotate' in parms and rotate_length == 0):
+        if (rotate_length == 0):
             
             # lst_cube = solveWhiteCross(parms)[0]
             str1 = "".join(lst_cube[0])
