@@ -343,13 +343,12 @@ class SolveDaisyTest(unittest.TestCase):
         def test_160_createYellowVariable(self):
             inputDict = {}
             inputDict['cube'] = 'sssssssssdddddddddvvvvvvvvvVVVVVVVVwVwwwwwwww111111111'
-            expectedResult = 's'     #if no yellow, then front is yellow         
-
-            actualResult = createYellowAndWhiteSides(inputDict)[0]
-            self.assertEqual(expectedResult, actualResult[1][1])
-            self.assertEqual(expectedResult, actualResult[1][3])
-            self.assertEqual(expectedResult, actualResult[1][5])
-            self.assertEqual(expectedResult, actualResult[1][7])
+            expectedResult_y = 's'     #if no yellow, then front is yellow         
+            expectedResult_w = 'v'     #other side of yellow
+            actualResult_y = createYellowAndWhiteSides(inputDict)[0]
+            actualResult_w = createYellowAndWhiteSides(inputDict)[1]
+            self.assertEqual(expectedResult_y, actualResult_y)
+            self.assertEqual(expectedResult_w, actualResult_w)
             
  
         
