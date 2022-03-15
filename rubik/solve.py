@@ -13,6 +13,8 @@ def _solve(parms):
     
     try:          
         lst_cube = createCubeListFromInputParms(parms) 
+        global rotate_length
+        
         if ('rotate' in parms) and (parms.get('rotate')) == None:
             rotate_length = 0
         elif ('rotate' in parms) and (parms.get('rotate')) != None:
