@@ -196,7 +196,7 @@ class SolveTest(unittest.TestCase):
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
-        expectedResult['cube'] = 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        expectedResult['cube'] = None
         expectedResult['status'] = 'ok'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
