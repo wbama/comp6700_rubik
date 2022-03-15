@@ -88,7 +88,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[4][5])
             self.assertEqual(expectedResult, actualResult[4][7])
             
-        def test_010_SolveWhiteCross_y0_NoYellow(self): #if yellow not exist, then [0][4] is yellow, opposite is white
+        def test_080_SolveWhiteCross_y0_NoYellow(self): #if yellow not exist, then [0][4] is yellow, opposite is white
             inputDict = {}
             inputDict['cube'] = 'r2rr1googg1r1b1o21bbbb2rro1oog2ggbr12o2grr2g1g22bobo1b'    
             expectedResult = '2'             
