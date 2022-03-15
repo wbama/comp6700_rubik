@@ -1,13 +1,10 @@
 import unittest
 from rubik.solveRotations import createCubeListFromInputParms
-from rubik.solveRotations import rotateCubeToLeft, rotateCubeToRight
-from rubik.solveRotations import rotateCubeUp, rotateCubeDown
-from rubik.solveRotations import rotateCubeClock
-from rubik.solveRotations import rotateSide_R, rotateSide_r
-from rubik.solveRotations import rotateSide_B, rotateSide_b
-from rubik.solveRotations import rotateSide_L, rotateSide_l
-from rubik.solveRotations import rotateSide_U, rotateSide_u
+from rubik.solveRotations import rotateCubeToLeft, rotateCubeToRight, rotateCubeUp, rotateCubeDown, rotateCubeClock
+from rubik.solveRotations import rotateSide_R, rotateSide_r, rotateSide_B, rotateSide_b
+from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotateSide_u
 from rubik.solveRotations import rotateSide_D, rotateSide_d
+from rubik.solveRotations import createYellowAndWhiteSides
 
 class SolveDaisyTest(unittest.TestCase):
             
@@ -342,6 +339,18 @@ class SolveDaisyTest(unittest.TestCase):
             str_cube = str1+str2+str3+str4+str5+str6  
                         
             self.assertEqual(expectedResult.get('cube'), str_cube) 
+            
+        def test_160_createYellowVariable(self):
+            inputDict = {}
+            inputDict['cube'] = 'sssssssssdddddddddvvvvvvvvvVVVVVVVVwVwwwwwwww111111111'
+            expectedResult = 's'     #if no yellow, then front is yellow         
+
+            actualResult = createYellowAndWhiteSides(inputDict)[0]
+            self.assertEqual(expectedResult, actualResult[1][1])
+            self.assertEqual(expectedResult, actualResult[1][3])
+            self.assertEqual(expectedResult, actualResult[1][5])
+            self.assertEqual(expectedResult, actualResult[1][7])
+            
  
         
 
