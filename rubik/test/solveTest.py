@@ -5,8 +5,6 @@
     
 """
 
-
-
 import unittest
 import rubik.solve as solve
 
@@ -27,19 +25,19 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))        
        
-    def test_011_ShouldRotateF_MissingRotate(self):
-
-        inputDict = {}
-        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
-        inputDict['rotate'] = ''
-        inputDict['op'] = 'solve'           
-
-        expectedResult = {}
-        expectedResult['cube'] = 'gbrgbrgbbbyybyoyoyogryggobbwwowwywwygrboorwwwryrrrgoog'
-        expectedResult['status'] = 'ok'
-        actualResult = solve._solve(inputDict)
-        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))         
+    # def test_011_ShouldRotateF_MissingRotate(self):
+    #
+    #     inputDict = {}
+    #     inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+    #     inputDict['rotate'] = ''
+    #     inputDict['op'] = 'solve'           
+    #
+    #     expectedResult = {}
+    #     expectedResult['cube'] = 'gbrgbrgbbbyybyoyoyogryggobbwwowwywwygrboorwwwryrrrgoog'
+    #     expectedResult['status'] = 'ok'
+    #     actualResult = solve._solve(inputDict)
+    #     self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))         
         
     def test_020_ShouldRotateValidNominalCube_f(self):
         inputDict = {}
