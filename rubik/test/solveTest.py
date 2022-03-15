@@ -212,7 +212,7 @@ class SolveTest(unittest.TestCase):
 
         expectedResult = {}
         expectedResult['cube'] = None
-        expectedResult['solution'] = "RRRBBLLFF"
+        expectedResult['solution'] = "lfLuLFFLUUBBLDD"
         expectedResult['status'] = 'ok'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
