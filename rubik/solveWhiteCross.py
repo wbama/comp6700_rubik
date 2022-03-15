@@ -6,8 +6,6 @@
 """
 
 
-from rubik.solveRotations import rotateCubeToLeft
-from rubik.solveRotations import rotateCubeClock
 from rubik.solveRotations import rotateIntoWhiteCross_y_0, rotateIntoWhiteCross_y_1, rotateIntoWhiteCross_y_2, rotateIntoWhiteCross_y_3
 from rubik.solveRotations import rotateIntoWhiteCross_y_4, rotateIntoWhiteCross_y_5
 from rubik.solveRotations import createCubeListFromInputParms

@@ -16,7 +16,7 @@ from rubik.solveRotations import createYellowAndWhiteVariables, createStringFrom
 # inputDict['cube'] = "gwwboboyboygwbyyyrygwrrgwowggyogrowbrwrrygoogyorrwbbbb"
 
 inputDict = {}
-inputDict['cube'] = "owog1bwgggobwowrrw11rowoogw1rgbr1bggbbobb11rwrr1wg1rob"
+inputDict['cube'] = "bgoowrgoyyyrbgwryyggrbywbgrbwwgbygrwwryorboygobbworwoo"
 inputDict['op'] = 'solve' 
 inputDict['rotate'] = ''
 
