@@ -204,7 +204,21 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
         self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
         
+    def test_140_ShouldNoSolutionSolvedCube(self):
 
+        inputDict = {}
+        inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
+        inputDict['rotate'] = ''
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['cube'] = None
+        expectedResult['solution'] = "RRRBBLLFF"
+        expectedResult['status'] = 'ok'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+        self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
         
 # Sad path tests
         
