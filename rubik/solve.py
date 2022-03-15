@@ -3,7 +3,7 @@ from rubik.solveRotations import rotateCubeDown
 from rubik.solveRotations import rotateSide_F
 from rubik.solveRotations import rotateSide_f
 import rubik.solveCheckInput as ci
-from rubik.solveRotations import createCubeListFromInputParms, createYellowAndWhiteVariables
+from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveWhiteCross import solveWhiteCross
 
 
@@ -214,11 +214,7 @@ def _solve(parms):
             result['cube'] = str_cube
         else:
             result = (ci.solveCheck(parms))   
-                      
 
-        
-    # if (rotate_length == 0):
-    #     del result['cube']
     
     ######################################################
     # Cleanup
