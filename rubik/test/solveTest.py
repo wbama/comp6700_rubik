@@ -207,7 +207,7 @@ class SolveTest(unittest.TestCase):
     def test_150_ShouldGiveValidCubeNoRotate(self):
 
         inputDict = {}
-        inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
+        inputDict['cube'] = 'wrggbobyyryrywrbggywybgorywgrgwywbooobbgrrowwwboboorgy'
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
