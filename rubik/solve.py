@@ -226,6 +226,7 @@ def _solve(parms):
     ######################################################
     # Cleanup
     ######################################################   
+    lst_cube = createCubeListFromInputParms(parms) 
     s0=set(lst_cube[0])
     s1=set(lst_cube[1])
     s2=set(lst_cube[2])
