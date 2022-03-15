@@ -1,3 +1,12 @@
+"""
+    Created on 03/05/2022
+    @author: Waldo du Toit
+    all functions used to solve the white cross, daisy or final solve
+    
+"""
+
+
+
 def createYellowAndWhiteVariables(parms):
     global var_y, var_w
     lst_cube = createCubeListFromInputParms(parms)

@@ -1,3 +1,11 @@
+"""
+    Created on 03/05/2022
+    @author: Waldo du Toit
+    temp code to feed in cube strings
+    
+"""
+
+
 
 from rubik.solve import _solve
 from rubik.solveDaisy import solveDaisy

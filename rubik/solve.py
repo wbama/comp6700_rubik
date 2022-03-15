@@ -1,3 +1,12 @@
+"""
+    Created on 02/05/2022
+    @author: Waldo du Toit
+    main solvec code
+    
+"""
+
+
+
 from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeDown
 from rubik.solveRotations import rotateSide_F

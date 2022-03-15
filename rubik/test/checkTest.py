@@ -1,3 +1,12 @@
+"""
+    Created on 02/05/2022
+    @author: Waldo du Toit
+    unittests checking string inputs
+    
+"""
+
+
+
 from unittest import TestCase
 import rubik.check as check 
 

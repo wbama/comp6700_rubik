@@ -1,3 +1,12 @@
+"""
+    Created on 03/05/2022
+    @author: Waldo du Toit
+    check string inputs
+    
+"""
+
+
+
 import rubik.cube as rubik
 
 def _check(parms):

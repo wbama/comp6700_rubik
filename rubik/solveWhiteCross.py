@@ -1,3 +1,11 @@
+"""
+    Created on 03/05/2022
+    @author: Waldo du Toit
+    program for solving the white cross
+    
+"""
+
+
 from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeClock
 from rubik.solveRotations import rotateIntoWhiteCross_y_0, rotateIntoWhiteCross_y_1, rotateIntoWhiteCross_y_2, rotateIntoWhiteCross_y_3

@@ -1,3 +1,11 @@
+"""
+    Created on 03/05/2022
+    @author: Waldo du Toit
+    unittests for solving the daisy
+    
+"""
+
+
 import unittest
 from rubik.solveDaisy import solveDaisy
 from rubik.solveRotations import createCubeListFromInputParms, createYellowAndWhiteVariables

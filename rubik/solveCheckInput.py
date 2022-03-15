@@ -1,4 +1,14 @@
-#    check the input string
+"""
+    Created on 03/05/2022
+    @author: Waldo du Toit
+    check the input string
+    
+"""
+
+
+
+
+
 
 def solveCheck(parms):  
     result = {} 

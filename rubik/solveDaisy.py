@@ -1,3 +1,11 @@
+"""
+    Created on 03/05/2022
+    @author: Waldo du Toit
+    program for solving the daisy
+    
+"""
+
+
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeToRight
@@ -11,6 +19,9 @@ from rubik.solveRotations import rotateSide_L, rotateSide_l
 from rubik.solveRotations import rotateSide_U, rotateSide_u
 from rubik.solveRotations import rotateSide_D, rotateSide_d
 from rubik.solveRotations import y_0_SolveWhiteLeaves, y_1_SolveWhiteLeaves, y_2_SolveWhiteLeaves, y_3_SolveWhiteLeaves, y_4_SolveWhiteLeaves, y_5_SolveWhiteLeaves
+
+
+
 from rubik.solveRotations import y_0_SolveWhiteLeaves, y_1_SolveWhiteLeaves, y_2_SolveWhiteLeaves, y_3_SolveWhiteLeaves, y_4_SolveWhiteLeaves, y_5_SolveWhiteLeaves
 from rubik.solveRotations import createYellowAndWhiteVariables
 

@@ -1,3 +1,11 @@
+"""
+    Created on 03/05/2022
+    @author: Waldo du Toit
+    unittests for solving the white cross
+    
+"""
+
+
 import unittest
 from rubik.solveWhiteCross import solveWhiteCross
 
