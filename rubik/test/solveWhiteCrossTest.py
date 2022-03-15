@@ -82,6 +82,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             expectedResult = '1'             
 
             actualResult = solveWhiteCross(inputDict)[0]
+            print(actualResult)
             self.assertEqual(expectedResult, actualResult[4][1])
             self.assertEqual(expectedResult, actualResult[4][3])
             self.assertEqual(expectedResult, actualResult[4][4])
