@@ -76,6 +76,18 @@ class SolveWhiteCrossTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[4][5])
             self.assertEqual(expectedResult, actualResult[4][7])
             
+        def test_070_SolveWhiteCross_y5_WhiteNow1(self):
+            inputDict = {}
+            inputDict['cube'] = '1o1grr1gyryyyb1gyobyobob11gb1orgoyggyorr1bbbbr1rrygoog'    
+            expectedResult = '1'             
+
+            actualResult = solveWhiteCross(inputDict)[0]
+            self.assertEqual(expectedResult, actualResult[4][1])
+            self.assertEqual(expectedResult, actualResult[4][3])
+            self.assertEqual(expectedResult, actualResult[4][4])
+            self.assertEqual(expectedResult, actualResult[4][5])
+            self.assertEqual(expectedResult, actualResult[4][7])
+            
             
         
 
