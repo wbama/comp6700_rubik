@@ -3,31 +3,29 @@ from rubik.solve import _solve
 from rubik.solveDaisy import solveDaisy
 from rubik.solveRotations import createCubeListFromInputParms, rotateCubeToRight, rotateCubeDown, rotateIntoWhiteCross_y_0, rotateIntoWhiteCross_y_1
 from rubik.solveWhiteCross import solveWhiteCross
-from rubik.solveRotations import createYellowAndWhiteSides
+from rubik.solveRotations import createYellowAndWhiteVariables
 
 # inputDict['cube'] = "gwwboboyboygwbyyyrygwrrgwowggyogrowbrwrrygoogyorrwbbbb"
 
 inputDict = {}
-inputDict['cube'] = "sssssssssdddddddddvvvvvvvvvVVVVVVVVwVwwwwwwww111111111"
+inputDict['cube'] = "gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy"
 inputDict['op'] = 'solve' 
 inputDict['rotate'] = ''
 
 
-actualResult = createYellowAndWhiteSides(inputDict)[0]
 
-print(actualResult)
 # lst_cube = (createCubeListFromInputParms(inputDict))
 # print(lst_cube)
-
+#
 # var_y = createYellowAndWhiteSides(inputDict)[0]
 # var_w = createYellowAndWhiteSides(inputDict)[1]   
 #
-# print(f"var yellow is: {var_y}")
-# print(f"var white is: {var_w}")
-# # lst_rotate = []
+#  print(f"var yellow is: {var_y}")
+#  print(f"var white is: {var_w}")
+#  lst_rotate = []
 # lst_cube = solveDaisy(inputDict)[0]
 # rotations = solveDaisy(inputDict)[1]
-# #
+
 # print(f"lst cube {lst_cube}")
 # print(f"rotations {rotations}")
 # #
@@ -39,4 +37,4 @@ print(actualResult)
 
 #print(solveWhiteCross(inputDict))
 
-# print(_solve(inputDict))
+print(_solve(inputDict))
