@@ -191,7 +191,7 @@ class SolveTest(unittest.TestCase):
     def test_140_ShouldGiveValidCubeMissingRotate(self):
 
         inputDict = {}
-        inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
+        inputDict['cube'] = 'wrggbobyyryrywrbggywybgorywgrgwywbooobbgrrowwwboboorgy'
         inputDict['rotate'] = ''
         inputDict['op'] = 'solve'           
 
