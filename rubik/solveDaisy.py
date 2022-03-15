@@ -12,14 +12,14 @@ from rubik.solveRotations import rotateSide_U, rotateSide_u
 from rubik.solveRotations import rotateSide_D, rotateSide_d
 from rubik.solveRotations import y_0_SolveWhiteLeaves, y_1_SolveWhiteLeaves, y_2_SolveWhiteLeaves, y_3_SolveWhiteLeaves, y_4_SolveWhiteLeaves, y_5_SolveWhiteLeaves
 from rubik.solveRotations import y_0_SolveWhiteLeaves, y_1_SolveWhiteLeaves, y_2_SolveWhiteLeaves, y_3_SolveWhiteLeaves, y_4_SolveWhiteLeaves, y_5_SolveWhiteLeaves
-from rubik.solveRotations import createYellowAndWhiteSides
+from rubik.solveRotations import createYellowAndWhiteVariables
 
 def solveDaisy(parms):
     
     #find out where the yellow center is. Solve from that vantage point    
     lst_cube = (createCubeListFromInputParms(parms)) 
-    var_y = createYellowAndWhiteSides(parms)[0]
-    var_w = createYellowAndWhiteSides(parms)[1]
+    var_y = createYellowAndWhiteVariables(parms)[0]
+    var_w = createYellowAndWhiteVariables(parms)[1]
     lst_rotate = [] 
 
     #yellow is in front    

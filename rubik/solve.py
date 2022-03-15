@@ -3,7 +3,7 @@ from rubik.solveRotations import rotateCubeDown
 from rubik.solveRotations import rotateSide_F
 from rubik.solveRotations import rotateSide_f
 import rubik.solveCheckInput as ci
-from rubik.solveRotations import createCubeListFromInputParms, createYellowAndWhiteSides
+from rubik.solveRotations import createCubeListFromInputParms, createYellowAndWhiteVariables
 from rubik.solveWhiteCross import solveWhiteCross
 
 

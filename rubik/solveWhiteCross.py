@@ -4,12 +4,12 @@ from rubik.solveRotations import rotateIntoWhiteCross_y_0, rotateIntoWhiteCross_
 from rubik.solveRotations import rotateIntoWhiteCross_y_4, rotateIntoWhiteCross_y_5
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveDaisy import solveDaisy
-from rubik.solveRotations import createYellowAndWhiteSides
+from rubik.solveRotations import createYellowAndWhiteVariables
 
 
 def solveWhiteCross(parms):
     
-    var_y = createYellowAndWhiteSides(parms)[0]
+    var_y = createYellowAndWhiteVariables(parms)[0]
 
     # have the daisy now. match up colors and rotate sides down for white cross
     if createCubeListFromInputParms(parms)[0][4] == var_y: 
