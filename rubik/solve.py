@@ -52,7 +52,18 @@ def _solve(parms):
             
  
             result['solution'] = str_rotation_cleanup
-            result['status'] = 'ok'  
+            result['status'] = 'ok' 
+            
+            s0=set(lst_cube[0])
+            s1=set(lst_cube[1])
+            s2=set(lst_cube[2])
+            s3=set(lst_cube[3])
+            s4=set(lst_cube[4])
+            s5=set(lst_cube[5]) 
+    
+            #if all the sides only have one character, cube is solved, no solution
+            if len(s0) == len(s1) == len(s2) == len(s3) == len(s4) == len(s5) == 1:
+                result['solution'] = "" 
                 
         # if 'rotate' in parms and (parms.get('rotate')) == None:
         #         c_rotate_cube = (rotateSide_F(lst_cube)) 
@@ -227,16 +238,7 @@ def _solve(parms):
     # Cleanup
     ######################################################   
     lst_cube = createCubeListFromInputParms(parms) 
-    s0=set(lst_cube[0])
-    s1=set(lst_cube[1])
-    s2=set(lst_cube[2])
-    s3=set(lst_cube[3])
-    s4=set(lst_cube[4])
-    s5=set(lst_cube[5]) 
-    
-    #if all the sides only have one character, cube is solved, no solution
-    if len(s0) == len(s1) == len(s2) == len(s3) == len(s4) == len(s5) == 1:
-        result['solution'] = ""
+
     
     
     #delete the cube string if giving solutions    
