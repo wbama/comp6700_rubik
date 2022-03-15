@@ -221,8 +221,8 @@ def _solve(parms):
     ######################################################   
     
     #delete the cube string if giving solutions    
-    # if 'solution' in result:
-    #     del result['cube'] 
+    if 'solution' in result:
+        del result['cube'] 
     
     
     return result
