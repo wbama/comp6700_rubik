@@ -9,7 +9,7 @@
 import unittest
 from rubik.solveWhiteCross import solveWhiteCross
 
-
+#need to update this. this is not a white cross. Look at the sides too
 class SolveWhiteCrossTest(unittest.TestCase):                 
             
         def test_010_SolveWhiteCross_y0(self):
