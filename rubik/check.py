@@ -208,7 +208,8 @@ def _check(parms):
         ########################################
         
         #run checks against the first side. blue - front, red - right, green - back, yellow - top
-        new_ctr = verify_adj_col()
+        # new_ctr = verify_adj_col()
+        new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)
                 
         ########################################
