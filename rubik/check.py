@@ -11,6 +11,7 @@ from rubik.solveRotations import *
 def _check(parms):
 
     result={}
+    global max_opposite_ctr
    
 #put this try except in, if string is a number, or missing cube key, will throw errors here
     
@@ -126,7 +127,7 @@ def _check(parms):
         #     exec(f'lst_cube.append(lst_in{i})')
             
      
-        lst_cube_orig = lst_cube[:]  
+        # lst_cube_orig = lst_cube[:]  
                     
         ########################################
         lst_opposite_cnt = []
