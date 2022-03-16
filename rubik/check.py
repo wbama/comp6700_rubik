@@ -2,6 +2,7 @@
     Created on 03/05/2022
     @author: Waldo du Toit
     check string inputs
+    03/16 - Refactoring the 'adjacent color to color that would appear on opposite side'
     
 """
 
@@ -73,7 +74,7 @@ def _check(parms):
         lst_opposite_cnt.append(new_ctr)
         
         #Rotate back to the beginning. But dont have to check for it again
-        #blue - front, red - right, green - back, yellow - top        
+        #blue - front, red - right, green - back, yellow - top    
         
         ########################################
         #flip the cube - yellow - front, red - right, white - back, orange - green
@@ -93,7 +94,6 @@ def _check(parms):
 
         new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)   
-        print(lst_opposite_cnt)
              
     except:
         pass #one of the below will catch errors

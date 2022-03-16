@@ -5,11 +5,6 @@
     
 """
 
-
-
-
-
-
 def solveCheck(parms):  
     result = {} 
     try:
@@ -44,8 +39,7 @@ def solveCheck(parms):
         elif ('rotate' in parms) and (parms.get('rotate')) != None:
             rotate_length = len(parms.get('rotate'))
         elif 'rotate' not in parms:
-            rotate_length = 0           
-              
+            rotate_length = 0   
 
           
     except:
