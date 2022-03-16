@@ -352,7 +352,7 @@ class SolveDaisyTest(unittest.TestCase):
         def test_160_createYellowVariable(self):
             inputDict = {}
             inputDict['cube'] = 'sssssssssdddddddddvvvvvvvvvVVVVVVVVwVwwwwwwww111111111'
-            expectedResult_y = 's'     #if no yellow, then front is yellow         
+            expectedResult_y = 'w'     #if no yellow, then top is yellow         
             expectedResult_w = 'v'     #other side of yellow
             actualResult_y = createYellowAndWhiteVariables(inputDict)[0]
             actualResult_w = createYellowAndWhiteVariables(inputDict)[1]
