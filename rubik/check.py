@@ -133,7 +133,6 @@ def _check(parms):
         #run checks against the first side. blue - front, red - right, green - back, yellow - top
         # new_ctr = verify_adj_col()
         new_ctr = verifyAdjacentColors(lst_cube)
-        print(new_ctr)
         lst_opposite_cnt.append(new_ctr)
                 
         ########################################
@@ -200,73 +199,77 @@ def _check(parms):
         
         ########################################
         #flip the cube - yellow - front, red - right, white - back, orange - green
+        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateCubeUp(lst_cube)
         
-        lst_cube = lst_cube_orig[:]
-        
-        side_0 = lst_cube[4]
-
-        side_1 = lst_cube[1]
-        #rotate it correctly
-        side_1 = (turn_type2(side_1))
-
-        side_2 = lst_cube[5]
-        #rotate side 2
-        side_2 = (turn_type3(side_2))
-
-        side_3 = lst_cube[3]
-        #rotate side 3
-        side_3 = (turn_type1(side_3))
-
-        #rotate side 4
-        side_4 = lst_cube[2]
-        side_4 = (turn_type3(side_4))
-
-        side_5 = lst_cube[0]
 
         
-        lst_cube = []
-        for i in range(6):
-            exec(f'lst_cube.append(side_{i})')     
+        # side_0 = lst_cube[4]
+        #
+        # side_1 = lst_cube[1]
+        # #rotate it correctly
+        # side_1 = (turn_type2(side_1))
+        #
+        # side_2 = lst_cube[5]
+        # #rotate side 2
+        # side_2 = (turn_type3(side_2))
+        #
+        # side_3 = lst_cube[3]
+        # #rotate side 3
+        # side_3 = (turn_type1(side_3))
+        #
+        # #rotate side 4
+        # side_4 = lst_cube[2]
+        # side_4 = (turn_type3(side_4))
+        #
+        # side_5 = lst_cube[0]
+        #
+        #
+        # lst_cube = []
+        # for i in range(6):
+        #     exec(f'lst_cube.append(side_{i})')     
         
      
-        new_ctr = verifyAdjacentColors(parms)
+        new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
 
         #####################################################
         #last bottom part
+        lst_cube = rotateCubeDown(lst_cube)
+        lst_cube = rotateCubeDown(lst_cube)
+        # lst_cube = lst_cube_orig[:]
         
-        lst_cube = lst_cube_orig[:]
-        
-        #flip the cube - white - front, red - right, yellow - back, blue - top
-        side_0 = lst_cube[5]
-
-        side_1 = lst_cube[1]
-        #turn side 1
-        side_1 = (turn_type1(side_1))
-
-        side_2 = lst_cube[4]
-        #rotate side 2
-        side_2 = (turn_type3(side_2))
-        #rotate side 3
-        side_3 = lst_cube[3]
-        side_3 = (turn_type2(side_3))
-
-        side_4 = lst_cube[0]
-
-        side_5 = lst_cube[2]
-        #rotate side 5
-        side_5 = (turn_type3(side_5))
-        
-        lst_cube = []
-        for i in range(6):
-            exec(f'lst_cube.append(side_{i})')
+        # #flip the cube - white - front, red - right, yellow - back, blue - top
+        # side_0 = lst_cube[5]
+        #
+        # side_1 = lst_cube[1]
+        # #turn side 1
+        # side_1 = (turn_type1(side_1))
+        #
+        # side_2 = lst_cube[4]
+        # #rotate side 2
+        # side_2 = (turn_type3(side_2))
+        # #rotate side 3
+        # side_3 = lst_cube[3]
+        # side_3 = (turn_type2(side_3))
+        #
+        # side_4 = lst_cube[0]
+        #
+        # side_5 = lst_cube[2]
+        # #rotate side 5
+        # side_5 = (turn_type3(side_5))
+        #
+        # lst_cube = []
+        # for i in range(6):
+        #     exec(f'lst_cube.append(side_{i})')
 
         
-        new_ctr = verifyAdjacentColors(parms)
+        new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
 
         new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)   
+        print(lst_opposite_cnt)
 
         max_opposite_ctr = max(lst_opposite_cnt)
              
