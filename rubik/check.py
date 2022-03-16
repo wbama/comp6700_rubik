@@ -11,7 +11,6 @@ from rubik.solveRotations import *
 def _check(parms):
 
     result={}
-    global max_opposite_ctr
    
 #put this try except in, if string is a number, or missing cube key, will throw errors here
     
@@ -307,7 +306,7 @@ def _check(parms):
     elif len(unique_center) != 6:
         result['status'] = 'error: two middle faces are the same colors'   
           
-    elif (max_opposite_ctr > 0):
+    elif (max(lst_opposite_cnt) > 0):
         result['status'] = 'error: adjacent color to color that would appear on opposite side' 
         
     else:
