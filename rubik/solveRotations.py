@@ -5,9 +5,9 @@
     
 """
         #this function looks at the colors around the edge and compares to the back colors to add to counter
-def verifyAdjacentColors(parms):
+def verifyAdjacentColors(lst_cube):
     
-    lst_cube = (createCubeListFromInputParms(parms))         
+    # lst_cube = (createCubeListFromInputParms(parms))         
         #around the edge of side 0
     ctr = 0                
     if ((lst_cube[0][0]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][2],lst_cube[4][6]]):

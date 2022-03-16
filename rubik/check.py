@@ -132,7 +132,7 @@ def _check(parms):
         
         #run checks against the first side. blue - front, red - right, green - back, yellow - top
         # new_ctr = verify_adj_col()
-        new_ctr = verifyAdjacentColors(parms)
+        new_ctr = verifyAdjacentColors(lst_cube)
         print(new_ctr)
         lst_opposite_cnt.append(new_ctr)
                 
