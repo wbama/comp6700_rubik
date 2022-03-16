@@ -353,7 +353,7 @@ class SolveDaisyTest(unittest.TestCase):
             inputDict = {}
             inputDict['cube'] = 'sssssssssdddddddddvvvvvvvvvVVVVVVVVwVwwwwwwww111111111'
             expectedResult_y = 'w'     #if no yellow, then top is yellow         
-            expectedResult_w = 'v'     #other side of yellow
+            expectedResult_w = '1'     #other side of yellow
             actualResult_y = createYellowAndWhiteVariables(inputDict)[0]
             actualResult_w = createYellowAndWhiteVariables(inputDict)[1]
             self.assertEqual(expectedResult_y, actualResult_y)
