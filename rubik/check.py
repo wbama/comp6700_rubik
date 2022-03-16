@@ -54,84 +54,84 @@ def _check(parms):
  
         
         #this function looks at the colors around the edge and compares to the back colors to add to counter
-        def verify_adj_col():
-            
-            #around the edge of side 0
-            ctr = 0                
-            if ((lst_cube[0][0]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][2],lst_cube[4][6]]):
-                ctr = 1        
-            elif ((lst_cube[0][1]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[4][7]):
-                ctr = 1
-            elif ((lst_cube[0][2]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[4][8],lst_cube[1][0]]):
-                ctr = 1
-            elif ((lst_cube[0][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][5]):
-                ctr = 1
-            elif ((lst_cube[0][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][3]):
-                ctr = 1
-            elif ((lst_cube[0][6]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][8],lst_cube[5][0]]):
-                ctr = 1   
-            elif ((lst_cube[0][7]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[5][1]):
-                ctr = 1
-            elif ((lst_cube[0][8]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[1][6],lst_cube[5][2]]):
-                ctr = 1
-        
-            #top right corner
-            elif ((lst_cube[4][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][0]):
-                ctr = 1   
-            elif ((lst_cube[4][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][0]):
-                ctr = 1   
-            elif ((lst_cube[4][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][1]):
-                ctr = 1   
-            elif ((lst_cube[4][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][1]):
-                ctr = 1            
-            elif ((lst_cube[4][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][2]):
-                ctr = 1   
-            elif ((lst_cube[4][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][2]):
-                ctr = 1   
-            
-            #top left corner    
-            elif ((lst_cube[4][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][2]):
-                ctr = 1   
-            elif ((lst_cube[4][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][2]):
-                ctr = 1   
-            elif ((lst_cube[4][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][1]):
-                ctr = 1    
-            elif ((lst_cube[4][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][1]):
-                ctr = 1    
-            elif ((lst_cube[4][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][0]):
-                ctr = 1   
-            elif ((lst_cube[4][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][0]):
-                ctr = 1   
-            
-            #bottom right row
-            elif ((lst_cube[5][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][6]):
-                ctr = 1  
-            elif ((lst_cube[5][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][6]):
-                ctr = 1  
-            elif ((lst_cube[5][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][7]):
-                ctr = 1   
-            elif ((lst_cube[5][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][7]):
-                ctr = 1          
-            elif ((lst_cube[5][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][8]):
-                ctr = 1   
-            elif ((lst_cube[5][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][8]):
-                ctr = 1   
-            
-            #bottom left row        
-            elif ((lst_cube[5][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][8]):
-                ctr = 1  
-            elif ((lst_cube[5][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][8]):
-                ctr = 1  
-            elif ((lst_cube[5][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][7]):
-                ctr = 1    
-            elif ((lst_cube[5][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][7]):
-                ctr = 1 
-            elif ((lst_cube[5][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][6]):
-                ctr = 1 
-            elif ((lst_cube[5][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][6]):
-                ctr = 1           
-                
-            return ctr                
+        # def verify_adj_col():
+        #
+        #     #around the edge of side 0
+        #     ctr = 0                
+        #     if ((lst_cube[0][0]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][2],lst_cube[4][6]]):
+        #         ctr = 1        
+        #     elif ((lst_cube[0][1]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[4][7]):
+        #         ctr = 1
+        #     elif ((lst_cube[0][2]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[4][8],lst_cube[1][0]]):
+        #         ctr = 1
+        #     elif ((lst_cube[0][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][5]):
+        #         ctr = 1
+        #     elif ((lst_cube[0][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][3]):
+        #         ctr = 1
+        #     elif ((lst_cube[0][6]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][8],lst_cube[5][0]]):
+        #         ctr = 1   
+        #     elif ((lst_cube[0][7]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[5][1]):
+        #         ctr = 1
+        #     elif ((lst_cube[0][8]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[1][6],lst_cube[5][2]]):
+        #         ctr = 1
+        #
+        #     #top right corner
+        #     elif ((lst_cube[4][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][0]):
+        #         ctr = 1   
+        #     elif ((lst_cube[4][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][0]):
+        #         ctr = 1   
+        #     elif ((lst_cube[4][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][1]):
+        #         ctr = 1   
+        #     elif ((lst_cube[4][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][1]):
+        #         ctr = 1            
+        #     elif ((lst_cube[4][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][2]):
+        #         ctr = 1   
+        #     elif ((lst_cube[4][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][2]):
+        #         ctr = 1   
+        #
+        #     #top left corner    
+        #     elif ((lst_cube[4][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][2]):
+        #         ctr = 1   
+        #     elif ((lst_cube[4][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][2]):
+        #         ctr = 1   
+        #     elif ((lst_cube[4][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][1]):
+        #         ctr = 1    
+        #     elif ((lst_cube[4][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][1]):
+        #         ctr = 1    
+        #     elif ((lst_cube[4][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][0]):
+        #         ctr = 1   
+        #     elif ((lst_cube[4][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][0]):
+        #         ctr = 1   
+        #
+        #     #bottom right row
+        #     elif ((lst_cube[5][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][6]):
+        #         ctr = 1  
+        #     elif ((lst_cube[5][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][6]):
+        #         ctr = 1  
+        #     elif ((lst_cube[5][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][7]):
+        #         ctr = 1   
+        #     elif ((lst_cube[5][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][7]):
+        #         ctr = 1          
+        #     elif ((lst_cube[5][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][8]):
+        #         ctr = 1   
+        #     elif ((lst_cube[5][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][8]):
+        #         ctr = 1   
+        #
+        #     #bottom left row        
+        #     elif ((lst_cube[5][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][8]):
+        #         ctr = 1  
+        #     elif ((lst_cube[5][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][8]):
+        #         ctr = 1  
+        #     elif ((lst_cube[5][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][7]):
+        #         ctr = 1    
+        #     elif ((lst_cube[5][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][7]):
+        #         ctr = 1 
+        #     elif ((lst_cube[5][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][6]):
+        #         ctr = 1 
+        #     elif ((lst_cube[5][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][6]):
+        #         ctr = 1           
+        #
+        #     return ctr                
 
         #create an instance of the cube by creating nested list        
         lst_cube = ([x for x in parms.get("cube")])
