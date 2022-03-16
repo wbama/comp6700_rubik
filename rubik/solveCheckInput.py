@@ -4,6 +4,7 @@
     check the input string
     
 """
+from rubik.solveRotations import *
 
 def solveCheck(parms):  
     result = {} 
@@ -39,7 +40,59 @@ def solveCheck(parms):
         elif ('rotate' in parms) and (parms.get('rotate')) != None:
             rotate_length = len(parms.get('rotate'))
         elif 'rotate' not in parms:
-            rotate_length = 0   
+            rotate_length = 0  
+            
+        #create an instance of the cube by creating nested list
+        lst_cube = createCubeListFromInputParms(parms)  
+                     
+        ########################################
+        lst_opposite_cnt = []
+        #run checks against the first side. blue - front, red - right, green - back, yellow - top
+        # new_ctr = verify_adj_col()
+        new_ctr = verifyAdjacentColors(lst_cube)
+        lst_opposite_cnt.append(new_ctr)
+                
+        ########################################
+        #rotate the cube to the right - red - front, green - right, orange - back, yellow - top
+        lst_cube = rotateCubeToRight(lst_cube)        
+        
+        new_ctr = verifyAdjacentColors(lst_cube)
+        lst_opposite_cnt.append(new_ctr)        
+        ########################################
+        
+        #rotate the cube to right again - green - front, orange - right, blue - back, yellow - top
+        lst_cube = rotateCubeToRight(lst_cube)
+        
+        new_ctr = verifyAdjacentColors(lst_cube)
+        lst_opposite_cnt.append(new_ctr)
+
+        ########################################
+        lst_cube = rotateCubeToRight(lst_cube)
+        
+        new_ctr = verifyAdjacentColors(lst_cube)
+        lst_opposite_cnt.append(new_ctr)
+        
+        #Rotate back to the beginning. But dont have to check for it again
+        #blue - front, red - right, green - back, yellow - top    
+        
+        ########################################
+        #flip the cube - yellow - front, red - right, white - back, orange - green
+        lst_cube = rotateCubeToRight(lst_cube)
+        lst_cube = rotateCubeUp(lst_cube) 
+     
+        new_ctr = verifyAdjacentColors(lst_cube)
+        lst_opposite_cnt.append(new_ctr)
+
+        #####################################################
+        #last bottom part
+        lst_cube = rotateCubeDown(lst_cube)
+        lst_cube = rotateCubeDown(lst_cube)
+        
+        new_ctr = verifyAdjacentColors(lst_cube)
+        lst_opposite_cnt.append(new_ctr)
+
+        new_ctr = verifyAdjacentColors(parms)
+        lst_opposite_cnt.append(new_ctr)    
 
           
     except:
@@ -81,7 +134,10 @@ def solveCheck(parms):
             result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')  
                
     # elif 'rotate' in parms and rotate_length == 0:
-    #         result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')            
+    #         result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')   
+    
+    elif (max(lst_opposite_cnt) > 0):
+        result['status'] = 'error: adjacent color to color that would appear on opposite side'          
   
         
     elif 'rotate' in parms and rotate_length > 0:
