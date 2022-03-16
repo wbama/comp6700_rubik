@@ -5,9 +5,8 @@
     
 """
 
-
-
 import rubik.cube as rubik
+from rubik.solveRotations import verifyAdjacentColors
 
 def _check(parms):
 
