@@ -226,7 +226,7 @@ def _check(parms):
         orig_side = lst_cube.pop(5) 
         lst_cube.insert(5, turn_type2(orig_side))
         
-        new_ctr = verify_adj_col()
+        new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)
         
         ########################################
@@ -245,7 +245,7 @@ def _check(parms):
         orig_side = lst_cube.pop(5)
         lst_cube.insert(5, turn_type2(orig_side))
         
-        new_ctr = verify_adj_col()
+        new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)
 
         ########################################
@@ -265,7 +265,7 @@ def _check(parms):
 
         lst_cube.insert(5, turn_type2(orig_side))
         
-        new_ctr = verify_adj_col()
+        new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)
         
         #Rotate back to the beginning. But dont have to check for it again
