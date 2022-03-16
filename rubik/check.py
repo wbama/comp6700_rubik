@@ -43,48 +43,8 @@ def _check(parms):
                 unique_center.append(char)               
               
         #create an instance of the cube by creating nested list
-        lst_cube = createCubeListFromInputParms(parms)            
-  
-        # def turn_type1(orig_side):
-        #     turned_side = []
-        #     turned_side.insert(0, orig_side [6])
-        #     turned_side.insert(1, orig_side [3])
-        #     turned_side.insert(2, orig_side [0])
-        #     turned_side.insert(3, orig_side [7])
-        #     turned_side.insert(4, orig_side [4])
-        #     turned_side.insert(5, orig_side [1])
-        #     turned_side.insert(6, orig_side [8])
-        #     turned_side.insert(7, orig_side [5])
-        #     turned_side.insert(8, orig_side [2])
-        #     return turned_side
-        #
-        # def turn_type2(orig_side):
-        #     turned_side = []
-        #     turned_side.insert(0, orig_side [2])
-        #     turned_side.insert(1, orig_side [5])
-        #     turned_side.insert(2, orig_side [8])
-        #     turned_side.insert(3, orig_side [1])
-        #     turned_side.insert(4, orig_side [4])
-        #     turned_side.insert(5, orig_side [7])
-        #     turned_side.insert(6, orig_side [0])
-        #     turned_side.insert(7, orig_side [3])
-        #     turned_side.insert(8, orig_side [6])
-        #     return turned_side
-        #
-        # def turn_type3(orig_side):
-        #     turned_side = []
-        #     turned_side.insert(0, orig_side [8])
-        #     turned_side.insert(1, orig_side [7])
-        #     turned_side.insert(2, orig_side [6])
-        #     turned_side.insert(3, orig_side [5])
-        #     turned_side.insert(4, orig_side [4])
-        #     turned_side.insert(5, orig_side [3])
-        #     turned_side.insert(6, orig_side [2])
-        #     turned_side.insert(7, orig_side [1])
-        #     turned_side.insert(8, orig_side [0])
-        #     return turned_side     
-
-                    
+        lst_cube = createCubeListFromInputParms(parms)  
+                     
         ########################################
         lst_opposite_cnt = []
         #run checks against the first side. blue - front, red - right, green - back, yellow - top
@@ -97,8 +57,7 @@ def _check(parms):
         lst_cube = rotateCubeToRight(lst_cube)        
         
         new_ctr = verifyAdjacentColors(lst_cube)
-        lst_opposite_cnt.append(new_ctr)
-        
+        lst_opposite_cnt.append(new_ctr)        
         ########################################
         
         #rotate the cube to right again - green - front, orange - right, blue - back, yellow - top
@@ -114,14 +73,12 @@ def _check(parms):
         lst_opposite_cnt.append(new_ctr)
         
         #Rotate back to the beginning. But dont have to check for it again
-        #blue - front, red - right, green - back, yellow - top
-        
+        #blue - front, red - right, green - back, yellow - top        
         
         ########################################
         #flip the cube - yellow - front, red - right, white - back, orange - green
         lst_cube = rotateCubeToRight(lst_cube)
-        lst_cube = rotateCubeUp(lst_cube)       
-
+        lst_cube = rotateCubeUp(lst_cube) 
      
         new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
@@ -137,7 +94,6 @@ def _check(parms):
         new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)   
         print(lst_opposite_cnt)
-
              
     except:
         pass #one of the below will catch errors
