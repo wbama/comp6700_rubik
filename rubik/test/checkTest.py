@@ -4,9 +4,6 @@
     unittests checking string inputs
     
 """
-
-
-
 from unittest import TestCase
 import rubik.check as check 
 

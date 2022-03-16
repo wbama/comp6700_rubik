@@ -6,8 +6,8 @@
     
 """
 
-import rubik.cube as rubik
-from rubik.solveRotations import *
+from rubik.solveRotations import createCubeListFromInputParms, verifyAdjacentColors
+from rubik.solveRotations import rotateCubeToRight, rotateCubeUp, rotateCubeDown
 
 def _check(parms):
 

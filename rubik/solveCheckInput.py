@@ -2,9 +2,11 @@
     Created on 03/05/2022
     @author: Waldo du Toit
     check the input string
+    03/16 - Refactoring the 'adjacent color to color that would appear on opposite side'
     
 """
-from rubik.solveRotations import *
+from rubik.solveRotations import createCubeListFromInputParms, verifyAdjacentColors
+from rubik.solveRotations import rotateCubeToRight, rotateCubeUp, rotateCubeDown
 
 def solveCheck(parms):  
     result = {} 
