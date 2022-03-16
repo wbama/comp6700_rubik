@@ -57,19 +57,19 @@ def _check(parms):
         
         #this function looks at the colors around the edge and compares to the back colors to add to counter
         #create an instance of the cube by creating nested list        
-        lst_cube = ([x for x in parms.get("cube")])
-      
-        lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) 
-        
-        for i in range (1,7):
-            for j in range(1,10):
-                exec(f"lst_in{i}.append(lst_cube.pop(0))")  
+        # lst_cube = ([x for x in parms.get("cube")])
+        #
+        # lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) 
+        #
+        # for i in range (1,7):
+        #     for j in range(1,10):
+        #         exec(f"lst_in{i}.append(lst_cube.pop(0))")  
                 
         #create list within a list of the cube.   
-        lst_cube = []
+        # lst_cube = []
         lst_opposite_cnt = []
-        for i in range(1,7):
-            exec(f'lst_cube.append(lst_in{i})')
+        # for i in range(1,7):
+        #     exec(f'lst_cube.append(lst_in{i})')
             
   
         def turn_type1(orig_side):
@@ -112,18 +112,18 @@ def _check(parms):
             return turned_side
         
         #create an instance of the cube by creating nested list        
-        lst_cube = ([x for x in parms.get("cube")])
-        
-        lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) 
-        
-        for i in range (1,7):
-            for j in range(1,10):
-                exec(f"lst_in{i}.append(lst_cube.pop(0))")  
-                
-        #create list within a list of the cube.                  
-        lst_opposite_cnt = []
-        for i in range(1,7):
-            exec(f'lst_cube.append(lst_in{i})')
+        # lst_cube = ([x for x in parms.get("cube")])
+        #
+        # lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) 
+        #
+        # for i in range (1,7):
+        #     for j in range(1,10):
+        #         exec(f"lst_in{i}.append(lst_cube.pop(0))")  
+        #
+        # #create list within a list of the cube.                  
+        # lst_opposite_cnt = []
+        # for i in range(1,7):
+        #     exec(f'lst_cube.append(lst_in{i})')
             
      
         lst_cube_orig = lst_cube[:]  
