@@ -303,7 +303,7 @@ def _check(parms):
             exec(f'lst_cube.append(side_{i})')     
         
      
-        new_ctr = verify_adj_col()
+        new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)
 
         #####################################################
@@ -336,10 +336,10 @@ def _check(parms):
             exec(f'lst_cube.append(side_{i})')
 
         
-        new_ctr = verify_adj_col()
+        new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)
 
-        new_ctr = verify_adj_col()
+        new_ctr = verifyAdjacentColors(parms)
         lst_opposite_cnt.append(new_ctr)   
 
         max_opposite_ctr = max(lst_opposite_cnt)
