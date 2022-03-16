@@ -43,73 +43,46 @@ def _check(parms):
                 unique_center.append(char)               
               
         #create an instance of the cube by creating nested list
-        lst_cube = createCubeListFromInputParms(parms)
-        # lst_cube = ([x for x in parms.get("cube")])
-        #
-        #
-        # lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6))         
-        #
-        # for i in range (1,7):
-        #      for j in range(1,10):
-        #          exec(f"lst_in{i}.append(lst_cube.pop(0))")
-        
- 
-        
-        #this function looks at the colors around the edge and compares to the back colors to add to counter
-        #create an instance of the cube by creating nested list        
-        # lst_cube = ([x for x in parms.get("cube")])
-        #
-        # lst_in1, lst_in2, lst_in3, lst_in4, lst_in5, lst_in6 = ([] for i in range(6)) 
-        #
-        # for i in range (1,7):
-        #     for j in range(1,10):
-        #         exec(f"lst_in{i}.append(lst_cube.pop(0))")  
-                
-        #create list within a list of the cube.   
-        # lst_cube = []
-        
-        # for i in range(1,7):
-        #     exec(f'lst_cube.append(lst_in{i})')
-            
+        lst_cube = createCubeListFromInputParms(parms)            
   
-        def turn_type1(orig_side):
-            turned_side = []
-            turned_side.insert(0, orig_side [6])
-            turned_side.insert(1, orig_side [3])
-            turned_side.insert(2, orig_side [0])
-            turned_side.insert(3, orig_side [7])
-            turned_side.insert(4, orig_side [4])
-            turned_side.insert(5, orig_side [1])
-            turned_side.insert(6, orig_side [8])
-            turned_side.insert(7, orig_side [5])
-            turned_side.insert(8, orig_side [2])
-            return turned_side
-        
-        def turn_type2(orig_side):
-            turned_side = []
-            turned_side.insert(0, orig_side [2])
-            turned_side.insert(1, orig_side [5])
-            turned_side.insert(2, orig_side [8])
-            turned_side.insert(3, orig_side [1])
-            turned_side.insert(4, orig_side [4])
-            turned_side.insert(5, orig_side [7])
-            turned_side.insert(6, orig_side [0])
-            turned_side.insert(7, orig_side [3])
-            turned_side.insert(8, orig_side [6])
-            return turned_side
-        
-        def turn_type3(orig_side):
-            turned_side = []
-            turned_side.insert(0, orig_side [8])
-            turned_side.insert(1, orig_side [7])
-            turned_side.insert(2, orig_side [6])
-            turned_side.insert(3, orig_side [5])
-            turned_side.insert(4, orig_side [4])
-            turned_side.insert(5, orig_side [3])
-            turned_side.insert(6, orig_side [2])
-            turned_side.insert(7, orig_side [1])
-            turned_side.insert(8, orig_side [0])
-            return turned_side     
+        # def turn_type1(orig_side):
+        #     turned_side = []
+        #     turned_side.insert(0, orig_side [6])
+        #     turned_side.insert(1, orig_side [3])
+        #     turned_side.insert(2, orig_side [0])
+        #     turned_side.insert(3, orig_side [7])
+        #     turned_side.insert(4, orig_side [4])
+        #     turned_side.insert(5, orig_side [1])
+        #     turned_side.insert(6, orig_side [8])
+        #     turned_side.insert(7, orig_side [5])
+        #     turned_side.insert(8, orig_side [2])
+        #     return turned_side
+        #
+        # def turn_type2(orig_side):
+        #     turned_side = []
+        #     turned_side.insert(0, orig_side [2])
+        #     turned_side.insert(1, orig_side [5])
+        #     turned_side.insert(2, orig_side [8])
+        #     turned_side.insert(3, orig_side [1])
+        #     turned_side.insert(4, orig_side [4])
+        #     turned_side.insert(5, orig_side [7])
+        #     turned_side.insert(6, orig_side [0])
+        #     turned_side.insert(7, orig_side [3])
+        #     turned_side.insert(8, orig_side [6])
+        #     return turned_side
+        #
+        # def turn_type3(orig_side):
+        #     turned_side = []
+        #     turned_side.insert(0, orig_side [8])
+        #     turned_side.insert(1, orig_side [7])
+        #     turned_side.insert(2, orig_side [6])
+        #     turned_side.insert(3, orig_side [5])
+        #     turned_side.insert(4, orig_side [4])
+        #     turned_side.insert(5, orig_side [3])
+        #     turned_side.insert(6, orig_side [2])
+        #     turned_side.insert(7, orig_side [1])
+        #     turned_side.insert(8, orig_side [0])
+        #     return turned_side     
 
                     
         ########################################
