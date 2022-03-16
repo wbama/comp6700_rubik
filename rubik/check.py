@@ -6,7 +6,7 @@
 """
 
 import rubik.cube as rubik
-from rubik.solveRotations import verifyAdjacentColors, createCubeListFromInputParms
+from rubik.solveRotations import *
 
 def _check(parms):
 
@@ -67,7 +67,7 @@ def _check(parms):
                 
         #create list within a list of the cube.   
         # lst_cube = []
-        lst_opposite_cnt = []
+        
         # for i in range(1,7):
         #     exec(f'lst_cube.append(lst_in{i})')
             
@@ -129,7 +129,7 @@ def _check(parms):
         lst_cube_orig = lst_cube[:]  
                     
         ########################################
-        
+        lst_opposite_cnt = []
         #run checks against the first side. blue - front, red - right, green - back, yellow - top
         # new_ctr = verify_adj_col()
         new_ctr = verifyAdjacentColors(lst_cube)
@@ -138,58 +138,60 @@ def _check(parms):
                 
         ########################################
         #rotate the cube to the right - red - front, green - right, orange - back, yellow - top
+        lst_cube = rotateCubeToRight(lst_cube)
         
-        first_side = lst_cube.pop(0)
-        lst_cube.insert(3, first_side)
+        # first_side = lst_cube.pop(0)
+        # lst_cube.insert(3, first_side)
+        #
+        # # rotate the top
+        # orig_side = lst_cube.pop(4)
+        # lst_cube.insert(4, turn_type1(orig_side))
+        #
+        # #now rotate the bottom
+        # orig_side = lst_cube.pop(5) 
+        # lst_cube.insert(5, turn_type2(orig_side))
         
-        # rotate the top
-        orig_side = lst_cube.pop(4)
-        lst_cube.insert(4, turn_type1(orig_side))
-        
-        #now rotate the bottom
-        orig_side = lst_cube.pop(5) 
-        lst_cube.insert(5, turn_type2(orig_side))
-        
-        new_ctr = verifyAdjacentColors(parms)
+        new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
         
         ########################################
         
-        #rotate the cube - green - front, orange - right, blue - back, yellow - top
-        first_side = lst_cube.pop(0)
-        lst_cube.append(first_side)
-        first_side = lst_cube.pop(5)
-        lst_cube.insert(3, first_side)
-
-        #now rotate the top
-        orig_side = lst_cube.pop(4)
-        lst_cube.insert(4, turn_type1(orig_side))
+        #rotate the cube to right again - green - front, orange - right, blue - back, yellow - top
+        lst_cube = rotateCubeToRight(lst_cube)
+        # first_side = lst_cube.pop(0)
+        # lst_cube.append(first_side)
+        # first_side = lst_cube.pop(5)
+        # lst_cube.insert(3, first_side)
+        #
+        # #now rotate the top
+        # orig_side = lst_cube.pop(4)
+        # lst_cube.insert(4, turn_type1(orig_side))
+        #
+        # #now rotate the bottom
+        # orig_side = lst_cube.pop(5)
+        # lst_cube.insert(5, turn_type2(orig_side))
         
-        #now rotate the bottom
-        orig_side = lst_cube.pop(5)
-        lst_cube.insert(5, turn_type2(orig_side))
-        
-        new_ctr = verifyAdjacentColors(parms)
+        new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
 
         ########################################
-        
+        lst_cube = rotateCubeToRight(lst_cube)
         #rotate the cube - orange - front, blue - right, red - back, yellow - top
-        first_side = lst_cube.pop(0)
-        lst_cube.append(first_side)
-        first_side = lst_cube.pop(5)
-        lst_cube.insert(3, first_side)
+        # first_side = lst_cube.pop(0)
+        # lst_cube.append(first_side)
+        # first_side = lst_cube.pop(5)
+        # lst_cube.insert(3, first_side)
+        #
+        # #now rotate the top
+        # orig_side = lst_cube.pop(4)
+        # lst_cube.insert(4, turn_type1(orig_side))
+        #
+        # #now rotate the bottom
+        # orig_side = lst_cube.pop(5)
+        #
+        # lst_cube.insert(5, turn_type2(orig_side))
         
-        #now rotate the top
-        orig_side = lst_cube.pop(4)
-        lst_cube.insert(4, turn_type1(orig_side))
-        
-        #now rotate the bottom
-        orig_side = lst_cube.pop(5)
-
-        lst_cube.insert(5, turn_type2(orig_side))
-        
-        new_ctr = verifyAdjacentColors(parms)
+        new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
         
         #Rotate back to the beginning. But dont have to check for it again
