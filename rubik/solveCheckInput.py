@@ -136,10 +136,7 @@ def solveCheck(parms):
             result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')  
                
     # elif 'rotate' in parms and rotate_length == 0:
-    #         result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')   
-    
-    elif (max(lst_opposite_cnt) > 0):
-        result['status'] = 'error: adjacent color to color that would appear on opposite side'          
+    #         result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')      
   
         
     elif 'rotate' in parms and rotate_length > 0:
@@ -147,9 +144,15 @@ def solveCheck(parms):
             if rotation in ['F','f','R','r','B','b','L','l','U','u','D','d']: 
                 result['status'] = 'ok'                       
             else:                
-                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')       
+                result['status'] = ('error: optional rotate should be in [FfRrBbLlUuDd]')    
+                
+    elif (max(lst_opposite_cnt) > 0):
+        result['status'] = 'error: adjacent color to color that would appear on opposite side'                  
+                   
     else:
         result['status'] = 'ok'
+        
+  
         
     return result
 
