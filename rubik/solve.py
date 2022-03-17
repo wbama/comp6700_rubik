@@ -11,7 +11,7 @@ from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeDown
 from rubik.solveRotations import rotateSide_R, rotateSide_r, rotateSide_B, rotateSide_b
 from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotateSide_u
-from rubik.solveRotations import rotateSide_D, rotateSide_d
+from rubik.solveRotations import rotateSide_D, rotateSide_d, rotateSide_f, rotateSide_F
 import rubik.solveCheckInput as ci
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveWhiteCross import solveWhiteCross
