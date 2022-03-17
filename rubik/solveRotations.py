@@ -1205,17 +1205,35 @@ def rotateCubeDown(cube):
         return new_cube
 
 #front side goes to the left
-# def rotateCubeToLeft(cube):
-#         #rotate cube to right
-#         first_side = cube.pop(0)
-#         cube.insert(3, first_side)        
-#         # rotate the top
-#         orig_cube = cube.pop(4)
-#         cube.insert(4, turn_type1(orig_cube))        
-#         #now rotate the bottom
-#         orig_cube = cube.pop(5) 
-#         cube.insert(5, turn_type2(orig_cube))
-#         return cube
+def rotateCubeToLeft(cube):
+        new_cube = [[], [], [], [], [], []]
+        
+        new_cube[0] = cube[1]
+        new_cube[1] = cube[2]
+        new_cube[2] = cube[3]
+        new_cube[3] = cube[0]
+        
+        new_cube[4].insert(0, cube [4][6])
+        new_cube[4].insert(1, cube [4][3])
+        new_cube[4].insert(2, cube [4][0])
+        new_cube[4].insert(3, cube [4][7])
+        new_cube[4].insert(4, cube [4][4])
+        new_cube[4].insert(5, cube [4][1])
+        new_cube[4].insert(6, cube [4][8])
+        new_cube[4].insert(7, cube [4][5])
+        new_cube[4].insert(8, cube [4][2])     
+
+        new_cube[5].insert(0, cube [5][2])
+        new_cube[5].insert(1, cube [5][5])
+        new_cube[5].insert(2, cube [5][8])
+        new_cube[5].insert(3, cube [5][1])
+        new_cube[5].insert(4, cube [5][4])
+        new_cube[5].insert(5, cube [5][7])
+        new_cube[5].insert(6, cube [5][0])
+        new_cube[5].insert(7, cube [5][3])
+        new_cube[5].insert(8, cube [5][6])  
+
+        return new_cube
  
  
 def y_0_SolveWhiteLeaves(lst_cube, lst_rotate):
