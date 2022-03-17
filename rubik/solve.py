@@ -9,8 +9,7 @@
 
 from rubik.solveRotations import rotateCubeToLeft
 from rubik.solveRotations import rotateCubeDown
-from rubik.solveRotations import rotateSide_F
-from rubik.solveRotations import rotateSide_f
+from rubik.solveRotations import rotateSide_F, rotateSide_f, rotateSide_R, rotateSide_r
 import rubik.solveCheckInput as ci
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveWhiteCross import solveWhiteCross
@@ -84,17 +83,8 @@ def _solve(parms):
                 elif rotation == 'f':
                     lst_cube = (rotateSide_f(lst_cube)) 
                          
-                elif rotation == 'R':
-                   
-                    rotateCubeToLeft(lst_cube)
-                    
-                    #rotate Right side clockwise
-                    c_rotate_cube = (rotateSide_F(lst_cube)) 
-                    
-                    rotateCubeToLeft(c_rotate_cube)
-                    rotateCubeToLeft(c_rotate_cube)
-                    rotateCubeToLeft(c_rotate_cube)   
-                    lst_cube =  c_rotate_cube      
+                elif rotation == 'R':                   
+                    lst_cube = rotateSide_R(lst_cube)     
                           
                 elif rotation == 'r':
                     c_rotate_cube = (rotateSide_f(lst_cube))        
