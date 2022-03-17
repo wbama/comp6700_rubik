@@ -4,11 +4,6 @@
     main solvec code
     
 """
-
-
-
-from rubik.solveRotations import rotateCubeToLeft
-from rubik.solveRotations import rotateCubeDown
 from rubik.solveRotations import rotateSide_R, rotateSide_r, rotateSide_B, rotateSide_b
 from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotateSide_u
 from rubik.solveRotations import rotateSide_D, rotateSide_d, rotateSide_f, rotateSide_F
@@ -104,8 +99,7 @@ def _solve(parms):
                     lst_cube = rotateSide_l(lst_cube)                       
                     
                 elif rotation == 'U':
-                    lst_cube = rotateSide_U(lst_cube)
-                      
+                    lst_cube = rotateSide_U(lst_cube)                      
                           
                 elif rotation == 'u':
                     lst_cube = rotateSide_u(lst_cube)    
@@ -114,8 +108,7 @@ def _solve(parms):
                     lst_cube = rotateSide_D(lst_cube) 
                     
                 elif rotation == 'd':
-                    lst_cube = rotateSide_d(lst_cube) 
-      
+                    lst_cube = rotateSide_d(lst_cube)      
            
             str1 = "".join(lst_cube[0])
             str2 = "".join(lst_cube[1])
