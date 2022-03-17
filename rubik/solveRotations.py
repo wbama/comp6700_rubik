@@ -1198,9 +1198,7 @@ def rotateCubeDown(cube):
         new_cube[4].insert(7, cube [2][1])
         new_cube[4].insert(8, cube [2][0])            
 
-        new_cube[5] = cube[0]    
-        
-
+        new_cube[5] = cube[0]  
 
         return new_cube
 
