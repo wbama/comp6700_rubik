@@ -1,12 +1,9 @@
 """
     Created on 03/05/2022
     @author: Waldo du Toit
-    test codes to rotate cube strings. Then use those cube strings in unittests
+    codes to rotate cube strings. Then use those cube strings in unittests
     
 """
-
-
-
 from rubik.solve import _solve
 from rubik.solveDaisy import solveDaisy
 from rubik.solveRotations import createCubeListFromInputParms, rotateCubeToRight, rotateCubeDown, rotateCubeUp
