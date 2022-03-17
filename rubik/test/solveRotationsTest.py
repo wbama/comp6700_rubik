@@ -6,9 +6,6 @@ from rubik.solveRotations import createCubeListFromInputParms
     unittests for all the rotations
     
 """
-
-
-
 from rubik.solveRotations import rotateCubeToLeft, rotateCubeToRight, rotateCubeUp, rotateCubeDown, rotateCubeClock
 from rubik.solveRotations import rotateSide_R, rotateSide_r, rotateSide_B, rotateSide_b
 from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotateSide_u
