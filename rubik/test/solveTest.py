@@ -2,6 +2,7 @@
     Created on 02/05/2022
     @author: Waldo du Toit
     unittests for solving the final solve solution
+    03/17 - Added test 943. Fx did not give error on microservice. 
     
 """
 
