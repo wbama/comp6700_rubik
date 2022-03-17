@@ -1205,17 +1205,17 @@ def rotateCubeDown(cube):
         return new_cube
 
 #front side goes to the left
-def rotateCubeToLeft(cube):
-        #rotate cube to right
-        first_side = cube.pop(0)
-        cube.insert(3, first_side)        
-        # rotate the top
-        orig_cube = cube.pop(4)
-        cube.insert(4, turn_type1(orig_cube))        
-        #now rotate the bottom
-        orig_cube = cube.pop(5) 
-        cube.insert(5, turn_type2(orig_cube))
-        return cube
+# def rotateCubeToLeft(cube):
+#         #rotate cube to right
+#         first_side = cube.pop(0)
+#         cube.insert(3, first_side)        
+#         # rotate the top
+#         orig_cube = cube.pop(4)
+#         cube.insert(4, turn_type1(orig_cube))        
+#         #now rotate the bottom
+#         orig_cube = cube.pop(5) 
+#         cube.insert(5, turn_type2(orig_cube))
+#         return cube
  
  
 def y_0_SolveWhiteLeaves(lst_cube, lst_rotate):
