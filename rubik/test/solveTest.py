@@ -326,6 +326,17 @@ class SolveTest(unittest.TestCase):
         expectedResult = {}
         expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
         actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))  
+        
+    def test_943_IncorrectParmsRotateString(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
+        inputDict['rotate'] = 'Fx'
+        inputDict['op'] = 'solve'
+
+        expectedResult = {}
+        expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
+        actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))        
      
         
