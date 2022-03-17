@@ -85,7 +85,7 @@ def verifyAdjacentColors(lst_cube):
         
     return ctr   
 
-
+# when y exists in the cube, use that. If not, use whatever is on the bottom as yellow and white as top
 def createYellowAndWhiteVariables(parms):
     global var_y, var_w
     lst_cube = createCubeListFromInputParms(parms)
@@ -119,6 +119,7 @@ def createYellowAndWhiteVariables(parms):
         
     return var_y, var_w
 
+#rotate the front side clockwise
 def rotateSide_F(orig_cube):
     new_cube = [[], [], [], [], [], []]
     #front
@@ -188,6 +189,7 @@ def rotateSide_F(orig_cube):
     new_cube[5].insert(8, orig_cube [5][8])
     return new_cube
 
+#rotate the front cc
 def rotateSide_f(orig_cube):
     new_cube = [[], [], [], [], [], []]
     #front
@@ -257,6 +259,7 @@ def rotateSide_f(orig_cube):
     new_cube[5].insert(8, orig_cube [5][8])
     return new_cube
 
+#rotate right side clockwise
 def rotateSide_R(orig_cube):
     new_cube = [[], [], [], [], [], []]
 
@@ -321,6 +324,7 @@ def rotateSide_R(orig_cube):
     new_cube[5].insert(8, orig_cube [2][0])
     return new_cube
 
+#rotate the right side cc
 def rotateSide_r(orig_cube):
     new_cube = [[], [], [], [], [], []]
     new_cube[0].insert(0, orig_cube [0][0])
@@ -384,7 +388,7 @@ def rotateSide_r(orig_cube):
     new_cube[5].insert(8, orig_cube [0][8])
     return new_cube
 
-
+#rotate the back clockwise
 def rotateSide_B(orig_cube): #rotates clock
     new_cube = [[], [], [], [], [], []]
     #front
@@ -449,7 +453,8 @@ def rotateSide_B(orig_cube): #rotates clock
     new_cube[5].insert(8, orig_cube [3][6])
     return new_cube
 
-def rotateSide_b(orig_cube): #rotates cc
+#rotate the back cc
+def rotateSide_b(orig_cube): 
     new_cube = [[], [], [], [], [], []]
     #front says same
     new_cube[0].insert(0, orig_cube [0][0])
@@ -514,6 +519,7 @@ def rotateSide_b(orig_cube): #rotates cc
     new_cube[5].insert(8, orig_cube [1][2])
     return new_cube
 
+#rotate the left clockwise
 def rotateSide_L(orig_cube):
     new_cube = [[], [], [], [], [], []]
     #front
@@ -580,6 +586,7 @@ def rotateSide_L(orig_cube):
     new_cube[5].insert(8, orig_cube [5][8])
     return new_cube
 
+#rotate the left cc
 def rotateSide_l(orig_cube):
     new_cube = [[], [], [], [], [], []]
     #front
@@ -646,6 +653,7 @@ def rotateSide_l(orig_cube):
     new_cube[5].insert(8, orig_cube [5][8])
     return new_cube
 
+#rotate upper side clockwise
 def rotateSide_U(orig_cube):
 
     new_cube = [[], [], [], [], [], []]
@@ -714,6 +722,7 @@ def rotateSide_U(orig_cube):
     new_cube[5].insert(8, orig_cube [5][8])
     return new_cube
 
+#rotate upper cc
 def rotateSide_u(orig_cube):
 
     new_cube = [[], [], [], [], [], []]
@@ -783,6 +792,7 @@ def rotateSide_u(orig_cube):
     new_cube[5].insert(8, orig_cube [5][8])
     return new_cube
 
+#rotate bottom clockwise
 def rotateSide_D(orig_cube):
     new_cube = [[], [], [], [], [], []]
     #front
@@ -851,6 +861,7 @@ def rotateSide_D(orig_cube):
   
     return new_cube
 
+#rotate bottom cc
 def rotateSide_d(orig_cube):
     new_cube = [[], [], [], [], [], []]
     #front
@@ -920,7 +931,7 @@ def rotateSide_d(orig_cube):
   
     return new_cube
 
-
+#create a string from a cube list. for testing
 def createStringFromCube(lst_cube):
     str1 = "".join(lst_cube[0])
     str2 = "".join(lst_cube[1])
@@ -948,6 +959,7 @@ def createCubeListFromInputParms(parms):
     
     return lst_cube
 
+#rotate the whole cube clockwise. Used in testing. 
 def rotateCubeClock(orig_cube):
     new_cube = [[], [], [], [], [], []]
     
@@ -1020,44 +1032,44 @@ def rotateCubeClock(orig_cube):
     return new_cube
 
 
-def turn_type1(orig_cube):
-    turned_side = []
-    turned_side.insert(0, orig_cube [6])
-    turned_side.insert(1, orig_cube [3])
-    turned_side.insert(2, orig_cube [0])
-    turned_side.insert(3, orig_cube [7])
-    turned_side.insert(4, orig_cube [4])
-    turned_side.insert(5, orig_cube [1])
-    turned_side.insert(6, orig_cube [8])
-    turned_side.insert(7, orig_cube [5])
-    turned_side.insert(8, orig_cube [2])
-    return turned_side
-        
-def turn_type2(orig_cube):
-    turned_side = []
-    turned_side.insert(0, orig_cube [2])
-    turned_side.insert(1, orig_cube [5])
-    turned_side.insert(2, orig_cube [8])
-    turned_side.insert(3, orig_cube [1])
-    turned_side.insert(4, orig_cube [4])
-    turned_side.insert(5, orig_cube [7])
-    turned_side.insert(6, orig_cube [0])
-    turned_side.insert(7, orig_cube [3])
-    turned_side.insert(8, orig_cube [6])
-    return turned_side
-        
-def turn_type3(orig_cube):
-    turned_side = []
-    turned_side.insert(0, orig_cube [8])
-    turned_side.insert(1, orig_cube [7])
-    turned_side.insert(2, orig_cube [6])
-    turned_side.insert(3, orig_cube [5])
-    turned_side.insert(4, orig_cube [4])
-    turned_side.insert(5, orig_cube [3])
-    turned_side.insert(6, orig_cube [2])
-    turned_side.insert(7, orig_cube [1])
-    turned_side.insert(8, orig_cube [0])
-    return turned_side
+# def turn_type1(orig_cube):
+#     turned_side = []
+#     turned_side.insert(0, orig_cube [6])
+#     turned_side.insert(1, orig_cube [3])
+#     turned_side.insert(2, orig_cube [0])
+#     turned_side.insert(3, orig_cube [7])
+#     turned_side.insert(4, orig_cube [4])
+#     turned_side.insert(5, orig_cube [1])
+#     turned_side.insert(6, orig_cube [8])
+#     turned_side.insert(7, orig_cube [5])
+#     turned_side.insert(8, orig_cube [2])
+#     return turned_side
+#
+# def turn_type2(orig_cube):
+#     turned_side = []
+#     turned_side.insert(0, orig_cube [2])
+#     turned_side.insert(1, orig_cube [5])
+#     turned_side.insert(2, orig_cube [8])
+#     turned_side.insert(3, orig_cube [1])
+#     turned_side.insert(4, orig_cube [4])
+#     turned_side.insert(5, orig_cube [7])
+#     turned_side.insert(6, orig_cube [0])
+#     turned_side.insert(7, orig_cube [3])
+#     turned_side.insert(8, orig_cube [6])
+#     return turned_side
+#
+# def turn_type3(orig_cube):
+#     turned_side = []
+#     turned_side.insert(0, orig_cube [8])
+#     turned_side.insert(1, orig_cube [7])
+#     turned_side.insert(2, orig_cube [6])
+#     turned_side.insert(3, orig_cube [5])
+#     turned_side.insert(4, orig_cube [4])
+#     turned_side.insert(5, orig_cube [3])
+#     turned_side.insert(6, orig_cube [2])
+#     turned_side.insert(7, orig_cube [1])
+#     turned_side.insert(8, orig_cube [0])
+#     return turned_side
 
 #front side goes to the right
 def rotateCubeToRight(cube):
