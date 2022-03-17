@@ -49,44 +49,29 @@ def solveCheck(parms):
                      
         ########################################
         lst_opposite_cnt = []
-        #run checks against the first side. blue - front, red - right, green - back, yellow - top
-        # new_ctr = verify_adj_col()
         new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
-                
-        ########################################
-        #rotate the cube to the right - red - front, green - right, orange - back, yellow - top
         lst_cube = rotateCubeToRight(lst_cube)        
         
         new_ctr = verifyAdjacentColors(lst_cube)
-        lst_opposite_cnt.append(new_ctr)        
-        ########################################
-        
-        #rotate the cube to right again - green - front, orange - right, blue - back, yellow - top
+        lst_opposite_cnt.append(new_ctr)  
+
         lst_cube = rotateCubeToRight(lst_cube)
         
         new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
 
-        ########################################
         lst_cube = rotateCubeToRight(lst_cube)
         
         new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
-        
-        #Rotate back to the beginning. But dont have to check for it again
-        #blue - front, red - right, green - back, yellow - top    
-        
-        ########################################
-        #flip the cube - yellow - front, red - right, white - back, orange - green
+
         lst_cube = rotateCubeToRight(lst_cube)
         lst_cube = rotateCubeUp(lst_cube) 
      
         new_ctr = verifyAdjacentColors(lst_cube)
         lst_opposite_cnt.append(new_ctr)
 
-        #####################################################
-        #last bottom part
         lst_cube = rotateCubeDown(lst_cube)
         lst_cube = rotateCubeDown(lst_cube)
         
