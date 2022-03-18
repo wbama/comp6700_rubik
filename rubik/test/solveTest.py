@@ -212,7 +212,7 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
         self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
         
-    def test_141_ShouldGiveWhiteCrossOnAboveSolution(self):
+    def test_150_ShouldGiveWhiteCrossOnAboveSolution(self):
 
         inputDict = {}
         inputDict['cube'] = 'wrggbobyyryrywrbggywybgorywgrgwywbooobbgrrowwwboboorgy'
@@ -232,7 +232,7 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(actualResult[5][5], actualResult[5][4])
         self.assertEqual(actualResult[0][5], actualResult[0][4])
         
-    def test_150_ShouldGiveValidCubeNoRotateY_5(self):
+    def test_160_ShouldGiveValidCubeNoRotateY_5(self):
 
         inputDict = {}
         inputDict['cube'] = 'gwoorbbgygyrwbgoorgbyrorbywobwygbbwobyyrworrwwoggywrgy'
@@ -247,7 +247,7 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
         self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
         
-    def test_151_ShouldGiveWhiteCrossOnAboveSolutionNoYellow(self):
+    def test_170_ShouldGiveWhiteCrossOnAboveSolutionNoYellow(self):
 
         inputDict = {}
         inputDict['cube'] = 'gwoorbbg1g1rwbgoorgb1rorb1wobw1gbbwob11rworrwwogg1wrg1'
@@ -266,7 +266,7 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(actualResult[1][1], actualResult[1][4])
         self.assertEqual(actualResult[2][1], actualResult[2][4])
         
-    def test_160_ShouldNoSolutionSolvedCube(self):
+    def test_180_ShouldNoSolutionSolvedCube(self):
 
         inputDict = {}
         inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
@@ -280,8 +280,7 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
-        self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
-        
+        self.assertEqual(expectedResult.get('solution'), actualResult.get('solution'))        
 
         
 # Sad path tests
