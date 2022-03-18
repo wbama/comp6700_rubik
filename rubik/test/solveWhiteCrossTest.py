@@ -43,7 +43,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
             #sides should be same color as the middle cells
             self.assertEqual(actualResult[0][3], actualResult[0][4])
             self.assertEqual(actualResult[4][3], actualResult[4][4])
-            self.assertEqual(actualResult[2][1], actualResult[2][4])
+            self.assertEqual(actualResult[2][5], actualResult[2][4])
             self.assertEqual(actualResult[5][3], actualResult[5][4])
             
         def test_030_SolveWhiteCross_y2(self):
