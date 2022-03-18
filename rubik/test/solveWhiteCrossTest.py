@@ -125,6 +125,11 @@ class SolveWhiteCrossTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[4][4])
             self.assertEqual(expectedResult, actualResult[4][5])
             self.assertEqual(expectedResult, actualResult[4][7])
+            #sides should be same color as the middle cells
+            self.assertEqual(actualResult[3][1], actualResult[3][4])
+            self.assertEqual(actualResult[0][1], actualResult[0][4])
+            self.assertEqual(actualResult[1][1], actualResult[1][4])
+            self.assertEqual(actualResult[2][1], actualResult[2][4])
             
         def test_080_SolveWhiteCross_y0_NoYellow(self): #if yellow not exist, then [4][4] is yellow, [5][4] is white, which is now g
             inputDict = {}
