@@ -221,7 +221,6 @@ class SolveTest(unittest.TestCase):
 
         expectedResult = 'w'  
         actualResult = createCubeListFromInputParms(solve._solve(inputDict))
-        print(actualResult)
         self.assertEqual(expectedResult, actualResult[1][1])
         self.assertEqual(expectedResult, actualResult[1][3])
         self.assertEqual(expectedResult, actualResult[1][4])
@@ -241,12 +240,31 @@ class SolveTest(unittest.TestCase):
 
         expectedResult = {}
         expectedResult['cube'] = None
-        expectedResult['solution'] = "lfLuLFFLUUBBLDD"
+        expectedResult['solution'] = "ddFDrdRddFDBBDRRFFDLL"
         expectedResult['status'] = 'ok'
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
         self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
+        
+    def test_151_ShouldGiveWhiteCrossOnAboveSolutionNoYellow(self):
+
+        inputDict = {}
+        inputDict['cube'] = 'gwoorbbg1g1rwbgoorgb1rorb1wobw1gbbwob11rworrwwogg1wrg1'
+        inputDict['op'] = 'solve'    
+        inputDict['rotate'] = 'ddFDrdRddFDBBDRRFFDLL'
+        expectedResult = 'w'  
+        actualResult = createCubeListFromInputParms(solve._solve(inputDict))
+        self.assertEqual(expectedResult, actualResult[4][1])
+        self.assertEqual(expectedResult, actualResult[4][3])
+        self.assertEqual(expectedResult, actualResult[4][4])
+        self.assertEqual(expectedResult, actualResult[4][5])
+        self.assertEqual(expectedResult, actualResult[4][7])
+        #sides should be same color as the middle cells
+        self.assertEqual(actualResult[3][1], actualResult[3][4])
+        self.assertEqual(actualResult[0][1], actualResult[0][4])
+        self.assertEqual(actualResult[1][1], actualResult[1][4])
+        self.assertEqual(actualResult[2][1], actualResult[2][4])
         
     def test_160_ShouldNoSolutionSolvedCube(self):
 
