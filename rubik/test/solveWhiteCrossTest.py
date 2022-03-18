@@ -12,19 +12,23 @@ from rubik.solveWhiteCross import solveWhiteCross
 #need to update this. this is not a white cross. Look at the sides too
 class SolveWhiteCrossTest(unittest.TestCase):                 
     #y in position 0, w in position 2
-    #
         def test_010_SolveWhiteCross_y0(self):
             inputDict = {}
             inputDict['cube'] = 'rwrrygooggyrybyowybbbbwrroyoogwggbrywowgrrwgygwwboboyb'    
-            expectedResult1 = 'w'             
+            expectedResult = 'w'             
 
             actualResult = solveWhiteCross(inputDict)[0]
             print(actualResult)
-            self.assertEqual(expectedResult1, actualResult[2][1])
-            self.assertEqual(expectedResult1, actualResult[2][3])
-            self.assertEqual(expectedResult1, actualResult[2][4])
-            self.assertEqual(expectedResult1, actualResult[2][5])
-            self.assertEqual(expectedResult1, actualResult[2][7])
+            self.assertEqual(expectedResult, actualResult[2][1])
+            self.assertEqual(expectedResult, actualResult[2][3])
+            self.assertEqual(expectedResult, actualResult[2][4])
+            self.assertEqual(expectedResult, actualResult[2][5])
+            self.assertEqual(expectedResult, actualResult[2][7])
+            #sides should be same color as the middle cells
+            self.assertEqual(actualResult[1][5], actualResult[1][4])
+            self.assertEqual(actualResult[4][1], actualResult[4][4])
+            self.assertEqual(actualResult[3][3], actualResult[3][4])
+            self.assertEqual(actualResult[5][7], actualResult[5][4])
             
         def test_020_SolveWhiteCross_y1(self):
             inputDict = {}
