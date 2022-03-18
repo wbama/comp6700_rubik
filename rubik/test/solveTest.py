@@ -233,10 +233,10 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(actualResult[5][5], actualResult[5][4])
         self.assertEqual(actualResult[0][5], actualResult[0][4])
         
-    def test_150_ShouldGiveValidCubeNoRotate(self):
+    def test_150_ShouldGiveValidCubeNoRotateY_5(self):
 
         inputDict = {}
-        inputDict['cube'] = 'wrggbobyyryrywrbggywybgorywgrgwywbooobbgrrowwwboboorgy'
+        inputDict['cube'] = 'gwoorbbgygyrwbgoorgbyrorbywobwygbbwobyyrworrwwoggywrgy'
         inputDict['op'] = 'solve'           
 
         expectedResult = {}
