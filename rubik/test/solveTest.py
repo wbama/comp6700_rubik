@@ -8,6 +8,7 @@
 
 import unittest
 import rubik.solve as solve
+from rubik.solveRotations import createCubeListFromInputParms
 
 
 class SolveTest(unittest.TestCase):  
@@ -222,7 +223,7 @@ class SolveTest(unittest.TestCase):
         expectedResult['cube'] = None
         expectedResult['solution'] = "lfLuLFFLUUBBLDD"
         expectedResult['status'] = 'ok'
-        actualResult = solve._solve(inputDict)
+        actualResult = createCubeListFromInputParms(solve._solve(inputDict))
         print(actualResult)
         # self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         # self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
