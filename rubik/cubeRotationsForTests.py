@@ -1,7 +1,7 @@
 """
     Created on 03/05/2022
     @author: Waldo du Toit
-    codes to rotate cube strings. Then use those cube strings in unittests
+    codes to rotate cube strings. Then use those cube strings in unittests to test cube from different sides
     
 """
 from rubik.solve import _solve
