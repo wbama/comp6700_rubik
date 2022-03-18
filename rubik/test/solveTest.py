@@ -255,6 +255,24 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
         self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
         
+    def test_010_SolveWhiteCross_y0(self):
+        inputDict = {}
+        inputDict['cube'] = 'rwrrygooggyrybyowybbbbwrroyoogwggbrywowgrrwgygwwboboyb'    
+        expectedResult = 'w'             
+
+        actualResult = solve._solve(inputDict)
+        print(actualResult)
+        self.assertEqual(expectedResult, actualResult[2][1])
+        self.assertEqual(expectedResult, actualResult[2][3])
+        self.assertEqual(expectedResult, actualResult[2][4])
+        self.assertEqual(expectedResult, actualResult[2][5])
+        self.assertEqual(expectedResult, actualResult[2][7])
+        #sides should be same color as the middle cells
+        self.assertEqual(actualResult[1][5], actualResult[1][4])
+        self.assertEqual(actualResult[4][1], actualResult[4][4])
+        self.assertEqual(actualResult[3][3], actualResult[3][4])
+        self.assertEqual(actualResult[5][7], actualResult[5][4])
+        
 # Sad path tests
         
     def test_910_IncorrectCubeString(self):
