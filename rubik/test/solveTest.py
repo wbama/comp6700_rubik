@@ -225,9 +225,16 @@ class SolveTest(unittest.TestCase):
         expectedResult['status'] = 'ok'
         actualResult = createCubeListFromInputParms(solve._solve(inputDict))
         print(actualResult)
-        # self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        # self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
-        # self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
+        self.assertEqual(expectedResult, actualResult[1][1])
+        self.assertEqual(expectedResult, actualResult[1][3])
+        self.assertEqual(expectedResult, actualResult[1][4])
+        self.assertEqual(expectedResult, actualResult[1][5])
+        self.assertEqual(expectedResult, actualResult[1][7])
+        #sides should be same color as the middle cells
+        self.assertEqual(actualResult[4][5], actualResult[4][4])
+        self.assertEqual(actualResult[2][3], actualResult[2][4])
+        self.assertEqual(actualResult[5][5], actualResult[5][4])
+        self.assertEqual(actualResult[0][5], actualResult[0][4])
         
     def test_150_ShouldGiveValidCubeNoRotate(self):
 
