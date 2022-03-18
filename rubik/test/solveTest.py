@@ -219,10 +219,7 @@ class SolveTest(unittest.TestCase):
         inputDict['rotate'] = 'lfLuLFFLUUBBLDD'
         inputDict['op'] = 'solve'           
 
-        expectedResult = {}
-        expectedResult['cube'] = None
-        expectedResult['solution'] = "lfLuLFFLUUBBLDD"
-        expectedResult['status'] = 'ok'
+        expectedResult = 'w'  
         actualResult = createCubeListFromInputParms(solve._solve(inputDict))
         print(actualResult)
         self.assertEqual(expectedResult, actualResult[1][1])
