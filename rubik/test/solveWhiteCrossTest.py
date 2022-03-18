@@ -56,7 +56,12 @@ class SolveWhiteCrossTest(unittest.TestCase):
             self.assertEqual(expectedResult, actualResult[0][3])
             self.assertEqual(expectedResult, actualResult[0][4])
             self.assertEqual(expectedResult, actualResult[0][5])
-            self.assertEqual(expectedResult, actualResult[0][7])
+            self.assertEqual(expectedResult, actualResult[0][7])            
+            #sides should be same color as the middle cells
+            self.assertEqual(actualResult[4][7], actualResult[4][4])
+            self.assertEqual(actualResult[1][3], actualResult[1][4])
+            self.assertEqual(actualResult[5][1], actualResult[5][4])
+            self.assertEqual(actualResult[3][5], actualResult[3][4])
             
         def test_040_SolveWhiteCross_y3(self):
             inputDict = {}
