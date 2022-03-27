@@ -15,7 +15,7 @@ from rubik.solveLowerLayer import solveLowerLayer
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = 'rwrrygooggyrybyowybbbbwrroyoogwggbrywowgrrwgygwwboboyb'
+inputDict['cube'] = 'gwwboboyboygwbyyyrygwrrgwowggyogrowbrwrrygoogyorrwbbbb'
 inputDict['op'] = 'solve' 
 inputDict['rotate'] = ''
 
@@ -46,7 +46,7 @@ inputDict['rotate'] = ''
 #
 # lst_cube = createCubeListFromInputParms(parms)
 
-print(solveWhiteCross(inputDict))
+print(solveLowerLayer(inputDict))
 
 
 #print(_solve(inputDict))
