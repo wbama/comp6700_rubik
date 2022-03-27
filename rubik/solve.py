@@ -29,16 +29,16 @@ def _solve(parms):
             rotate_length = 0       
        
         if (rotate_length == 0 ):
-            str1 = "".join(lst_cube[0])
-            str2 = "".join(lst_cube[1])
-            str3 = "".join(lst_cube[2])
-            str4 = "".join(lst_cube[3])
-            str5 = "".join(lst_cube[4])
-            str6 = "".join(lst_cube[5])                       
-            
-            str_cube = parms.get('cube')
-            #str_cube = str1+str2+str3+str4+str5+str6   
-            print(str_cube)
+            # str1 = "".join(lst_cube[0])
+            # str2 = "".join(lst_cube[1])
+            # str3 = "".join(lst_cube[2])
+            # str4 = "".join(lst_cube[3])
+            # str5 = "".join(lst_cube[4])
+            # str6 = "".join(lst_cube[5])                       
+            #
+            # str_cube = parms.get('cube')
+            # str_cube = str1+str2+str3+str4+str5+str6   
+            # print(str_cube)
             
             str_rotations_long = "".join(solveWhiteCross(parms)[1])  
             
