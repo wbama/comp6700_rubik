@@ -10,7 +10,9 @@ from rubik.solveWhiteCross import solveWhiteCross
 
 
 def solveLowerLayer(parms):
+    actualResult = solveWhiteCross(parms)[0]
     
-        pass
+    return actualResult
+
     
 

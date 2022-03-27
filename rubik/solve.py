@@ -16,7 +16,8 @@ def _solve(parms):
     result = {}    
     str_cube = ''
     
-    try:          
+    try:      
+        #the test will give string input. Make a list cube    
         lst_cube = createCubeListFromInputParms(parms) 
         global rotate_length
         
@@ -36,8 +37,10 @@ def _solve(parms):
             str6 = "".join(lst_cube[5])                       
             
             str_cube = str1+str2+str3+str4+str5+str6   
+            print(str_cube)
             
             str_rotations_long = "".join(solveWhiteCross(parms)[1])  
+            
             last_x = str_rotations_long.rfind('x')
             str_rotations_short = str_rotations_long[:last_x]
             str_rotations_no_x = str_rotations_short.replace("x", "")

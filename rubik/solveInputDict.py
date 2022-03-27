@@ -5,16 +5,17 @@
     
 """
 from rubik.solve import _solve
-from rubik.solveDaisy import solveDaisy
+
 from rubik.solveRotations import createCubeListFromInputParms, rotateCubeToRight, rotateCubeDown, rotateIntoWhiteCross_y_0, rotateIntoWhiteCross_y_1
 from rubik.solveWhiteCross import solveWhiteCross
 from rubik.solveRotations import createYellowAndWhiteVariables, createStringFromCube
+from rubik.solveLowerLayer import solveLowerLayer
 
 # inputDict['cube'] = "gwwboboyboygwbyyyrygwrrgwowggyogrowbrwrrygoogyorrwbbbb"
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
+inputDict['cube'] = 'rwrrygooggyrybyowybbbbwrroyoogwggbrywowgrrwgygwwboboyb'
 inputDict['op'] = 'solve' 
 inputDict['rotate'] = ''
 
@@ -46,6 +47,6 @@ inputDict['rotate'] = ''
 # lst_cube = createCubeListFromInputParms(parms)
 
 print(solveWhiteCross(inputDict))
-print(solveDaisy(inputDict))
+
 
 #print(_solve(inputDict))
