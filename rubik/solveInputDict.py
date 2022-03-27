@@ -11,9 +11,10 @@ from rubik.solveWhiteCross import solveWhiteCross
 from rubik.solveRotations import createYellowAndWhiteVariables, createStringFromCube
 
 # inputDict['cube'] = "gwwboboyboygwbyyyrygwrrgwowggyogrowbrwrrygoogyorrwbbbb"
+#inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = "bgoowrgoyyyrbgwryyggrbywbgrbwwgbygrwwryorboygobbworwoo"
+inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 inputDict['op'] = 'solve' 
 inputDict['rotate'] = ''
 
@@ -45,5 +46,6 @@ inputDict['rotate'] = ''
 # lst_cube = createCubeListFromInputParms(parms)
 
 print(solveWhiteCross(inputDict))
+print(solveDaisy(inputDict))
 
 #print(_solve(inputDict))
