@@ -356,15 +356,15 @@ class SolveDaisyTest(unittest.TestCase):
             self.assertEqual(expectedResult_y, actualResult_y)
             self.assertEqual(expectedResult_w, actualResult_w)
             
-        def test_170_createYellowVariable(self):
-            inputDict = {}
-            inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
-            expectedResult_y = 'y'     #if no yellow, then front is yellow         
-            expectedResult_w = 'w'     #other side of yellow
-            actualResult_y = createYellowAndWhiteVariables(inputDict)[0]
-            actualResult_w = createYellowAndWhiteVariables(inputDict)[1]
-            self.assertEqual(expectedResult_y, actualResult_y)
-            self.assertEqual(expectedResult_w, actualResult_w)
+        # def test_170_createYellowVariable(self):
+        #     inputDict = {}
+        #     inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
+        #     expectedResult_y = 'y'     #if no yellow, then front is yellow         
+        #     expectedResult_w = 'w'     #other side of yellow
+        #     actualResult_y = createYellowAndWhiteVariables(inputDict)[0]
+        #     actualResult_w = createYellowAndWhiteVariables(inputDict)[1]
+        #     self.assertEqual(expectedResult_y, actualResult_y)
+        #     self.assertEqual(expectedResult_w, actualResult_w)
             
  
         
