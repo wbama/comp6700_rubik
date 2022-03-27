@@ -232,20 +232,20 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(actualResult[5][5], actualResult[5][4])
         self.assertEqual(actualResult[0][5], actualResult[0][4])
         
-    def test_160_ShouldGiveValidCubeNoRotateY_5(self):
-
-        inputDict = {}
-        inputDict['cube'] = 'gwoorbbgygyrwbgoorgbyrorbywobwygbbwobyyrworrwwoggywrgy'
-        inputDict['op'] = 'solve'           
-
-        expectedResult = {}
-        expectedResult['cube'] = None
-        expectedResult['solution'] = "ddFDrdRddFDBBDRRFFDLL"
-        expectedResult['status'] = 'ok'
-        actualResult = solve._solve(inputDict)
-        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
-        self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
+    # def test_160_ShouldGiveValidCubeNoRotateY_5(self):
+    #
+    #     inputDict = {}
+    #     inputDict['cube'] = 'gwoorbbgygyrwbgoorgbyrorbywobwygbbwobyyrworrwwoggywrgy'
+    #     inputDict['op'] = 'solve'           
+    #
+    #     expectedResult = {}
+    #     expectedResult['cube'] = None
+    #     expectedResult['solution'] = "ddFDrdRddFDBBDRRFFDLL"
+    #     expectedResult['status'] = 'ok'
+    #     actualResult = solve._solve(inputDict)
+    #     self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+    #     self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
         
     def test_170_ShouldGiveWhiteCrossOnAboveSolutionNoYellow(self):
 
