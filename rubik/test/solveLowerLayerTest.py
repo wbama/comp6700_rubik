@@ -11,7 +11,8 @@ from rubik.solveLowerLayer import solveLowerLayer
 
 #need to update this. this is not a white cross. Look at the sides too
 class SolveLowerLayerTest(unittest.TestCase):  
-    pass               
+    def test_010_SolveLowerLayer(self):   
+        pass            
 
 
             
