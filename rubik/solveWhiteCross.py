@@ -7,10 +7,12 @@
 """
 
 
-from rubik.solveRotations import rotateIntoWhiteCross_y_4
+from rubik.solveRotations import rotateIntoWhiteCross_y_4, createYellowAndWhiteVariables
 from rubik.solveDaisy import solveDaisy
 
-def solveWhiteCross(parms):    
+def solveWhiteCross(parms):  
+    
+    var_w = createYellowAndWhiteVariables(parms)[1]  
 
     lst_cube_from_daisy = ((rotateIntoWhiteCross_y_4(solveDaisy(parms)[0], solveDaisy(parms)[1])))[0]
     rotation_from_daisy = ((rotateIntoWhiteCross_y_4(solveDaisy(parms)[0], solveDaisy(parms)[1])))[1]        

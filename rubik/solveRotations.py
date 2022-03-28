@@ -1824,7 +1824,7 @@ def y_3_SolveWhiteLeaves(lst_cube, lst_rotate):
         return lst_cube, lst_rotate
 
 def y_4_SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one    
-    
+
         #rotate to non white in [4][5]        
         if lst_cube[4][5] == var_w and lst_cube[4][7] != var_w:
             lst_cube = rotateSide_u(lst_cube)
@@ -2240,6 +2240,73 @@ def rotateIntoWhiteCross_y_5(lst_cube, lst_rotate):
     lst_rotate.append("Dy")      
        
     return lst_cube, lst_rotate
+#######
+def front_left_trigger(lst_cube, lst_rotate):
+    lst_cube = rotateSide_F(lst_cube)
+    lst_cube = rotateSide_U(lst_cube)
+    lst_cube = rotateSide_f(lst_cube)   
+    lst_rotate.append("fuf")  
+    
+    return lst_cube, lst_rotate
+
+def front_right_trigger(lst_cube, lst_rotate):
+    lst_cube = rotateSide_f(lst_cube)
+    lst_cube = rotateSide_u(lst_cube)
+    lst_cube = rotateSide_F(lst_cube)   
+    lst_rotate.append("fuF")  
+    
+    return lst_cube, lst_rotate
+#######
+def right_left_trigger(lst_cube, lst_rotate):
+    lst_cube = rotateSide_R(lst_cube)
+    lst_cube = rotateSide_U(lst_cube)
+    lst_cube = rotateSide_r(lst_cube)   
+    lst_rotate.append("RUr")  
+    
+    return lst_cube, lst_rotate
+
+def right_right_trigger(lst_cube, lst_rotate):
+    lst_cube = rotateSide_r(lst_cube)
+    lst_cube = rotateSide_u(lst_cube)
+    lst_cube = rotateSide_R(lst_cube)   
+    lst_rotate.append("ruR")  
+    
+    return lst_cube, lst_rotate
+
+#######
+def back_left_trigger(lst_cube, lst_rotate):
+    lst_cube = rotateSide_B(lst_cube)
+    lst_cube = rotateSide_U(lst_cube)
+    lst_cube = rotateSide_b(lst_cube)   
+    lst_rotate.append("BUb")  
+    
+    return lst_cube, lst_rotate
+
+def back_right_trigger(lst_cube, lst_rotate):
+    lst_cube = rotateSide_b(lst_cube)
+    lst_cube = rotateSide_u(lst_cube)
+    lst_cube = rotateSide_B(lst_cube)   
+    lst_rotate.append("buB")  
+    
+    return lst_cube, lst_rotate
+
+#######
+def left_left_trigger(lst_cube, lst_rotate):
+    lst_cube = rotateSide_L(lst_cube)
+    lst_cube = rotateSide_U(lst_cube)
+    lst_cube = rotateSide_l(lst_cube)   
+    lst_rotate.append("LUl")  
+    
+    return lst_cube, lst_rotate
+
+def left_right_trigger(lst_cube, lst_rotate):
+    lst_cube = rotateSide_l(lst_cube)
+    lst_cube = rotateSide_u(lst_cube)
+    lst_cube = rotateSide_L(lst_cube)   
+    lst_rotate.append("luL")  
+    
+    return lst_cube, lst_rotate
+
 
 
         

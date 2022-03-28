@@ -11,7 +11,8 @@ from rubik.solveRotations import createYellowAndWhiteVariables
 from rubik.solveRotations import rotateSide_R, rotateSide_r, rotateSide_B, rotateSide_b
 from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotateSide_u
 from rubik.solveRotations import rotateSide_D, rotateSide_d, rotateSide_f, rotateSide_F
-
+from rubik.solveRotations import front_left_trigger, front_right_trigger, right_left_trigger, right_right_trigger
+from rubik.solveRotations import back_left_trigger, back_right_trigger, left_left_trigger, left_right_trigger
 
 def solveLowerLayer(parms):
     
@@ -55,43 +56,57 @@ def solveLowerLayer(parms):
         #[3][2] 
         if lst_cube[3][2] == var_w and lst_cube[0][0] == lst_cube[0][4]:
             lst_rotate.append("") 
+            lst_cube = left_right_trigger(lst_cube, lst_rotate)
+            
         elif lst_cube[3][2] == var_w and lst_cube[0][0] == lst_cube[3][4]:
-            lst_cube = rotateSide_u(lst_cube)
-            lst_rotate.append("u") 
+            lst_cube = rotateSide_U(lst_cube)
+            lst_rotate.append("U") 
+            lst_cube = back_right_trigger(lst_cube, lst_rotate)
+            
         elif lst_cube[3][2] == var_w and lst_cube[0][0] == lst_cube[2][4]:
             lst_cube = rotateSide_u(lst_cube)
             lst_cube = rotateSide_u(lst_cube)
-            lst_rotate.append("uu1") 
+            lst_rotate.append("uu") 
+            lst_cube = right_right_trigger(lst_cube, lst_rotate)
         elif lst_cube[3][2] == var_w and lst_cube[0][0] == lst_cube[1][4]:
-            lst_cube = rotateSide_U(lst_cube)
-            lst_rotate.append("U") 
+            lst_cube = rotateSide_u(lst_cube)
+            lst_rotate.append("u") 
+            lst_cube = front_right_trigger(lst_cube, lst_rotate)
         #[3][0]
         elif lst_cube[3][0] == var_w and lst_cube[2][2] == lst_cube[2][4]:
             lst_rotate.append("") 
+            lst_cube = back_right_trigger(lst_cube, lst_rotate)
         elif lst_cube[3][0] == var_w and lst_cube[2][2] == lst_cube[1][4]:
             lst_cube = rotateSide_U(lst_cube)
-            lst_rotate.append("U") 
+            lst_rotate.append("U")          
+            lst_cube = back_left_trigger(lst_cube, lst_rotate)
+
         elif lst_cube[3][0] == var_w and lst_cube[2][2] == lst_cube[0][4]:
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("UU") 
+            lst_cube = right_left_trigger(lst_cube, lst_rotate)
         elif lst_cube[3][0] == var_w and lst_cube[2][2] == lst_cube[3][4]:
             lst_cube = rotateSide_u(lst_cube)
             lst_rotate.append("u")              
-            
+            lst_cube = front_left_trigger(lst_cube, lst_rotate)
         #[0][0] 
         elif lst_cube[0][0] == var_w and lst_cube[3][2] == lst_cube[0][4]:
             lst_cube = rotateSide_u(lst_cube)
             lst_rotate.append("u") 
+            lst_cube = right_left_trigger(lst_cube, lst_rotate)
         elif lst_cube[0][0] == var_w and lst_cube[3][2] == lst_cube[1][4]:
             lst_cube = rotateSide_u(lst_cube)
             lst_cube = rotateSide_u(lst_cube)
-            lst_rotate.append("uu2") 
+            lst_rotate.append("uu") 
+            lst_cube = back_left_trigger(lst_cube, lst_rotate)
         elif lst_cube[0][0] == var_w and lst_cube[3][2] == lst_cube[2][4]:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U") 
+            lst_cube = left_left_trigger(lst_cube, lst_rotate)
         elif lst_cube[0][0] == var_w and lst_cube[3][2] == lst_cube[3][4]:
-            lst_rotate.append("")             
+            lst_rotate.append("")     
+            lst_cube = front_left_trigger(lst_cube, lst_rotate)        
         #[0][2]
         elif lst_cube[0][2] == var_w and lst_cube[1][0] == lst_cube[0][4]:
             lst_cube = rotateSide_U(lst_cube)
@@ -115,7 +130,7 @@ def solveLowerLayer(parms):
         elif lst_cube[1][0] == var_w and lst_cube[0][2] == lst_cube[2][4]:
             lst_cube = rotateSide_u(lst_cube)
             lst_cube = rotateSide_u(lst_cube)
-            lst_rotate.append("uu3") 
+            lst_rotate.append("uu") 
         elif lst_cube[1][0] == var_w and lst_cube[0][2] == lst_cube[3][4]:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U")             
@@ -127,6 +142,8 @@ def solveLowerLayer(parms):
         elif lst_cube[1][2] == var_w and lst_cube[2][0] == lst_cube[1][4]:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U") 
+            lst_cube = front_right_trigger(lst_cube, lst_rotate)
+            
         elif lst_cube[1][2] == var_w and lst_cube[2][0] == lst_cube[2][4]:
             lst_rotate.append("") 
         elif lst_cube[1][2] == var_w and lst_cube[2][0] == lst_cube[3][4]:
