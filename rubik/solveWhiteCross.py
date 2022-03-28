@@ -6,8 +6,8 @@
     
 """
 
-from rubik.solveRotations import rotateIntoWhiteCross_y_0, rotateIntoWhiteCross_y_1, rotateIntoWhiteCross_y_2, rotateIntoWhiteCross_y_3
-from rubik.solveRotations import rotateIntoWhiteCross_y_4, rotateIntoWhiteCross_y_5
+
+from rubik.solveRotations import rotateIntoWhiteCross_y_4
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveDaisy import solveDaisy
 from rubik.solveRotations import createYellowAndWhiteVariables
@@ -15,7 +15,7 @@ from rubik.solveRotations import createYellowAndWhiteVariables
 
 def solveWhiteCross(parms):
     
-    var_y = createYellowAndWhiteVariables(parms)[0]
+    # var_y = createYellowAndWhiteVariables(parms)[0]
 
     # have the daisy now. match up colors and rotate sides down for white cross
     # if createCubeListFromInputParms(parms)[0][4] == var_y: 
