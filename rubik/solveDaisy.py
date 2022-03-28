@@ -37,10 +37,10 @@ def solveDaisy(parms):
     #     for _ in range(20):
     #         lst_cube = (y_3_SolveWhiteLeaves(lst_cube, lst_rotate))[0]    
             
-    if createCubeListFromInputParms(parms)[4][4] == var_y: 
+    # if createCubeListFromInputParms(parms)[4][4] == var_y: 
         #just run through the code 20 times. Take out the no movements in the end
-        for _ in range(20):
-            lst_cube = (y_4_SolveWhiteLeaves(lst_cube, lst_rotate))[0] 
+    for _ in range(20):
+        lst_cube = (y_4_SolveWhiteLeaves(lst_cube, lst_rotate))[0] 
             
     # if createCubeListFromInputParms(parms)[5][4] == var_y: 
     #     #just run through the code 20 times. Take out the no movements in the end
