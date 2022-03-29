@@ -79,7 +79,8 @@ def solveLowerLayer(parms):
         lst_cube[1][2] != var_w and lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[3][0] != var_w and \
         lst_cube[3][2] != var_w:
             break
-  
+        
+    print(lst_cube)
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
     
     return lst_cube, lst_rotate
