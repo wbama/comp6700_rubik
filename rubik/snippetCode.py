@@ -1,12 +1,7 @@
-"""
-    Created on 03/05/2022
-    @author: Waldo du Toit
-    snippet code
-    
-"""
+i = 0
 
-
-
-a = ""
-
-print(len(a))
+while True:
+    print(i)
+    i+= 1
+    if i == 5:
+        break
