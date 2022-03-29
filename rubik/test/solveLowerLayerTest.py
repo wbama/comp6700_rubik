@@ -14,9 +14,11 @@ class SolveLowerLayerTest(unittest.TestCase):
     def test_010_SolveLowerLayer(self):   
         inputDict = {}
         inputDict['cube'] = 'gwwboboyboygwbyyyrygwrrgwowggyogrowbrwrrygoogyorrwbbbb'    
-        expectedResult = 'w'             
+        expectedResult = 'w'  
+                   
 
         actualResult = solveLowerLayer(inputDict)[0]
+        print(actualResult)
         self.assertEqual(expectedResult, actualResult[5][1])
         self.assertEqual(expectedResult, actualResult[5][2])
         self.assertEqual(expectedResult, actualResult[5][3])
