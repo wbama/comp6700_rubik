@@ -49,11 +49,6 @@ def solveLowerLayer(parms):
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
     
     #if no top corners, solve the bottom corners. Run once, then run top corners
-    if lst_cube[0][0] != var_w and lst_cube[0][2] != var_w and lst_cube[1][0] != var_w and \
-    lst_cube[1][2] != var_w and lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[3][0] != var_w and \
-    lst_cube[3][2] != var_w:
-        print("no top right")
-
             
     #solve the side-top corners
     while True:
