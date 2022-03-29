@@ -21,7 +21,6 @@ def solveLowerLayer(parms):
     var_w = createYellowAndWhiteVariables(parms)[1]
     #the input cube with the white cross
     lst_cube = solveWhiteCross(parms)[0]
-    print(f"beginning cube {lst_cube}")
 
     str_rotations_long = "".join(solveWhiteCross(parms)[1])  
             
@@ -46,7 +45,6 @@ def solveLowerLayer(parms):
     lst_rotate = list(str_rotation_cleanup) 
     
     #the cross color will be whatever is at the bottom. Not always white. use var_w
-    print(f"The cross color will be {var_w}")
     
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
     
@@ -80,7 +78,7 @@ def solveLowerLayer(parms):
         lst_cube[3][2] != var_w:
             break
         
-    print(lst_cube)
+    print(f"end cube {lst_cube}")
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
     
     return lst_cube, lst_rotate
