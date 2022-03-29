@@ -26,6 +26,7 @@ class SolveLowerLayerTest(unittest.TestCase):
         self.assertEqual(expectedResult, actualResult[5][7])
         self.assertEqual(expectedResult, actualResult[5][8])
         #sides should also be solved
+        
           
 
 
