@@ -2454,6 +2454,26 @@ def solve_top_w_corners(lst_cube, lst_rotate):
         lst_cube = back_right_trigger(lst_cube, lst_rotate)[0] 
         
     return lst_cube, lst_rotate 
+
+def solve_bottom_w_corners(lst_cube, lst_rotate):
+    if lst_cube[0][6] == var_w:
+        lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]
+    elif lst_cube[0][8] == var_w:
+        lst_cube = front_right_trigger(lst_cube, lst_rotate)[0]
+    elif lst_cube[1][6] == var_w:
+        lst_cube = right_left_trigger(lst_cube, lst_rotate)[0]
+    elif lst_cube[1][8] == var_w:
+        lst_cube = right_right_trigger(lst_cube, lst_rotate)[0]
+    elif lst_cube[2][6] == var_w:
+        lst_cube = back_left_trigger(lst_cube, lst_rotate)[0]
+    elif lst_cube[2][8] == var_w:
+        lst_cube = back_right_trigger(lst_cube, lst_rotate)[0]
+    elif lst_cube[3][6] == var_w:
+        lst_cube = left_left_trigger(lst_cube, lst_rotate)[0]
+    elif lst_cube[3][8] == var_w:
+        lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]
+        
+    return lst_cube, lst_rotate 
                 
 
 

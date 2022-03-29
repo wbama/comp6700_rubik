@@ -13,7 +13,8 @@ from rubik.solveRotations import rotateSide_R, rotateSide_r, rotateSide_B, rotat
 from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotateSide_u
 from rubik.solveRotations import rotateSide_D, rotateSide_d, rotateSide_f, rotateSide_F
 from rubik.solveRotations import front_left_trigger, front_right_trigger, right_left_trigger, right_right_trigger
-from rubik.solveRotations import back_left_trigger, back_right_trigger, left_left_trigger, left_right_trigger, solve_top_w_corners
+from rubik.solveRotations import back_left_trigger, back_right_trigger, left_left_trigger, left_right_trigger
+from rubik.solveRotations import solve_top_w_corners, solve_bottom_w_corners
 
 def solveLowerLayer(parms):
     
@@ -47,8 +48,6 @@ def solveLowerLayer(parms):
     #the cross color will be whatever is at the bottom. Not always white. use var_w
     print(f"The cross color will be {var_w}")
     
-
-
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
     
     #if no top corners, solve the bottom corners. Run once, then run top corners
@@ -69,10 +68,19 @@ def solveLowerLayer(parms):
             break
     
     # if no side-top corners, put side-bottom corners on top, then solve side-top corners   
-    if lst_cube[2][8] == var_w:
-        lst_cube = back_right_trigger(lst_cube, lst_rotate)[0]
-        print(f"new list {lst_cube}")
-    
+    lst_cube = solve_bottom_w_corners(lst_cube, lst_rotate)[0] 
+    lst_rotate =   solve_bottom_w_corners(lst_cube, lst_rotate)[1]
+        
+    while True:
+        lst_cube = solve_top_w_corners(lst_cube, lst_rotate)[0]  
+        lst_rotate =   solve_top_w_corners(lst_cube, lst_rotate)[1]              
+                      
+        if lst_cube[0][0] != var_w and lst_cube[0][2] != var_w and lst_cube[1][0] != var_w and \
+        lst_cube[1][2] != var_w and lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[3][0] != var_w and \
+        lst_cube[3][2] != var_w:
+            break
+  
+    # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
     
     return lst_cube, lst_rotate
 
