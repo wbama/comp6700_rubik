@@ -285,7 +285,7 @@ class SolveTest(unittest.TestCase):
         
     def test_190_SolveLowerLayer(self):   
         inputDict = {}
-        inputDict['cube'] = 'ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw'  
+        inputDict['cube'] = 'ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw0'  
         var_w = inputDict['cube'][-5]
         expectedResult_col = var_w 
                    
