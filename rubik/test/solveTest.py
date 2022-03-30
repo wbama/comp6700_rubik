@@ -215,11 +215,11 @@ class SolveTest(unittest.TestCase):
     
     def test_150_SolveLowerLayer(self):   
         inputDict = {}
-        inputDict['cube'] = 'ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw'         
+        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'         
         rotations =(solve._solve(inputDict)).get("solution")
         
         inputDict = {}
-        inputDict['cube'] = 'ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw'         
+        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'         
         inputDict['rotate'] = rotations
         
         var_w = inputDict['cube'][-5]

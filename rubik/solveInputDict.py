@@ -11,13 +11,13 @@ from rubik.solveWhiteCross import solveWhiteCross
 from rubik.solveRotations import createYellowAndWhiteVariables, createStringFromCube
 from rubik.solveLowerLayer import solveLowerLayer
 
-# inputDict['cube'] = "gwwboboyboygwbyyyrygwrrgwowggyogrowbrwrrygoogyorrwbbbb"
+# inputDict['cube'] = "ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw"
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = 'ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw'
+inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 inputDict['op'] = 'solve' 
-inputDict['rotate'] = ''
+inputDict['rotate'] = 'urUfuuDDRRUURRBBLLFFUBUbUluuLfuFluuLUluLULUl'
 
 
 
@@ -42,11 +42,11 @@ inputDict['rotate'] = ''
 # #
 #print(f"WC {solveWhiteCross(inputDict)}")
 #
-# print(_solve(inputDict))
+print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 
-solveLowerLayer(inputDict)
+#solveLowerLayer(inputDict)
 
 
 #print(_solve(inputDict))
