@@ -311,8 +311,9 @@ class SolveTest(unittest.TestCase):
 
         # #sides should also be solved
         self.assertEqual( (actualResult.get('cube'))[6],  (actualResult.get('cube'))[7],  (actualResult.get('cube'))[8])
- 
-
+        self.assertEqual( (actualResult.get('cube'))[15],  (actualResult.get('cube'))[16],  (actualResult.get('cube'))[17])
+        self.assertEqual( (actualResult.get('cube'))[24],  (actualResult.get('cube'))[25],  (actualResult.get('cube'))[26])
+        self.assertEqual( (actualResult.get('cube'))[33],  (actualResult.get('cube'))[34],  (actualResult.get('cube'))[35])
 
 # Sad path tests
 
