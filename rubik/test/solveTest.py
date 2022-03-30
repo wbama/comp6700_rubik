@@ -214,19 +214,14 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('solution'), actualResult.get('solution'))  
     
     def test_150_SolveLowerLayer(self):   
+       
         inputDict = {}
         inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'         
-        rotations =(solve._solve(inputDict)).get("solution")
-        
-        inputDict = {}
-        inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'         
-        inputDict['rotate'] = rotations
+        inputDict['rotate'] = (solve._solve(inputDict)).get("solution")
         
         var_w = inputDict['cube'][-5]
         expectedResult_col = var_w 
-        
-        
-        print(rotations)
+
         actualResult =  solve._solve(inputDict)
         print(actualResult)
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[45])
