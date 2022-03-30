@@ -378,97 +378,97 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict)
         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
     
-    # def test_942_IncorrectParmsRotateString(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
-    #     inputDict['rotate'] = 'Ff Bb'
-    #     inputDict['op'] = 'solve'
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))  
-    #
-    # def test_943_IncorrectParmsRotateString(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
-    #     inputDict['rotate'] = 'Fx'
-    #     inputDict['op'] = 'solve'
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))        
-    #
-    #
-    # def test_950_CubeMoreThan54Elements(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboogo'
-    #     inputDict['op'] = 'solve'
-    #     inputDict['rotate'] = 'F'
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: cube string has to have 54 elements'
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
-    # def test_960_CubeFewerThan54Elements(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboo'
-    #     inputDict['op'] = 'solve'
-    #     inputDict['rotate'] = 'F'
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: cube string has to have 54 elements'
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
-    # def test_970_CubeNotSixColors(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'bbbbbbbbbbbbbbbbbbgggggggggoooooooooyyyyyyyyywwwwwwwww'
-    #     inputDict['op'] = 'solve'
-    #     inputDict['rotate'] = 'F'
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: there should be 6 colors'
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
-    # def test_980_CubeNineOccurencesOfSixColors(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'bbbbbbbbbbrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
-    #     inputDict['op'] = 'solve'
-    #     inputDict['rotate'] = 'F'
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: one of the colors is more or less than 9 occurrences'
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
-    # def test_990_MiddleFaceDifferentColor(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'bbbbrbbbbrrrrrrrbrgggggggggoooooooooyyyyyyyyywwwwwwwww'
-    #     inputDict['op'] = 'solve'
-    #     inputDict['rotate'] = 'f'
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: two middle faces are the same colors'
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
-    # def test_9100_OnlyLettersAndNumbersInCubeString(self):
-    #
-    #     inputDict = {}
-    #     inputDict['cube'] = 'rrbbbbgggr????oro?ogr?ggobbwwwwwwwwwgrboorbb?o??rrgoog'
-    #     inputDict['rotate'] = 'f'
-    #     inputDict['op'] = 'solve'           
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: only alphanumeric characters in the cube string'
-    #
-    #     actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
+    def test_942_IncorrectParmsRotateString(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
+        inputDict['rotate'] = 'Ff Bb'
+        inputDict['op'] = 'solve'
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))  
+    
+    def test_943_IncorrectParmsRotateString(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
+        inputDict['rotate'] = 'Fx'
+        inputDict['op'] = 'solve'
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))        
+    
+    
+    def test_950_CubeMoreThan54Elements(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboogo'
+        inputDict['op'] = 'solve'
+        inputDict['rotate'] = 'F'
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: cube string has to have 54 elements'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
+    def test_960_CubeFewerThan54Elements(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboo'
+        inputDict['op'] = 'solve'
+        inputDict['rotate'] = 'F'
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: cube string has to have 54 elements'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
+    def test_970_CubeNotSixColors(self):
+        inputDict = {}
+        inputDict['cube'] = 'bbbbbbbbbbbbbbbbbbgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        inputDict['op'] = 'solve'
+        inputDict['rotate'] = 'F'
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: there should be 6 colors'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
+    def test_980_CubeNineOccurencesOfSixColors(self):
+        inputDict = {}
+        inputDict['cube'] = 'bbbbbbbbbbrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        inputDict['op'] = 'solve'
+        inputDict['rotate'] = 'F'
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: one of the colors is more or less than 9 occurrences'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
+    def test_990_MiddleFaceDifferentColor(self):
+        inputDict = {}
+        inputDict['cube'] = 'bbbbrbbbbrrrrrrrbrgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        inputDict['op'] = 'solve'
+        inputDict['rotate'] = 'f'
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: two middle faces are the same colors'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
+    def test_9100_OnlyLettersAndNumbersInCubeString(self):
+    
+        inputDict = {}
+        inputDict['cube'] = 'rrbbbbgggr????oro?ogr?ggobbwwwwwwwwwgrboorbb?o??rrgoog'
+        inputDict['rotate'] = 'f'
+        inputDict['op'] = 'solve'           
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: only alphanumeric characters in the cube string'
+    
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
     # def test_9110_ReturnErrorIncorrectAdjacentColor(self):
     #     inputDict = {}
     #     inputDict['cube'] = 'wyrwbbowwyggyrwbrwyywrgbggygoowoobyyrrrbybbobgrrgwgooo'
