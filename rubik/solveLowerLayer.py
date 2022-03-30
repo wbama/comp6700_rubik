@@ -14,7 +14,7 @@ from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotat
 from rubik.solveRotations import rotateSide_D, rotateSide_d, rotateSide_f, rotateSide_F
 from rubik.solveRotations import front_left_trigger, front_right_trigger, right_left_trigger, right_right_trigger
 from rubik.solveRotations import back_left_trigger, back_right_trigger, left_left_trigger, left_right_trigger
-from rubik.solveRotations import solve_top_w_corners, solve_bottom_w_corners
+from rubik.solveRotations import solve_top_w_corners, solve_bottom_w_corners, solve_top_white_cells
 
 def solveLowerLayer(parms):
     
@@ -44,13 +44,15 @@ def solveLowerLayer(parms):
     #if no top corners, solve the bottom corners. Run once, then run top corners            
     #solve the side-top corners
     for _ in range(50):
-    # while True:    
+    # while True:   
+        print(f"input list {lst_cube}") 
+        
         if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
         lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
         lst_cube[3][2] == var_w:
-            lst_cube_rotate = solve_top_w_corners(lst_cube, lst_rotate)
-            lst_cube = lst_cube_rotate[0]
-            lst_rotate = lst_cube_rotate[1]
+            lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
+            lst_cube = lst_top_w_corners[0]
+            lst_rotate = lst_top_w_corners[1]
             print(f"after top white rotate {lst_cube}")     
     
         # if no side-top corners, put side-bottom corners on top, then solve side-top corners   
@@ -58,15 +60,19 @@ def solveLowerLayer(parms):
         if lst_cube[0][0] != var_w and lst_cube[0][2] != var_w and lst_cube[1][0] != var_w and \
         lst_cube[1][2] != var_w and lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[3][0] != var_w and \
         lst_cube[3][2] != var_w:
-            lst_cube_rotate = solve_bottom_w_corners(lst_cube, lst_rotate)
-            lst_cube = lst_cube_rotate[0]
-            lst_rotate = lst_cube_rotate[1]
-            print(f"after bottom white rotate {lst_cube} {lst_rotate}")
+            lst_bottom_w_corners = solve_bottom_w_corners(lst_cube, lst_rotate)
+            lst_cube = lst_bottom_w_corners[0]
+            lst_rotate = lst_bottom_w_corners[1]
+            print(f"after bottom white rotate {lst_cube}")
             
-        if lst_cube[4][6] == var_w and lst_cube[5][0] != var_w:
+        if lst_cube[4][6] == var_w or lst_cube[4][8] == var_w or lst_cube[4][0] == var_w or lst_cube[4][2] == var_w:
             print("top white somewhere")
-            #lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]
-            # lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]            
+            lst_top_white_cells = solve_top_white_cells(lst_cube, lst_rotate)
+            lst_cube = lst_top_white_cells[0]
+            lst_rotate = lst_top_white_cells[1]
+
+                # lst_cube = (front_left_trigger(lst_cube, lst_rotate))[0]
+            print(f"after top rotate {lst_cube}")           
             
         if lst_cube[5][0] == var_w and lst_cube[5][1] == var_w and lst_cube[5][2] == var_w and lst_cube[5][3] == var_w and \
         lst_cube[5][4] == var_w and lst_cube[5][5] == var_w and lst_cube[5][6] == var_w and lst_cube[5][7] == var_w and \

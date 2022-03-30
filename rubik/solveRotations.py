@@ -1821,7 +1821,7 @@ def y_3_SolveWhiteLeaves(lst_cube, lst_rotate):
             lst_cube = lst_cube
             lst_rotate.append("") 
             
-        return lst_cube, lst_rotate
+        return [lst_cube, lst_rotate]
 
 def y_4_SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one    
 
@@ -1961,7 +1961,7 @@ def y_4_SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one
             lst_cube = lst_cube
             lst_rotate.append("")
             
-        return lst_cube, lst_rotate
+        return [lst_cube, lst_rotate]
 
 def y_5_SolveWhiteLeaves(lst_cube, lst_rotate): # working on this
     
@@ -2099,7 +2099,7 @@ def y_5_SolveWhiteLeaves(lst_cube, lst_rotate): # working on this
             lst_rotate.append("")
             
     
-        return lst_cube, lst_rotate
+        return [lst_cube, lst_rotate]
     
 def rotateIntoWhiteCross_y_0(lst_cube, lst_rotate):
     #if statements. Can have more than one outcome
@@ -2123,7 +2123,7 @@ def rotateIntoWhiteCross_y_0(lst_cube, lst_rotate):
     lst_rotate.append("Fy")  
 
             
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 def rotateIntoWhiteCross_y_1(lst_cube, lst_rotate):
     #if statements. Can have more than one outcome
@@ -2146,7 +2146,7 @@ def rotateIntoWhiteCross_y_1(lst_cube, lst_rotate):
     lst_cube = rotateSide_R(lst_cube)
     lst_rotate.append("Ry")      
        
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 
 def rotateIntoWhiteCross_y_2(lst_cube, lst_rotate):
@@ -2170,7 +2170,7 @@ def rotateIntoWhiteCross_y_2(lst_cube, lst_rotate):
     lst_cube = rotateSide_B(lst_cube)
     lst_rotate.append("By")      
        
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 def rotateIntoWhiteCross_y_3(lst_cube, lst_rotate):
     #if statements. Can have more than one outcome
@@ -2193,7 +2193,7 @@ def rotateIntoWhiteCross_y_3(lst_cube, lst_rotate):
     lst_cube = rotateSide_L(lst_cube)
     lst_rotate.append("Ly")      
        
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 def rotateIntoWhiteCross_y_4(lst_cube, lst_rotate):
     #if statements. Can have more than one outcome
@@ -2216,7 +2216,7 @@ def rotateIntoWhiteCross_y_4(lst_cube, lst_rotate):
     lst_cube = rotateSide_U(lst_cube)
     lst_rotate.append("U")      
        
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 def rotateIntoWhiteCross_y_5(lst_cube, lst_rotate):
     #if statements. Can have more than one outcome
@@ -2239,7 +2239,7 @@ def rotateIntoWhiteCross_y_5(lst_cube, lst_rotate):
     lst_cube = rotateSide_D(lst_cube)
     lst_rotate.append("Dy")      
        
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 #######
 def front_left_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_F(lst_cube)
@@ -2247,7 +2247,7 @@ def front_left_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_f(lst_cube)   
     lst_rotate.append("Fuf")  
     
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 def front_right_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_f(lst_cube)
@@ -2255,7 +2255,7 @@ def front_right_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_F(lst_cube)   
     lst_rotate.append("fuF")  
     
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 #######
 def right_left_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_R(lst_cube)
@@ -2263,7 +2263,7 @@ def right_left_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_r(lst_cube)   
     lst_rotate.append("RUr")  
     
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 def right_right_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_r(lst_cube)
@@ -2271,7 +2271,7 @@ def right_right_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_R(lst_cube)   
     lst_rotate.append("ruR")  
     
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 #######
 def back_left_trigger(lst_cube, lst_rotate):
@@ -2280,7 +2280,7 @@ def back_left_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_b(lst_cube)   
     lst_rotate.append("BUb")  
     
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 def back_right_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_b(lst_cube)
@@ -2288,7 +2288,7 @@ def back_right_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_B(lst_cube)   
     lst_rotate.append("buB")  
     
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 #######
 def left_left_trigger(lst_cube, lst_rotate):
@@ -2297,7 +2297,7 @@ def left_left_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_l(lst_cube)   
     lst_rotate.append("LUl")  
     
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 def left_right_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_l(lst_cube)
@@ -2305,7 +2305,7 @@ def left_right_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_L(lst_cube)   
     lst_rotate.append("luL")  
     
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]
 
 def solve_top_w_corners(lst_cube, lst_rotate):
     
@@ -2457,7 +2457,7 @@ def solve_top_w_corners(lst_cube, lst_rotate):
         lst_rotate.append("") 
         lst_cube = back_right_trigger(lst_cube, lst_rotate)[0] 
         
-    return lst_cube, lst_rotate 
+    return [lst_cube, lst_rotate]
 
 def solve_bottom_w_corners(lst_cube, lst_rotate):
     if lst_cube[0][6] == var_w:
@@ -2477,7 +2477,87 @@ def solve_bottom_w_corners(lst_cube, lst_rotate):
     elif lst_cube[3][8] == var_w:
         lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]
         
-    return lst_cube, lst_rotate 
+    return [lst_cube, lst_rotate]
+
+def solve_top_white_cells(lst_cube, lst_rotate):
+    if lst_cube[4][6] == var_w and lst_cube[5][0] != var_w:
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube) 
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)   
+            lst_rotate.append("luLluL")  
+    elif lst_cube[4][6] == var_w and lst_cube[5][2] != var_w:
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube) 
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)   
+            lst_rotate.append("uluLluL")  
+    elif lst_cube[4][6] == var_w and lst_cube[5][8] != var_w:
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube) 
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)   
+            lst_rotate.append("uuluLluL")  
+    elif lst_cube[4][6] == var_w and lst_cube[5][6] != var_w:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube) 
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)   
+            lst_rotate.append("UluLluL") 
+            
+            
+    elif lst_cube[4][8] == var_w and lst_cube[5][0] != var_w:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube) 
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)   
+            lst_rotate.append("UluLluL")  
+    elif lst_cube[4][8] == var_w and lst_cube[5][6] != var_w:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube) 
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)   
+            lst_rotate.append("UUluLluL")  
+    elif lst_cube[4][8] == var_w and lst_cube[5][8] != var_w:
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube) 
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)   
+            lst_rotate.append("uluLluL")  
+    elif lst_cube[4][8] == var_w and lst_cube[5][6] != var_w:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube) 
+            lst_cube = rotateSide_l(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_L(lst_cube)   
+            lst_rotate.append("UUluLluL") 
+        
+    return [lst_cube, lst_rotate]
                 
 
 
