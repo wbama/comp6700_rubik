@@ -469,16 +469,16 @@ class SolveTest(unittest.TestCase):
         actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
     
-    # def test_9110_ReturnErrorIncorrectAdjacentColor(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'wyrwbbowwyggyrwbrwyywrgbggygoowoobyyrrrbybbobgrrgwgooo'
-    #     inputDict['op'] = 'solve'  
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: adjacent color to color that would appear on opposite side'
-    #
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    def test_9110_ReturnErrorIncorrectAdjacentColor(self):
+        inputDict = {}
+        inputDict['cube'] = 'wyrwbbowwyggyrwbrwyywrgbggygoowoobyyrrrbybbobgrrgwgooo'
+        inputDict['op'] = 'solve'  
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: adjacent color to color that would appear on opposite side'
+    
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
     #
     #     result = solve._solve(inputDict)
     #     self.assertIn('status', result)
