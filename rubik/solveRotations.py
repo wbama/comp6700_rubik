@@ -2200,21 +2200,21 @@ def rotateIntoWhiteCross_y_4(lst_cube, lst_rotate):
     if lst_cube[4][5] == var_w and (lst_cube[1][1] == lst_cube[1][4]):
         lst_cube = rotateSide_R(lst_cube)
         lst_cube = rotateSide_R(lst_cube)
-        lst_rotate.append("RRx")
+        lst_rotate.append("RR")
     if lst_cube[4][1] == var_w and (lst_cube[2][1] == lst_cube[2][4]):
         lst_cube = rotateSide_B(lst_cube)
         lst_cube = rotateSide_B(lst_cube)
-        lst_rotate.append("BBx")   
+        lst_rotate.append("BB")   
     if lst_cube[4][3] == var_w and (lst_cube[3][1] == lst_cube[3][4]):
         lst_cube = rotateSide_L(lst_cube)
         lst_cube = rotateSide_L(lst_cube)
-        lst_rotate.append("LLx") 
+        lst_rotate.append("LL") 
     if lst_cube[4][7] == var_w and (lst_cube[0][4] == lst_cube[0][1]):
         lst_cube = rotateSide_F(lst_cube)
         lst_cube = rotateSide_F(lst_cube)
-        lst_rotate.append("FFx")  
+        lst_rotate.append("FF")  
     lst_cube = rotateSide_U(lst_cube)
-    lst_rotate.append("Uy")      
+    lst_rotate.append("U")      
        
     return lst_cube, lst_rotate
 
@@ -2328,7 +2328,7 @@ def solve_top_w_corners(lst_cube, lst_rotate):
         lst_rotate.append("u") 
         lst_cube = front_right_trigger(lst_cube, lst_rotate)[0]
     #[3][0]
-    if lst_cube[3][0] == var_w and lst_cube[2][2] == lst_cube[2][4]:
+    elif lst_cube[3][0] == var_w and lst_cube[2][2] == lst_cube[2][4]:
         lst_rotate.append("") 
         lst_cube = back_right_trigger(lst_cube, lst_rotate)
     elif lst_cube[3][0] == var_w and lst_cube[2][2] == lst_cube[1][4]:
@@ -2346,7 +2346,7 @@ def solve_top_w_corners(lst_cube, lst_rotate):
         lst_rotate.append("u")              
         lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]
     #[0][0] 
-    if lst_cube[0][0] == var_w and lst_cube[3][2] == lst_cube[0][4]:
+    elif lst_cube[0][0] == var_w and lst_cube[3][2] == lst_cube[0][4]:
         lst_cube = rotateSide_u(lst_cube)
         lst_rotate.append("u") 
         lst_cube = right_left_trigger(lst_cube, lst_rotate)[0]
@@ -2363,24 +2363,28 @@ def solve_top_w_corners(lst_cube, lst_rotate):
         lst_rotate.append("")     
         lst_cube = front_left_trigger(lst_cube, lst_rotate) [0]       
     #[0][2]
-    if lst_cube[0][2] == var_w and lst_cube[1][0] == lst_cube[0][4]:
+    elif lst_cube[0][2] == var_w and lst_cube[1][0] == lst_cube[0][4]:
         lst_cube = rotateSide_U(lst_cube)
-        lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]       
         lst_rotate.append("U") 
+        lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]       
+
     elif lst_cube[0][2] == var_w and lst_cube[1][0] == lst_cube[1][4]:
-        lst_cube = front_right_trigger(lst_cube, lst_rotate) [0]       
         lst_rotate.append("") 
+        lst_cube = front_right_trigger(lst_cube, lst_rotate) [0]
     elif lst_cube[0][2] == var_w and lst_cube[1][0] == lst_cube[2][4]:
         lst_cube = rotateSide_u(lst_cube)
-        lst_cube = right_right_trigger(lst_cube, lst_rotate)[0]   
         lst_rotate.append("u") 
+        lst_cube = right_right_trigger(lst_cube, lst_rotate)[0]   
+
     elif lst_cube[0][2] == var_w and lst_cube[1][0] == lst_cube[3][4]:
         lst_cube = rotateSide_U(lst_cube)
-        lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]  
-        lst_rotate.append("U")          
+        lst_cube = rotateSide_U(lst_cube)
+        lst_rotate.append("UU")    
+        lst_cube = back_right_trigger(lst_cube, lst_rotate)[0]  
+   
         
     #[1][0] 
-    if lst_cube[1][0] == var_w and lst_cube[0][2] == lst_cube[0][4]:
+    elif lst_cube[1][0] == var_w and lst_cube[0][2] == lst_cube[0][4]:
         lst_rotate.append("") 
         lst_cube = right_left_trigger(lst_cube, lst_rotate)[0]  
     elif lst_cube[1][0] == var_w and lst_cube[0][2] == lst_cube[1][4]:
@@ -2398,7 +2402,7 @@ def solve_top_w_corners(lst_cube, lst_rotate):
         lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]      
                 
     #[1][2]
-    if lst_cube[1][2] == var_w and lst_cube[2][0] == lst_cube[0][4]:
+    elif lst_cube[1][2] == var_w and lst_cube[2][0] == lst_cube[0][4]:
         lst_cube = rotateSide_U(lst_cube)
         lst_cube = rotateSide_U(lst_cube)
         lst_rotate.append("UU") 
@@ -2418,7 +2422,7 @@ def solve_top_w_corners(lst_cube, lst_rotate):
         lst_cube = back_right_trigger(lst_cube, lst_rotate)[0]
         
     #[2][0] 
-    if lst_cube[2][0] == var_w and lst_cube[1][2] == lst_cube[0][4]:
+    elif lst_cube[2][0] == var_w and lst_cube[1][2] == lst_cube[0][4]:
         lst_cube = rotateSide_U(lst_cube)
         lst_rotate.append("U")   
         lst_cube = right_left_trigger(lst_cube, lst_rotate)[0]
@@ -2436,7 +2440,7 @@ def solve_top_w_corners(lst_cube, lst_rotate):
         lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]
                     
     #[2][2]
-    if lst_cube[2][2] == var_w and lst_cube[3][0] == lst_cube[0][4]:
+    elif lst_cube[2][2] == var_w and lst_cube[3][0] == lst_cube[0][4]:
         lst_cube = rotateSide_u(lst_cube)
         lst_rotate.append("U") 
         lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]
