@@ -49,74 +49,33 @@ def solveLowerLayer(parms):
     #if no top corners, solve the bottom corners. Run once, then run top corners
             
     #solve the side-top corners
-    # while True:
-    if lst_cube[0][0] != var_w and lst_cube[0][2] != var_w and lst_cube[1][0] != var_w and \
-    lst_cube[1][2] != var_w and lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[3][0] != var_w and \
-    lst_cube[3][2] != var_w:
-        print("no top white")
-        print(lst_cube)
+    while True:    
+        if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
+        lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
+        lst_cube[3][2] == var_w:
+            print("has top white")
+            lst_cube_rotate = solve_top_w_corners(lst_cube, lst_rotate)
+            lst_cube = lst_cube_rotate[0]
+            lst_rotate = lst_cube_rotate[1]
+            print(f"after top white rotate {lst_cube}")     
     
-    if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
-    lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
-    lst_cube[3][2] == var_w:
-        print("has top white")
-        lst_cube_rotate = solve_top_w_corners(lst_cube, lst_rotate)
-        lst_cube = lst_cube_rotate[0]
-        lst_rotate = lst_cube_rotate[1]
-        print(f"after top white rotate {lst_cube}")     
-        # if lst_cube[0][0] != var_w and lst_cube[0][2] != var_w and lst_cube[1][0] != var_w and \
-        # lst_cube[1][2] != var_w and lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[3][0] != var_w and \
-        # lst_cube[3][2] != var_w:
-        #     break
-    
-    # if no side-top corners, put side-bottom corners on top, then solve side-top corners   
-    # just do the rotate once, then split up, else will do twice
-    if lst_cube[0][0] != var_w and lst_cube[0][2] != var_w and lst_cube[1][0] != var_w and \
-    lst_cube[1][2] != var_w and lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[3][0] != var_w and \
-    lst_cube[3][2] != var_w:
-        print("has bottom white")
-        lst_cube_rotate = solve_bottom_w_corners(lst_cube, lst_rotate)
-        lst_cube = lst_cube_rotate[0]
-        lst_rotate = lst_cube_rotate[1]
-        print(f"after bottom white rotate {lst_cube} {lst_rotate}") 
+        # if no side-top corners, put side-bottom corners on top, then solve side-top corners   
+        # just do the rotate once, then split up, else will do twice
+        if lst_cube[0][0] != var_w and lst_cube[0][2] != var_w and lst_cube[1][0] != var_w and \
+        lst_cube[1][2] != var_w and lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[3][0] != var_w and \
+        lst_cube[3][2] != var_w:
+            print("has bottom white")
+            lst_cube_rotate = solve_bottom_w_corners(lst_cube, lst_rotate)
+            lst_cube = lst_cube_rotate[0]
+            lst_rotate = lst_cube_rotate[1]
+            print(f"after bottom white rotate {lst_cube} {lst_rotate}")
+            
+        if lst_cube[5][0] == var_w and lst_cube[5][1] == var_w and lst_cube[5][2] == var_w and \
+        lst_cube[5][3] == var_w and lst_cube[5][4] == var_w and lst_cube[5][5] == var_w:
+            break
 
         
-    if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
-    lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
-    lst_cube[3][2] == var_w:
-        print("has top white")
-        lst_cube_rotate = solve_top_w_corners(lst_cube, lst_rotate)
-        lst_cube = lst_cube_rotate[0]
-        lst_rotate = lst_cube_rotate[1]
-        print(f"after top white rotate {lst_cube} {lst_rotate}")  
-        
-    if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
-    lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
-    lst_cube[3][2] == var_w:
-        print("has top white")
-        lst_cube_rotate = solve_top_w_corners(lst_cube, lst_rotate)
-        lst_cube = lst_cube_rotate[0]
-        lst_rotate = lst_cube_rotate[1]
-        print(f"after top white rotate {lst_cube} {lst_rotate}")
-        
-    if lst_cube[0][0] != var_w and lst_cube[0][2] != var_w and lst_cube[1][0] != var_w and \
-    lst_cube[1][2] != var_w and lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[3][0] != var_w and \
-    lst_cube[3][2] != var_w:
-        print("has bottom white")
-        lst_cube_rotate = solve_bottom_w_corners(lst_cube, lst_rotate)
-        lst_cube = lst_cube_rotate[0]
-        lst_rotate = lst_cube_rotate[1]
-        print(f"after bottom white rotate {lst_cube} {lst_rotate}") 
-        
-    if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
-    lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
-    lst_cube[3][2] == var_w:
-        print("has top white")
-        lst_cube_rotate = solve_top_w_corners(lst_cube, lst_rotate)
-        lst_cube = lst_cube_rotate[0]
-        lst_rotate = lst_cube_rotate[1]
-        print(f"after top white rotate {lst_cube} {lst_rotate}")
-  
+
         
     print(lst_rotate)
     print(lst_cube)       
