@@ -472,6 +472,7 @@ class SolveTest(unittest.TestCase):
     def test_9110_ReturnErrorIncorrectAdjacentColor(self):
         inputDict = {}
         inputDict['cube'] = 'wyrwbbowwyggyrwbrwyywrgbggygoowoobyyrrrbybbobgrrgwgooo'
+        inputDict['rotate'] = 'f'
         inputDict['op'] = 'solve'  
     
         expectedResult = {}
