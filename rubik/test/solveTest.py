@@ -297,6 +297,7 @@ class SolveTest(unittest.TestCase):
         
         print(rotations)
         actualResult =  solve._solve(inputDict)
+        print(actualResult)
         # self.assertEqual(expectedResult_col, actualResult[5][1])
         # self.assertEqual(expectedResult_col, actualResult[5][2])
         # self.assertEqual(expectedResult_col, actualResult[5][3])
