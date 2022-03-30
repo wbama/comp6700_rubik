@@ -247,24 +247,24 @@ class SolveTest(unittest.TestCase):
     #     self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
     #     self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
         
-    def test_170_ShouldGiveWhiteCrossOnAboveSolutionNoYellow(self):
-
-        inputDict = {}
-        inputDict['cube'] = 'gwoorbbg1g1rwbgoorgb1rorb1wobw1gbbwob11rworrwwogg1wrg1'
-        inputDict['op'] = 'solve'    
-        inputDict['rotate'] = 'ddFDrdRddFDBBDRRFFDLL'
-        expectedResult = 'w'  
-        actualResult = createCubeListFromInputParms(solve._solve(inputDict))
-        self.assertEqual(expectedResult, actualResult[4][1])
-        self.assertEqual(expectedResult, actualResult[4][3])
-        self.assertEqual(expectedResult, actualResult[4][4])
-        self.assertEqual(expectedResult, actualResult[4][5])
-        self.assertEqual(expectedResult, actualResult[4][7])
-        #sides should be same color as the middle cells
-        self.assertEqual(actualResult[3][1], actualResult[3][4])
-        self.assertEqual(actualResult[0][1], actualResult[0][4])
-        self.assertEqual(actualResult[1][1], actualResult[1][4])
-        self.assertEqual(actualResult[2][1], actualResult[2][4])
+    # def test_170_ShouldGiveWhiteCrossOnAboveSolutionNoYellow(self):
+    #
+    #     inputDict = {}
+    #     inputDict['cube'] = 'gwoorbbg1g1rwbgoorgb1rorb1wobw1gbbwob11rworrwwogg1wrg1'
+    #     inputDict['op'] = 'solve'    
+    #     inputDict['rotate'] = 'ddFDrdRddFDBBDRRFFDLL'
+    #     expectedResult = 'w'  
+    #     actualResult = createCubeListFromInputParms(solve._solve(inputDict))
+    #     self.assertEqual(expectedResult, actualResult[4][1])
+    #     self.assertEqual(expectedResult, actualResult[4][3])
+    #     self.assertEqual(expectedResult, actualResult[4][4])
+    #     self.assertEqual(expectedResult, actualResult[4][5])
+    #     self.assertEqual(expectedResult, actualResult[4][7])
+    #     #sides should be same color as the middle cells
+    #     self.assertEqual(actualResult[3][1], actualResult[3][4])
+    #     self.assertEqual(actualResult[0][1], actualResult[0][4])
+    #     self.assertEqual(actualResult[1][1], actualResult[1][4])
+    #     self.assertEqual(actualResult[2][1], actualResult[2][4])
         
     def test_180_ShouldNoSolutionSolvedCube(self):
 
