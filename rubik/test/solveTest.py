@@ -266,21 +266,21 @@ class SolveTest(unittest.TestCase):
 #     #     self.assertEqual(actualResult[1][1], actualResult[1][4])
 #     #     self.assertEqual(actualResult[2][1], actualResult[2][4])
 #
-#     def test_180_ShouldNoSolutionSolvedCube(self):
-#
-#         inputDict = {}
-#         inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
-#         inputDict['rotate'] = ''
-#         inputDict['op'] = 'solve'           
-#
-#         expectedResult = {}
-#         expectedResult['cube'] = None
-#         expectedResult['solution'] = ""
-#         expectedResult['status'] = 'ok'
-#         actualResult = solve._solve(inputDict)
-#         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-#         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
-#         self.assertEqual(expectedResult.get('solution'), actualResult.get('solution'))  
+    def test_180_ShouldNoSolutionSolvedCube(self):
+
+        inputDict = {}
+        inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
+        inputDict['rotate'] = ''
+        inputDict['op'] = 'solve'           
+
+        expectedResult = {}
+        expectedResult['cube'] = None
+        expectedResult['solution'] = ""
+        expectedResult['status'] = 'ok'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+        self.assertEqual(expectedResult.get('solution'), actualResult.get('solution'))  
 #
 #     # def test_190_SolveLowerLayer(self):   
 #     #     inputDict = {}
