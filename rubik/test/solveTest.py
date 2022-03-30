@@ -310,10 +310,8 @@ class SolveTest(unittest.TestCase):
 
 
         # #sides should also be solved
-        # self.assertEqual(actualResult[0][6], actualResult[0][7], actualResult[0][7])
-        # self.assertEqual(actualResult[1][6], actualResult[1][7], actualResult[1][7])
-        # self.assertEqual(actualResult[2][6], actualResult[2][7], actualResult[2][7])
-        # self.assertEqual(actualResult[3][6], actualResult[3][7], actualResult[3][7])      
+        self.assertEqual( (actualResult.get('cube'))[6],  (actualResult.get('cube'))[7],  (actualResult.get('cube'))[8])
+ 
 
 
 # Sad path tests
