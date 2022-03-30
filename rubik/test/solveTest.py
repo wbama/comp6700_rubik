@@ -196,21 +196,21 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
         
-    def test_140_ShouldGiveValidCubeMissingRotate(self):
-
-        inputDict = {}
-        inputDict['cube'] = 'wrggbobyyryrywrbggywybgorywgrgwywbooobbgrrowwwboboorgy'
-        inputDict['rotate'] = ''
-        inputDict['op'] = 'solve'           
-
-        expectedResult = {}
-        expectedResult['cube'] = None
-        expectedResult['solution'] = "RuRuuuLUubUURRBBLLFF"
-        expectedResult['status'] = 'ok'
-        actualResult = solve._solve(inputDict)
-        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
-        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
-        self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
+    # def test_140_ShouldGiveValidCubeMissingRotate(self):
+    #
+    #     inputDict = {}
+    #     inputDict['cube'] = 'wrggbobyyryrywrbggywybgorywgrgwywbooobbgrrowwwboboorgy'
+    #     inputDict['rotate'] = ''
+    #     inputDict['op'] = 'solve'           
+    #
+    #     expectedResult = {}
+    #     expectedResult['cube'] = None
+    #     expectedResult['solution'] = "RuRuuuLUubUURRBBLLFF"
+    #     expectedResult['status'] = 'ok'
+    #     actualResult = solve._solve(inputDict)
+    #     self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+    #     self.assertEqual(expectedResult.get('solution'), actualResult.get('solution')) 
         
     def test_150_ShouldGiveWhiteCrossOnAboveSolution(self):
 
