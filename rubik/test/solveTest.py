@@ -344,40 +344,40 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
     
     
-    # def test_930_MissingCube(self):
-    #     inputDict = {}
-    #     inputDict['op'] = 'solve' 
-    #     inputDict['rotate'] = ''          
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: no cube found'
-    #
-    #     actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
-    # def test_940_InvalidRotation(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
-    #     inputDict['rotate'] = 'w'
-    #     inputDict['op'] = 'solve'
-    #
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
-    # def test_941_IncorrectParmsRotateString(self):
-    #     inputDict = {}
-    #     inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
-    #     inputDict['rotate'] = '  '
-    #     inputDict['op'] = 'solve'
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
-    #     actualResult = solve._solve(inputDict)
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
-    #
+    def test_930_MissingCube(self):
+        inputDict = {}
+        inputDict['op'] = 'solve' 
+        inputDict['rotate'] = ''          
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: no cube found'
+    
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
+    def test_940_InvalidRotation(self):
+        inputDict = {}
+        inputDict['cube'] = 'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
+        inputDict['rotate'] = 'w'
+        inputDict['op'] = 'solve'
+    
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
+    def test_941_IncorrectParmsRotateString(self):
+        inputDict = {}
+        inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
+        inputDict['rotate'] = '  '
+        inputDict['op'] = 'solve'
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: optional rotate should be in [FfRrBbLlUuDd]'
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+    
     # def test_942_IncorrectParmsRotateString(self):
     #     inputDict = {}
     #     inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
