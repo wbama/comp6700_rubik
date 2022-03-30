@@ -28,25 +28,9 @@ def _solve(parms):
         elif 'rotate' not in parms:
             rotate_length = 0       
        
-        if (rotate_length == 0 ):
-            # str1 = "".join(lst_cube[0])
-            # str2 = "".join(lst_cube[1])
-            # str3 = "".join(lst_cube[2])
-            # str4 = "".join(lst_cube[3])
-            # str5 = "".join(lst_cube[4])
-            # str6 = "".join(lst_cube[5])                       
-            #
-            # str_cube = parms.get('cube')
-            # str_cube = str1+str2+str3+str4+str5+str6   
-            # print(str_cube)
-            
+        if (rotate_length == 0 ):          
             str_rotations_long = "".join(solveWhiteCross(parms)[1])  
-            
-            last_x = str_rotations_long.rfind('x')
-            str_rotations_short = str_rotations_long[:last_x]
-            str_rotations_no_x = str_rotations_short.replace("x", "")
-            str_rotations_no_y = str_rotations_no_x.replace("y", "")
-            str_rotation_cleanup = str_rotations_no_y.replace("Dd", "")
+            str_rotation_cleanup = str_rotations_long.replace("Dd", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("rR", "")
