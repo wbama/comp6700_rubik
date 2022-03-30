@@ -62,10 +62,17 @@ def solveLowerLayer(parms):
             lst_rotate = lst_cube_rotate[1]
             print(f"after bottom white rotate {lst_cube} {lst_rotate}")
             
-        if lst_cube[0][0] != var_w and lst_cube[0][2] != var_w and lst_cube[0][6] != var_w and lst_cube[0][8] != var_w and \
-        lst_cube[1][0] != var_w and lst_cube[1][2] != var_w and lst_cube[1][6] != var_w and lst_cube[1][8] != var_w and \
-        lst_cube[2][0] != var_w and lst_cube[2][2] != var_w and lst_cube[2][6] != var_w and lst_cube[2][8] != var_w and \
-        lst_cube[3][0] != var_w and lst_cube[3][2] != var_w and lst_cube[3][6] != var_w and lst_cube[3][8] != var_w:
+        if lst_cube[4][6] == var_w and lst_cube[5][0] != var_w:
+            print("top white somewhere")
+            #lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]
+            # lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]
+            
+            
+        if lst_cube[5][0] == var_w and lst_cube[5][1] == var_w and lst_cube[5][2] == var_w and lst_cube[5][3] == var_w and \
+        lst_cube[5][4] == var_w and lst_cube[5][5] == var_w and lst_cube[5][6] == var_w and lst_cube[5][7] == var_w and \
+        lst_cube[5][8] == var_w and (lst_cube[0][6] == lst_cube[0][7] == lst_cube[0][8]) and \
+        (lst_cube[1][6] == lst_cube[1][7] == lst_cube[1][8]) and   (lst_cube[2][6] == lst_cube[2][7] == lst_cube[2][8]) and \
+         (lst_cube[3][6] == lst_cube[3][7] == lst_cube[3][8]):
             break
 
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
