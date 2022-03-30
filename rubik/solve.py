@@ -9,7 +9,7 @@ from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotat
 from rubik.solveRotations import rotateSide_D, rotateSide_d, rotateSide_f, rotateSide_F
 import rubik.solveCheckInput as ci
 from rubik.solveRotations import createCubeListFromInputParms
-from rubik.solveWhiteCross import solveWhiteCross
+from rubik.solveLowerLayer import solveLowerLayer
 
 
 def _solve(parms):
@@ -29,7 +29,7 @@ def _solve(parms):
             rotate_length = 0       
        
         if (rotate_length == 0 ):          
-            str_rotations_long = "".join(solveWhiteCross(parms)[1])  
+            str_rotations_long = "".join(solveLowerLayer(parms)[1])  
             str_rotation_cleanup = str_rotations_long.replace("Dd", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")
