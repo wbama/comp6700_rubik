@@ -298,7 +298,7 @@ class SolveTest(unittest.TestCase):
         print(rotations)
         actualResult =  solve._solve(inputDict)
         print(actualResult)
-        self.assertEqual(expectedResult_col, actualResult.get('cube')[46])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[46])
         self.assertEqual(expectedResult_col, actualResult[5][2])
         self.assertEqual(expectedResult_col, actualResult[5][3])
         self.assertEqual(expectedResult_col, actualResult[5][4])
