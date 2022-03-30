@@ -317,33 +317,33 @@ class SolveTest(unittest.TestCase):
 
 # Sad path tests
 
-    # def test_910_IncorrectCubeString(self):
-    #
-    #     inputDict = {}
-    #     inputDict['cube'] = '123456789'
-    #     inputDict['op'] = 'solve'  
-    #     inputDict['rotate'] = 'f'         
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: cube string has to have 54 elements'
-    #
-    #     actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
-    # def test_920_CubeNotString(self):
-    #
-    #     inputDict = {}
-    #     inputDict['cube'] = 42
-    #     inputDict['op'] = 'solve' 
-    #     inputDict['rotate'] = ''            
-    #
-    #     expectedResult = {}
-    #     expectedResult['status'] = 'error: cube not a string'
-    #
-    #     actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
-    #     self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
-    #
-    #
+    def test_910_IncorrectCubeString(self):
+    
+        inputDict = {}
+        inputDict['cube'] = '123456789'
+        inputDict['op'] = 'solve'  
+        inputDict['rotate'] = 'f'         
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: cube string has to have 54 elements'
+    
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
+    def test_920_CubeNotString(self):
+    
+        inputDict = {}
+        inputDict['cube'] = 42
+        inputDict['op'] = 'solve' 
+        inputDict['rotate'] = ''            
+    
+        expectedResult = {}
+        expectedResult['status'] = 'error: cube not a string'
+    
+        actualResult = solve._solve(inputDict) #calling _solve and passing inputDict
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+    
+    
     # def test_930_MissingCube(self):
     #     inputDict = {}
     #     inputDict['op'] = 'solve' 
