@@ -478,8 +478,8 @@ class SolveTest(unittest.TestCase):
         expectedResult = {}
         expectedResult['status'] = 'error: adjacent color to color that would appear on opposite side'
     
-        #actualResult = solve._solve(inputDict)
-        #self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        actualResult = solve._solve(inputDict)
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
     
        
 # analysis of solve
