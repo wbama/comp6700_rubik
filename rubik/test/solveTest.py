@@ -289,6 +289,7 @@ class SolveTest(unittest.TestCase):
         expectedResult_col = var_w 
         
         actualResult =solve._solve(inputDict)
+        print(actualResult)
         #actualResult = solveLowerLayer(inputDict)[0]
         self.assertEqual(expectedResult_col, actualResult[5][1])
         self.assertEqual(expectedResult_col, actualResult[5][2])
