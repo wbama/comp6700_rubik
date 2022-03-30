@@ -43,7 +43,7 @@ def solveLowerLayer(parms):
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again    
     #if no top corners, solve the bottom corners. Run once, then run top corners            
     #solve the side-top corners
-    for _ in range(20):
+    for _ in range(50):
     # while True:    
         if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
         lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
