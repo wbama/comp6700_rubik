@@ -9,7 +9,6 @@
 import unittest
 import rubik.solve as solve
 from rubik.solveRotations import createCubeListFromInputParms
-from rubik.solveLowerLayer import solveLowerLayer
 
 
 class SolveTest(unittest.TestCase):  
