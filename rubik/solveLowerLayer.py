@@ -39,12 +39,9 @@ def solveLowerLayer(parms):
     #get back the cleaned up rotations from making white cross. Append to this list
     lst_rotate = list(str_rotation_cleanup) 
     
-    #the cross color will be whatever is at the bottom. Not always white. use var_w
-    
-    # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
-    
-    #if no top corners, solve the bottom corners. Run once, then run top corners
-            
+    #the cross color will be whatever is at the bottom. Not always white. use var_w    
+    # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again    
+    #if no top corners, solve the bottom corners. Run once, then run top corners            
     #solve the side-top corners
     while True:    
         if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
