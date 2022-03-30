@@ -285,12 +285,12 @@ class SolveTest(unittest.TestCase):
         
     def test_190_SolveLowerLayer(self):   
         inputDict = {}
-        inputDict['cube'] = 'ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw0'  
+        inputDict['cube'] = 'ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw'  
         var_w = inputDict['cube'][-5]
         expectedResult_col = var_w 
                    
-
-        actualResult = solveLowerLayer(inputDict)[0]
+        actualResult =solve._solve(inputDict)
+        #actualResult = solveLowerLayer(inputDict)[0]
         self.assertEqual(expectedResult_col, actualResult[5][1])
         self.assertEqual(expectedResult_col, actualResult[5][2])
         self.assertEqual(expectedResult_col, actualResult[5][3])
