@@ -47,8 +47,8 @@ def solveLowerLayer(parms):
     #solve the side-top corners
 
     
-    for _ in range(20): #run the whole thing 20 times, with the top and bottom white parts on its own each time
-        for _ in range(20):
+    for _ in range(10): #run the whole thing 10 times, with the top and bottom white parts on its own each time
+        for _ in range(3):
             if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
             lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
             lst_cube[3][2] == var_w:
