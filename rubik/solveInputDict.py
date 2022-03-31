@@ -15,10 +15,10 @@ from rubik.solveLowerLayer import solveLowerLayer
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = 'gggggggggyowyowyowbbbbbbbbbyrwyrwyrwoooyyyrrrooowwwrrr'
+inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
 #inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
 inputDict['op'] = 'solve' 
-inputDict['rotate'] = ''
+#inputDict['rotate'] = 'RRRBBLLFFUUUUFufRUruuBUbUUbuBUUluuLuRUrUluuLUluL'
 
 
 
@@ -47,7 +47,7 @@ print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 
-#solveLowerLayer(inputDict)
+solveLowerLayer(inputDict)
 
 
 #print(_solve(inputDict))

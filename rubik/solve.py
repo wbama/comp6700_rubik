@@ -19,6 +19,7 @@ def _solve(parms):
     try:      
         #the test will give string input. Make a list cube    
         lst_cube = createCubeListFromInputParms(parms) 
+
         global rotate_length
         
         if ('rotate' in parms) and (parms.get('rotate')) == None:
@@ -30,6 +31,7 @@ def _solve(parms):
        
         if (rotate_length == 0 ):          
             str_rotations_long = "".join(solveLowerLayer(parms)[1])  
+            print(f"string rotations {str_rotations_long}")
             str_rotation_cleanup = str_rotations_long.replace("Dd", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")
