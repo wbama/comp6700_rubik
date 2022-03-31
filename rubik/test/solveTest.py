@@ -220,6 +220,7 @@ class SolveTest(unittest.TestCase):
         inputDict['rotate'] = (solve._solve(inputDict)).get("solution")
         
         var_w = inputDict['cube'][-5]
+        print(f" variable w is {var_w}")
         expectedResult_col = var_w 
 
         actualResult =  solve._solve(inputDict)
