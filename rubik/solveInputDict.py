@@ -15,7 +15,7 @@ from rubik.solveLowerLayer import solveLowerLayer
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = 'gbbgbbgbborrorrorrbggbggbggoorooroorywwwywywwwyyywywyy'
+inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 #inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
 inputDict['op'] = 'solve' 
 inputDict['rotate'] = ''
