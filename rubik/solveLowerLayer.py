@@ -2,7 +2,7 @@
     Created on 03/05/2022
     @author: Waldo du Toit
     program for solving the white cross
-    03/26 - Solve lower layer
+    03/31 - Solve lower layer
     
 """
 
