@@ -1,7 +1,7 @@
 i = 0
+j= 0
 
-while True:
+for i in range(10):
     print(i)
-    i+= 1
-    if i == 5:
-        break
+    for j in range(5):
+        print(j)

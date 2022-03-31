@@ -19,6 +19,7 @@ from rubik.solveRotations import solve_top_w_corners, solve_bottom_w_corners, so
 def solveLowerLayer(parms):
     
     var_w = createYellowAndWhiteVariables(parms)[1]
+    print(var_w)
     #the input cube with the white cross
     lst_cube = solveWhiteCross(parms)[0]
     str_rotations_long = "".join(solveWhiteCross(parms)[1]) 
@@ -45,15 +46,15 @@ def solveLowerLayer(parms):
     #solve the side-top corners
     for _ in range(50):
     # while True:   
-        print(f"input list {lst_cube}") 
         
         if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
         lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
         lst_cube[3][2] == var_w:
+            print(f"input list {lst_cube}") 
             lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
             lst_cube = lst_top_w_corners[0]
             lst_rotate = lst_top_w_corners[1]
-            print(f"after top white rotate {lst_cube}")     
+            print(f"lst_top_w_corners {lst_top_w_corners}")     
     
         # if no side-top corners, put side-bottom corners on top, then solve side-top corners   
         # just do the rotate once, then split up, else will do twice
@@ -67,9 +68,9 @@ def solveLowerLayer(parms):
             
         if lst_cube[4][6] == var_w or lst_cube[4][8] == var_w or lst_cube[4][0] == var_w or lst_cube[4][2] == var_w:
             print("top white somewhere")
-            lst_top_white_cells = solve_top_white_cells(lst_cube, lst_rotate)
-            lst_cube = lst_top_white_cells[0]
-            lst_rotate = lst_top_white_cells[1]
+            # lst_top_white_cells = solve_top_white_cells(lst_cube, lst_rotate)
+            # lst_cube = lst_top_white_cells[0]
+            # lst_rotate = lst_top_white_cells[1]
 
                 # lst_cube = (front_left_trigger(lst_cube, lst_rotate))[0]
             print(f"after top rotate {lst_cube}")           
