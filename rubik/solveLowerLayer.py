@@ -22,6 +22,7 @@ def solveLowerLayer(parms):
     print(var_w)
     #the input cube with the white cross
     lst_cube = solveWhiteCross(parms)[0]
+    print(f"first list {lst_cube}") 
     str_rotations_long = "".join(solveWhiteCross(parms)[1]) 
             
     str_rotation_cleanup = str_rotations_long.replace("Dd", "")
@@ -44,8 +45,9 @@ def solveLowerLayer(parms):
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again    
     #if no top corners, solve the bottom corners. Run once, then run top corners            
     #solve the side-top corners
-    for _ in range(20): #run the whole thing 20 times, with the top and bottom white parts on its own each time
 
+    
+    for _ in range(20): #run the whole thing 20 times, with the top and bottom white parts on its own each time
         for _ in range(20):
             if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
             lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
