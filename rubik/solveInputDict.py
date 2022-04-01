@@ -43,9 +43,9 @@ inputDict['rotate'] = 'RRuDRRuDRRuDRRUUURRUUUUBBUUUULLUUUUFFubuBuuBUbUUfuFluLUlu
 # print(f"lst cube {lst_cube}")
 # print(f"rotations {rotations}")
 # #
-# print(f"wc {solveLowerLayer(inputDict)}")
+print(f"wc {solveWhiteCross(inputDict)}")
 #
-print(_solve(inputDict))
+#print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 

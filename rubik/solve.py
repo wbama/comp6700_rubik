@@ -31,7 +31,7 @@ def _solve(parms):
        
         if (rotate_length == 0 ):          
             str_rotations_long = "".join(solveLowerLayer(parms)[1])  
-            print(f"string rotations {str_rotations_long}")
+            # print(f"string rotations {str_rotations_long}")
             str_rotation_cleanup = str_rotations_long.replace("Dd", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")

@@ -13,9 +13,7 @@ from rubik.solveDaisy import solveDaisy
 def solveWhiteCross(parms):  
     
     var_w = createYellowAndWhiteVariables(parms)[1]  
-    # print(rotation_from_daisy)        
-    # whiteCrossCubeRotation = (rotateIntoWhiteCross(lst_cube_from_daisy, rotation_from_daisy ))
-      
+     
     lst_cube = solveDaisy(parms)[0]
     lst_rotate = solveDaisy(parms)[1]
                
@@ -30,6 +28,5 @@ def solveWhiteCross(parms):
         else:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U")
-            
-    # print("".join(lst_rotate))     
+
     return [lst_cube, lst_rotate] 
