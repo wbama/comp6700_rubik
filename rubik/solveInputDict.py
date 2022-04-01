@@ -19,7 +19,7 @@ inputDict = {}
 inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
 #inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
 inputDict['op'] = 'solve' 
-#inputDict['rotate'] = 'RRRUUUUBBUUUULLUUUUFF'
+inputDict['rotate'] = 'RRRUUUUBBUUUULLUUUUFF'
 
 
 
@@ -42,9 +42,9 @@ inputDict['op'] = 'solve'
 # print(f"lst cube {lst_cube}")
 # print(f"rotations {rotations}")
 # #
-print(f"WC {solveWhiteCross(inputDict)}")
+print(f"wc {solveWhiteCross(inputDict)}")
 #
-#print(_solve(inputDict))
+print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 

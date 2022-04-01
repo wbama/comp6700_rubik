@@ -41,7 +41,7 @@ def solveLowerLayer(parms):
     #solve the side-top corners
 
     
-    for _ in range(1): #run the whole thing 10 times, with the top and bottom white parts on its own each time
+    for _ in range(50): #run the whole thing 10 times, with the top and bottom white parts on its own each time
         # for _ in range(3):
         if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
         lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
@@ -87,6 +87,7 @@ def solveLowerLayer(parms):
 
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
     print(f"final lst_cube {lst_cube}")
+    print("".join(lst_rotate))  
     return lst_cube, lst_rotate
 
     
