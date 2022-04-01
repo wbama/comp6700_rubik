@@ -16,7 +16,7 @@ def solveLowerLayer(parms):
     var_w = createYellowAndWhiteVariables(parms)[1]
     #the input cube with the white cross
     lst_cube = solveWhiteCross(parms)[0]
-    print(f"first list {lst_cube}") 
+    # print(f"first list {lst_cube}") 
     str_rotations_long = "".join(solveWhiteCross(parms)[1]) 
             
     str_rotation_cleanup = str_rotations_long.replace("Dd", "")
