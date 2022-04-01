@@ -12,7 +12,7 @@ from rubik.solveWhiteCross import solveWhiteCross
 #need to update this. this is not a white cross. Look at the sides too
 class SolveWhiteCrossTest(unittest.TestCase):                 
             
-        def test_050_SolveWhiteCross_y4(self):
+        def test_050_SolveWhiteCross(self):
             inputDict = {}
             inputDict['cube'] = 'gwwboboyboygwbyyyrygwrrgwowggyogrowbrwrrygoogyorrwbbbb'    
             expectedResult = 'w'             

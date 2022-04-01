@@ -26,7 +26,7 @@ def solveWhiteCross(parms):
         lst_cube[5][5] == var_w and lst_cube[5][7] == var_w:
             break
         else:
-            lst_cube = rotateSide_U(lst_cube)
+            whiteCrossCube = rotateSide_U(whiteCrossCube)
             rotation_from_daisy.append("U")
             
             
