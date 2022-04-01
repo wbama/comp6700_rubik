@@ -1835,9 +1835,6 @@ def SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one
         elif lst_cube[4][5] == var_w and lst_cube[4][1] != var_w:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U")  
-        else:
-            lst_cube = lst_cube
-            lst_rotate.append("")
     
     #first and easiest now solve [4][5]
         if lst_cube[0][5] == var_w and lst_cube[4][5] != var_w:
