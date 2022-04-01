@@ -13,27 +13,27 @@ from rubik.solveDaisy import solveDaisy
 def solveWhiteCross(parms):  
     
     var_w = createYellowAndWhiteVariables(parms)[1]  
-
-    lst_cube_from_daisy = ((rotateIntoWhiteCross(solveDaisy(parms)[0], solveDaisy(parms)[1])))[0]
-    rotation_from_daisy = ((rotateIntoWhiteCross(solveDaisy(parms)[0], solveDaisy(parms)[1])))[1]   
-    print(rotation_from_daisy)        
-    whiteCrossCubeRotation = (rotateIntoWhiteCross(lst_cube_from_daisy, rotation_from_daisy ))
+    # print(rotation_from_daisy)        
+    # whiteCrossCubeRotation = (rotateIntoWhiteCross(lst_cube_from_daisy, rotation_from_daisy ))
       
-    whiteCrossCube = whiteCrossCubeRotation[0]
-    whiteCrossRotation = whiteCrossCubeRotation[1]
-    print(whiteCrossCube)  
-    print(whiteCrossRotation)
+    lst_cube = solveDaisy(parms)[0]
+    lst_rotate = solveDaisy(parms)[1]
+    print(f"start cube {lst_cube}")  
+    print(f"start rotate {lst_rotate}") 
                
-    # for _ in range(20):
-    #     whiteCrossCube = (rotateIntoWhiteCross(whiteCrossCube[0], whiteCrossCube[1])) 
-    #     lst_cube = whiteCrossCube[0]
-    #
-    #     if lst_cube[5][1] == var_w and lst_cube[5][3] == var_w and lst_cube[5][4] == var_w and \
-    #     lst_cube[5][5] == var_w and lst_cube[5][7] == var_w:
-    #         break
-    #     else:
-    #         whiteCrossCube = rotateSide_U(whiteCrossCube[0])
-    #         rotation_from_daisy.append("U")
+    for _ in range(50):
+        lst_cube_rotate = rotateIntoWhiteCross(lst_cube, lst_rotate)   
+        lst_cube = lst_cube_rotate[0]
+        lst_rotate = lst_cube_rotate[1]           
+        print(lst_cube)
+        print(lst_rotate)        
+        
+        if lst_cube[5][1] == var_w and lst_cube[5][3] == var_w and lst_cube[5][4] == var_w and \
+        lst_cube[5][5] == var_w and lst_cube[5][7] == var_w:
+            break
+        else:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_rotate.append("U")
             
             
-    return whiteCrossCube 
+    return [lst_cube, lst_rotate] 

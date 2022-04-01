@@ -23,4 +23,4 @@ def solveDaisy(parms):
         lst_cube[4][5] == var_w and lst_cube[4][7] == var_w:
             break     
 
-    return lst_cube, lst_rotate
+    return [lst_cube, lst_rotate]

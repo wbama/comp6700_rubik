@@ -42,7 +42,7 @@ inputDict['op'] = 'solve'
 # print(f"lst cube {lst_cube}")
 # print(f"rotations {rotations}")
 # #
-print(f"Daisy {solveDaisy(inputDict)}")
+print(f"WC {solveWhiteCross(inputDict)}")
 #
 #print(_solve(inputDict))
 #
