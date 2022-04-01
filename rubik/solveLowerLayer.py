@@ -53,7 +53,7 @@ def solveLowerLayer(parms):
             lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
             lst_cube = lst_top_w_corners[0]
             lst_rotate = lst_top_w_corners[1]
-            str_rotate = "".join(lst_rotate) 
+            # str_rotate = "".join(lst_rotate) 
             # print(f"rotate_top_w_corners {str_rotate}")   
             # print(f"after 1st rotate {lst_cube}")   
             # print("")
@@ -67,7 +67,7 @@ def solveLowerLayer(parms):
             lst_bottom_w_corners = solve_bottom_w_corners(lst_cube, lst_rotate)
             lst_cube = lst_bottom_w_corners[0]
             lst_rotate = lst_bottom_w_corners[1]
-            str_rotate = "".join(lst_rotate) 
+            # str_rotate = "".join(lst_rotate) 
             # print(f"rotate_botom_w_corners {str_rotate}")   
             # print(f"after 2st rotate {lst_cube}")   
             # print("")
