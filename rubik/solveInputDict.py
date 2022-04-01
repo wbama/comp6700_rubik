@@ -41,9 +41,9 @@ inputDict['op'] = 'solve'
 # print(f"lst cube {lst_cube}")
 # print(f"rotations {rotations}")
 # #
-#print(f"WC {solveWhiteCross(inputDict)}")
+print(f"WC {solveWhiteCross(inputDict)}")
 #
-print(_solve(inputDict))
+#print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 
