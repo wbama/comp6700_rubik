@@ -216,7 +216,6 @@ class SolveTest(unittest.TestCase):
     def test_150_SolveLowerLayer(self):   
        
         inputDict = {}
-        #inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog' 
         inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'        
         inputDict['rotate'] = (solve._solve(inputDict)).get("solution")
         
@@ -240,6 +239,34 @@ class SolveTest(unittest.TestCase):
         self.assertEqual( (actualResult.get('cube'))[15],  (actualResult.get('cube'))[16],  (actualResult.get('cube'))[17])
         self.assertEqual( (actualResult.get('cube'))[24],  (actualResult.get('cube'))[25],  (actualResult.get('cube'))[26])
         self.assertEqual( (actualResult.get('cube'))[33],  (actualResult.get('cube'))[34],  (actualResult.get('cube'))[35])
+        
+    def test_160_SolveLowerLayer(self):   
+       
+        inputDict = {}
+        inputDict['cube'] = 'ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw'        
+        inputDict['rotate'] = (solve._solve(inputDict)).get("solution")
+        
+        var_w = inputDict['cube'][-5]
+        expectedResult_col = var_w 
+
+        actualResult =  solve._solve(inputDict)
+        print(actualResult)
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[45])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[46])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[47])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[48])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[49])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[50])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[51])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[52])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[53])
+
+        # #sides should also be solved
+        self.assertEqual( (actualResult.get('cube'))[6],  (actualResult.get('cube'))[7],  (actualResult.get('cube'))[8])
+        self.assertEqual( (actualResult.get('cube'))[15],  (actualResult.get('cube'))[16],  (actualResult.get('cube'))[17])
+        self.assertEqual( (actualResult.get('cube'))[24],  (actualResult.get('cube'))[25],  (actualResult.get('cube'))[26])
+        self.assertEqual( (actualResult.get('cube'))[33],  (actualResult.get('cube'))[34],  (actualResult.get('cube'))[35])
+
 
 # Sad path tests
 

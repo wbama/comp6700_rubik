@@ -12,15 +12,16 @@ from rubik.solveRotations import createYellowAndWhiteVariables, createStringFrom
 from rubik.solveLowerLayer import solveLowerLayer
 from rubik.solveDaisy import solveDaisy
 
-# inputDict['cube'] = "ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw"
+
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
+inputDict['cube'] = "ooogboyyrgrbbrgwwroyrygbgbgygywowyrrbowoygbwwgbbywrorw"
 #inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
-inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
+#inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 #inputDict['cube'] = 'byowbgoryyyworwryybowogrgbrgwoyogwwgrborygybgwgbbwobrr'
 inputDict['op'] = 'solve' 
-#inputDict['rotate'] = 'ururrUfuudRRFFUURRUBBUUUULLuRUrluLUluuLUUbuBBUbUluuLuuruRluL'
+inputDict['rotate'] = 'RUfbDRRLLUUFFURRUUUUBBuruRbuBluuLULUlufUFUURUrUUFUf'
 
 
 
