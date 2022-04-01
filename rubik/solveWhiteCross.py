@@ -31,5 +31,5 @@ def solveWhiteCross(parms):
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U")
             
-    print("".join(lst_rotate))     
+    # print("".join(lst_rotate))     
     return [lst_cube, lst_rotate] 
