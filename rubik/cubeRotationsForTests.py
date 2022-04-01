@@ -11,14 +11,14 @@ from rubik.solveWhiteCross import solveWhiteCross
 
 
 inputDict = {}
-inputDict['cube'] = "rwrrygooggyrybyowybbbbwrroyoogwggbrywowgrrwgygwwboboyb"
+inputDict['cube'] = "rryobggrwoyowrroybgybygoygwwwywobrborowryggbbygbwwbgor"
 inputDict['op'] = 'solve' 
 #inputDict['rotate'] = 'F'
 
 lst_cube = createCubeListFromInputParms(inputDict)
 print(lst_cube)
 #rotate the cube
-lst_cube = rotateCubeDown(lst_cube)
+lst_cube = rotateCubeUp(lst_cube)
 print(lst_cube)
 str1 = "".join(lst_cube[0])
 str2 = "".join(lst_cube[1])

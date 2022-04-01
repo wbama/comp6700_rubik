@@ -6,7 +6,7 @@
 """
 from rubik.solve import _solve
 
-from rubik.solveRotations import createCubeListFromInputParms, rotateCubeToRight, rotateCubeDown, rotateIntoWhiteCross_y_0, rotateIntoWhiteCross_y_1
+from rubik.solveRotations import createCubeListFromInputParms, rotateCubeToRight, rotateCubeDown
 from rubik.solveWhiteCross import solveWhiteCross
 from rubik.solveRotations import createYellowAndWhiteVariables, createStringFromCube, createYellowAndWhiteVariables
 from rubik.solveLowerLayer import solveLowerLayer
@@ -17,10 +17,10 @@ from rubik.solveDaisy import solveDaisy
 
 inputDict = {}
 #inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
-#inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
-inputDict['cube'] = 'royobrbbwgrybrborgorwyggrgroywyobgorggboyybgoywbwwwwwy'
+inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
+#inputDict['cube'] = 'byowbgoryyyworwryybowogrgbrgwoyogwwgrborygybgwgbbwobrr'
 inputDict['op'] = 'solve' 
-inputDict['rotate'] = 'RRuDRRuDRRuDRRUUURRUUUUBBUUUULLUUUUFFubuBuuBUbUUfuFluLUluL'
+inputDict['rotate'] = 'ururrUfuudRRFFUURRUBBUUUULLuRUrluLUluuLUUbuBBUbUluuLuuruRluL'
 
 
 
@@ -43,9 +43,9 @@ inputDict['rotate'] = 'RRuDRRuDRRuDRRUUURRUUUUBBUUUULLUUUUFFubuBuuBUbUUfuFluLUlu
 # print(f"lst cube {lst_cube}")
 # print(f"rotations {rotations}")
 # #
-print(f"wc {solveWhiteCross(inputDict)}")
+#print(f"wc {solveLowerLayer(inputDict)}")
 #
-#print(_solve(inputDict))
+print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 
