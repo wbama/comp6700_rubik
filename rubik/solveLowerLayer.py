@@ -89,7 +89,7 @@ def solveLowerLayer(parms):
         lst_cube[5][8] == var_w and (lst_cube[0][6] == lst_cube[0][7] == lst_cube[0][8]) and \
         (lst_cube[1][6] == lst_cube[1][7] == lst_cube[1][8]) and   (lst_cube[2][6] == lst_cube[2][7] == lst_cube[2][8]) and \
          (lst_cube[3][6] == lst_cube[3][7] == lst_cube[3][8]):
-            break9
+            break
 
     # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again
     # print(f"final lst_cube {lst_cube}")
