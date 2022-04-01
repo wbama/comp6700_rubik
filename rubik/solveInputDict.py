@@ -16,10 +16,11 @@ from rubik.solveDaisy import solveDaisy
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
+#inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
 #inputDict['cube'] = 'rybbbrggryrybyoyyybgryggobbwwwwwwwwwgrrooybgooogrrboog'
+inputDict['cube'] = 'royobrbbwgrybrborgorwyggrgroywyobgorggboyybgoywbwwwwwy'
 inputDict['op'] = 'solve' 
-inputDict['rotate'] = 'RRRUUUUBBUUUULLUUUUFF'
+inputDict['rotate'] = 'RRuDRRuDRRuDRRUUURRUUUUBBUUUULLUUUUFFubuBuuBUbUUfuFluLUluL'
 
 
 
@@ -42,7 +43,7 @@ inputDict['rotate'] = 'RRRUUUUBBUUUULLUUUUFF'
 # print(f"lst cube {lst_cube}")
 # print(f"rotations {rotations}")
 # #
-print(f"wc {solveWhiteCross(inputDict)}")
+print(f"wc {solveLowerLayer(inputDict)}")
 #
 print(_solve(inputDict))
 #

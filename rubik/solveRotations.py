@@ -2242,7 +2242,7 @@ def front_left_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_F(lst_cube)
     lst_cube = rotateSide_U(lst_cube)
     lst_cube = rotateSide_f(lst_cube)   
-    lst_rotate.append("Fuf")  
+    lst_rotate.append("Fufx")  
     
     return [lst_cube, lst_rotate]
 
