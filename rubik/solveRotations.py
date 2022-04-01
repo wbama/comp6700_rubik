@@ -1797,8 +1797,7 @@ def y_3_SolveWhiteLeaves(lst_cube, lst_rotate):
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_L(lst_cube)
             lst_cube = rotateSide_f(lst_cube)
-            lst_rotate.append("lULf") 
-            
+            lst_rotate.append("lULf")             
        
         elif lst_cube[5][5] == var_w and lst_cube[3][5] != var_w:
             lst_cube = rotateSide_R(lst_cube)
@@ -1823,7 +1822,7 @@ def y_3_SolveWhiteLeaves(lst_cube, lst_rotate):
             
         return [lst_cube, lst_rotate]
 
-def y_4_SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one    
+def SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one    
 
         #rotate to non white in [4][5]        
         if lst_cube[4][5] == var_w and lst_cube[4][7] != var_w:
@@ -1957,9 +1956,9 @@ def y_4_SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one
             lst_cube = rotateSide_R(lst_cube)
             lst_cube = rotateSide_R(lst_cube)
             lst_rotate.append("dRR")   
-        else:
-            lst_cube = lst_cube
-            lst_rotate.append("")
+        # else:
+        #     lst_cube = lst_cube
+        #     lst_rotate.append("")
             
         return [lst_cube, lst_rotate]
 
@@ -2201,15 +2200,15 @@ def rotateIntoWhiteCross(lst_cube, lst_rotate):
         lst_cube = rotateSide_R(lst_cube)
         lst_cube = rotateSide_R(lst_cube)
         lst_rotate.append("RR")
-    if lst_cube[4][1] == var_w and (lst_cube[2][1] == lst_cube[2][4]):
+    elif lst_cube[4][1] == var_w and (lst_cube[2][1] == lst_cube[2][4]):
         lst_cube = rotateSide_B(lst_cube)
         lst_cube = rotateSide_B(lst_cube)
         lst_rotate.append("BB")   
-    if lst_cube[4][3] == var_w and (lst_cube[3][1] == lst_cube[3][4]):
+    elif lst_cube[4][3] == var_w and (lst_cube[3][1] == lst_cube[3][4]):
         lst_cube = rotateSide_L(lst_cube)
         lst_cube = rotateSide_L(lst_cube)
         lst_rotate.append("LL") 
-    if lst_cube[4][7] == var_w and (lst_cube[0][4] == lst_cube[0][1]):
+    elif lst_cube[4][7] == var_w and (lst_cube[0][4] == lst_cube[0][1]):
         lst_cube = rotateSide_F(lst_cube)
         lst_cube = rotateSide_F(lst_cube)
         lst_rotate.append("FF")  
