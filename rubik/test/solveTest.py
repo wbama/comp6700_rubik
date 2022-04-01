@@ -223,7 +223,7 @@ class SolveTest(unittest.TestCase):
         expectedResult_col = var_w 
 
         actualResult =  solve._solve(inputDict)
-        print(actualResult)
+        # print(actualResult)
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[45])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[46])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[47])
@@ -250,7 +250,7 @@ class SolveTest(unittest.TestCase):
         expectedResult_col = var_w 
 
         actualResult =  solve._solve(inputDict)
-        print(actualResult)
+        # print(actualResult)
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[45])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[46])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[47])
