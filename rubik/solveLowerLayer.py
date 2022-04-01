@@ -6,22 +6,17 @@
     
 """
 
-from rubik.solveWhiteCross import solveWhiteCross
-from rubik.solveRotations import createYellowAndWhiteVariables,\
-    solve_top_w_corners
-from rubik.solveRotations import rotateSide_R, rotateSide_r, rotateSide_B, rotateSide_b
-from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotateSide_u
-from rubik.solveRotations import rotateSide_D, rotateSide_d, rotateSide_f, rotateSide_F
-from rubik.solveRotations import front_left_trigger, front_right_trigger, right_left_trigger, right_right_trigger
-from rubik.solveRotations import back_left_trigger, back_right_trigger, left_left_trigger, left_right_trigger
 from rubik.solveRotations import solve_top_w_corners, solve_bottom_w_corners, solve_top_white_cells
+from rubik.solveWhiteCross import solveWhiteCross
+from rubik.solveRotations import createYellowAndWhiteVariables
+
 
 def solveLowerLayer(parms):
     
     var_w = createYellowAndWhiteVariables(parms)[1]
     #the input cube with the white cross
     lst_cube = solveWhiteCross(parms)[0]
-    # print(f"first list {lst_cube}") 
+    print(f"first list {lst_cube}") 
     str_rotations_long = "".join(solveWhiteCross(parms)[1]) 
             
     str_rotation_cleanup = str_rotations_long.replace("Dd", "")
@@ -46,7 +41,7 @@ def solveLowerLayer(parms):
     #solve the side-top corners
 
     
-    for _ in range(50): #run the whole thing 10 times, with the top and bottom white parts on its own each time
+    for _ in range(1): #run the whole thing 10 times, with the top and bottom white parts on its own each time
         # for _ in range(3):
         if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
         lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
@@ -55,7 +50,9 @@ def solveLowerLayer(parms):
             lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
             lst_cube = lst_top_w_corners[0]
             lst_rotate = lst_top_w_corners[1]
-            print(f"lst_top_w_corners {lst_top_w_corners}")     
+            str_rotate = "".join(lst_rotate) 
+            print(f"rotate_top_w_corners {str_rotate}")   
+            print(f"after 1st rotate {lst_cube}")   
         
         # if no side-top corners, put side-bottom corners on top, then solve side-top corners   
         # just do the rotate once, then split up, else will do twice
@@ -65,7 +62,7 @@ def solveLowerLayer(parms):
             lst_bottom_w_corners = solve_bottom_w_corners(lst_cube, lst_rotate)
             lst_cube = lst_bottom_w_corners[0]
             lst_rotate = lst_bottom_w_corners[1]
-            print(f"after bottom white rotate {lst_cube}")
+            print(f"after bottom white rotate {lst_bottom_w_corners}")
                 
             # if lst_cube[5][0] == var_w and lst_cube[5][1] == var_w and lst_cube[5][2] == var_w and lst_cube[5][3] == var_w and \
             # lst_cube[5][4] == var_w and lst_cube[5][5] == var_w and lst_cube[5][6] == var_w and lst_cube[5][7] == var_w and \
