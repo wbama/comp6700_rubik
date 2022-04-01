@@ -16,12 +16,12 @@ from rubik.solveDaisy import solveDaisy
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = "SUUSUUSUU3aa3aa3aaUSSUSSUSS33a33a33aKZZZKZKZZZKKKZKZKK"
+inputDict['cube'] = "gwgbbobgrowbwrbwwgygrrgyrobwyoroyworgrooygwbyyybbwrogy"
 #inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
 #inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 #inputDict['cube'] = 'byowbgoryyyworwryybowogrgbrgwoyogwwgrborygybgwgbbwobrr'
 inputDict['op'] = 'solve' 
-inputDict['rotate'] = 'RRUUUUBBUUUULLUUUUFFluuLFUfBUUbbuuBuRUUrULUlfUFRUruuBUUbuBUb'
+inputDict['rotate'] = 'FRfufuurrUfuFFUURRUBBUUUULLUUluLRUruuBUUbuBUbbuBUbuuBUbuB'
 
 
 
