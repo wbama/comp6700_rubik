@@ -11,7 +11,6 @@ import rubik.solveCheckInput as ci
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveLowerLayer import solveLowerLayer
 
-
 def _solve(parms):
     result = {}    
     str_cube = ''
@@ -31,7 +30,6 @@ def _solve(parms):
        
         if (rotate_length == 0 ):          
             str_rotations_long = "".join(solveLowerLayer(parms)[1])  
-            # print(f"string rotations {str_rotations_long}")
             str_rotation_cleanup = str_rotations_long.replace("Dd", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")
@@ -43,8 +41,7 @@ def _solve(parms):
             str_rotation_cleanup = str_rotation_cleanup.replace("bB", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("Bb", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("Ff", "")
-            str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")
-            
+            str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")            
  
             result['solution'] = str_rotation_cleanup
             result['status'] = 'ok' 
@@ -58,8 +55,7 @@ def _solve(parms):
     
             #if all the sides only have one character, cube is solved, no solution
             if len(s0) == len(s1) == len(s2) == len(s3) == len(s4) == len(s5) == 1:
-                result['solution'] = ""              
-           
+                result['solution'] = ""            
          
         if 'rotate' in parms and rotate_length > 0:
             for rotation in (parms.get('rotate')):   
@@ -111,8 +107,7 @@ def _solve(parms):
                     
             result = {}
             result['cube'] = str_cube
-            result['status'] = 'ok'   
-
+            result['status'] = 'ok'
        
     except:
         result = (ci.solveCheck(parms)) 
@@ -121,8 +116,7 @@ def _solve(parms):
         if (ci.solveCheck(parms)['status']) == 'ok':
             result['cube'] = str_cube
         else:
-            result = (ci.solveCheck(parms))   
-
+            result = (ci.solveCheck(parms))  
     
     ######################################################
     # Cleanup

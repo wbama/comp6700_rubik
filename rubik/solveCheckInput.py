@@ -135,9 +135,7 @@ def solveCheck(parms):
         result['status'] = 'error: adjacent color to color that would appear on opposite side'                  
                    
     else:
-        result['status'] = 'ok'
-        
-  
+        result['status'] = 'ok'   
         
     return result
 
