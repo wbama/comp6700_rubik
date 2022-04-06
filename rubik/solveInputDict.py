@@ -21,7 +21,7 @@ inputDict = {}
 #inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 inputDict['cube'] = 'yybrbybrgwggowgwrgywyogwobgbbboywyoorgrwryorrwbrbogoyw'
 inputDict['op'] = 'solve' 
-#inputDict['rotate'] = 'fuuubDDRRUULLuBBRRuFFRUruRUUruRUr'
+inputDict['rotate'] = 'ruRUfuuubDDRUFRRuLLuuBBFUfRUruRUUrULUlUBUUbuBUbUURUr'
 
 
 
@@ -56,6 +56,9 @@ print("")
 print("")
 print("")
 print(solveLowerLayer(inputDict))
-
+print("")
+print("")
+print("")
+print(_solve(inputDict))
 
 #print(_solve(inputDict))
