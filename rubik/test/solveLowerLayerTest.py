@@ -13,7 +13,7 @@ from rubik.solveLowerLayer import solveLowerLayer
 class SolveLowerLayerTest(unittest.TestCase):  
     def test_010_SolveLowerLayer(self):   
         inputDict = {}
-        inputDict['cube'] = 'WvvvvWEvqWqhEWhEWAAEhWhhqhEWvAqqWqqWAhqqEEvEEhAvAAAhAv'  
+        inputDict['cube'] = 'O7xzBOBBzzzB77OO7BOBOzzO7z77O7BxxzxxzxxxO7BB999x999999'  
         var_w = inputDict['cube'][-5]
         expectedResult_col = var_w 
                    
