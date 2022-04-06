@@ -1486,9 +1486,9 @@ def front_left_trigger(lst_cube, lst_rotate):
 
 def front_right_trigger(lst_cube, lst_rotate):
     lst_cube = rotateSide_f(lst_cube)
-    lst_cube = rotateSide_U(lst_cube)
+    lst_cube = rotateSide_u(lst_cube)
     lst_cube = rotateSide_F(lst_cube)   
-    lst_rotate.append("fUF")  
+    lst_rotate.append("fuF")  
     
     return [lst_cube, lst_rotate]
 #######
@@ -1758,10 +1758,9 @@ def solve_top_white_cells(lst_cube, lst_rotate):
             lst_cube = rotateSide_b(lst_cube)
             lst_cube = rotateSide_u(lst_cube)
             lst_cube = rotateSide_B(lst_cube)   
-            lst_rotate.append("UbuBbuB") 
+            lst_rotate.append("UbuBbuB")            
             
-            
-    if lst_cube[4][8] == var_w and lst_cube[5][2] != var_w:
+    elif lst_cube[4][8] == var_w and lst_cube[5][2] != var_w:
             lst_cube = rotateSide_R(lst_cube)
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_r(lst_cube) 
@@ -1800,7 +1799,7 @@ def solve_top_white_cells(lst_cube, lst_rotate):
             lst_cube = rotateSide_B(lst_cube)   
             lst_rotate.append("UUbuBbuB") 
     ###here
-    if lst_cube[4][0] == var_w and lst_cube[5][6] != var_w:
+    elif lst_cube[4][0] == var_w and lst_cube[5][6] != var_w:
             lst_cube = rotateSide_b(lst_cube)
             lst_cube = rotateSide_u(lst_cube)
             lst_cube = rotateSide_B(lst_cube) 
@@ -1837,7 +1836,7 @@ def solve_top_white_cells(lst_cube, lst_rotate):
             lst_cube = rotateSide_r(lst_cube)   
             lst_rotate.append("UURUrRUr") 
             
-    if lst_cube[4][2] == var_w and lst_cube[5][8] != var_w:
+    elif lst_cube[4][2] == var_w and lst_cube[5][8] != var_w:
             lst_cube = rotateSide_B(lst_cube)
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_b(lst_cube) 
