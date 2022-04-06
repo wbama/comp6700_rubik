@@ -16,7 +16,7 @@ class SolveDaisyTest(unittest.TestCase):
             
         def test_010_RotateWholeCubeClockwise(self):
             inputDict = {}
-            inputDict['cube'] = 'bgbgyrywgogyygywooggrbwywrobwyobrywrwworoorywgbrorbbbg'
+            inputDict['cube'] = 'yybrbybrgwggowgwrgywyogwobgbbboywyoorgrwryorrwbrbogoyw'
             inputDict['op'] = 'solve'  
             
             expectedResult = {} 
