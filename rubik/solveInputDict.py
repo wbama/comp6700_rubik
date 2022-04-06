@@ -46,12 +46,12 @@ inputDict['op'] = 'solve'
 # #
 #print(f"wc {solveLowerLayer(inputDict)}")
 #
-print(_solve(inputDict))
+#print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 
 
-#print(solveLowerLayer(inputDict))
+print(solveWhiteCross(inputDict))
 
 
 #print(_solve(inputDict))
