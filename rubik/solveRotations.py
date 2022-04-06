@@ -1443,7 +1443,11 @@ def rotateIntoWhiteCross(lst_cube, lst_rotate):
         lst_cube = rotateSide_u(lst_cube)
         lst_cube = rotateSide_R(lst_cube)
         lst_cube = rotateSide_R(lst_cube)
-        lst_rotate.append("uRR")        
+        lst_rotate.append("uRR")  
+    else:
+        lst_cube = rotateSide_U(lst_cube) 
+        lst_rotate.append("U")  
+              
        
     return [lst_cube, lst_rotate]
 
