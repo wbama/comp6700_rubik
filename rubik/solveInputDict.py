@@ -16,7 +16,7 @@ from rubik.solveDaisy import solveDaisy
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = "gwgbbobgrowbwrbwwgygrrgyrobwyoroyworgrooygwbyyybbwrogy"
+inputDict['cube'] = "WvvvvWEvqWqhEWhEWAAEhWhhqhEWvAqqWqqWAhqqEEvEEhAvAAAhAv"
 #inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
 #inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 #inputDict['cube'] = 'byowbgoryyyworwryybowogrgbrgwoyogwwgrborygybgwgbbwobrr'
