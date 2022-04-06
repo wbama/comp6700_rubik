@@ -51,7 +51,7 @@ inputDict['op'] = 'solve'
 # lst_cube = createCubeListFromInputParms(parms)
 
 
-#print(solveWhiteCross(inputDict))
+print(solveWhiteCross(inputDict))
 
 
-print(_solve(inputDict))
+#print(_solve(inputDict))
