@@ -16,12 +16,12 @@ from rubik.solveDaisy import solveDaisy
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
 
 inputDict = {}
-inputDict['cube'] = "gwgbbobgrowbwrbwwgygrrgyrobwyoroyworgrooygwbyyybbwrogy"
+inputDict['cube'] = "qBu1HqHH111HBBqqBHqHq11qB1BBqBHuu1uu1uuuqBHHOOOuOOOOOO"
 #inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
 #inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 #inputDict['cube'] = 'byowbgoryyyworwryybowogrgbrgwoyogwwgrborygybgwgbbwobrr'
 inputDict['op'] = 'solve' 
-inputDict['rotate'] = 'FRfufuurrUfuFFUURRUBBUUUULLUUluLRUruuBUUbuBUbbuBUbuuBUbuB'
+#inputDict['rotate'] = 'RRuDRRuDRRuDRRUUURRUUUUBBUUUULLUUUUFFUluuLUluL'
 
 
 
@@ -46,12 +46,12 @@ inputDict['rotate'] = 'FRfufuurrUfuFFUURRUBBUUUULLUUluLRUruuBUUbuBUbbuBUbuuBUbuB
 # #
 #print(f"wc {solveLowerLayer(inputDict)}")
 #
-print(_solve(inputDict))
+#print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 
 
-#solveLowerLayer(inputDict)
+print(solveLowerLayer(inputDict))
 
 
 #print(_solve(inputDict))
