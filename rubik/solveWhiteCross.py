@@ -17,6 +17,7 @@ def solveWhiteCross(parms):
     lst_cube = solveDaisy(parms)[0]
     lst_rotate = solveDaisy(parms)[1]
     print(f"input cube {lst_cube}")
+    print(f"input rotation {lst_rotate}")
                
     for _ in range(20):
         lst_cube_rotate = rotateIntoWhiteCross(lst_cube, lst_rotate)   
