@@ -15,7 +15,8 @@ class SolveWhiteCrossTest(unittest.TestCase):
         def test_050_SolveWhiteCross(self):
             inputDict = {}
             inputDict['cube'] = 'qBu1HqHH111HBBqqBHqHq11qB1BBqBHuu1uu1uuuqBHHOOOuOOOOOO'    
-            expectedResult = inputDict['cube'][50]           
+            var_w = inputDict['cube'][-5]
+            expectedResult_col = var_w       
 
             actualResult = solveWhiteCross(inputDict)[0]
             self.assertEqual(expectedResult, actualResult[5][1])
