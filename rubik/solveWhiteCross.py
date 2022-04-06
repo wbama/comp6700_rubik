@@ -7,7 +7,7 @@
 """
 
 
-from rubik.solveRotations import rotateIntoWhiteCross, createYellowAndWhiteVariables, rotateSide_U
+from rubik.solveRotations import rotateIntoWhiteCross, createYellowAndWhiteVariables
 from rubik.solveDaisy import solveDaisy
 
 def solveWhiteCross(parms):  
