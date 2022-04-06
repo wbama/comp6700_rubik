@@ -64,7 +64,7 @@ class SolveDaisyTest(unittest.TestCase):
             
     def test_050_SolveDaisy_y_4(self):
             inputDict = {}
-            inputDict['cube'] = 'bbgwbzozrozwrrbgrbbbgrggorrzgrooobbgroowzgwzzwowwwwzgz'    
+            inputDict['cube'] = 'qBu1HqHH111HBBqqBHqHq11qB1BBqBHuu1uu1uuuqBHHOOOuOOOOOO'    
             expectedResult = 'w'             
             if createCubeListFromInputParms(inputDict)[4][4] == createYellowAndWhiteVariables(inputDict)[0]:
                 actualResult = solveDaisy(inputDict)[0]
