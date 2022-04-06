@@ -15,7 +15,7 @@ class SolveWhiteCrossTest(unittest.TestCase):
         def test_010_SolveWhiteCross(self):
             inputDict = {}
             #inputDict['cube'] = 'qBu1HqHH111HBBqqBHqHq11qB1BBqBHuu1uu1uuuqBHHOOOuOOOOOO'   
-            inputDict['cube'] = 'ybybgrbowboogoorbowywgbygrwoyggrrbgygbbryyrorowgwwwrwy'    
+            inputDict['cube'] = 'goobbybbowgrgrrgrggywygrogyrbwgorborbbyoyorybywywwwoww'    
             var_w = inputDict['cube'][-5]
             expectedResult = var_w       
 
