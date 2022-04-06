@@ -21,7 +21,7 @@ inputDict['cube'] = "qBu1HqHH111HBBqqBHqHq11qB1BBqBHuu1uu1uuuqBHHOOOuOOOOOO"
 #inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 #inputDict['cube'] = 'byowbgoryyyworwryybowogrgbrgwoyogwwgrborygybgwgbbwobrr'
 inputDict['op'] = 'solve' 
-#inputDict['rotate'] = 'RRuDRRuDRRuDRRUUURRUUUUBBUUUULLUUUUFFUluuLUluL'
+#inputDict['rotate'] = 'RRuDRRuDRRuDRRuddBBUUUULLUUUUFFUUUURRuuBUUbUBUUbuuLUlruR'
 
 
 
@@ -46,12 +46,12 @@ inputDict['op'] = 'solve'
 # #
 #print(f"wc {solveLowerLayer(inputDict)}")
 #
-#print(_solve(inputDict))
+print(_solve(inputDict))
 #
 # lst_cube = createCubeListFromInputParms(parms)
 
 
-print(solveLowerLayer(inputDict))
+#print(solveLowerLayer(inputDict))
 
 
 #print(_solve(inputDict))

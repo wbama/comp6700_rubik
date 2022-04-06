@@ -25,8 +25,8 @@ def solveWhiteCross(parms):
         if lst_cube[5][1] == var_w and lst_cube[5][3] == var_w and lst_cube[5][4] == var_w and \
         lst_cube[5][5] == var_w and lst_cube[5][7] == var_w:
             break
-        else:
-            lst_cube = rotateSide_U(lst_cube)
-            lst_rotate.append("U")
+        # else:
+        #     lst_cube = rotateSide_U(lst_cube)
+        #     lst_rotate.append("U")
 
     return [lst_cube, lst_rotate] 
