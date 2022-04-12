@@ -34,15 +34,10 @@ def solveMiddleLayer(parms):
     str_rotation_cleanup = str_rotation_cleanup.replace("bB", "")
     str_rotation_cleanup = str_rotation_cleanup.replace("Bb", "")
     str_rotation_cleanup = str_rotation_cleanup.replace("Ff", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")
-    
+    str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")    
     #get back the cleaned up rotations from making white cross. Append to this list
     lst_rotate = list(str_rotation_cleanup) 
     
-    #the cross color will be whatever is at the bottom. Not always white. use var_w    
-    # if no side-top corners or side-bottom corners, solve top matched to bottom, do whole thing again    
-    #if no top corners, solve the bottom corners. Run once, then run top corners            
-    #solve the side-top corners
     print(f"input cube {lst_cube}")
 
     return lst_cube, lst_rotate
