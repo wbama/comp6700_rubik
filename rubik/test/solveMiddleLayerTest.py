@@ -8,6 +8,7 @@
 
 import unittest
 from rubik.solveLowerLayer import solveLowerLayer
+from rubik.solveMiddleLayer import solveMiddleLayer
 
 #need to update this. this is not a white cross. Look at the sides too
 class SolveLowerLayerTest(unittest.TestCase):  
@@ -32,6 +33,17 @@ class SolveLowerLayerTest(unittest.TestCase):
         self.assertEqual(actualResult[1][6], actualResult[1][7], actualResult[1][7])
         self.assertEqual(actualResult[2][6], actualResult[2][7], actualResult[2][7])
         self.assertEqual(actualResult[3][6], actualResult[3][7], actualResult[3][7])
+        
+    def test_020_SolveMiddleLayer(self):   
+        inputDict = {}
+        inputDict['cube'] = 'oGog6og3Sg36S33o6gGo36SSS63go6gooSGo663GggGSS6SG3GGGg3'  
+                
+        actualResult = solveMiddleLayer(inputDict)[0]
+        #sides should also be solved
+        self.assertEqual(actualResult[0][4], actualResult[0][5], actualResult[0][6])
+        self.assertEqual(actualResult[1][4], actualResult[1][5], actualResult[1][6])
+        self.assertEqual(actualResult[2][4], actualResult[2][5], actualResult[2][6])
+        self.assertEqual(actualResult[3][4], actualResult[3][5], actualResult[3][6])
 
         
         
