@@ -19,7 +19,7 @@ inputDict = {}
 #inputDict['cube'] = "ryrbboogywyogrwrygybrggbowbbyyoowoowwrggybgogbrbwwryrw"
 #inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
 #inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
-inputDict['cube'] = 'iht3aPaP3iiht3aa3aPtPPtiP33hhP3PatPhaitaiatt33iihhhhti'
+inputDict['cube'] = 'BeReRrAReeeBBerBttrArRBtBrRRtrrrBeRRtBtRttAAtreAAABAAe'
 inputDict['op'] = 'solve' 
 #inputDict['rotate'] = 'RRurUfUDDRUfuRRuLLuuBBuFuFruRluuLuruRbuuBUbuBuluL'
 

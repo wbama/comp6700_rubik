@@ -1766,9 +1766,9 @@ def solve_top_white_cells(lst_cube, lst_rotate):
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_r(lst_cube) 
             lst_cube = rotateSide_R(lst_cube)
-            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_r(lst_cube)   
-            lst_rotate.append("RUrRur")      
+            lst_rotate.append("RUrRUr")      
     elif lst_cube[4][8] == var_w and lst_cube[5][0] != var_w:
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_l(lst_cube)
