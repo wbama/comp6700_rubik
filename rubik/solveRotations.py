@@ -1877,6 +1877,66 @@ def solve_top_white_cells(lst_cube, lst_rotate):
             lst_rotate.append("URUrRur") 
         
     return [lst_cube, lst_rotate]
+
+def rotateIntoT(lst_cube, lst_rotate):
+    if lst_cube[4][7] != var_y and lst_cube[0][1] != var_y:
+        if lst_cube[0][1] == lst_cube[0][4] == lst_cube[0][7]:
+            lst_rotate.append("") 
+        elif lst_cube[0][1] == lst_cube[1][4] == lst_cube[1][7]:
+            lst_cube = rotateSide_u(lst_cube)
+            lst_rotate.append("u") 
+        elif lst_cube[0][1] == lst_cube[2][4] == lst_cube[2][7]:
+            lst_cube = rotateSide_u(lst_cube)
+            lst_cube = rotateSide_u(lst_cube)
+            lst_rotate.append("uu") 
+        elif lst_cube[0][1] == lst_cube[3][4] == lst_cube[3][7]:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_rotate.append("U") 
+            
+            #working on this
+    elif lst_cube[4][5] != var_y and lst_cube[1][1] != var_y:
+        if lst_cube[1][1] == lst_cube[0][4] == lst_cube[0][7]:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_rotate.append("U") 
+        elif lst_cube[1][1] == lst_cube[1][4] == lst_cube[1][7]:
+            lst_rotate.append("") 
+        elif lst_cube[1][1] == lst_cube[2][4] == lst_cube[2][7]:
+            lst_cube = rotateSide_u(lst_cube)
+            lst_rotate.append("u") 
+        elif lst_cube[1][1] == lst_cube[3][4] == lst_cube[3][7]:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_rotate.append("UU") 
+            
+    elif lst_cube[4][1] != var_y and lst_cube[2][1] != var_y:
+        if lst_cube[2][1] == lst_cube[0][4] == lst_cube[0][7]:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_rotate.append("UU") 
+        elif lst_cube[2][1] == lst_cube[1][4] == lst_cube[1][7]:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_rotate.append("U") 
+        elif lst_cube[2][1] == lst_cube[2][4] == lst_cube[2][7]:
+            lst_rotate.append("") 
+        elif lst_cube[2][1] == lst_cube[3][4] == lst_cube[3][7]:
+            lst_cube = rotateSide_u(lst_cube)
+            lst_rotate.append("u") 
+            
+    elif lst_cube[4][3] != var_y and lst_cube[3][1] != var_y:
+        if lst_cube[3][1] == lst_cube[0][4] == lst_cube[0][7]:
+            lst_cube = rotateSide_u(lst_cube)
+            lst_rotate.append("u") 
+        elif lst_cube[3][1] == lst_cube[1][4] == lst_cube[1][7]:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_cube = rotateSide_U(lst_cube)
+            lst_rotate.append("UU") 
+        elif lst_cube[3][1] == lst_cube[2][4] == lst_cube[2][7]:
+            lst_cube = rotateSide_U(lst_cube)
+            lst_rotate.append("U")
+        elif lst_cube[3][1] == lst_cube[3][4] == lst_cube[3][7]:
+            lst_rotate.append("") 
+            
+
                 
 
 

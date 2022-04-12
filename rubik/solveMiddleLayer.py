@@ -10,6 +10,7 @@
 from rubik.solveRotations import solve_top_w_corners, solve_bottom_w_corners, solve_top_white_cells
 from rubik.solveWhiteCross import solveWhiteCross
 from rubik.solveRotations import createYellowAndWhiteVariables
+from rubik.solveLowerLayer import solveLowerLayer
 
 
 def solveMiddleLayer(parms):
@@ -18,9 +19,9 @@ def solveMiddleLayer(parms):
     print(f"var_w is  {var_w}")
     #the input cube with the white cross
     
-    lst_cube = solveWhiteCross(parms)[0]
+    lst_cube = solveLowerLayer(parms)[0]
     
-    str_rotations_long = "".join(solveWhiteCross(parms)[1]) 
+    str_rotations_long = "".join(solveLowerLayer(parms)[1]) 
             
     str_rotation_cleanup = str_rotations_long.replace("Dd", "")
     str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")

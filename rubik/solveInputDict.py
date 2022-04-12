@@ -11,6 +11,7 @@ from rubik.solveWhiteCross import solveWhiteCross
 from rubik.solveRotations import createYellowAndWhiteVariables, createStringFromCube, createYellowAndWhiteVariables
 from rubik.solveLowerLayer import solveLowerLayer
 from rubik.solveDaisy import solveDaisy
+from rubik.solveMiddleLayer import solveMiddleLayer
 
 
 #inputDict['cube'] = 'xy54Ra5ax4RxRxxa545445yxayy54RR4RaxxRayya5aayRxyy5445R'
@@ -51,11 +52,11 @@ inputDict['op'] = 'solve'
 # lst_cube = createCubeListFromInputParms(parms)
 
 
-print(solveWhiteCross(inputDict))
+# print(solveWhiteCross(inputDict))
 print("")
 print("")
 print("")
-print(solveLowerLayer(inputDict))
+print(solveMiddleLayer(inputDict))
 print("")
 print("")
 print("")
