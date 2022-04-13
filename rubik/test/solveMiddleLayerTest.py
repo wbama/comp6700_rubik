@@ -52,7 +52,7 @@ class SolveLowerLayerTest(unittest.TestCase):
         
         actualResult = solveMiddleLayer(inputDict)[0]
         #sides should also be solved
-        if actualResult[1][1] == actualResult[1][4]:
+        if actualResult[0][1] == actualResult[0][4]:
             self.assertEqual(actualResult[0][1], actualResult[0][4], actualResult[0][6]) 
         self.assertEqual(actualResult[1][1], actualResult[1][4], actualResult[1][6]) 
         # self.assertEqual(actualResult[2][1], actualResult[2][4], actualResult[2][6]) 
