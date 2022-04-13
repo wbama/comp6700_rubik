@@ -6,7 +6,7 @@
     04/04 - Finish solving lower layer
     
 """
-from rubik.solveRotations import createYellowAndWhiteVariables, rotateIntoT
+from rubik.solveRotations import createYellowAndWhiteVariables, rotateIntoTSolve
 from rubik.solveLowerLayer import solveLowerLayer
 
 
@@ -35,7 +35,7 @@ def solveMiddleLayer(parms):
     #get back the cleaned up rotations from making white cross. Append to this list
 
     
-    rotateIntoT(lst_cube, lst_rotate)
+    rotateIntoTSolve(lst_cube, lst_rotate)
     
     # print(f"input cube {lst_cube}")
 
