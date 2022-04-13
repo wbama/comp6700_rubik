@@ -1879,7 +1879,8 @@ def solve_top_white_cells(lst_cube, lst_rotate):
     return [lst_cube, lst_rotate]
 
 def rotateIntoT(lst_cube, lst_rotate):
-    if lst_cube[4][7] != var_y and lst_cube[0][1] != var_y:
+    #top piece with no yellow. Then matches the side with one of center colors
+    if lst_cube[4][7] != var_y:
         if lst_cube[0][1] == lst_cube[0][4] == lst_cube[0][7]:
             lst_rotate.append("") 
         elif lst_cube[0][1] == lst_cube[1][4] == lst_cube[1][7]:
@@ -1893,7 +1894,7 @@ def rotateIntoT(lst_cube, lst_rotate):
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U") 
 
-    elif lst_cube[4][5] != var_y and lst_cube[1][1] != var_y:
+    elif lst_cube[4][5] != var_y:
         if lst_cube[1][1] == lst_cube[0][4] == lst_cube[0][7]:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U") 
@@ -1907,7 +1908,7 @@ def rotateIntoT(lst_cube, lst_rotate):
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("UU") 
             
-    elif lst_cube[4][1] != var_y and lst_cube[2][1] != var_y:
+    elif lst_cube[4][1] != var_y:
         if lst_cube[2][1] == lst_cube[0][4] == lst_cube[0][7]:
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_U(lst_cube)
@@ -1921,7 +1922,7 @@ def rotateIntoT(lst_cube, lst_rotate):
             lst_cube = rotateSide_u(lst_cube)
             lst_rotate.append("u") 
             
-    elif lst_cube[4][3] != var_y and lst_cube[3][1] != var_y:
+    elif lst_cube[4][3] != var_y :
         if lst_cube[3][1] == lst_cube[0][4] == lst_cube[0][7]:
             lst_cube = rotateSide_u(lst_cube)
             lst_rotate.append("u") 
