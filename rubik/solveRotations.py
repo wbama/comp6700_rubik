@@ -1892,8 +1892,7 @@ def rotateIntoT(lst_cube, lst_rotate):
         elif lst_cube[0][1] == lst_cube[3][4] == lst_cube[3][7]:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U") 
-            
-            #working on this
+
     elif lst_cube[4][5] != var_y and lst_cube[1][1] != var_y:
         if lst_cube[1][1] == lst_cube[0][4] == lst_cube[0][7]:
             lst_cube = rotateSide_U(lst_cube)

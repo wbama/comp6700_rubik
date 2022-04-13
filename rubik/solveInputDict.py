@@ -29,6 +29,6 @@ print(solveLowerLayer(inputDict))
 print("")
 print("")
 print("")
-print(_solve(inputDict))
+print(solveMiddleLayer(inputDict))
 
 #print(_solve(inputDict))

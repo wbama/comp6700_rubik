@@ -6,10 +6,7 @@
     04/04 - Finish solving lower layer
     
 """
-
-from rubik.solveRotations import solve_top_w_corners, solve_bottom_w_corners, solve_top_white_cells
-from rubik.solveWhiteCross import solveWhiteCross
-from rubik.solveRotations import createYellowAndWhiteVariables
+from rubik.solveRotations import createYellowAndWhiteVariables, rotateIntoT
 from rubik.solveLowerLayer import solveLowerLayer
 
 
@@ -21,24 +18,26 @@ def solveMiddleLayer(parms):
     
     lst_cube = solveLowerLayer(parms)[0]
     
-    str_rotations_long = "".join(solveLowerLayer(parms)[1]) 
+    lst_rotate = solveLowerLayer(parms)[1]
             
-    str_rotation_cleanup = str_rotations_long.replace("Dd", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("rR", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("Uu", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("uU", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("Ll", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("lL", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("bB", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("Bb", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("Ff", "")
-    str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")    
+    # str_rotation_cleanup = str_rotations_long.replace("Dd", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("rR", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("Uu", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("uU", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("Ll", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("lL", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("bB", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("Bb", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("Ff", "")
+    # str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")    
     #get back the cleaned up rotations from making white cross. Append to this list
-    lst_rotate = list(str_rotation_cleanup) 
+
     
-    print(f"input cube {lst_cube}")
+    rotateIntoT(lst_cube, lst_rotate)
+    
+    # print(f"input cube {lst_cube}")
 
     return lst_cube, lst_rotate
 
