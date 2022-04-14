@@ -7,6 +7,7 @@
     
 """
 from rubik.solveRotations import createYellowAndWhiteVariables, rotateIntoTSolve, solve_top_w_corners
+from rubik.solveRotations import right_left_trigger, back_left_trigger, left_left_trigger, front_left_trigger
 from rubik.solveLowerLayer import solveLowerLayer
 
 
@@ -51,6 +52,16 @@ def solveMiddleLayer(parms):
             (lst_cube[4][7] == var_y or lst_cube[0][1] == var_y ) and \
             (lst_cube[4][8] == var_y or lst_cube[0][2]  == var_y or lst_cube[3][0]  == var_y):
             print("edge piece not yellow")
+            if (lst_cube[0][3] ==  lst_cube[0][4] and lst_cube[0][5] != lst_cube[0][4]):
+                lst_cube = right_left_trigger(lst_cube, lst_rotate)[0]
+            elif (lst_cube[1][3] ==  lst_cube[1][4] and lst_cube[1][5] != lst_cube[1][4]):
+                lst_cube = back_left_trigger(lst_cube, lst_rotate)[0]
+            elif (lst_cube[2][3] ==  lst_cube[2][4] and lst_cube[2][5] != lst_cube[2][4]):
+                lst_cube = left_left_trigger(lst_cube, lst_rotate)[0]
+            elif (lst_cube[3][3] ==  lst_cube[3][4] and lst_cube[3][5] != lst_cube[3][4]):
+                lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]
+                
+                
     
     return lst_cube, lst_rotate
 
