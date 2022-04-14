@@ -10,6 +10,7 @@ from rubik.solveRotations import rotateSide_D, rotateSide_d, rotateSide_f, rotat
 import rubik.solveCheckInput as ci
 from rubik.solveRotations import createCubeListFromInputParms
 from rubik.solveLowerLayer import solveLowerLayer
+from rubik.solveMiddleLayer import solveMiddleLayer
 
 def _solve(parms):
     result = {}    
@@ -30,7 +31,7 @@ def _solve(parms):
        
         if (rotate_length == 0 ):          
             
-            str_rotations_long = "".join(solveLowerLayer(parms)[1])  
+            str_rotations_long = "".join(solveMiddleLayer(parms)[1])  
             
             str_rotation_cleanup = str_rotations_long.replace("Dd", "")
             str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
