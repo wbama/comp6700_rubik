@@ -291,9 +291,13 @@ class SolveTest(unittest.TestCase):
         self.assertEqual( (actualResult.get('cube'))[3],  (actualResult.get('cube'))[4],  (actualResult.get('cube'))[5])
         self.assertEqual( (actualResult.get('cube'))[6],  (actualResult.get('cube'))[7],  (actualResult.get('cube'))[8])
         
-        
+        self.assertEqual( (actualResult.get('cube'))[12],  (actualResult.get('cube'))[13],  (actualResult.get('cube'))[14])
         self.assertEqual( (actualResult.get('cube'))[15],  (actualResult.get('cube'))[16],  (actualResult.get('cube'))[17])
+        
+        self.assertEqual( (actualResult.get('cube'))[21],  (actualResult.get('cube'))[22],  (actualResult.get('cube'))[23])
         self.assertEqual( (actualResult.get('cube'))[24],  (actualResult.get('cube'))[25],  (actualResult.get('cube'))[26])
+        
+        self.assertEqual( (actualResult.get('cube'))[30],  (actualResult.get('cube'))[31],  (actualResult.get('cube'))[32])   
         self.assertEqual( (actualResult.get('cube'))[33],  (actualResult.get('cube'))[34],  (actualResult.get('cube'))[35])
 
 
