@@ -9,9 +9,7 @@
 """
 from rubik.solveRotations import createYellowAndWhiteVariables, rotateIntoTSolve, solve_top_w_corners
 from rubik.solveRotations import right_left_trigger, back_left_trigger, left_left_trigger, front_left_trigger
-from rubik.solveRotations import right_right_trigger, back_right_trigger, left_right_trigger, front_right_trigger
 from rubik.solveLowerLayer import solveLowerLayer
-
 
 def solveMiddleLayer(parms):
     
@@ -21,8 +19,7 @@ def solveMiddleLayer(parms):
     lst_cube = solveLowerLayer(parms)[0]    
     lst_rotate = solveLowerLayer(parms)[1]
             
-    for _ in range(20):
-        
+    for _ in range(20):        
         lst_cube_t = rotateIntoTSolve(lst_cube, lst_rotate)
         lst_cube = lst_cube_t[0]
         lst_rotate = lst_cube_t[1]
@@ -42,7 +39,7 @@ def solveMiddleLayer(parms):
             (lst_cube[2][3] == lst_cube[2][4] == lst_cube[2][5] == lst_cube[2][6] == lst_cube[2][7] == lst_cube[2][8]) and \
             (lst_cube[3][3] == lst_cube[3][4] == lst_cube[3][5] == lst_cube[3][6] == lst_cube[3][7] == lst_cube[3][8]):
             break
-        
+                
         #no edge pieces without yellow, but middle layer not solved. If middle layer solved, would break
         if (lst_cube[4][3]  == var_y or lst_cube[3][1]  == var_y) and \
             (lst_cube[4][1] == var_y or lst_cube[2][1]  == var_y) and \
@@ -68,31 +65,7 @@ def solveMiddleLayer(parms):
                 lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]
                 lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
                 lst_cube = lst_top_w_corners[0]
-                lst_rotate = lst_top_w_corners[1]   
-#################
-            # if (lst_cube[0][5] ==  lst_cube[0][4] and lst_cube[0][3] != lst_cube[0][4]):
-            #     lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]
-            #     lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
-            #     lst_cube = lst_top_w_corners[0]
-            #     lst_rotate = lst_top_w_corners[1] 
-            # elif (lst_cube[1][5] ==  lst_cube[1][4] and lst_cube[1][3] != lst_cube[1][4]):
-            #     lst_cube = front_right_trigger(lst_cube, lst_rotate)[0]
-            #     lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
-            #     lst_cube = lst_top_w_corners[0]
-            #     lst_rotate = lst_top_w_corners[1] 
-            # elif (lst_cube[2][5] ==  lst_cube[2][4] and lst_cube[2][3] != lst_cube[2][4]):####
-            #     lst_cube = right_right_trigger(lst_cube, lst_rotate)[0]
-            #     lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
-            #     lst_cube = lst_top_w_corners[0]
-            #     lst_rotate = lst_top_w_corners[1] 
-            # elif (lst_cube[3][5] ==  lst_cube[3][4] and lst_cube[3][3] != lst_cube[3][4]):
-            #     lst_cube = back_right_trigger(lst_cube, lst_rotate)[0]
-            #     lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
-            #     lst_cube = lst_top_w_corners[0]
-            #     lst_rotate = lst_top_w_corners[1]   
-
-           
-                
+                lst_rotate = lst_top_w_corners[1] 
     
     return lst_cube, lst_rotate
 

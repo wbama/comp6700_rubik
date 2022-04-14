@@ -5,7 +5,6 @@
     
 """
 import unittest
-from rubik.solveLowerLayer import solveLowerLayer
 from rubik.solveMiddleLayer import solveMiddleLayer
 
 #need to update this. this is not a white cross. Look at the sides too
