@@ -300,7 +300,6 @@ class SolveTest(unittest.TestCase):
         self.assertEqual( (actualResult.get('cube'))[30],  (actualResult.get('cube'))[31],  (actualResult.get('cube'))[32])   
         self.assertEqual( (actualResult.get('cube'))[33],  (actualResult.get('cube'))[34],  (actualResult.get('cube'))[35])
 
-
 # Sad path tests
 
     def test_910_IncorrectCubeString(self):
