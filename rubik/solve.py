@@ -9,7 +9,6 @@ from rubik.solveRotations import rotateSide_L, rotateSide_l, rotateSide_U, rotat
 from rubik.solveRotations import rotateSide_D, rotateSide_d, rotateSide_f, rotateSide_F
 import rubik.solveCheckInput as ci
 from rubik.solveRotations import createCubeListFromInputParms
-from rubik.solveLowerLayer import solveLowerLayer
 from rubik.solveMiddleLayer import solveMiddleLayer
 
 def _solve(parms):
