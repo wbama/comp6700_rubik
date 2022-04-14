@@ -273,27 +273,26 @@ class SolveTest(unittest.TestCase):
         expectedResult_col = var_w 
                    
 
-        actualResult = solve._solve(inputDict)
-        self.assertEqual(expectedResult_col, actualResult[5][1])
-        self.assertEqual(expectedResult_col, actualResult[5][2])
-        self.assertEqual(expectedResult_col, actualResult[5][3])
-        self.assertEqual(expectedResult_col, actualResult[5][4])
-        self.assertEqual(expectedResult_col, actualResult[5][5])
-        self.assertEqual(expectedResult_col, actualResult[5][6])
-        self.assertEqual(expectedResult_col, actualResult[5][7])
-        self.assertEqual(expectedResult_col, actualResult[5][8])
-        #sides should also be solved
-        self.assertEqual(actualResult[0][3], actualResult[0][4], actualResult[0][5])
-        self.assertEqual(actualResult[0][6], actualResult[0][7], actualResult[0][7])
+        actualResult =  solve._solve(inputDict)
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[45])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[46])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[47])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[48])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[49])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[50])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[51])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[52])
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[53])
         
-        self.assertEqual(actualResult[1][3], actualResult[1][4], actualResult[1][5])
-        self.assertEqual(actualResult[1][6], actualResult[1][7], actualResult[1][7])
         
-        self.assertEqual(actualResult[2][3], actualResult[2][4], actualResult[2][5])
-        self.assertEqual(actualResult[2][6], actualResult[2][7], actualResult[2][7])
+        # #sides should also be solved
+        self.assertEqual( (actualResult.get('cube'))[3],  (actualResult.get('cube'))[4],  (actualResult.get('cube'))[5])
+        self.assertEqual( (actualResult.get('cube'))[6],  (actualResult.get('cube'))[7],  (actualResult.get('cube'))[8])
         
-        self.assertEqual(actualResult[3][3], actualResult[3][4], actualResult[3][5])
-        self.assertEqual(actualResult[3][6], actualResult[3][7], actualResult[3][7])
+        
+        self.assertEqual( (actualResult.get('cube'))[15],  (actualResult.get('cube'))[16],  (actualResult.get('cube'))[17])
+        self.assertEqual( (actualResult.get('cube'))[24],  (actualResult.get('cube'))[25],  (actualResult.get('cube'))[26])
+        self.assertEqual( (actualResult.get('cube'))[33],  (actualResult.get('cube'))[34],  (actualResult.get('cube'))[35])
 
 
 # Sad path tests
