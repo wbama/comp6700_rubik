@@ -21,7 +21,7 @@ def solveMiddleLayer(parms):
     lst_cube = solveLowerLayer(parms)[0]    
     lst_rotate = solveLowerLayer(parms)[1]
             
-    for _ in range(50):
+    for _ in range(20):
         
         lst_cube_t = rotateIntoTSolve(lst_cube, lst_rotate)
         lst_cube = lst_cube_t[0]
@@ -30,7 +30,6 @@ def solveMiddleLayer(parms):
         if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
             lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
             lst_cube[3][2] == var_w:
-                # print("top w corners")
                 lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
                 lst_cube = lst_top_w_corners[0]
                 lst_rotate = lst_top_w_corners[1] 
