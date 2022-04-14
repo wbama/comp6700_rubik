@@ -20,15 +20,11 @@ inputDict = {}
 #inputDict['cube'] = "ryrbboogywyogrwrygybrggbowbbyyoowoowwrggybgogbrbwwryrw"
 #inputDict['cube'] = 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'
 #inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
-inputDict['cube'] = 'SoYsssowwSww33YssSSwsSSo3Ys3ooSwo3SwosYwoYw33sSY3YYY3o'
+inputDict['cube'] = 'rrwobgbrrbwworbywyrgwygoorgobbboywrygybwygybooggyworwg'
 inputDict['op'] = 'solve' 
-inputDict['rotate'] = 'uRRfuuubuLUURRBBuFFUULLLUlubuuBUbuBRUUrFUfUUfuF'
+#inputDict['rotate'] = 'uRRfuuubuLUURRBBuFFUULLLUlubuuBUbuBRUUrFUfUUfuF'
 
 # print(solveWhiteCross(inputDict))
-print(solveLowerLayer(inputDict))
-print("")
-print("")
-print("")
 print(solveMiddleLayer(inputDict))
 
 #print(_solve(inputDict))

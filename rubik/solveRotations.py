@@ -1880,7 +1880,7 @@ def solve_top_white_cells(lst_cube, lst_rotate):
 
 def rotateIntoTSolve(lst_cube, lst_rotate):
     #top piece with no yellow. Then matches the side with one of center colors
-    if lst_cube[4][7] != var_y:
+    if lst_cube[4][7] != var_y and lst_cube[0][1] != var_y:
         if lst_cube[0][1] == lst_cube[0][4] == lst_cube[0][7]:
             if lst_cube[4][7] == lst_cube[1][4]:
                 lst_cube = rotateSide_U(lst_cube)
@@ -1930,72 +1930,159 @@ def rotateIntoTSolve(lst_cube, lst_rotate):
             
 #############################################   
 
-    elif lst_cube[4][5] != var_y:
+    elif lst_cube[4][5] != var_y and lst_cube[1][1] != var_y:
         if lst_cube[1][1] == lst_cube[0][4] == lst_cube[0][7]:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U") 
-            
+            if lst_cube[4][7] == lst_cube[1][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = right_left_trigger(lst_cube, lst_rotate)[0] 
+            elif lst_cube[4][7] == lst_cube[2][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]              
             
         elif lst_cube[1][1] == lst_cube[1][4] == lst_cube[1][7]:
-            lst_rotate.append("") 
-            
-            
+            if lst_cube[4][5] == lst_cube[2][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = back_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][5] == lst_cube[0][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = front_right_trigger(lst_cube, lst_rotate)[0]                
+
         elif lst_cube[1][1] == lst_cube[2][4] == lst_cube[2][7]:
             lst_cube = rotateSide_u(lst_cube)
             lst_rotate.append("u") 
+            if lst_cube[4][1] == lst_cube[3][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = left_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][1] == lst_cube[1][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = right_right_trigger(lst_cube, lst_rotate)[0]      
             
             
         elif lst_cube[1][1] == lst_cube[3][4] == lst_cube[3][7]:
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("UU") 
-            
+            if lst_cube[4][3] == lst_cube[0][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][3] == lst_cube[2][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = back_right_trigger(lst_cube, lst_rotate)[0]             
             
             
 #############################################            
-    elif lst_cube[4][1] != var_y:
+    elif lst_cube[4][1] != var_y and lst_cube[2][1] != var_y:
         if lst_cube[2][1] == lst_cube[0][4] == lst_cube[0][7]:
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_U(lst_cube)
-            lst_rotate.append("UU") 
-            
+            lst_rotate.append("UU")             
+            if lst_cube[4][7] == lst_cube[1][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = right_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][7] == lst_cube[3][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]                
             
         elif lst_cube[2][1] == lst_cube[1][4] == lst_cube[1][7]:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U") 
+            if lst_cube[4][5] == lst_cube[2][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = back_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][5] == lst_cube[0][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = front_right_trigger(lst_cube, lst_rotate)[0]   
             
             
         elif lst_cube[2][1] == lst_cube[2][4] == lst_cube[2][7]:
-            lst_rotate.append("") 
-            
+            if lst_cube[4][1] == lst_cube[3][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = left_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][1] == lst_cube[1][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = right_right_trigger(lst_cube, lst_rotate)[0]             
             
         elif lst_cube[2][1] == lst_cube[3][4] == lst_cube[3][7]:
             lst_cube = rotateSide_u(lst_cube)
             lst_rotate.append("u") 
+            if lst_cube[4][3] == lst_cube[0][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][3] == lst_cube[1][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = back_right_trigger(lst_cube, lst_rotate)[0]            
             
             
-            
- #############################################
+#############################################
            
     elif lst_cube[4][3] != var_y :
         if lst_cube[3][1] == lst_cube[0][4] == lst_cube[0][7]:
             lst_cube = rotateSide_u(lst_cube)
             lst_rotate.append("u") 
+            if lst_cube[4][7] == lst_cube[1][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = right_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][7] == lst_cube[3][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]    
             
             
         elif lst_cube[3][1] == lst_cube[1][4] == lst_cube[1][7]:
             lst_cube = rotateSide_U(lst_cube)
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("UU") 
+            if lst_cube[4][5] == lst_cube[2][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = back_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][5] == lst_cube[0][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = front_right_trigger(lst_cube, lst_rotate)[0]   
             
             
         elif lst_cube[3][1] == lst_cube[2][4] == lst_cube[2][7]:
             lst_cube = rotateSide_U(lst_cube)
             lst_rotate.append("U")
+            if lst_cube[4][1] == lst_cube[3][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = left_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][1] == lst_cube[1][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = right_right_trigger(lst_cube, lst_rotate)[0]   
             
             
         elif lst_cube[3][1] == lst_cube[3][4] == lst_cube[3][7]:
-            lst_rotate.append("") 
+            if lst_cube[4][3] == lst_cube[0][4]:
+                lst_cube = rotateSide_U(lst_cube)
+                lst_rotate.append("U") 
+                lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]            
+            elif lst_cube[4][3] == lst_cube[2][4]:                                            
+                lst_cube = rotateSide_u(lst_cube) 
+                lst_rotate.append("u")  
+                lst_cube = back_right_trigger(lst_cube, lst_rotate)[0]   
             
     return [lst_cube, lst_rotate]
             
