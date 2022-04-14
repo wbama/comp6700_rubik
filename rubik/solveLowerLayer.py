@@ -46,36 +46,26 @@ def solveLowerLayer(parms):
         if lst_cube[0][0] == var_w or lst_cube[0][2] == var_w or lst_cube[1][0] == var_w or \
         lst_cube[1][2] == var_w or lst_cube[2][0] == var_w or lst_cube[2][2] == var_w or lst_cube[3][0] == var_w or \
         lst_cube[3][2] == var_w:
-            # print("top w corners")
             lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
             lst_cube = lst_top_w_corners[0]
             lst_rotate = lst_top_w_corners[1]
-            # print(lst_cube)
-            # print("".join(lst_rotate))
-            # print("")
         
         # if no side-top corners, put side-bottom corners on top, then solve side-top corners   
         # just do the rotate once, then split up, else will do twice
         if lst_cube[0][6] == var_w or lst_cube[0][8] == var_w or lst_cube[1][6] == var_w or \
         lst_cube[1][8] == var_w or lst_cube[2][6] == var_w or lst_cube[2][8] == var_w or lst_cube[3][6] == var_w or \
         lst_cube[3][8] == var_w:
-            # print("low corners")
             lst_bottom_w_corners = solve_bottom_w_corners(lst_cube, lst_rotate)
             lst_cube = lst_bottom_w_corners[0]
             lst_rotate = lst_bottom_w_corners[1]
-            # print(lst_cube)
-            # print("".join(lst_rotate))
-            # print("")
-            #this will reposition bottom white to top                
+             
           
         if lst_cube[4][6] == var_w or lst_cube[4][8] == var_w or lst_cube[4][0] == var_w or lst_cube[4][2] == var_w:
             # print("on top")
             lst_top_white_cells = solve_top_white_cells(lst_cube, lst_rotate)
             lst_cube = lst_top_white_cells[0]
             lst_rotate = lst_top_white_cells[1]
-            # print(lst_cube)
-            # print("".join(lst_rotate))
-            # print("")
+
             
         if lst_cube[5][0] == var_w and lst_cube[5][1] == var_w and lst_cube[5][2] == var_w and lst_cube[5][3] == var_w and \
         lst_cube[5][4] == var_w and lst_cube[5][5] == var_w and lst_cube[5][6] == var_w and lst_cube[5][7] == var_w and \
