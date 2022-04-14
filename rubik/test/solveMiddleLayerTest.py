@@ -11,30 +11,15 @@ from rubik.solveMiddleLayer import solveMiddleLayer
 #need to update this. this is not a white cross. Look at the sides too
 class SolveMiddleLayerTest(unittest.TestCase):  
     
-    def test_010_RotateIntoTShape(self):   
-        inputDict = {}
-        inputDict['cube'] = 'gwgbbobgrowbwrbwwgygrrgyrobwyoroyworgrooygwbyyybbwrogy'  
-        #solve lower layer first, then rotate into T
-        
-        actualResult = solveMiddleLayer(inputDict)[0]
-        #sides should also be solved
-        if actualResult[0][1] == actualResult[0][4]:
-            self.assertEqual(actualResult[0][1], actualResult[0][4], actualResult[0][6]) 
-        elif actualResult[1][1] == actualResult[1][4]:
-            self.assertEqual(actualResult[1][1], actualResult[1][4], actualResult[1][6]) 
-        elif actualResult[2][1] == actualResult[2][4]:
-            self.assertEqual(actualResult[2][1], actualResult[2][4], actualResult[2][6]) 
-        elif actualResult[2][1] == actualResult[2][4]:
-            self.assertEqual(actualResult[3][1], actualResult[3][4], actualResult[3][6])
-            
-    def test_020_SolveMiddleLayer(self):   
+           
+    def test_010_SolveMiddleLayer(self):   
         inputDict = {}
         inputDict['cube'] = 'SoYsssowwSww33YssSSwsSSo3Ys3ooSwo3SwosYwoYw33sSY3YYY3o'  
         var_w = inputDict['cube'][-5]
         expectedResult_col = var_w 
                    
 
-        actualResult = solveLowerLayer(inputDict)[0]
+        actualResult = solveMiddleLayer(inputDict)[0]
         self.assertEqual(expectedResult_col, actualResult[5][1])
         self.assertEqual(expectedResult_col, actualResult[5][2])
         self.assertEqual(expectedResult_col, actualResult[5][3])
@@ -44,9 +29,16 @@ class SolveMiddleLayerTest(unittest.TestCase):
         self.assertEqual(expectedResult_col, actualResult[5][7])
         self.assertEqual(expectedResult_col, actualResult[5][8])
         #sides should also be solved
+        self.assertEqual(actualResult[0][3], actualResult[0][4], actualResult[0][5])
         self.assertEqual(actualResult[0][6], actualResult[0][7], actualResult[0][7])
+        
+        self.assertEqual(actualResult[1][3], actualResult[1][4], actualResult[1][5])
         self.assertEqual(actualResult[1][6], actualResult[1][7], actualResult[1][7])
+        
+        self.assertEqual(actualResult[2][3], actualResult[2][4], actualResult[2][5])
         self.assertEqual(actualResult[2][6], actualResult[2][7], actualResult[2][7])
+        
+        self.assertEqual(actualResult[3][3], actualResult[3][4], actualResult[3][5])
         self.assertEqual(actualResult[3][6], actualResult[3][7], actualResult[3][7])
 
         

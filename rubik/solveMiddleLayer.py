@@ -17,20 +17,6 @@ def solveMiddleLayer(parms):
     lst_cube = solveLowerLayer(parms)[0]    
     lst_rotate = solveLowerLayer(parms)[1]
             
-    # str_rotation_cleanup = str_rotations_long.replace("Dd", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("dD", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("Rr", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("rR", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("Uu", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("uU", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("Ll", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("lL", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("bB", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("Bb", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("Ff", "")
-    # str_rotation_cleanup = str_rotation_cleanup.replace("fF", "")    
-    #get back the cleaned up rotations from making white cross. Append to this list
-
     for _ in range(20):
         
         lst_cube_t = rotateIntoTSolve(lst_cube, lst_rotate)
@@ -44,6 +30,15 @@ def solveMiddleLayer(parms):
                 lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
                 lst_cube = lst_top_w_corners[0]
                 lst_rotate = lst_top_w_corners[1]
+                
+        if lst_cube[5][0] == var_w and lst_cube[5][1] == var_w and lst_cube[5][2] == var_w and lst_cube[5][3] == var_w and \
+        lst_cube[5][4] == var_w and lst_cube[5][5] == var_w and lst_cube[5][6] == var_w and lst_cube[5][7] == var_w and \
+        lst_cube[5][8] == var_w and \
+        (lst_cube[0][3] == lst_cube[0][4] == lst_cube[0][5] == lst_cube[0][6] == lst_cube[0][7] == lst_cube[0][8]) and \
+        (lst_cube[1][3] == lst_cube[1][4] == lst_cube[1][5] == lst_cube[1][6] == lst_cube[1][7] == lst_cube[1][8]) and \
+        (lst_cube[2][3] == lst_cube[2][4] == lst_cube[2][5] == lst_cube[2][6] == lst_cube[2][7] == lst_cube[2][8]) and \
+        (lst_cube[3][3] == lst_cube[3][4] == lst_cube[3][5] == lst_cube[3][6] == lst_cube[3][7] == lst_cube[3][8]):
+            break
     
     return lst_cube, lst_rotate
 
