@@ -266,9 +266,11 @@ class SolveTest(unittest.TestCase):
         self.assertEqual( (actualResult.get('cube'))[33],  (actualResult.get('cube'))[34],  (actualResult.get('cube'))[35])
         
     def test_170_SolveMiddleLayer(self):   
+     
         inputDict = {}
-        #inputDict['cube'] = 'SoYsssowwSww33YssSSwsSSo3Ys3ooSwo3SwosYwoYw33sSY3YYY3o'  
-        inputDict['cube'] = 'SoYsssowwSww33YssSSwsSSo3Ys3ooSwo3SwosYwoYw33sSY3YYY3o'
+        inputDict['cube'] = 'SoYsssowwSww33YssSSwsSSo3Ys3ooSwo3SwosYwoYw33sSY3YYY3o'        
+        inputDict['rotate'] = (solve._solve(inputDict)).get("solution")
+        
         var_w = inputDict['cube'][-5]
         expectedResult_col = var_w 
                    
