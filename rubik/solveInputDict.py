@@ -22,9 +22,9 @@ inputDict = {}
 #inputDict['cube'] = 'rrbbbbgggryyyyoroyogryggobbwwwwwwwwwgrboorbbyoyyrrgoog'
 inputDict['cube'] = 'SoYsssowwSww33YssSSwsSSo3Ys3ooSwo3SwosYwoYw33sSY3YYY3o'
 inputDict['op'] = 'solve' 
-#inputDict['rotate'] = 'uRRfuuubuLUURRBBuFFUULLLUlubuuBUbuBRUUrFUfUUfuF'
+inputDict['rotate'] = 'uRRfuuubuLUURRBBuFFUULLLUlubuuBUbuBRUUrFUfUUfuFRUrufuFLUlubuBBUburuRUUUBUburuR'
 
 # print(solveWhiteCross(inputDict))
-print(solveMiddleLayer(inputDict))
+#print(solveMiddleLayer(inputDict))
 
-#print(_solve(inputDict))
+print(_solve(inputDict))
