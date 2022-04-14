@@ -47,9 +47,7 @@ def solveMiddleLayer(parms):
             (lst_cube[4][1] == var_y or lst_cube[2][1]  == var_y) and \
             (lst_cube[4][5] == var_y or lst_cube[1][1] == var_y ) and \
             (lst_cube[4][7] == var_y or lst_cube[0][1] == var_y ):
-            print("edge piece not yellow")
-            print(lst_cube)
-            print("")
+
             if (lst_cube[0][3] ==  lst_cube[0][4] and lst_cube[0][5] != lst_cube[0][4]):
                 lst_cube = right_left_trigger(lst_cube, lst_rotate)[0]
                 lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
@@ -69,8 +67,7 @@ def solveMiddleLayer(parms):
                 lst_cube = front_left_trigger(lst_cube, lst_rotate)[0]
                 lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
                 lst_cube = lst_top_w_corners[0]
-                lst_rotate = lst_top_w_corners[1] 
-                
+                lst_rotate = lst_top_w_corners[1]                
                 
     
     return lst_cube, lst_rotate
