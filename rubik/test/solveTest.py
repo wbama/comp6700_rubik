@@ -268,7 +268,7 @@ class SolveTest(unittest.TestCase):
     def test_170_SolveMiddleLayer(self):   
      
         inputDict = {}
-        inputDict['cube'] = 'SoYsssowwSww33YssSSwsSSo3Ys3ooSwo3SwosYwoYw33sSY3YYY3o'        
+        inputDict['cube'] = 'L52255e5eLL2Le22ekkekek5wkewk52LkwL2LkLL22we55wkwww5we'        
         inputDict['rotate'] = (solve._solve(inputDict)).get("solution")
         
         var_w = inputDict['cube'][-5]
