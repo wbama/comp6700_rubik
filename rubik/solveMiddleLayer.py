@@ -19,7 +19,7 @@ def solveMiddleLayer(parms):
     lst_cube = solveLowerLayer(parms)[0]    
     lst_rotate = solveLowerLayer(parms)[1]
             
-    for _ in range(20):
+    for _ in range(50):
         
         lst_cube_t = rotateIntoTSolve(lst_cube, lst_rotate)
         lst_cube = lst_cube_t[0]
