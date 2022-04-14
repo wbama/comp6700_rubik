@@ -43,19 +43,22 @@ def solveMiddleLayer(parms):
             break
         
         #no edge pieces without yellow, but middle layer not solved. If middle layer solved, would break
-        if (lst_cube[4][0] == var_y or lst_cube[3][0]  == var_y or lst_cube[2][2]  == var_y) and \
+        if (lst_cube[4][3]  == var_y or lst_cube[3][1]  == var_y) and \
             (lst_cube[4][1] == var_y or lst_cube[2][1]  == var_y) and \
-            (lst_cube[4][2] == var_y or lst_cube[2][0]  == var_y or lst_cube[1][2]  == var_y) and \
-            (lst_cube[4][3] == var_y or lst_cube[3][1] == var_y) and \
             (lst_cube[4][5] == var_y or lst_cube[1][1] == var_y ) and \
-            (lst_cube[4][6] == var_y or lst_cube[0][0]  == var_y or lst_cube[3][2]  == var_y) and \
-            (lst_cube[4][7] == var_y or lst_cube[0][1] == var_y ) and \
-            (lst_cube[4][8] == var_y or lst_cube[0][2]  == var_y or lst_cube[3][0]  == var_y):
+            (lst_cube[4][7] == var_y or lst_cube[0][1] == var_y ):
             print("edge piece not yellow")
+            print(lst_cube)
+            print("")
             if (lst_cube[0][3] ==  lst_cube[0][4] and lst_cube[0][5] != lst_cube[0][4]):
+                print("lst_cube[0][3]")
                 lst_cube = right_left_trigger(lst_cube, lst_rotate)[0]
             elif (lst_cube[1][3] ==  lst_cube[1][4] and lst_cube[1][5] != lst_cube[1][4]):
                 lst_cube = back_left_trigger(lst_cube, lst_rotate)[0]
+                lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
+                lst_cube = lst_top_w_corners[0]
+                lst_rotate = lst_top_w_corners[1] 
+                print(f"lst_cube[1][3] {lst_cube}")
             elif (lst_cube[2][3] ==  lst_cube[2][4] and lst_cube[2][5] != lst_cube[2][4]):
                 lst_cube = left_left_trigger(lst_cube, lst_rotate)[0]
             elif (lst_cube[3][3] ==  lst_cube[3][4] and lst_cube[3][5] != lst_cube[3][4]):
