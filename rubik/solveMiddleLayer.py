@@ -70,11 +70,11 @@ def solveMiddleLayer(parms):
                 lst_cube = lst_top_w_corners[0]
                 lst_rotate = lst_top_w_corners[1]   
 #################
-            # if (lst_cube[0][5] ==  lst_cube[0][4] and lst_cube[0][3] != lst_cube[0][4]):
-            #     lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]
-            #     lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
-            #     lst_cube = lst_top_w_corners[0]
-            #     lst_rotate = lst_top_w_corners[1] 
+            if (lst_cube[0][5] ==  lst_cube[0][4] and lst_cube[0][3] != lst_cube[0][4]):
+                lst_cube = left_right_trigger(lst_cube, lst_rotate)[0]
+                lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
+                lst_cube = lst_top_w_corners[0]
+                lst_rotate = lst_top_w_corners[1] 
             # elif (lst_cube[1][5] ==  lst_cube[1][4] and lst_cube[1][3] != lst_cube[1][4]):
             #     lst_cube = front_right_trigger(lst_cube, lst_rotate)[0]
             #     lst_top_w_corners = solve_top_w_corners(lst_cube, lst_rotate)
