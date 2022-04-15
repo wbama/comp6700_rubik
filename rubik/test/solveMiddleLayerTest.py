@@ -14,7 +14,7 @@ class SolveMiddleLayerTest(unittest.TestCase):
     def test_010_SolveMiddleLayer(self):   
         inputDict = {}
         #inputDict['cube'] = 'SoYsssowwSww33YssSSwsSSo3Ys3ooSwo3SwosYwoYw33sSY3YYY3o'  
-        inputDict['cube'] = 'L52255e5eLL2Le22ekkekek5wkewk52LkwL2LkLL22we55wkwww5we'
+        inputDict['cube'] = 'oyyrobgobbgrobowbbgyygryrrrggyogbggworyyyrbbrowowwwwww'
         var_w = inputDict['cube'][-5]
         expectedResult_col = var_w 
                    
