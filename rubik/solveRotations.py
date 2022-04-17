@@ -483,7 +483,6 @@ def rotateSide_B_bottom(new_cube, orig_cube):
     new_cube[5].insert(7, orig_cube [3][3])
     new_cube[5].insert(8, orig_cube [3][6])
 
-
 #rotate the back clockwise
 def rotateSide_B(orig_cube): #rotates clock
     new_cube = [[], [], [], [], [], []]
@@ -1076,77 +1075,6 @@ def createCubeListFromInputParms(parms):
     return lst_cube
 
 #rotate the whole cube clockwise. Used in testing. 
-def rotateCubeClock(orig_cube):
-    new_cube = [[], [], [], [], [], []]
-    
-    #front
-    new_cube[0].insert(0, orig_cube [0][6])
-    new_cube[0].insert(1, orig_cube [0][3])
-    new_cube[0].insert(2, orig_cube [0][0])
-    new_cube[0].insert(3, orig_cube [0][7])
-    new_cube[0].insert(4, orig_cube [0][4])
-    new_cube[0].insert(5, orig_cube [0][1])
-    new_cube[0].insert(6, orig_cube [0][8])
-    new_cube[0].insert(7, orig_cube [0][5])
-    new_cube[0].insert(8, orig_cube [0][2])
-    
-    #right    
-    new_cube[1].insert(0, orig_cube [4][6])
-    new_cube[1].insert(1, orig_cube [4][3])
-    new_cube[1].insert(2, orig_cube [4][0])
-    new_cube[1].insert(3, orig_cube [4][7])
-    new_cube[1].insert(4, orig_cube [4][4])
-    new_cube[1].insert(5, orig_cube [4][1])
-    new_cube[1].insert(6, orig_cube [4][8])
-    new_cube[1].insert(7, orig_cube [4][5])
-    new_cube[1].insert(8, orig_cube [4][2])
-    
-    #back    
-    new_cube[2].insert(0, orig_cube [2][2])
-    new_cube[2].insert(1, orig_cube [2][5])
-    new_cube[2].insert(2, orig_cube [2][8])
-    new_cube[2].insert(3, orig_cube [2][1])
-    new_cube[2].insert(4, orig_cube [2][4])
-    new_cube[2].insert(5, orig_cube [2][7])
-    new_cube[2].insert(6, orig_cube [2][0])
-    new_cube[2].insert(7, orig_cube [2][3])
-    new_cube[2].insert(8, orig_cube [2][6])
-    
-    #left    
-    new_cube[3].insert(0, orig_cube [5][6])
-    new_cube[3].insert(1, orig_cube [5][3])
-    new_cube[3].insert(2, orig_cube [5][0])
-    new_cube[3].insert(3, orig_cube [5][7])
-    new_cube[3].insert(4, orig_cube [5][4])
-    new_cube[3].insert(5, orig_cube [5][1])
-    new_cube[3].insert(6, orig_cube [5][8])
-    new_cube[3].insert(7, orig_cube [5][5])
-    new_cube[3].insert(8, orig_cube [5][2])
-    
-    #top    
-    new_cube[4].insert(0, orig_cube [3][6])
-    new_cube[4].insert(1, orig_cube [3][3])
-    new_cube[4].insert(2, orig_cube [3][0])
-    new_cube[4].insert(3, orig_cube [3][7])
-    new_cube[4].insert(4, orig_cube [3][4])
-    new_cube[4].insert(5, orig_cube [3][1])
-    new_cube[4].insert(6, orig_cube [3][8])
-    new_cube[4].insert(7, orig_cube [3][5])
-    new_cube[4].insert(8, orig_cube [3][2])
-    
-    #bottom    
-    new_cube[5].insert(0, orig_cube [1][6])
-    new_cube[5].insert(1, orig_cube [1][3])
-    new_cube[5].insert(2, orig_cube [1][0])
-    new_cube[5].insert(3, orig_cube [1][7])
-    new_cube[5].insert(4, orig_cube [1][4])
-    new_cube[5].insert(5, orig_cube [1][1])
-    new_cube[5].insert(6, orig_cube [1][8])
-    new_cube[5].insert(7, orig_cube [1][5])
-    new_cube[5].insert(8, orig_cube [1][2])
-    
-    return new_cube
-
 #front side goes to the right
 def rotateCubeToRight(cube):
         new_cube = [[], [], [], [], [], []]
@@ -1440,9 +1368,6 @@ def SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one
             lst_cube = rotateSide_R(lst_cube)
             lst_cube = rotateSide_R(lst_cube)
             lst_rotate.append("dRR")   
-        # else:
-        #     lst_cube = lst_cube
-        #     lst_rotate.append("")
             
         return [lst_cube, lst_rotate]
 
@@ -1963,6 +1888,7 @@ def solve_top_white_cells(lst_cube, lst_rotate):
             lst_cube = rotateSide_u(lst_cube)
             lst_cube = rotateSide_L(lst_cube)   
             lst_rotate.append("uuluLluL") 
+            
     elif lst_cube[4][2] == var_w and lst_cube[5][6] != var_w:
             lst_cube = rotateSide_u(lst_cube)
             lst_cube = rotateSide_b(lst_cube)
