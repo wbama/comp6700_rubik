@@ -654,10 +654,7 @@ def rotateSide_L(orig_cube):
 
     return new_cube
 
-#rotate the left cc
-def rotateSide_l(orig_cube):
-    new_cube = [[], [], [], [], [], []]
-    #front
+def rotateSide_l_front(new_cube, orig_cube):
     new_cube[0].insert(0, orig_cube [5][0])
     new_cube[0].insert(1, orig_cube [0][1])
     new_cube[0].insert(2, orig_cube [0][2])
@@ -667,8 +664,8 @@ def rotateSide_l(orig_cube):
     new_cube[0].insert(6, orig_cube [5][6])
     new_cube[0].insert(7, orig_cube [0][7])
     new_cube[0].insert(8, orig_cube [0][8])
-    
-    #stays the same
+
+def rotateSide_l_right(new_cube, orig_cube):
     new_cube[1].insert(0, orig_cube [1][0])
     new_cube[1].insert(1, orig_cube [1][1])
     new_cube[1].insert(2, orig_cube [1][2])
@@ -678,7 +675,8 @@ def rotateSide_l(orig_cube):
     new_cube[1].insert(6, orig_cube [1][6])
     new_cube[1].insert(7, orig_cube [1][7])
     new_cube[1].insert(8, orig_cube [1][8])
-    
+
+def rotateSide_l_back(new_cube, orig_cube):
     new_cube[2].insert(0, orig_cube [2][0])
     new_cube[2].insert(1, orig_cube [2][1])
     new_cube[2].insert(2, orig_cube [4][6])
@@ -688,8 +686,8 @@ def rotateSide_l(orig_cube):
     new_cube[2].insert(6, orig_cube [2][6])
     new_cube[2].insert(7, orig_cube [2][7])
     new_cube[2].insert(8, orig_cube [4][0])
-    
-    #side that rotates counterc
+     
+def rotateSide_l_left(new_cube, orig_cube):
     new_cube[3].insert(0, orig_cube [3][2])
     new_cube[3].insert(1, orig_cube [3][5])
     new_cube[3].insert(2, orig_cube [3][8])
@@ -698,8 +696,9 @@ def rotateSide_l(orig_cube):
     new_cube[3].insert(5, orig_cube [3][7])
     new_cube[3].insert(6, orig_cube [3][0])
     new_cube[3].insert(7, orig_cube [3][3])
-    new_cube[3].insert(8, orig_cube [3][6])      
-   
+    new_cube[3].insert(8, orig_cube [3][6])
+    
+def rotateSide_l_top(new_cube, orig_cube):
     new_cube[4].insert(0, orig_cube [0][0])
     new_cube[4].insert(1, orig_cube [4][1])
     new_cube[4].insert(2, orig_cube [4][2])
@@ -710,6 +709,7 @@ def rotateSide_l(orig_cube):
     new_cube[4].insert(7, orig_cube [4][7])
     new_cube[4].insert(8, orig_cube [4][8])
     
+def rotateSide_l_bottom(new_cube, orig_cube):
     new_cube[5].insert(0, orig_cube [2][8])
     new_cube[5].insert(1, orig_cube [5][1])
     new_cube[5].insert(2, orig_cube [5][2])
@@ -719,6 +719,18 @@ def rotateSide_l(orig_cube):
     new_cube[5].insert(6, orig_cube [2][2])
     new_cube[5].insert(7, orig_cube [5][7])
     new_cube[5].insert(8, orig_cube [5][8])
+    
+#rotate the left cc
+def rotateSide_l(orig_cube):
+    new_cube = [[], [], [], [], [], []]
+    #front
+    rotateSide_l_front(new_cube, orig_cube)
+    rotateSide_l_right(new_cube, orig_cube)
+    rotateSide_l_back(new_cube, orig_cube)
+    #stays the same
+    rotateSide_l_left(new_cube, orig_cube)
+    rotateSide_l_bottom(new_cube, orig_cube) 
+
     return new_cube
 
 #rotate upper side clockwise
