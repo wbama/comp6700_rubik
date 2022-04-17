@@ -4,7 +4,7 @@
     program for solving the white cross
     03/31 - Solve lower layer
     04/04 - Finish solving lower layer
-    04/14 - Middle layer construction
+    04/17 - Middle layer construction
     
 """
 from rubik.solveRotations import createYellowAndWhiteVariables, rotateIntoTSolve, solve_top_w_corners
