@@ -729,6 +729,7 @@ def rotateSide_l(orig_cube):
     rotateSide_l_back(new_cube, orig_cube)
     #stays the same
     rotateSide_l_left(new_cube, orig_cube)
+    rotateSide_l_top(new_cube, orig_cube)
     rotateSide_l_bottom(new_cube, orig_cube) 
 
     return new_cube
