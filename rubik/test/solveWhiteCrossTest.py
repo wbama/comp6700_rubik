@@ -4,8 +4,6 @@
     unittests for solving the white cross
     
 """
-
-
 import unittest
 from rubik.solveWhiteCross import solveWhiteCross
 
