@@ -1237,7 +1237,7 @@ def rotateCubeToLeft(cube):
 
         return new_cube    
 
-def SolveWhiteLeaves(lst_cube, lst_rotate): # working on this one    
+def solveWhiteLeaves(lst_cube, lst_rotate): # working on this one    
 
         #rotate non white to into [4][5]        
         if lst_cube[4][5] == var_w and lst_cube[4][7] != var_w:
@@ -1831,7 +1831,7 @@ def solve_top_white_cells(lst_cube, lst_rotate):
             lst_cube = rotateSide_u(lst_cube)
             lst_cube = rotateSide_B(lst_cube)   
             lst_rotate.append("UUbuBbuB") 
-    ###here
+
     elif lst_cube[4][0] == var_w and lst_cube[5][6] != var_w:
             lst_cube = rotateSide_b(lst_cube)
             lst_cube = rotateSide_u(lst_cube)

@@ -4,11 +4,7 @@
     codes to rotate cube strings. Then use those cube strings in unittests to test cube from different sides
     
 """
-from rubik.solve import _solve
-from rubik.solveDaisy import solveDaisy
-from rubik.solveRotations import createCubeListFromInputParms, rotateCubeToRight, rotateCubeDown, rotateCubeUp
-from rubik.solveWhiteCross import solveWhiteCross
-
+from rubik.solveRotations import createCubeListFromInputParms, rotateCubeToRight, rotateCubeDown, rotateCubeUp, rotateCubeToLeft
 
 inputDict = {}
 inputDict['cube'] = "rryobggrwoyowrroybgybygoygwwwywobrborowryggbbygbwwbgor"

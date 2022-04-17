@@ -6,7 +6,7 @@
     
 """
 from rubik.solveRotations import createCubeListFromInputParms
-from rubik.solveRotations import SolveWhiteLeaves, createYellowAndWhiteVariables
+from rubik.solveRotations import solveWhiteLeaves, createYellowAndWhiteVariables
 
 def solveDaisy(parms):
     
@@ -17,7 +17,7 @@ def solveDaisy(parms):
     var_y =  createYellowAndWhiteVariables(parms)[0]
 
     for _ in range(50):
-        lst_cube = (SolveWhiteLeaves(lst_cube, lst_rotate))[0]   
+        lst_cube = (solveWhiteLeaves(lst_cube, lst_rotate))[0]   
         
         if lst_cube[4][4] == var_y and lst_cube[4][1] == var_w and lst_cube[4][3] == var_w and \
         lst_cube[4][5] == var_w and lst_cube[4][7] == var_w:
