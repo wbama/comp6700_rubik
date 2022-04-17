@@ -417,10 +417,7 @@ def rotateSide_r(orig_cube):
 
     return new_cube
 
-#rotate the back clockwise
-def rotateSide_B(orig_cube): #rotates clock
-    new_cube = [[], [], [], [], [], []]
-    #front
+def rotateSide_B_front(new_cube, orig_cube):
     new_cube[0].insert(0, orig_cube [0][0])
     new_cube[0].insert(1, orig_cube [0][1])
     new_cube[0].insert(2, orig_cube [0][2])
@@ -431,6 +428,7 @@ def rotateSide_B(orig_cube): #rotates clock
     new_cube[0].insert(7, orig_cube [0][7])
     new_cube[0].insert(8, orig_cube [0][8])
     
+def rotateSide_B_Bight(new_cube, orig_cube):
     new_cube[1].insert(0, orig_cube [1][0])
     new_cube[1].insert(1, orig_cube [1][1])
     new_cube[1].insert(2, orig_cube [5][8])
@@ -439,8 +437,9 @@ def rotateSide_B(orig_cube): #rotates clock
     new_cube[1].insert(5, orig_cube [5][7])
     new_cube[1].insert(6, orig_cube [1][6])
     new_cube[1].insert(7, orig_cube [1][7])
-    new_cube[1].insert(8, orig_cube [5][6])
-    #rotates clock
+    new_cube[1].insert(8, orig_cube [5][6]) 
+    
+def rotateSide_B_back(new_cube, orig_cube):   
     new_cube[2].insert(0, orig_cube [2][6])
     new_cube[2].insert(1, orig_cube [2][3])
     new_cube[2].insert(2, orig_cube [2][0])
@@ -450,7 +449,8 @@ def rotateSide_B(orig_cube): #rotates clock
     new_cube[2].insert(6, orig_cube [2][8])
     new_cube[2].insert(7, orig_cube [2][5])
     new_cube[2].insert(8, orig_cube [2][2])
-    
+     
+def rotateSide_B_left(new_cube, orig_cube):  
     new_cube[3].insert(0, orig_cube [4][2])
     new_cube[3].insert(1, orig_cube [3][1])
     new_cube[3].insert(2, orig_cube [3][2])
@@ -461,6 +461,7 @@ def rotateSide_B(orig_cube): #rotates clock
     new_cube[3].insert(7, orig_cube [3][7])
     new_cube[3].insert(8, orig_cube [3][8])
     
+def rotateSide_B_top(new_cube, orig_cube): 
     new_cube[4].insert(0, orig_cube [1][2])
     new_cube[4].insert(1, orig_cube [1][5])
     new_cube[4].insert(2, orig_cube [1][8])
@@ -471,6 +472,7 @@ def rotateSide_B(orig_cube): #rotates clock
     new_cube[4].insert(7, orig_cube [4][7])
     new_cube[4].insert(8, orig_cube [4][8])
     
+def rotateSide_B_bottom(new_cube, orig_cube):      
     new_cube[5].insert(0, orig_cube [5][0])
     new_cube[5].insert(1, orig_cube [5][1])
     new_cube[5].insert(2, orig_cube [5][2])
@@ -480,6 +482,19 @@ def rotateSide_B(orig_cube): #rotates clock
     new_cube[5].insert(6, orig_cube [3][0])
     new_cube[5].insert(7, orig_cube [3][3])
     new_cube[5].insert(8, orig_cube [3][6])
+
+
+#rotate the back clockwise
+def rotateSide_B(orig_cube): #rotates clock
+    new_cube = [[], [], [], [], [], []]
+    #front
+    rotateSide_B_front(new_cube, orig_cube)       
+    rotateSide_B_Bight(new_cube, orig_cube)        
+    rotateSide_B_back(new_cube, orig_cube)          
+    rotateSide_B_left(new_cube, orig_cube)         
+    rotateSide_B_top(new_cube, orig_cube)        
+    rotateSide_B_bottom(new_cube, orig_cube)   
+
     return new_cube
 
 #rotate the back cc
