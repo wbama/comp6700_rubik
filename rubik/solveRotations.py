@@ -95,9 +95,7 @@ def createYellowAndWhiteVariables(parms):
     return var_y, var_w
 
 #rotate the front side clockwise
-def rotateSide_F(orig_cube):
-    new_cube = [[], [], [], [], [], []]
-    #front
+def rotateSide_F_front (new_cube, orig_cube):
     new_cube[0].insert(0, orig_cube [0][6])
     new_cube[0].insert(1, orig_cube [0][3])
     new_cube[0].insert(2, orig_cube [0][0])
@@ -107,6 +105,11 @@ def rotateSide_F(orig_cube):
     new_cube[0].insert(6, orig_cube [0][8])
     new_cube[0].insert(7, orig_cube [0][5])
     new_cube[0].insert(8, orig_cube [0][2])
+    
+def rotateSide_F(orig_cube):
+    new_cube = [[], [], [], [], [], []]
+    #front
+    rotateSide_F_front (new_cube, orig_cube)
     
     #right    
     new_cube[1].insert(0, orig_cube [4][6])
