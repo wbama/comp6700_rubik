@@ -106,12 +106,7 @@ def rotateSide_F_front (new_cube, orig_cube):
     new_cube[0].insert(7, orig_cube [0][5])
     new_cube[0].insert(8, orig_cube [0][2])
     
-def rotateSide_F(orig_cube):
-    new_cube = [[], [], [], [], [], []]
-    #front
-    rotateSide_F_front (new_cube, orig_cube)
-    
-    #right    
+def rotateSide_F_right (new_cube, orig_cube):
     new_cube[1].insert(0, orig_cube [4][6])
     new_cube[1].insert(1, orig_cube [1][1])
     new_cube[1].insert(2, orig_cube [1][2])
@@ -122,7 +117,7 @@ def rotateSide_F(orig_cube):
     new_cube[1].insert(7, orig_cube [1][7])
     new_cube[1].insert(8, orig_cube [1][8])
     
-    #back    
+def rotateSide_F_back (new_cube, orig_cube):
     new_cube[2].insert(0, orig_cube [2][0])
     new_cube[2].insert(1, orig_cube [2][1])
     new_cube[2].insert(2, orig_cube [2][2])
@@ -133,7 +128,7 @@ def rotateSide_F(orig_cube):
     new_cube[2].insert(7, orig_cube [2][7])
     new_cube[2].insert(8, orig_cube [2][8])
     
-    #left    
+def rotateSide_F_left (new_cube, orig_cube):
     new_cube[3].insert(0, orig_cube [3][0])
     new_cube[3].insert(1, orig_cube [3][1])
     new_cube[3].insert(2, orig_cube [5][0])
@@ -144,7 +139,7 @@ def rotateSide_F(orig_cube):
     new_cube[3].insert(7, orig_cube [3][7])
     new_cube[3].insert(8, orig_cube [5][2])
     
-    #top    
+def rotateSide_F_top (new_cube, orig_cube):
     new_cube[4].insert(0, orig_cube [4][0])
     new_cube[4].insert(1, orig_cube [4][1])
     new_cube[4].insert(2, orig_cube [4][2])
@@ -155,7 +150,7 @@ def rotateSide_F(orig_cube):
     new_cube[4].insert(7, orig_cube [3][5])
     new_cube[4].insert(8, orig_cube [3][2])
     
-    #bottom    
+def rotateSide_F_bottom (new_cube, orig_cube):
     new_cube[5].insert(0, orig_cube [1][6])
     new_cube[5].insert(1, orig_cube [1][3])
     new_cube[5].insert(2, orig_cube [1][0])
@@ -165,6 +160,21 @@ def rotateSide_F(orig_cube):
     new_cube[5].insert(6, orig_cube [5][6])
     new_cube[5].insert(7, orig_cube [5][7])
     new_cube[5].insert(8, orig_cube [5][8])
+    
+def rotateSide_F(orig_cube):
+    new_cube = [[], [], [], [], [], []]
+    #front
+    rotateSide_F_front (new_cube, orig_cube)    
+    #right    
+    rotateSide_F_right (new_cube, orig_cube)    
+    #back    
+    rotateSide_F_back (new_cube, orig_cube)    
+    #left    
+    rotateSide_F_left (new_cube, orig_cube)    
+    #top    
+    rotateSide_F_top (new_cube, orig_cube)    
+    #bottom    
+    rotateSide_F_bottom (new_cube, orig_cube)
     return new_cube
 
 #rotate the front cc
