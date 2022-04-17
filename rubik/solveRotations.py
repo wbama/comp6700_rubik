@@ -887,6 +887,7 @@ def rotateSide_u(orig_cube):
     rotateSide_u_front(new_cube, orig_cube)
     rotateSide_u_right(new_cube, orig_cube)   
     rotateSide_u_back(new_cube, orig_cube)
+    rotateSide_u_left(new_cube, orig_cube)
     rotateSide_u_top(new_cube, orig_cube)   
     rotateSide_u_bottom(new_cube, orig_cube) 
     return new_cube
