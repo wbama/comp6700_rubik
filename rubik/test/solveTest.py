@@ -258,7 +258,6 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[51])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[52])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[53])
-
         # #sides should also be solved
         self.assertEqual( (actualResult.get('cube'))[6],  (actualResult.get('cube'))[7],  (actualResult.get('cube'))[8])
         self.assertEqual( (actualResult.get('cube'))[15],  (actualResult.get('cube'))[16],  (actualResult.get('cube'))[17])
@@ -283,8 +282,7 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[50])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[51])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[52])
-        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[53])
-        
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[53])        
         
         # #sides should also be solved
         self.assertEqual( (actualResult.get('cube'))[3],  (actualResult.get('cube'))[4],  (actualResult.get('cube'))[5])
@@ -317,8 +315,7 @@ class SolveTest(unittest.TestCase):
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[50])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[51])
         self.assertEqual(expectedResult_col, (actualResult.get('cube'))[52])
-        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[53])
-        
+        self.assertEqual(expectedResult_col, (actualResult.get('cube'))[53])        
         
         # #sides should also be solved
         self.assertEqual( (actualResult.get('cube'))[3],  (actualResult.get('cube'))[4],  (actualResult.get('cube'))[5])

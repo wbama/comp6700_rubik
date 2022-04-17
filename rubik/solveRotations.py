@@ -5,119 +5,85 @@
     
 """
         #this function looks at the colors around the edge and compares to the back colors to add to counter
-def verifyAdjacentColors(lst_cube):
-    
-    # lst_cube = (createCubeListFromInputParms(parms))         
-        #around the edge of side 0
-    ctr = 0                
-    if ((lst_cube[0][0]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][2],lst_cube[4][6]]):
-        ctr = 1        
-    elif ((lst_cube[0][1]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[4][7]):
-        ctr = 1
-    elif ((lst_cube[0][2]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[4][8],lst_cube[1][0]]):
-        ctr = 1
-    elif ((lst_cube[0][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][5]):
-        ctr = 1
-    elif ((lst_cube[0][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][3]):
-        ctr = 1
-    elif ((lst_cube[0][6]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][8],lst_cube[5][0]]):
-        ctr = 1   
-    elif ((lst_cube[0][7]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[5][1]):
-        ctr = 1
-    elif ((lst_cube[0][8]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[1][6],lst_cube[5][2]]):
-        ctr = 1
-    
-    #top right corner
-    elif ((lst_cube[4][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][0]):
-        ctr = 1   
-    elif ((lst_cube[4][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][0]):
-        ctr = 1   
-    elif ((lst_cube[4][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][1]):
-        ctr = 1   
-    elif ((lst_cube[4][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][1]):
-        ctr = 1            
-    elif ((lst_cube[4][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][2]):
-        ctr = 1   
-    elif ((lst_cube[4][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][2]):
-        ctr = 1   
         
-    #top left corner    
-    elif ((lst_cube[4][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][2]):
-        ctr = 1   
-    elif ((lst_cube[4][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][2]):
-        ctr = 1   
-    elif ((lst_cube[4][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][1]):
-        ctr = 1    
-    elif ((lst_cube[4][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][1]):
-        ctr = 1    
-    elif ((lst_cube[4][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][0]):
-        ctr = 1   
-    elif ((lst_cube[4][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][0]):
-        ctr = 1   
-    
-    #bottom right row
-    elif ((lst_cube[5][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][6]):
-        ctr = 1  
-    elif ((lst_cube[5][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][6]):
-        ctr = 1  
-    elif ((lst_cube[5][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][7]):
-        ctr = 1   
-    elif ((lst_cube[5][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][7]):
-        ctr = 1          
-    elif ((lst_cube[5][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][8]):
-        ctr = 1   
-    elif ((lst_cube[5][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][8]):
-        ctr = 1   
-    
-    #bottom left row        
-    elif ((lst_cube[5][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][8]):
-        ctr = 1  
-    elif ((lst_cube[5][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][8]):
-        ctr = 1  
-    elif ((lst_cube[5][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][7]):
-        ctr = 1    
-    elif ((lst_cube[5][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][7]):
-        ctr = 1 
-    elif ((lst_cube[5][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][6]):
-        ctr = 1 
-    elif ((lst_cube[5][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][6]):
-        ctr = 1           
-        
-    return ctr   
-
-# when y exists in the cube, use that. If not, use whatever is on the bottom as yellow and white as top
-# def createYellowAndWhiteVariables(parms):
-#     global var_y, var_w
-#     lst_cube = createCubeListFromInputParms(parms)
-#     if ("y" in lst_cube[0][4] or "Y" in lst_cube[0][4]):
-#         var_y = lst_cube[0][4]
-#         var_w = lst_cube[2][4]
+# def verifyAdjacentColors(lst_cube):
 #
-#     elif ("y" in lst_cube[1][4] or "Y" in lst_cube[1][4]):
-#         var_y = lst_cube[1][4]
-#         var_w = lst_cube[3][4]
+#     ctr = 0     
 #
-#     elif ("y" in lst_cube[2][4] or "Y" in lst_cube[2][4]):
-#         var_y = lst_cube[2][4]
-#         var_w = lst_cube[0][4] 
+#     if ((lst_cube[0][0]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][2],lst_cube[4][6]]):
+#         ctr = 1        
+#     elif ((lst_cube[0][1]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[4][7]):
+#         ctr = 1
+#     elif ((lst_cube[0][2]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[4][8],lst_cube[1][0]]):
+#         ctr = 1
+#     elif ((lst_cube[0][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][5]):
+#         ctr = 1
+#     elif ((lst_cube[0][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][3]):
+#         ctr = 1
+#     elif ((lst_cube[0][6]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[3][8],lst_cube[5][0]]):
+#         ctr = 1   
+#     elif ((lst_cube[0][7]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[5][1]):
+#         ctr = 1
+#     elif ((lst_cube[0][8]) == lst_cube[0][4] and lst_cube[2][4] in [lst_cube[1][6],lst_cube[5][2]]):
+#         ctr = 1
 #
-#     elif ("y" in lst_cube[3][4] or "Y" in lst_cube[3][4]):
-#         var_y = lst_cube[3][4]
-#         var_w = lst_cube[1][4]
+#     #top right corner
+#     elif ((lst_cube[4][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][0]):
+#         ctr = 1   
+#     elif ((lst_cube[4][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][0]):
+#         ctr = 1   
+#     elif ((lst_cube[4][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][1]):
+#         ctr = 1   
+#     elif ((lst_cube[4][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][1]):
+#         ctr = 1            
+#     elif ((lst_cube[4][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][2]):
+#         ctr = 1   
+#     elif ((lst_cube[4][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][2]):
+#         ctr = 1   
 #
-#     elif ("y" in lst_cube[4][4] or "Y" in lst_cube[4][4]):
-#         var_y = lst_cube[4][4]
-#         var_w = lst_cube[5][4]
+#     #top left corner    
+#     elif ((lst_cube[4][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][2]):
+#         ctr = 1   
+#     elif ((lst_cube[4][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][2]):
+#         ctr = 1   
+#     elif ((lst_cube[4][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][1]):
+#         ctr = 1    
+#     elif ((lst_cube[4][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][1]):
+#         ctr = 1    
+#     elif ((lst_cube[4][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][0]):
+#         ctr = 1   
+#     elif ((lst_cube[4][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][0]):
+#         ctr = 1   
 #
-#     elif ("y" in lst_cube[5][4] or "Y" in lst_cube[5][4]):
-#         var_y = lst_cube[5][4]
-#         var_w = lst_cube[4][4]
+#     #bottom right row
+#     elif ((lst_cube[5][2]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][6]):
+#         ctr = 1  
+#     elif ((lst_cube[5][2]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][6]):
+#         ctr = 1  
+#     elif ((lst_cube[5][5]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][7]):
+#         ctr = 1   
+#     elif ((lst_cube[5][5]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][7]):
+#         ctr = 1          
+#     elif ((lst_cube[5][8]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[1][8]):
+#         ctr = 1   
+#     elif ((lst_cube[5][8]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[1][8]):
+#         ctr = 1   
 #
-#     else:
-#         var_y = lst_cube[4][4]
-#         var_w = lst_cube[5][4]
+#     #bottom left row        
+#     elif ((lst_cube[5][0]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][8]):
+#         ctr = 1  
+#     elif ((lst_cube[5][0]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][8]):
+#         ctr = 1  
+#     elif ((lst_cube[5][3]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][7]):
+#         ctr = 1    
+#     elif ((lst_cube[5][3]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][7]):
+#         ctr = 1 
+#     elif ((lst_cube[5][6]) == lst_cube[0][4] and lst_cube[2][4] == lst_cube[3][6]):
+#         ctr = 1 
+#     elif ((lst_cube[5][6]) == lst_cube[2][4] and lst_cube[0][4] == lst_cube[3][6]):
+#         ctr = 1           
 #
-#     return var_y, var_w
+#     return ctr   
 
 # here y is always top, w is always bottom. Easier
 def createYellowAndWhiteVariables(parms):
